@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
-.red-hat-display-black> {
+.red-hat-display-black {
   font-family: "Red Hat Display", serif;
   font-optical-sizing: auto;
   font-weight: 900;
@@ -35,6 +35,10 @@ p{
     font-family: "Source Code Pro";
 }
 
+b{
+    font-family: "Source Code Pro";
+}
+
 /* Background Colours */
 
 .background-odd{
@@ -43,4 +47,18 @@ p{
 
 .background-even{
     background-color: #003566;
+}
+
+/* Navigation Styling */
+
+.navbar{
+    background-color: #001d3d;
+}
+
+.navbar-brand{
+    font-family: "Red Hat Display";
+}
+
+.navlink{
+    font-family: "Source Code Pro";
 }
