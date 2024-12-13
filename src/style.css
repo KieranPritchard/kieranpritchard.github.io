@@ -14,3 +14,23 @@
     font-weight: 400;
     font-style: normal;
 }
+
+/* Text Styling */
+
+h1{
+    font-family: "Red Hat Display";
+    text-align: center;
+}
+
+h2{
+    font-family: "Red Hat Display";
+    text-align: center;
+}
+
+h5{
+    font-family: "Red Hat Display";
+}
+
+p{
+    font-family: "Source Code Pro";
+}
