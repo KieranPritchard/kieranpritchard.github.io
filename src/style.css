@@ -62,3 +62,9 @@ b{
 .navlink{
     font-family: "Source Code Pro";
 }
+
+/* Home page recent blogs section */
+
+.card-body{
+    background-color: #003566;
+}
