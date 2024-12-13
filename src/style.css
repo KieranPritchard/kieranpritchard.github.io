@@ -87,7 +87,7 @@ b{
 /* Image Styling */
 
 #Hero-Image-Home-Page{
-    height: 350px;
+    height: 400px;
     width: auto;
     display: block;
     margin-left: auto;
@@ -139,4 +139,18 @@ b{
 .Recent-Projects-Image-Background{
     width: 100%;
     background-color: #003566;
+}
+
+/* Home Page Custom Measurements*/
+
+#Intro-Section-Home-Page{
+    padding-top: 150px;
+    padding-bottom: 150px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: auto;
+}
+
+#Intro-Section-Paragraph{
+    padding-top: 20px;
 }
