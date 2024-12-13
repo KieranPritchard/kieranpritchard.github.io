@@ -20,19 +20,24 @@
 h1{
     font-family: "Red Hat Display";
     text-align: center;
+    color: #a9d6e5 !important;
 }
 
 h2{
     font-family: "Red Hat Display";
     text-align: center;
+    color: #a9d6e5 !important;
 }
 
 h5{
     font-family: "Red Hat Display";
+    color: #a9d6e5 !important;
+    
 }
 
 p{
     font-family: "Source Code Pro";
+    color: white;
 }
 
 b{
@@ -57,13 +62,23 @@ b{
 
 .navbar-brand{
     font-family: "Red Hat Display";
+    color: white !important;
 }
 
-.navlink{
+.nav-link{
     font-family: "Source Code Pro";
+    color: white !important;
 }
 
-/* Home page recent blogs section */
+.nav-link:hover{
+    color: #ffc300 !important;
+}
+
+#Active-Page{
+    color: #ffc300;
+}
+
+/* Card Styling */
 
 .card-body{
     background-color: #003566;
