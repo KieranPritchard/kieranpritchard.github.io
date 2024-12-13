@@ -96,11 +96,12 @@ b{
 }
 
 #About-Me-Home-Page-Image{
-    height: 350px;
+    height: 400px;
     width: auto; 
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 60px;
 }
 
 #Home-Page-Recent-Blogs-One{
@@ -153,4 +154,16 @@ b{
 
 #Intro-Section-Paragraph{
     padding-top: 20px;
+}
+
+#About-Section-Home-Page{
+    padding-top: 30px;
+    padding-bottom: 200px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: auto;
+}
+
+#Home-Page-About-Me-Paragraph{
+    padding: 170px 0;
 }
