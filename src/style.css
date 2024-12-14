@@ -108,7 +108,7 @@ b{
     height: 120px;
     width: auto;
     display: block;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 20px;
     margin-right: auto;
 }
@@ -139,8 +139,8 @@ b{
 }
 
 .Recent-Projects-Image-Background{
-    width: 100%;
-    background-color: #003566;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Home Page Custom Measurements*/
@@ -185,8 +185,9 @@ b{
 }
 
 .recent-blog-post-home-page-title{
+    margin-top: 10px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 .recent-blog-post-home-page-title-link{
@@ -200,4 +201,54 @@ b{
 
 .recent-blog-post-home-page-text{
     padding-bottom: 15px;
+}
+
+#Recent-Projects-Section{
+    padding-top: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.recent-project-card{
+    margin-top: 40px;
+    border-radius: 25px;
+    padding: 15px;
+    box-shadow: 0px 0px 20px 2px #a9d6e5
+}
+
+.recent-project-card-img-background{
+    background-color: black;
+    padding: 20px;
+}
+
+.recent-project-card-img{
+    height: 80px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recent-project-card-title{
+    margin-top: 15px;
+}
+
+.recent-project-card-text{
+    font-size: 15px;
+}
+
+.recent-project-card-button{
+    width: 95%;
+    height: 50px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #a9d6e5;
+    color: #a9d6e5;
+    border-width: 1px;
+    font-family: "Source Code Pro";
+    background-color: transparent;
+}
+
+.recent-project-card-button:hover{
+    background-color: #a9d6e5;
+    color: #003566;
 }
