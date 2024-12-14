@@ -105,10 +105,11 @@ b{
 }
 
 #Home-Page-Recent-Blogs-One{
-    height: 100px;
+    height: 120px;
     width: auto;
     display: block;
-    margin-left: auto;
+    margin-top: 10px;
+    margin-left: 20px;
     margin-right: auto;
 }
 
@@ -166,4 +167,37 @@ b{
 
 #Home-Page-About-Me-Paragraph{
     padding: 170px 0;
+}
+
+#Blogs-Section-Home-Page{
+    padding-top: 30px;
+    padding-bottom: 100px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: auto;
+}
+
+.recent-blog-post-home-page{
+    background-color: #003566;
+    border-radius: 25px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.recent-blog-post-home-page-title{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.recent-blog-post-home-page-title-link{
+    color: #a9d6e5;
+    text-decoration: none;
+}
+
+.recent-blog-post-home-page-title-link:hover{
+    color: #ffc300;
+}
+
+.recent-blog-post-home-page-text{
+    padding-bottom: 15px;
 }
