@@ -263,3 +263,12 @@ b{
     background-color: #a9d6e5;
     color: #003566;
 }
+
+/* About Page Styling*/
+
+#about-page-intro-section{
+    padding-top: 150px;
+    padding-bottom: 150px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
