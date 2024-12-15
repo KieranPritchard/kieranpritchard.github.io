@@ -33,6 +33,7 @@ h3{
     color: #a9d6e5 !important;
     text-align: center;
     font-family: "Red Hat Display";
+    font-size: 20px !important;
 }
 
 h5{
@@ -271,4 +272,19 @@ b{
     padding-bottom: 150px;
     padding-left: 5%;
     padding-right: 5%;
+}
+
+#about-page-skills-section{
+    height: 100vh;
+    padding-top: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.about-page-skills-section-heading{
+    padding-top: 30px;
+}
+
+#about-page-skills-section-text{
+    padding-top: 10px;
 }
