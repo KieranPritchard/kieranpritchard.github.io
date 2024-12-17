@@ -268,8 +268,8 @@ b{
 /* About Page Styling*/
 
 #about-page-intro-section{
-    padding-top: 100px;
-    padding-bottom: 150px;
+    height: 100vh;
+    padding-top: 150px;
     padding-left: 5%;
     padding-right: 5%;
 }
@@ -287,4 +287,33 @@ b{
 
 #about-page-skills-section-text{
     padding-top: 10px;
+}
+
+#about-page-educational-history-section{
+    height: 100vh;
+    padding-top: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.educational-history-card{
+    margin-top: 140px !important;
+    background-color: #003566;
+    border-radius: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+.educational-history-title{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.educational-history-date{
+    margin-left: 15px;
+}
+
+.educational-history-list{
+    margin-left: 20px;
 }
