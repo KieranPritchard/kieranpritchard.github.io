@@ -394,3 +394,82 @@ b{
     background-color: #a9d6e5;
     color: #001d3d;
 }
+
+/* Blog page styling */
+
+#blog-page-side-padding{
+    padding-top: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#blog-sidebar{
+    padding: 25px;
+    border-radius: 25px;
+}
+
+.searchbar-container{
+    text-align: center;
+}
+
+#blog-searchbar{
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: #a9d6e5;
+    border-style: none;
+}
+
+.sidebar-title{
+    text-align: left;
+    padding-top: 10px;
+}
+
+.sidebar-checkbox[type="checkbox"]{
+    height: 25px;
+    width: 25px;
+    appearance: none;
+    background-color: #a9d6e5;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #a9d6e5;
+    border-radius: 5px;
+}
+
+.sidebar-checkbox[type="checkbox"]:checked{
+    background-color: #003566;
+}
+
+.sidebar-checkbox[type="checkbox"]:checked::after{
+    appearance: initial;
+}
+
+.sidebar-labels{
+    color: white;
+    font-family: "Source Code Pro" !important;
+    margin-top: 1px;
+    margin-left: 10px;
+    position: fixed;
+}
+
+.sidebar-recent-blog{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.sidebar-recent-blog-image{
+    height: 50px;
+    width: auto;
+}
+
+.sidebar-recent-blog-title{
+    margin-left: 15px;
+    font-family: "Source Code Pro";
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar-recent-blog-title:hover{
+    color: #ffc300;
+    font-weight: bold;
+}
