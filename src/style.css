@@ -534,3 +534,49 @@ b{
 #project-page-recent-projects-heading{
     padding-top: 30px;
 }
+
+#project-page-overview-section{
+    height: 100vh;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#project-page-overview-section-heading{
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.project-page-project-card{
+    background-color: #003566;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px 0.1px #a9d6e5;
+}
+
+.project-page-project-card-image-background{
+    background-color: black;
+    height: 150px;
+}
+
+.project-page-project-card-image{
+    height: 100px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-page-project-card-title{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.project-page-project-card-text{
+    color: #a9d6e5;
+}
+
+.topic{
+    border-style: solid;
+    border-radius: 25px;
+    padding: 5px 10px;
+    font-size: 10px;
+}
