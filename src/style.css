@@ -462,6 +462,7 @@ b{
 .sidebar-recent-blog-image{
     height: 50px;
     width: auto;
+    border-radius: 25px;
 }
 
 .sidebar-recent-blog-title{
@@ -481,6 +482,12 @@ b{
     padding-bottom: 30px;
 }
 
+.blog-post-image{
+    height: 150px;
+    width: auto;
+    border-radius: 25px;
+}
+
 .blog-post-title{
     text-align: left;
     font-size: 25px;
@@ -495,4 +502,8 @@ b{
     font-family: "Red Hat Display";
     color: #a9d6e5;
     font-size: 15px;
+}
+
+.blog-post-description{
+    font-size: 16px;
 }
