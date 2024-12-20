@@ -406,6 +406,7 @@ b{
 #blog-sidebar{
     padding: 25px;
     border-radius: 25px;
+    margin-right: 100px;
 }
 
 .searchbar-container{
@@ -449,7 +450,8 @@ b{
     font-family: "Source Code Pro" !important;
     margin-top: 1px;
     margin-left: 10px;
-    position: fixed;
+    position:relative;
+    top: -6px;
 }
 
 .sidebar-recent-blog{
@@ -472,4 +474,25 @@ b{
 .sidebar-recent-blog-title:hover{
     color: #ffc300;
     font-weight: bold;
+}
+
+.blog-post{
+    border-bottom: solid #a9d6e5;
+    padding-bottom: 30px;
+}
+
+.blog-post-title{
+    text-align: left;
+    font-size: 25px;
+    padding-top: 20px;
+}
+
+.blog-post-title:hover{
+    color: #ffc300 !important;
+}
+
+.blog-post-date{
+    font-family: "Red Hat Display";
+    color: #a9d6e5;
+    font-size: 15px;
 }
