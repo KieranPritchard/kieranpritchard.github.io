@@ -580,3 +580,87 @@ b{
     padding: 5px 10px;
     font-size: 10px;
 }
+
+/* Hobbies Page Styling*/
+
+#hobbies-page-programming-section{
+    height: 100vh;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#hobbies-page-programming-section-title{
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+table{
+    background-color: #a9d6e5;
+    border-color: #001d3d !important;
+    width: 100%;
+}
+
+th{
+    height: 60px;
+    text-align: center !important;
+    background-color: #003566;
+}
+
+.table-title-text{
+    color: #a9d6e5;
+    font-family: "Red Hat Display";
+}
+
+table, th, td {
+    text-align: center;
+    border: 1px solid !important;
+}
+
+#hobbies-page-programming-section-image{
+    height: 200px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#hobbies-page-gaming-section{
+    height: 100vh;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#hobbies-page-gaming-section-title{
+    padding-top: 30px;
+}
+
+#hobbies-page-gaming-section-image{
+    height: 200px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#hobbies-page-gaming-section-text{
+    padding-top: 150px;
+}
+
+#hobbies-page-collecting-section{
+    height: 100vh;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#hobbies-page-collecting-section-title{
+    padding-top: 30px;
+}
+
+#hobbies-page-collecting-section-text{
+    padding-top: 150px;
+}
+
+#hobbies-page-collecting-section-image{
+    height: 200px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
