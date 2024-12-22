@@ -536,3 +536,22 @@ table, th, td {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* All The Styling For The Contact Page */
+
+#contact-page-list{
+    list-style: none;
+}
+
+#contact-page-list, li{
+    margin-top: 20px;
+}
+
+.contact-page-icon-background{
+    margin-right: 15px;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #a9d6e5;
+    border-radius: 25px;
+    color: #001d3d;
+}
