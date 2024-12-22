@@ -73,6 +73,8 @@ b{
     padding-right: 5%;
 }
 
+/* Blog Post Styling */
+
 .recent-blog-post{
     background-color: #003566;
     border-radius: 25px;
@@ -99,6 +101,8 @@ b{
 .recent-blog-post-text{
     padding-bottom: 15px;
 }
+
+/* Recent Project Card Styling */
 
 .recent-project-card{
     margin-top: 40px;
@@ -142,6 +146,64 @@ b{
 .recent-project-card-button:hover{
     background-color: #a9d6e5;
     color: #003566;
+}
+
+/* Email Styling */
+
+
+#contact-me-form{
+    margin-top: 40px;
+}
+
+.contact-me-form-your-email, .contact-me-form-email-subject{
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 5px;
+    background-color: #a9d6e5;
+    border-style: none;
+    border-radius: 15px;
+}
+
+.contact-me-form-email-body{
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    padding-left: 5px;
+    background-color: #a9d6e5;
+    border-style: none;
+    border-radius: 15px;
+}
+
+.contact-me-form-your-email::placeholder, .contact-me-form-email-subject::placeholder{
+    padding-left: 5px;
+    font-family: "Source Code Pro";
+}
+
+.contact-me-form-email-body::placeholder{
+    padding-left: 5px;
+    font-family: "Source Code Pro";
+}
+
+.btn-container{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.submit-btn{
+    width: 50%;
+    padding: 10px 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #a9d6e5;
+    border-radius: 25px;
+    color: #a9d6e5;
+    background-color: transparent;
+}
+
+.submit-btn:hover{
+    background-color: #a9d6e5;
+    color: #001d3d;
 }
 
 /* Navigation Styling */
@@ -223,21 +285,7 @@ b{
     padding: 170px 0;
 }
 
-/* All The Styling For The Home Page */
-
-#about-page-intro-section{
-    height: 100vh;
-    padding-top: 150px;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-#about-page-skills-section{
-    height: 100vh;
-    padding-top: 30px;
-    padding-left: 5%;
-    padding-right: 5%;
-}
+/* All The Styling For The About Page */
 
 .about-page-skills-section-heading{
     padding-top: 30px;
@@ -245,13 +293,6 @@ b{
 
 #about-page-skills-section-text{
     padding-top: 10px;
-}
-
-#about-page-educational-history-section{
-    height: 100vh;
-    padding-top: 30px;
-    padding-left: 5%;
-    padding-right: 5%;
 }
 
 .educational-history-card{
@@ -276,18 +317,7 @@ b{
     margin-left: 20px;
 }
 
-#about-page-contact-section{
-    padding-top: 30px;
-    padding-left: 5%;
-    padding-right: 5%;
-    height: 100vh;
-}
-
 #about-page-contact-section-title{
-    margin-top: 40px;
-}
-
-#about-contact-me-form{
     margin-top: 40px;
 }
 
@@ -300,57 +330,6 @@ b{
 #about-contact-me-phone-icon,#about-contact-me-email-icon{
     font-size: 40px;
     padding-right: 15px;
-}
-
-#about-contact-me-form-email, #about-contact-me-form-email-subject{
-    width: 100%;
-    height: 50px;
-    margin-top: 10px;
-    padding-left: 5px;
-    background-color: #a9d6e5;
-    border-style: none;
-    border-radius: 15px;
-}
-
-#about-contact-me-form-email-body{
-    width: 100%;
-    height: 200px;
-    margin-top: 10px;
-    padding-left: 5px;
-    background-color: #a9d6e5;
-    border-style: none;
-    border-radius: 15px;
-}
-
-#about-contact-me-form-email::placeholder, #about-contact-me-form-email-subject::placeholder{
-    padding-left: 5px;
-    font-family: "Source Code Pro";
-}
-
-#about-contact-me-form-email-body::placeholder{
-    padding-left: 5px;
-    font-family: "Source Code Pro";
-}
-
-.btn-container{
-    margin-top: 20px;
-    text-align: center;
-}
-
-.submit-btn{
-    width: 50%;
-    padding: 10px 0;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #a9d6e5;
-    border-radius: 25px;
-    color: #a9d6e5;
-    background-color: transparent;
-}
-
-.submit-btn:hover{
-    background-color: #a9d6e5;
-    color: #001d3d;
 }
 
 /* Blog page styling */
