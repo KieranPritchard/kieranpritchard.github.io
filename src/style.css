@@ -18,12 +18,14 @@
 /* Text Styling */
 
 h1{
+    padding-top: 175px;
     font-family: "Red Hat Display";
     text-align: center;
     color: #a9d6e5 !important;
 }
 
 h2{
+    padding-top: 30px;
     font-family: "Red Hat Display";
     text-align: center;
     color: #a9d6e5 !important;
@@ -55,14 +57,91 @@ b{
     font-family: "Source Code Pro";
 }
 
-/* Background Colours */
+/* Styling for universial elements (To be used on mulitple pages) */
 
 .background-odd{
     background-color: #001d3d;
+    height: 100vh;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .background-even{
     background-color: #003566;
+    height: 100vh;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.recent-blog-post{
+    background-color: #003566;
+    border-radius: 25px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.recent-blog-post-title{
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    color: #a9d6e5 !important;
+}
+
+.recent-blog-post-title-link{
+    color: #a9d6e5;
+    text-decoration: none;
+}
+
+.recent-blog-post-title-link:hover{
+    color: #ffc300;
+}
+
+.recent-blog-post-text{
+    padding-bottom: 15px;
+}
+
+.recent-project-card{
+    margin-top: 40px;
+    border-radius: 25px;
+    padding: 15px;
+    box-shadow: 0px 0px 20px 1px #a9d6e5;
+}
+
+.recent-project-card-img-background{
+    background-color: black;
+    padding: 40px;
+}
+
+.recent-project-card-img{
+    height: 80px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recent-project-card-title{
+    margin-top: 15px;
+}
+
+.recent-project-card-text{
+    font-size: 15px;
+}
+
+.recent-project-card-button{
+    width: 95%;
+    height: 50px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #a9d6e5;
+    color: #a9d6e5;
+    border-width: 1px;
+    font-family: "Source Code Pro";
+    background-color: transparent;
+}
+
+.recent-project-card-button:hover{
+    background-color: #a9d6e5;
+    color: #003566;
 }
 
 /* Navigation Styling */
@@ -89,11 +168,6 @@ b{
     color: #ffc300;
 }
 
-/* Card Styling */
-
-.card-body{
-    background-color: #003566;
-}
 
 /* Image Styling */
 
@@ -154,118 +228,17 @@ b{
     margin-right: auto;
 }
 
-/* Home Page Custom Measurements*/
-
-#Intro-Section-Home-Page{
-    padding-top: 150px;
-    padding-bottom: 150px;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin: auto;
-}
+/* All The Styling For The Home Page */
 
 #Intro-Section-Paragraph{
     padding-top: 20px;
-}
-
-#About-Section-Home-Page{
-    padding-top: 30px;
-    padding-bottom: 200px;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin: auto;
 }
 
 #Home-Page-About-Me-Paragraph{
     padding: 170px 0;
 }
 
-#Blogs-Section-Home-Page{
-    padding-top: 30px;
-    padding-bottom: 100px;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin: auto;
-}
-
-.recent-blog-post-home-page{
-    background-color: #003566;
-    border-radius: 25px;
-    margin-top: 25px;
-    margin-bottom: 5px;
-}
-
-.recent-blog-post-home-page-title{
-    margin-top: 10px;
-    padding-top: 10px;
-    padding-bottom: 5px;
-}
-
-.recent-blog-post-home-page-title-link{
-    color: #a9d6e5;
-    text-decoration: none;
-}
-
-.recent-blog-post-home-page-title-link:hover{
-    color: #ffc300;
-}
-
-.recent-blog-post-home-page-text{
-    padding-bottom: 15px;
-}
-
-#Recent-Projects-Section{
-    padding-top: 30px;
-    padding-left: 5%;
-    padding-right: 5%;
-    height: 100vh;
-}
-
-.recent-project-card{
-    margin-top: 40px;
-    border-radius: 25px;
-    padding: 15px;
-    box-shadow: 0px 0px 20px 1px #a9d6e5;
-}
-
-.recent-project-card-img-background{
-    background-color: black;
-    padding: 40px;
-}
-
-.recent-project-card-img{
-    height: 80px;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.recent-project-card-title{
-    margin-top: 15px;
-}
-
-.recent-project-card-text{
-    font-size: 15px;
-}
-
-.recent-project-card-button{
-    width: 95%;
-    height: 50px;
-    border-radius: 15px;
-    border-style: solid;
-    border-color: #a9d6e5;
-    color: #a9d6e5;
-    border-width: 1px;
-    font-family: "Source Code Pro";
-    background-color: transparent;
-}
-
-.recent-project-card-button:hover{
-    background-color: #a9d6e5;
-    color: #003566;
-}
-
-/* About Page Styling*/
+/* All The Styling For The Home Page */
 
 #about-page-intro-section{
     height: 100vh;
