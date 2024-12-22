@@ -206,6 +206,15 @@ b{
     color: #001d3d;
 }
 
+/* Styling for topic*/
+
+.topic{
+    border-style: solid;
+    border-radius: 25px;
+    padding: 5px 10px;
+    font-size: 10px;
+}
+
 /* Navigation Styling */
 
 .navbar{
@@ -317,10 +326,6 @@ b{
     margin-left: 20px;
 }
 
-#about-page-contact-section-title{
-    margin-top: 40px;
-}
-
 .about-contact-me-list-item{
     list-style-type: none;
     font-size: 22px;
@@ -332,18 +337,13 @@ b{
     padding-right: 15px;
 }
 
-/* Blog page styling */
-
-#blog-page-side-padding{
-    padding-top: 30px;
-    padding-left: 5%;
-    padding-right: 5%;
-}
+/* All The Styling For The Blog Page */
 
 #blog-sidebar{
     padding: 25px;
     border-radius: 25px;
     margin-right: 100px;
+    height: 70vh;
 }
 
 .searchbar-container{
@@ -445,46 +445,16 @@ b{
     font-size: 16px;
 }
 
-/* Projects Page Styling */
-
-#project-page-intro-section{
-    height: 100vh;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-#project-page-intro-section-heading{
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
+/* All The Styling For The Projects Page */
 
 #project-page-intro-section-text{
+    padding-top: 30px;
     font-size: 16px;
-}
-
-#project-page-recent-projects-section{
-    height: 100vh;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-#project-page-recent-projects-heading{
-    padding-top: 30px;
-}
-
-#project-page-overview-section{
-    height: 100vh;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-#project-page-overview-section-heading{
-    padding-top: 30px;
-    padding-bottom: 40px;
 }
 
 .project-page-project-card{
     background-color: #003566;
+    margin-top: 30px;
     padding: 20px;
     border-radius: 25px;
     box-shadow: 0px 0px 20px 0.1px #a9d6e5;
@@ -511,12 +481,6 @@ b{
     color: #a9d6e5;
 }
 
-.topic{
-    border-style: solid;
-    border-radius: 25px;
-    padding: 5px 10px;
-    font-size: 10px;
-}
 
 /* Hobbies Page Styling*/
 
