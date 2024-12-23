@@ -543,8 +543,8 @@ table, th, td {
     list-style: none;
 }
 
-#contact-page-list, li{
-    margin-top: 20px;
+#contact-page-list{
+    margin-top: 10px;
 }
 
 .contact-page-icon-background{
