@@ -31,3 +31,13 @@ function openRecentProjectPost(recentProjectPostNumber){
         console.log("Please input a number from 1-3")
     }
 }
+
+// Function to search through blogs
+
+function blogSearch(){
+    // Variables for function
+    let input = document.getElementById('blog-searchbar');
+    let filter = input.ariaValueMax.toUpperCase();
+    let ul = document.getElementById('blog-list');
+    let li = ul.getElementsByTagName('li');
+}
