@@ -465,6 +465,11 @@ table, th, td {
     color: #ffc300 !important;
 }
 
+.blog-post-title-line{
+    color: inherit;
+    text-decoration: none;
+}
+
 .blog-post-date{
     font-family: "Red Hat Display";
     color: #a9d6e5;
