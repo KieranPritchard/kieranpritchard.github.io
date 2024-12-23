@@ -37,7 +37,18 @@ function openRecentProjectPost(recentProjectPostNumber){
 function blogSearch(){
     // Variables for function
     let input = document.getElementById('blog-searchbar');
-    let filter = input.ariaValueMax.toUpperCase();
+    let filter = input.value.toUpperCase();
     let ul = document.getElementById('blog-list');
     let li = ul.getElementsByTagName('li');
+
+    // Loops through blog posts to find matching title, it will hide any where that don't match
+    for(i =0; i < li.length; i++){
+        let a = li[i].getElementsByTagName("a")[0];
+        let txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = ""
+        } else{
+            li[i].style.display = "none";
+        }
+    }
 }
