@@ -62,12 +62,19 @@ function blogFilter(filterTopic) {
     let boxTwoIsChecked = document.getElementById("blog-topic-2").clicked;
     let boxThreeIsChecked = document.getElementById("blog-topic-3").clicked;
     
-    // Loops through all blog posts to check if there is a filter on that <li> tag that matches the parameters
-    for(post in blogPosts){
-        if(post.classList.contains(filterTopic)){
+    if(boxOneIsChecked || boxTwoIsChecked || boxThreeIsChecked == true) {
+        // Loops through all blog posts to check if there is a filter on that <li> tag that matches the parameters
+        for(post in blogPosts){
+            if(post.classList.contains(filterTopic)){
+                post.style.display = "block"
+            } else{
+                post.style.display = "none"
+            }
+        }
+    } else {
+        // Loop to make for post visble if 
+        for(post in blogPosts){
             post.style.display = "block"
-        } else{
-            post.style.display = "none"
         }
     }
 }
