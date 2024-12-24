@@ -73,8 +73,8 @@ function blogFilter(filterTopic) {
         });
     } else {
         // Loop to make for post visble if 
-        for(post in blogPosts){
+        blogPosts.forEach(post => {
             post.style.display = "block"
-        }
+        });
     }
 }
