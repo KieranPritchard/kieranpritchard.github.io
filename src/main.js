@@ -54,8 +54,10 @@ function blogSearch(){
 }
 
 function blogFilter(filterTopic) {
+    // Accesses all blog posts on page
     const blogPosts = document.querySelectorAll('#blog-list li');
     
+    // Loops through all blog posts to check if there is a filter on that <li> tag that matches the parameters
     for(post in blogPosts){
         if(post.classList.contains(filterTopic)){
             post.style.display = "block"
