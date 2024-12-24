@@ -50,11 +50,11 @@
                         </div>
                         <div>
                             <h3 class="sidebar-title">Catagories</h3>
-                            <input class="sidebar-checkbox" type="checkbox" name="" id="blog-topic-1">
+                            <input class="sidebar-checkbox" type="checkbox" onclick="blogFilter('topicOne')" id="blog-topic-1">
                             <label class="sidebar-labels" for="blog-topic-1">Topic</label><br>
-                            <input class="sidebar-checkbox" type="checkbox" name="" id="blog-topic-2">
+                            <input class="sidebar-checkbox" type="checkbox" onclick="blogFilter('topicTwo')" id="blog-topic-2">
                             <label class="sidebar-labels" for="blog-topic-2">Topic</label><br>
-                            <input class="sidebar-checkbox" type="checkbox" name="" id="blog-topic-3">
+                            <input class="sidebar-checkbox" type="checkbox" onclick="blogFilter('topicThree')" id="blog-topic-3">
                             <label class="sidebar-labels" for="blog-topic-3">Topic</label><br>
                         </div>
                         <div>
@@ -76,7 +76,7 @@
                 </div>
                 <div class="col-sm-8">
                     <ul id="blog-list">
-                        <li>
+                        <li class="topicThree">
                             <div class="blog-post row">
                                 <div class="col-sm-3">
                                     <img class="blog-post-image" src="" alt="">
@@ -88,7 +88,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="topicOne">
                             <div class="blog-post row">
                                 <div class="col-sm-3">
                                     <img class="blog-post-image" src="" alt="">
@@ -100,7 +100,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="topicThree">
                             <div class="blog-post row">
                                 <div class="col-sm-3">
                                     <img class="blog-post-image" src="" alt="">
