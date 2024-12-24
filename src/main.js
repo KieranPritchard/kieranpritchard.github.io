@@ -61,6 +61,15 @@ function blogFilter(filterTopic) {
     let boxOneIsChecked = document.getElementById("blog-topic-1").clicked;
     let boxTwoIsChecked = document.getElementById("blog-topic-2").clicked;
     let boxThreeIsChecked = document.getElementById("blog-topic-3").clicked;
+
+    // Logs to console when checkboxs are true
+    if (boxOneIsChecked === true){
+        console.log("Box one is checked.")
+    } else if (boxTwoIsChecked === true){
+        console.log("Box two is checked.")
+    } else if (boxThreeIsChecked === true){
+        console.log("Box three is checked.")
+    }
     
     if(boxOneIsChecked || boxTwoIsChecked || boxThreeIsChecked == true) {
         // Loops through all blog posts to check if there is a filter on that <li> tag that matches the parameters
