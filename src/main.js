@@ -52,3 +52,15 @@ function blogSearch(){
         }
     }
 }
+
+function blogFilter(filterTopic) {
+    const blogPosts = document.querySelectorAll('#blog-list li');
+    
+    for(post in blogPosts){
+        if(post.classList.contains(filterTopic)){
+            post.style.display = "block"
+        } else{
+            post.style.display = "none"
+        }
+    }
+}
