@@ -58,11 +58,11 @@ function blogFilter(filterTopic) {
     const blogPosts = document.querySelectorAll('#blog-list li');
     
     // Variables to store the value of status of checkboxs
-    let boxOneIsChecked = document.getElementById("blog-topic-1").clicked;
-    let boxTwoIsChecked = document.getElementById("blog-topic-2").clicked;
+    let boxOneIsChecked = document.getElementById("blog-topic-1").checked;
+    let boxTwoIsChecked = document.getElementById("blog-topic-2").checked;
     let boxThreeIsChecked = document.getElementById("blog-topic-3").checked;
 
-    if(boxOneIsChecked || boxTwoIsChecked || boxThreeIsChecked == true) {
+    if(boxOneIsChecked || boxTwoIsChecked || boxThreeIsChecked) {
         // Loops through all blog posts to check if there is a filter on that <li> tag that matches the parameters
         for(post in blogPosts){
             if(post.classList.contains(filterTopic)){
