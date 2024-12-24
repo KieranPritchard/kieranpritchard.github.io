@@ -64,13 +64,13 @@ function blogFilter(filterTopic) {
 
     if(boxOneIsChecked || boxTwoIsChecked || boxThreeIsChecked) {
         // Loops through all blog posts to check if there is a filter on that <li> tag that matches the parameters
-        for(post in blogPosts){
+        blogPosts.forEach(post => {
             if(post.classList.contains(filterTopic)){
                 post.style.display = "block"
             } else{
                 post.style.display = "none"
             }
-        }
+        });
     } else {
         // Loop to make for post visble if 
         for(post in blogPosts){
