@@ -59,6 +59,10 @@ b{
 
 /* Styling for universial elements (To be used on mulitple pages) */
 
+body{
+    background-color: #001d3d !important;
+}
+
 .background-odd{
     background-color: #001d3d;
     height: 100vh;
@@ -573,7 +577,7 @@ table, th, td {
 .indivual-post-page-title{
     text-align: left;
     padding: 0;
-    padding-top: 20px;
+    padding-top: px;
 }
 
 .indivual-post-page-date{
@@ -595,7 +599,8 @@ table, th, td {
 .indivual-post-page-header-image-background{
     height: 200px;
     background-color: white;
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #indivual-post-page-header-image{
@@ -605,7 +610,13 @@ table, th, td {
     width: auto;
 }
 
-.indivual-post-page-heading{
+.blog-post-page-heading{
     text-align: left;
     margin-bottom: 30px;
+}
+
+.portfolio-post-page-heading{
+    text-align: left;
+    margin-bottom: 30px;
+    margin-top: 10px;
 }
