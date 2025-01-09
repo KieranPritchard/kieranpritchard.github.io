@@ -247,6 +247,8 @@ table, th, td {
 
 .navbar{
     background-color: #001d3d;
+    padding-left: 2.5% !important;
+    padding-right: 15% !important;
 }
 
 .navbar-brand{
@@ -559,14 +561,14 @@ table, th, td {
 }
 
 .contact-page-list-item{
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     font-size: 20px;
 }
 
 .contact-page-icon-background{
     margin-right: 15px;
     font-size: 25px;
-    padding: 10px;
+    padding: 15px;
     background-color: #a9d6e5;
     border-radius: 100px;
     color: #001d3d;
