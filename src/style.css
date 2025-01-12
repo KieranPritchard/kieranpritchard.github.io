@@ -622,3 +622,8 @@ table, th, td {
     margin-bottom: 30px;
     margin-top: 10px;
 }
+
+/* Media query for when website view is small */
+@media screen and (max-width: 576px) {
+    
+}
