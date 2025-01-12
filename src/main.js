@@ -54,16 +54,16 @@ function blogSearch(){
 }
 
 function blogFilter(filterTopic) {
-    // Accesses all blog posts on page
+    // Accesses all blog posts on page.
     const blogPosts = document.querySelectorAll('#blog-list li');
     
-    // Variables to store the value of status of checkboxs
+    // Variables to store the value of status of checkboxs.
     let boxOneIsChecked = document.getElementById("blog-topic-1").checked;
     let boxTwoIsChecked = document.getElementById("blog-topic-2").checked;
     let boxThreeIsChecked = document.getElementById("blog-topic-3").checked;
 
     if(boxOneIsChecked || boxTwoIsChecked || boxThreeIsChecked) {
-        // Loops through all blog posts to check if there is a filter on that <li> tag that matches the parameters
+        // Loops through all blog posts to check if there is a filter on that <li> tag that matches the parameters.
         blogPosts.forEach(post => {
             if(post.classList.contains(filterTopic)){
                 post.style.display = "block"
@@ -72,7 +72,7 @@ function blogFilter(filterTopic) {
             }
         });
     } else {
-        // Loop to make for post visble if 
+        // Loop to make for post visble if none of the filter buttons a clicked.
         blogPosts.forEach(post => {
             post.style.display = "block"
         });
