@@ -625,5 +625,47 @@ table, th, td {
 
 /* Media query for when website view is small */
 @media screen and (max-width: 576px) {
+    /* Text heading */
+    h1{
+        padding: 0;
+    }
+
+    /* Reuseable element styling */
+
+    /* Navbar */
+
+    .navbar{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Backgrounds */
     
+    .background-odd{
+        height: auto;
+        padding-bottom: 30px;
+    }
+
+    .background-even{
+        height: auto;
+        padding-bottom: 30px;
+    }
+
+    /* Blog post styling */
+
+    .recent-blog-post-title{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .recent-blog-post-text{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    /* Home page styling */
+
+    #Home-Page-About-Me-Paragraph{
+        padding: 0;
+    }
 }
