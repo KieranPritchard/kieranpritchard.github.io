@@ -290,6 +290,14 @@ table, th, td {
     margin-top: 60px;
 }
 
+#About-Me-Page-Image{
+    height: 400px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin: auto;
+}
+
 .home-page-recent-blogs-image{
     height: 120px;
     width: auto;
