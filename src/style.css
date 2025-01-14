@@ -649,12 +649,7 @@ table, th, td {
 
     /* Backgrounds */
     
-    .background-odd{
-        height: auto;
-        padding-bottom: 30px;
-    }
-
-    .background-even{
+    .auto-background{
         height: auto;
         padding-bottom: 30px;
     }
