@@ -390,7 +390,7 @@ table, th, td {
 #blog-sidebar{
     padding: 25px;
     border-radius: 25px;
-    margin-right: 100px;
+    margin-right: 60px;
     height: 70vh;
 }
 
@@ -420,6 +420,7 @@ table, th, td {
     border-style: solid;
     border-color: #a9d6e5;
     border-radius: 5px;
+    margin-left: 15px;
 }
 
 .sidebar-checkbox[type="checkbox"]:checked{
@@ -682,10 +683,24 @@ table, th, td {
         padding: 0;
     }
 
-    /*About page styling*/
+    /* About page styling */
 
     .about-page-heading{
         padding: 0;
         padding-top: 10px;
+    }
+
+    /* Blog Page styling */
+
+    #blog-sidebar{
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    .sidebar-recent-blog{
+        padding: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
