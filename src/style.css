@@ -342,12 +342,23 @@ table, th, td {
     padding-top: 10px;
 }
 
+.educational-history-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 30%);
+    width: 100%;
+}
+
+.educational-history-row{
+    width: 100%;
+}
+
 .educational-history-card{
     background-color: #003566;
     border-radius: 25px;
     padding-top: 15px;
     padding-bottom: 15px;
-
 }
 
 .educational-history-title{
