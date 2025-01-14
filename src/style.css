@@ -334,7 +334,7 @@ table, th, td {
 
 /* All The Styling For The About Page */
 
-.about-page-skills-section-heading{
+.about-page-heading{
     padding-top: 30px;
 }
 
@@ -680,5 +680,12 @@ table, th, td {
 
     #Home-Page-About-Me-Paragraph{
         padding: 0;
+    }
+
+    /*About page styling*/
+
+    .about-page-heading{
+        padding: 0;
+        padding-top: 10px;
     }
 }
