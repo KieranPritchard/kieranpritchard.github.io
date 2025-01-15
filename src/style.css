@@ -548,7 +548,7 @@ table, th, td {
     padding-bottom: 30px;
 }
 
-#hobbies-page-image{
+.hobbies-page-image{
     height: 200px;
     width: auto;
     margin-left: auto;
