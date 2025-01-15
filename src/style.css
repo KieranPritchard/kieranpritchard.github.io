@@ -109,15 +109,15 @@ body{
 /* Recent Project Card Styling */
 
 .recent-project-card{
-    margin-top: 40px;
+    margin-top: 5%;
     border-radius: 25px;
-    padding: 15px;
+    padding: 4%;
     box-shadow: 0px 0px 20px 1px #a9d6e5;
 }
 
 .recent-project-card-img-background{
     background-color: black;
-    padding: 40px;
+    padding: 10%;
 }
 
 .recent-project-card-img{
@@ -128,7 +128,7 @@ body{
 }
 
 .recent-project-card-title{
-    margin-top: 15px;
+    margin-top: 2.5%;
 }
 
 .recent-project-card-text{
@@ -137,7 +137,7 @@ body{
 
 .recent-project-card-button{
     width: 95%;
-    height: 50px;
+    height: 50px; /*Find fix for not using percentage.*/
     border-radius: 15px;
     border-style: solid;
     border-color: #a9d6e5;
