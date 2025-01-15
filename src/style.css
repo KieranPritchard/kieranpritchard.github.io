@@ -325,21 +325,21 @@ table, th, td {
 /* All The Styling For The Home Page */
 
 #Intro-Section-Paragraph{
-    padding-top: 20px;
+    padding-top: 2%;
 }
 
 #Home-Page-About-Me-Paragraph{
-    padding: 170px 0;
+    padding: 30% 0;
 }
 
 /* All The Styling For The About Page */
 
 .about-page-heading{
-    padding-top: 30px;
+    padding-top: 2.5%;
 }
 
 #about-page-skills-section-text{
-    padding-top: 10px;
+    padding-top: 1.5%;
 }
 
 .educational-history-section{
@@ -357,32 +357,32 @@ table, th, td {
 .educational-history-card{
     background-color: #003566;
     border-radius: 25px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 0.25%;
+    padding-bottom: 0.25%;
 }
 
 .educational-history-title{
-    margin-top: 5px;
-    margin-left: 10px;
+    margin-top: 0.5%;
+    margin-left: 1%;
 }
 
 .educational-history-date{
-    margin-left: 15px;
+    margin-left: 1.75%;
 }
 
 .educational-history-list{
-    margin-left: 20px;
+    margin-left: 2%;
 }
 
 .about-contact-me-list-item{
     list-style-type: none;
     font-size: 22px;
-    margin-bottom: 15px;
+    margin-bottom: 1.5%;
 }
 
 #about-contact-me-phone-icon,#about-contact-me-email-icon{
     font-size: 40px;
-    padding-right: 15px;
+    padding-right: 1.5%;
 }
 
 /* All The Styling For The Blog Page */
