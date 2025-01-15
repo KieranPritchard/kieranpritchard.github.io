@@ -616,6 +616,13 @@ table, th, td {
     width: auto;
 }
 
+.indivual-post-page-image{
+    height: 200px;
+    width: auto;
+    padding-left: auto;
+    padding-right: auto;
+}
+
 .blog-post-page-heading{
     text-align: left;
     margin-bottom: 30px;
