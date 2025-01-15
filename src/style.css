@@ -18,14 +18,14 @@
 /* Text Styling */
 
 h1{
-    padding-top: 175px;
+    padding-top: 35%;
     font-family: "Red Hat Display";
     text-align: center;
     color: #a9d6e5 !important;
 }
 
 h2{
-    padding-top: 30px;
+    padding-top: 2.5%;
     font-family: "Red Hat Display";
     text-align: center;
     color: #a9d6e5 !important;
@@ -82,14 +82,14 @@ body{
 .recent-blog-post{
     background-color: #003566;
     border-radius: 25px;
-    margin-top: 25px;
-    margin-bottom: 5px;
+    margin-top: 1.5%;
+    margin-bottom: 1%;
 }
 
 .recent-blog-post-title{
-    margin-top: 10px;
-    padding-top: 10px;
-    padding-bottom: 5px;
+    margin-top: 0.5%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
     color: #a9d6e5 !important;
 }
 
@@ -103,7 +103,7 @@ body{
 }
 
 .recent-blog-post-text{
-    padding-bottom: 15px;
+    padding-bottom: 1.5%;
 }
 
 /* Recent Project Card Styling */
