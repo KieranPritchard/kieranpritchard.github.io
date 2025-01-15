@@ -156,14 +156,14 @@ body{
 
 
 #contact-me-form{
-    margin-top: 40px;
+    margin-top: 4%;
 }
 
 #contact-me-form-your-email, #contact-me-form-email-subject{
     width: 100%;
-    height: 50px;
-    margin-top: 10px;
-    padding-left: 5px;
+    height: 50px; /* Go back to to figure out a way with % */
+    margin-top: 1.5%;
+    padding-left: 1%;
     background-color: #a9d6e5;
     border-style: none;
     border-radius: 15px;
@@ -171,32 +171,32 @@ body{
 
 #contact-me-form-email-body{
     width: 100%;
-    height: 200px;
-    margin-top: 10px;
-    padding-left: 5px;
+    height: 200px; /* Go back to to figure out a way with % */
+    margin-top: 1.5%;
+    padding-left: 1%;
     background-color: #a9d6e5;
     border-style: none;
     border-radius: 15px;
 }
 
 .contact-me-form-your-email::placeholder, .contact-me-form-email-subject::placeholder{
-    padding-left: 5px;
+    padding-left: 1%;
     font-family: "Source Code Pro";
 }
 
 .contact-me-form-email-body::placeholder{
-    padding-left: 5px;
+    padding-left: 1%;
     font-family: "Source Code Pro";
 }
 
 .btn-container{
-    margin-top: 40px;
+    margin-top: 5%;
     text-align: center;
 }
 
 .submit-btn{
     width: 50%;
-    padding: 10px 0;
+    padding: 1.5% 0;
     border-style: solid;
     border-width: 1px;
     border-color: #a9d6e5;
