@@ -544,7 +544,7 @@ table, th, td {
 /* All The Styling For The Hobbies Page */
 
 #hobbies-page-programming-section-title{
-    padding-bottom: 30px;
+    padding-bottom: 2.5%;
 }
 
 .hobbies-page-image{
@@ -555,7 +555,7 @@ table, th, td {
 }
 
 #hobbies-page-gaming-section-text, #hobbies-page-collecting-section-text{
-    padding-top: 150px;
+    padding: calc(100% - 50%) 0;
 }
 
 /* All The Styling For The Contact Page */
