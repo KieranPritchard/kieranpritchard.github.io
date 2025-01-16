@@ -388,10 +388,10 @@ table, th, td {
 /* All The Styling For The Blog Page */
 
 #blog-sidebar{
-    padding: 25px;
+    padding: 5%;
     border-radius: 25px;
-    margin-right: 60px;
-    height: 70vh;
+    margin-right: 15%;
+    height: auto;
 }
 
 .searchbar-container{
@@ -400,7 +400,7 @@ table, th, td {
 
 #blog-searchbar{
     width: 100%;
-    padding: 10px;
+    padding: 3.5%;
     border-radius: 25px;
     background-color: #a9d6e5;
     border-style: none;
@@ -408,7 +408,7 @@ table, th, td {
 
 .sidebar-title{
     text-align: left;
-    padding-top: 10px;
+    padding-top: 2.5%;
 }
 
 .sidebar-checkbox[type="checkbox"]{
@@ -420,7 +420,7 @@ table, th, td {
     border-style: solid;
     border-color: #a9d6e5;
     border-radius: 5px;
-    margin-left: 15px;
+    margin-left: 3%;
 }
 
 .sidebar-checkbox[type="checkbox"]:checked{
@@ -434,15 +434,15 @@ table, th, td {
 .sidebar-labels{
     color: white;
     font-family: "Source Code Pro" !important;
-    margin-top: 1px;
-    margin-left: 10px;
+    margin-top: 1%;
+    margin-left: 2.5%;
     position:relative;
     top: -6px;
 }
 
 .sidebar-recent-blog{
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
 }
 
 .sidebar-recent-blog-image{
@@ -452,7 +452,7 @@ table, th, td {
 }
 
 .sidebar-recent-blog-title{
-    margin-left: 15px;
+    margin-left: 2.5%;
     font-family: "Source Code Pro";
     text-decoration: none;
     color: white;
@@ -471,7 +471,7 @@ table, th, td {
 
 .blog-post{
     border-bottom: solid #a9d6e5;
-    padding-bottom: 30px;
+    padding: 3% 0;
 }
 
 .blog-post-image{
@@ -483,7 +483,6 @@ table, th, td {
 .blog-post-title{
     text-align: left;
     font-size: 25px;
-    padding-top: 20px;
 }
 
 .blog-post-title:hover{
