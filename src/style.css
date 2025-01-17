@@ -357,21 +357,20 @@ table, th, td {
 .educational-history-card{
     background-color: #003566;
     border-radius: 25px;
-    padding-top: 0.25%;
-    padding-bottom: 0.25%;
+    padding: 1%;
 }
 
 .educational-history-title{
     margin-top: 0.5%;
-    margin-left: 1%;
+    margin-left: 1.5%;
 }
 
 .educational-history-date{
-    margin-left: 1.75%;
+    margin-left: 3.5%;
 }
 
 .educational-history-list{
-    margin-left: 2%;
+    margin-left: 4%;
 }
 
 .about-contact-me-list-item{
