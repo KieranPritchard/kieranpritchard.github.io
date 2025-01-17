@@ -654,19 +654,19 @@ table, th, td {
     
     .auto-background{
         height: auto;
-        padding-bottom: 30px;
+        padding-bottom: 3%;
     }
 
     /* Blog post styling */
 
     .recent-blog-post-title{
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 4%;
+        margin-right: 4%;
     }
 
     .recent-blog-post-text{
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 4%;
+        margin-right: 4%;
     }
 
     /* Home page styling */
@@ -679,7 +679,7 @@ table, th, td {
 
     .about-page-heading{
         padding: 0;
-        padding-top: 10px;
+        padding-top: 2%;
     }
 
     /* Blog Page styling */
@@ -687,12 +687,12 @@ table, th, td {
     #blog-sidebar{
         width: 100%;
         height: auto;
-        margin-bottom: 40px;
+        margin-bottom: 5%;
     }
 
     .sidebar-recent-blog{
         padding: 0;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 1%;
+        padding-bottom: 1%;
     }
 }
