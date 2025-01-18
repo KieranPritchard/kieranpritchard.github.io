@@ -342,6 +342,7 @@ table, th, td {
 
 .about-page-heading{
     padding-top: 2.5%;
+    font-size: 1.25vw !important;
 }
 
 #about-page-skills-section-text{
@@ -369,19 +370,22 @@ table, th, td {
 .educational-history-title{
     margin-top: 0.5%;
     margin-left: 1.5%;
+    font-size: 1.25vw !important;
 }
 
 .educational-history-date{
     margin-left: 3.5%;
+    font-size: 1vw !important;
 }
 
 .educational-history-list{
+    font-size: 1vw !important;
     margin-left: 4%;
 }
 
 .about-contact-me-list-item{
     list-style-type: none;
-    font-size: 22px;
+    font-size: 1.5vw !important;
     margin-bottom: 1.5%;
 }
 
