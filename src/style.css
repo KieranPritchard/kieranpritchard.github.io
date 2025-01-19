@@ -447,6 +447,7 @@ table, th, td {
     margin-left: 2.5%;
     position:relative;
     top: -6px;
+    
 }
 
 .sidebar-recent-blog{
@@ -465,6 +466,7 @@ table, th, td {
     font-family: "Source Code Pro";
     text-decoration: none;
     color: white;
+    font-size: 0.85vw;
 }
 
 .sidebar-recent-blog-title:hover{
@@ -491,7 +493,7 @@ table, th, td {
 
 .blog-post-title{
     text-align: left;
-    font-size: 25px;
+    font-size: 1.30vw !important;
 }
 
 .blog-post-title:hover{
@@ -506,11 +508,11 @@ table, th, td {
 .blog-post-date{
     font-family: "Red Hat Display";
     color: #a9d6e5;
-    font-size: 15px;
+    font-size: 1vw !important;
 }
 
 .blog-post-description{
-    font-size: 16px;
+    font-size: 1vw !important;
 }
 
 /* All The Styling For The Projects Page */
