@@ -134,11 +134,11 @@ body{
 
 .recent-project-card-title{
     margin-top: 2.5%;
-    font-size: 1.25vw;
+    font-size: 1.45vw;
 }
 
 .recent-project-card-text{
-    font-size: 15px;
+    font-size: 0.85vw !important;
 }
 
 .recent-project-card-button{
@@ -519,7 +519,7 @@ table, th, td {
 
 #project-page-intro-section-text{
     padding-top: 1.5%;
-    font-size: 16px;
+    font-size: 1vw;
 }
 
 .project-page-project-card{
@@ -545,10 +545,12 @@ table, th, td {
 .project-page-project-card-title{
     padding-top: 5%;
     padding-bottom: 2.5%;
+    font-size: 1.35vw;
 }
 
 .project-page-project-card-text{
     color: #a9d6e5;
+    font-size: 0.85vw !important;
 }
 
 
