@@ -376,15 +376,23 @@ table, th, td {
     margin-left: 4%;
 }
 
-.about-contact-me-list-item{
-    list-style-type: none;
-    font-size: 1.5vw !important;
-    margin-bottom: 1.5%;
+#about-contact-page-list{
+    padding: 0% !important;
+    display: block;
+    text-align: center;
 }
 
-#about-contact-me-phone-icon,#about-contact-me-email-icon{
-    font-size: 40px;
-    padding-right: 1.5%;
+.about-contact-page-list-item{
+    list-style-type: none;
+    padding-right: 0% !important;
+    margin-left: -10.5% !important;
+    margin-bottom: 3.5%;
+    font-size: 1.25vw;
+}
+
+.about-contact-page-icon-background{
+    margin-right: 2.5%;
+    font-size: 1.5vw;
 }
 
 /* All The Styling For The Blog Page */
