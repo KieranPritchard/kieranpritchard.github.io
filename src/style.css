@@ -51,7 +51,7 @@ ul{
 }
 
 p{
-    font-size: 1vw !important;
+    font-size: 1.25vw !important;
     font-family: "Source Code Pro";
     color: white;
 }
@@ -108,6 +108,7 @@ body{
 
 .recent-blog-post-text{
     padding-bottom: 1.5%;
+    padding-right: 1.5%;
     font-size: 1vw !important;
 }
 
@@ -342,7 +343,7 @@ table, th, td {
 
 .about-page-heading{
     padding-top: 2.5%;
-    font-size: 1.25vw !important;
+    font-size: 1.5vw !important;
 }
 
 #about-page-skills-section-text{
@@ -557,10 +558,6 @@ table, th, td {
     width: auto;
     margin-left: auto;
     margin-right: auto;
-}
-
-#hobbies-page-gaming-section-text, #hobbies-page-collecting-section-text{
-    padding: calc(100% - 50%) 0;
 }
 
 /* All The Styling For The Contact Page */
