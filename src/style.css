@@ -651,11 +651,11 @@ table, th, td {
     }
 
     h2{
-        font-size: 4vw !important;
+        font-size: 4.5vw !important;
     }
 
     p{
-        font-size: 2.25vw !important;
+        font-size: 2.75vw !important;
     }
 
     /* Reuseable element styling */
@@ -679,23 +679,23 @@ table, th, td {
     .recent-blog-post-title{
         margin-left: 4%;
         margin-right: 4%;
-        font-size: 2.5vw !important;
+        font-size: 4.5vw !important;
     }
 
     .recent-blog-post-text{
         margin-left: 4%;
         margin-right: 4%;
-        font-size: 1.7vw !important;
+        font-size: 2.4vw !important;
     }
 
     /* Recent Project Card Styling */
 
     .recent-project-card-title{
-        font-size: 2.9vw !important;
+        font-size: 3.8vw !important;
     }
 
     .recent-project-card-text{
-        font-size: 1.7vw !important;
+        font-size: 2.4vw !important;
     }
 
     /* Home page styling */
