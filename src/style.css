@@ -37,7 +37,7 @@ h3{
     color: #a9d6e5 !important;
     text-align: center;
     font-family: "Red Hat Display";
-    font-size: 20px !important;
+    font-size: 1.75vw !important;
 }
 
 h5{
@@ -593,14 +593,14 @@ table, th, td {
 
 .indivual-post-page-date{
     margin: 0;
-    margin-top: 1.5%;
-    font-size: 15px;
+    margin: 1.5% 0;
+    font-size: 1.5vw!important;
     font-family: "Red Hat Display";
     color: #a9d6e5;
 }
 
 .indivual-post-page-topics{
-    font-size: 15px;
+    font-size: 1.25vw !important;
     color: #a9d6e5;
     position: relative;
     top: 5px;
@@ -609,7 +609,7 @@ table, th, td {
 }
 
 .indivual-post-page-header-image-background{
-    height: 200px;
+    height: 20vh;
     background-color: white;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -644,7 +644,15 @@ table, th, td {
 @media screen and (max-width: 576px) {
     /* Text heading */
     h1{
-        padding: 0;
+        font-size: 6vw !important;
+    }
+
+    h2{
+        font-size: 4.5vw !important;
+    }
+
+    p{
+        font-size: 2.75vw !important;
     }
 
     /* Reuseable element styling */
@@ -668,11 +676,23 @@ table, th, td {
     .recent-blog-post-title{
         margin-left: 4%;
         margin-right: 4%;
+        font-size: 4.5vw !important;
     }
 
     .recent-blog-post-text{
         margin-left: 4%;
         margin-right: 4%;
+        font-size: 2.4vw !important;
+    }
+
+    /* Recent Project Card Styling */
+
+    .recent-project-card-title{
+        font-size: 3.8vw !important;
+    }
+
+    .recent-project-card-text{
+        font-size: 2.4vw !important;
     }
 
     /* Home page styling */
