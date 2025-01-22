@@ -679,11 +679,23 @@ table, th, td {
     .recent-blog-post-title{
         margin-left: 4%;
         margin-right: 4%;
+        font-size: 2.5vw !important;
     }
 
     .recent-blog-post-text{
         margin-left: 4%;
         margin-right: 4%;
+        font-size: 1.7vw !important;
+    }
+
+    /* Recent Project Card Styling */
+
+    .recent-project-card-title{
+        font-size: 2.9vw !important;
+    }
+
+    .recent-project-card-text{
+        font-size: 1.7vw !important;
     }
 
     /* Home page styling */
