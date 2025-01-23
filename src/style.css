@@ -774,4 +774,14 @@ table, th, td {
     .blog-post-description{
         font-size: 2vw !important;
     }
+
+    /* Project Page Styling*/
+
+    .project-page-project-card-title{
+        font-size: 3.4vw !important;
+    }
+
+    .project-page-project-card-text{
+        font-size: 2.4vw !important;
+    }
 }
