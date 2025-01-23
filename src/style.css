@@ -808,4 +808,14 @@ table, th, td {
     #contact-page-button{
         font-size: 2.75vw;
     }
+
+    /* Indivual Post Pages Styling */
+    .indivual-post-page-date{
+        font-size: 3vw!important;
+    }
+    
+    .indivual-post-page-topics{
+        font-size: 2.5vw !important;
+        margin-bottom: 5% !important;
+    }
 }
