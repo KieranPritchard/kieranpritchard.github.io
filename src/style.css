@@ -754,4 +754,20 @@ table, th, td {
         padding-top: 1%;
         padding-bottom: 1%;
     }
+
+    .sidebar-title{
+        font-size: 2.75vw !important;
+    }
+
+    .blog-post-title{
+        font-size: 3.6vw !important;
+    }
+
+    .blog-post-date{
+        font-size: 2vw !important;
+    }
+
+    .blog-post-description{
+        font-size: 2vw !important;
+    }
 }
