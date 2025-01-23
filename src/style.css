@@ -100,6 +100,7 @@ body{
 .recent-blog-post-title-link{
     color: #a9d6e5;
     text-decoration: none;
+    transition: ease 0.5s;
 }
 
 .recent-blog-post-title-link:hover{
@@ -152,6 +153,7 @@ body{
     border-width: 1px;
     font-family: "Source Code Pro";
     background-color: transparent;
+    transition: ease 0.25s;
 }
 
 .recent-project-card-button:hover{
@@ -209,6 +211,7 @@ body{
     border-radius: 25px;
     color: #a9d6e5;
     background-color: transparent;
+    transition: ease 0.25s;
 }
 
 .submit-btn:hover{
