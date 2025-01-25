@@ -4,14 +4,16 @@ function recentBlogContentLoad(blogPostNum){
         case 1:
             // Switches image tag attributes around on first image.
             const blogImageOne = document.getElementById("recent-blog-image-1");
-            blogImageOne.src = "";
-            blogImageOne.alt = "working";
+            blogImageOne.src =;
+            blogImageOne.alt =;
             // Changes the title and link of blog post 1
-            const blogTitleOne = document.getElementById("blog-post-title-link-1");
-            blogTitleOne.innerHTML="Working"
+            const blogTitleLinkOne = document.getElementById("blog-post-title-link-1");
+            const blogTitleOne = document.getElementById("blog-post-title-1");
+            blogTitleLinkOne.href=;
+            blogTitleLinkOne.innerHTML=;
             // Changes the descript of blog post 1
             const blogTextOne = document.getElementById("blog-post-text-1");
-            blogTextOne.innerHTML = "working"      
+            blogTextOne.innerHTML =;      
             break;
     
         default:
