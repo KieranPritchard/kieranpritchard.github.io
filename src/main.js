@@ -10,7 +10,7 @@ function recentBlogContentLoad(blogPostNum){
             const blogTitleLinkOne = document.getElementById("blog-post-title-link-1");
             const blogTitleOne = document.getElementById("blog-post-title-1");
             blogTitleLinkOne.href=;
-            blogTitleLinkOne.innerHTML=;
+            blogTitleOne.innerHTML=;
             // Changes the descript of blog post 1
             const blogTextOne = document.getElementById("blog-post-text-1");
             blogTextOne.innerHTML =;      
@@ -24,11 +24,24 @@ function recentBlogContentLoad(blogPostNum){
             const blogTitleLinkTwo = document.getElementById("blog-post-title-link-2");
             const blogTitleTwo = document.getElementById("blog-post-title-2");
             blogTitleLinkTwo.href=;
-            blogTitleLinkTwo.innerHTML=;
+            blogTitleTwo.innerHTML=;
             // Changes the descript of blog post 2
             const blogTextTwo = document.getElementById("blog-post-text-2");
             blogTextTwo.innerHTML =;  
             break;
+        case 3:
+            // Switches image tag attributes around on second image.
+            const blogImageThree = document.getElementById("recent-blog-image-2");
+            blogImageThree.src =;
+            blogImageThree.alt =;
+            // Changes the title and link of blog post 2
+            const blogTitleLinkThree = document.getElementById("blog-post-title-link-2");
+            const blogTitleThree = document.getElementById("blog-post-title-2");
+            blogTitleLinkThree.href=;
+            blogTitleThree.innerHTML=;
+            // Changes the descript of blog post 2
+            const blogTextThree = document.getElementById("blog-post-text-2");
+            blogTextThree.innerHTML =;
         default:
             break;
     }
