@@ -1,5 +1,23 @@
-
-
+function recentBlogContentLoad(blogPostNum){
+    // Switch statement to load different posts
+    switch (blogPostNum) {
+        case 1:
+            // Switches image tag attributes around on first image.
+            const blogImageOne = document.getElementById("recent-blog-image-1");
+            blogImageOne.src = "";
+            blogImageOne.alt = "working";
+            // Changes the title and link of blog post 1
+            const blogTitleOne = document.getElementById("blog-post-title-link-1");
+            blogTitleOne.innerHTML="Working"
+            // Changes the descript of blog post 1
+            const blogTextOne = document.getElementById("blog-post-text-1");
+            blogTextOne.innerHTML = "working"      
+            break;
+    
+        default:
+            break;
+    }
+}
 // Function to search through blogs
 
 function blogSearch(){
