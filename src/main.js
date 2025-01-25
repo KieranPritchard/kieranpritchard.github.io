@@ -15,7 +15,20 @@ function recentBlogContentLoad(blogPostNum){
             const blogTextOne = document.getElementById("blog-post-text-1");
             blogTextOne.innerHTML =;      
             break;
-    
+        case 2:
+            // Switches image tag attributes around on second image.
+            const blogImageTwo = document.getElementById("recent-blog-image-2");
+            blogImageTwo.src =;
+            blogImageTwo.alt =;
+            // Changes the title and link of blog post 2
+            const blogTitleLinkTwo = document.getElementById("blog-post-title-link-2");
+            const blogTitleTwo = document.getElementById("blog-post-title-2");
+            blogTitleLinkTwo.href=;
+            blogTitleLinkTwo.innerHTML=;
+            // Changes the descript of blog post 2
+            const blogTextTwo = document.getElementById("blog-post-text-2");
+            blogTextTwo.innerHTML =;  
+            break;
         default:
             break;
     }
