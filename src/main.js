@@ -4,44 +4,44 @@ function recentBlogContentLoad(blogPostNum){
         case 1:
             // Switches image tag attributes around on first image.
             const blogImageOne = document.getElementById("recent-blog-image-1");
-            blogImageOne.src =;
-            blogImageOne.alt =;
+            blogImageOne.src ="";
+            blogImageOne.alt ="";
             // Changes the title and link of blog post 1
             const blogTitleLinkOne = document.getElementById("blog-post-title-link-1");
             const blogTitleOne = document.getElementById("blog-post-title-1");
-            blogTitleLinkOne.href=;
-            blogTitleOne.innerHTML=;
+            blogTitleLinkOne.href="";
+            blogTitleOne.innerHTML="";
             // Changes the descript of blog post 1
             const blogTextOne = document.getElementById("blog-post-text-1");
-            blogTextOne.innerHTML =;      
+            blogTextOne.innerHTML ="";      
             break;
         case 2:
             // Switches image tag attributes around on second image.
             const blogImageTwo = document.getElementById("recent-blog-image-2");
-            blogImageTwo.src =;
-            blogImageTwo.alt =;
+            blogImageTwo.src ="";
+            blogImageTwo.alt ="";
             // Changes the title and link of blog post 2
             const blogTitleLinkTwo = document.getElementById("blog-post-title-link-2");
             const blogTitleTwo = document.getElementById("blog-post-title-2");
-            blogTitleLinkTwo.href=;
-            blogTitleTwo.innerHTML=;
+            blogTitleLinkTwo.href="";
+            blogTitleTwo.innerHTML="";
             // Changes the descript of blog post 2
             const blogTextTwo = document.getElementById("blog-post-text-2");
-            blogTextTwo.innerHTML =;  
+            blogTextTwo.innerHTML ="";  
             break;
         case 3:
             // Switches image tag attributes around on second image.
             const blogImageThree = document.getElementById("recent-blog-image-2");
-            blogImageThree.src =;
-            blogImageThree.alt =;
+            blogImageThree.src ="";
+            blogImageThree.alt ="";
             // Changes the title and link of blog post 2
             const blogTitleLinkThree = document.getElementById("blog-post-title-link-2");
             const blogTitleThree = document.getElementById("blog-post-title-2");
-            blogTitleLinkThree.href=;
-            blogTitleThree.innerHTML=;
+            blogTitleLinkThree.href="";
+            blogTitleThree.innerHTML="";
             // Changes the descript of blog post 2
             const blogTextThree = document.getElementById("blog-post-text-2");
-            blogTextThree.innerHTML =;
+            blogTextThree.innerHTML ="";
         default:
             break;
     }
@@ -56,7 +56,7 @@ function recentProjectContentLoad(projectPostNum){
             projectPostImageOne.style="colour: black;"
             projectPostImageOne.src="";
             projectPostImageOne.alt="";
-            
+
             break;
         case 2:
             
