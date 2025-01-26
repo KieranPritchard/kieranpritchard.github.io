@@ -48,7 +48,20 @@ function recentBlogContentLoad(blogPostNum){
 }
 
 function recentProjectContentLoad(projectPostNum){
-    
+    // Switch to load the different content
+    switch (projectPostNum) {
+        case 1:
+            
+            break;
+        case 2:
+            
+            break;
+        case 3:
+
+            break;
+        default:
+            break;
+    }
 }
 
 // Function to search through blogs
