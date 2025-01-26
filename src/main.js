@@ -51,6 +51,11 @@ function recentProjectContentLoad(projectPostNum){
     // Switch to load the different content
     switch (projectPostNum) {
         case 1:
+            // Changes image attributes around.
+            const projectPostImageOne = getElementById("recent-project-card-img-1")
+            projectPostImageOne.style="colour: black;"
+            projectPostImageOne.src="";
+            projectPostImageOne.alt="";
             
             break;
         case 2:
