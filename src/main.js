@@ -46,6 +46,11 @@ function recentBlogContentLoad(blogPostNum){
             break;
     }
 }
+
+function recentProjectContentLoad(projectPostNum){
+    
+}
+
 // Function to search through blogs
 
 function blogSearch(){
