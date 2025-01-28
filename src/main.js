@@ -1,3 +1,4 @@
+// Function to load recent blog content.
 function recentBlogContentLoad(blogPostNum){
     // Switch statement to load different posts
     switch (blogPostNum) {
@@ -47,6 +48,7 @@ function recentBlogContentLoad(blogPostNum){
     }
 }
 
+// Function to load recent project cards
 function recentProjectContentLoad(projectPostNum){
     // Switch to load the different content
     switch (projectPostNum) {
