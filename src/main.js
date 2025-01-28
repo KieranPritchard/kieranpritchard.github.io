@@ -51,12 +51,20 @@ function recentProjectContentLoad(projectPostNum){
     // Switch to load the different content
     switch (projectPostNum) {
         case 1:
-            // Changes image attributes around.
+            // Changes image attributes around on image one.
             const projectPostImageOne = getElementById("recent-project-card-img-1")
             projectPostImageOne.style="colour: black;"
             projectPostImageOne.src="";
             projectPostImageOne.alt="";
-
+            // Changes title on blog one.
+            const projectPostTitleOne = getElementById("recent-project-card-title-1");
+            projectPostTitleOne.innerHTML="";
+            // Changes description on blog one.
+            const projectPostDescriptionOne = getElementById("recent-project-card-text-1")
+            projectPostDescriptionOne.innerHTML="";
+            // Changes button link on blog one.
+            const projectPostButtonOne = getElementById("recent-project-card-button-1")
+            projectPostButtonOne.onclick="window.open('')"
             break;
         case 2:
             
