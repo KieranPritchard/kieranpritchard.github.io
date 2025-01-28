@@ -67,7 +67,20 @@ function recentProjectContentLoad(projectPostNum){
             projectPostButtonOne.onclick="window.open('')"
             break;
         case 2:
-            
+            // Changes image attributes around on image two.
+            const projectPostImageTwo = getElementById("recent-project-card-img-1")
+            projectPostImageTwo.style="colour: black;"
+            projectPostImageTwo.src="";
+            projectPostImageTwo.alt="";
+            // Changes title on blog two.
+            const projectPostTitleTwo = getElementById("recent-project-card-title-1");
+            projectPostTitleTwo.innerHTML="";
+            // Changes description on blog two.
+            const projectPostDescriptionTwo = getElementById("recent-project-card-text-1")
+            projectPostDescriptionTwo.innerHTML="";
+            // Changes button link on blog two.
+            const projectPostButtonTwo = getElementById("recent-project-card-button-1")
+            projectPostButtonTwo.onclick="window.open('')"
             break;
         case 3:
 
