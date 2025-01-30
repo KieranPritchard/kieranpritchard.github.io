@@ -151,3 +151,8 @@ function blogFilter(filterTopic) {
         });
     }
 }
+
+// Function executes all functions to be loaded
+function websiteLoadFunctions(){
+    
+}
