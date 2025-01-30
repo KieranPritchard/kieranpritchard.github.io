@@ -158,4 +158,8 @@ function websiteLoadFunctions(){
     recentBlogContentLoad(1)
     recentBlogContentLoad(2)
     recentBlogContentLoad(3)
+    // Loads all the recent project post contents for home page and projects page.
+    recentProjectContentLoad(1)
+    recentProjectContentLoad(2)
+    recentProjectContentLoad(3)
 }
