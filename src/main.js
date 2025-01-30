@@ -106,7 +106,6 @@ function recentProjectContentLoad(projectPostNum){
 }
 
 // Function to search through blogs
-
 function blogSearch(){
     // Variables for function
     let input = document.getElementById('blog-searchbar');
@@ -126,6 +125,7 @@ function blogSearch(){
     }
 }
 
+// Function Filters blogs based on what class the list item is.
 function blogFilter(filterTopic) {
     // Accesses all blog posts on page.
     const blogPosts = document.querySelectorAll('#blog-list li');
