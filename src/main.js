@@ -154,5 +154,8 @@ function blogFilter(filterTopic) {
 
 // Function executes all functions to be loaded
 function websiteLoadFunctions(){
-    
+    // Loads all the recent blog post contents for home page.
+    recentBlogContentLoad(1)
+    recentBlogContentLoad(2)
+    recentBlogContentLoad(3)
 }
