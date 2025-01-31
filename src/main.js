@@ -105,6 +105,11 @@ function recentProjectContentLoad(projectPostNum){
     }
 }
 
+//Function to resize email message box based on view width
+function emailMessageBoxResize(){
+
+}
+
 // Function to search through blogs
 function blogSearch(){
     // Variables for function
