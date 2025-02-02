@@ -107,7 +107,14 @@ function recentProjectContentLoad(projectPostNum){
 
 //Function to resize email message box based on view width
 function emailMessageBoxResize(){
+    const windowSize = window.innerWidth;
 
+    // if statement to change row numbers based on height
+    if(){
+
+    } else{
+        
+    }
 }
 
 // Function to search through blogs
