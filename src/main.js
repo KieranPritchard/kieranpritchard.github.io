@@ -173,6 +173,11 @@ function blogFilter(filterTopic) {
     }
 }
 
+// Function sends email via users client
+function sendEmailMessage(){
+    
+}
+
 // Function executes all functions to be loaded
 function websiteLoadFunctions(){
     // Loads all the recent blog post contents for home page.
