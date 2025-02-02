@@ -108,12 +108,21 @@ function recentProjectContentLoad(projectPostNum){
 //Function to resize email message box based on view width
 function emailMessageBoxResize(){
     const windowSize = window.innerWidth;
+    const contactMessageForm = getElementById("contact-me-form-email-body");
 
     // if statement to change row numbers based on height
-    if(){
+    if( windowSize < 576){
 
-    } else{
-        
+    } else if(windowSize >= 576){
+
+    }else if(windowSize >= 768){
+
+    }else if(windowSize >= 992){
+
+    }else if(windowSize >= 1200){
+
+    }else if(windowSize >= 1400){
+
     }
 }
 
