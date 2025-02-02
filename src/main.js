@@ -112,17 +112,17 @@ function emailMessageBoxResize(){
 
     // if statement to change row numbers based on height
     if( windowSize < 576){
-
+        contactMessageForm.rows="15"
     } else if(windowSize >= 576){
-
+        contactMessageForm.rows="15"
     }else if(windowSize >= 768){
-
+        contactMessageForm.rows="10"
     }else if(windowSize >= 992){
-
+        contactMessageForm.rows="15"
     }else if(windowSize >= 1200){
-
+        contactMessageForm.rows="15"
     }else if(windowSize >= 1400){
-
+        contactMessageForm.rows="15"
     }
 }
 
