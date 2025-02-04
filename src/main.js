@@ -175,7 +175,13 @@ function blogFilter(filterTopic) {
 
 // Function sends email via users client
 function sendEmailMessage(){
+    // Accesses the values of each field to send email.
+    const sendFromEmailAddress = getElementById().value
+    const sendEmailSubject = getElementById().value
+    const sendEmailBody = getElementById().value
     
+    // Opens the emails client for user to send
+    document.location.href = "mailto:KieranPritchard06@gmail.com?subject=" + encodeURIComponent(sendEmailSubject) + "&body=" + encodeURIComponent("Email Send From: " + sendFromEmailAddress + "%0A") + encodeURIComponent(sendEmailBody)
 }
 
 // Function executes all functions to be loaded
