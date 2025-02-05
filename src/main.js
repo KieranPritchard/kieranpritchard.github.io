@@ -110,7 +110,7 @@ function emailMessageBoxResize(){
     const windowSize = window.innerWidth;
     const contactMessageForm = getElementById("contact-me-form-email-body");
 
-    // if statement to change row numbers based on height
+    // if statement to change row numbers based on height in pixels
     if( windowSize < 576){
         contactMessageForm.rows="15"
     } else if(windowSize >= 576){
@@ -125,6 +125,8 @@ function emailMessageBoxResize(){
         contactMessageForm.rows="15"
     }
 }
+
+window.addEventListener("resize", emailMessageBoxResize())
 
 // Function to search through blogs
 function blogSearch(){
