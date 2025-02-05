@@ -32,16 +32,16 @@ function recentBlogContentLoad(blogPostNum){
             break;
         case 3:
             // Switches image tag attributes around on second image.
-            const blogImageThree = document.getElementById("recent-blog-image-2");
+            const blogImageThree = document.getElementById("recent-blog-image-3");
             blogImageThree.src ="";
             blogImageThree.alt ="";
             // Changes the title and link of blog post 2
-            const blogTitleLinkThree = document.getElementById("blog-post-title-link-2");
-            const blogTitleThree = document.getElementById("blog-post-title-2");
+            const blogTitleLinkThree = document.getElementById("blog-post-title-link-3");
+            const blogTitleThree = document.getElementById("blog-post-title-3");
             blogTitleLinkThree.href="";
             blogTitleThree.innerHTML="";
             // Changes the descript of blog post 2
-            const blogTextThree = document.getElementById("blog-post-text-2");
+            const blogTextThree = document.getElementById("blog-post-text-3");
             blogTextThree.innerHTML ="";
         default:
             break;
