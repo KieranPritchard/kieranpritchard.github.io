@@ -54,51 +54,51 @@ function recentProjectContentLoad(projectPostNum){
     switch (projectPostNum) {
         case 1:
             // Changes image attributes around on image one.
-            const projectPostImageOne = getElementById("recent-project-card-img-1")
+            const projectPostImageOne = document.getElementById("recent-project-card-img-1")
             projectPostImageOne.style="colour: black;"
             projectPostImageOne.src="";
             projectPostImageOne.alt="";
             // Changes title on blog one.
-            const projectPostTitleOne = getElementById("recent-project-card-title-1");
+            const projectPostTitleOne = document.getElementById("recent-project-card-title-1");
             projectPostTitleOne.innerHTML="";
             // Changes description on blog one.
-            const projectPostDescriptionOne = getElementById("recent-project-card-text-1")
+            const projectPostDescriptionOne = document.getElementById("recent-project-card-text-1")
             projectPostDescriptionOne.innerHTML="";
             // Changes button link on blog one.
-            const projectPostButtonOne = getElementById("recent-project-card-button-1")
+            const projectPostButtonOne = document.getElementById("recent-project-card-button-1")
             projectPostButtonOne.onclick="window.open('')"
             break;
         case 2:
             // Changes image attributes around on image two.
-            const projectPostImageTwo = getElementById("recent-project-card-img-2")
+            const projectPostImageTwo = document.getElementById("recent-project-card-img-2")
             projectPostImageTwo.style="colour: black;"
             projectPostImageTwo.src="";
             projectPostImageTwo.alt="";
             // Changes title on blog two.
-            const projectPostTitleTwo = getElementById("recent-project-card-title-2");
+            const projectPostTitleTwo = document.getElementById("recent-project-card-title-2");
             projectPostTitleTwo.innerHTML="";
             // Changes description on blog two.
-            const projectPostDescriptionTwo = getElementById("recent-project-card-text-2")
+            const projectPostDescriptionTwo = document.getElementById("recent-project-card-text-2")
             projectPostDescriptionTwo.innerHTML="";
             // Changes button link on blog two.
-            const projectPostButtonTwo = getElementById("recent-project-card-button-2")
+            const projectPostButtonTwo = document.getElementById("recent-project-card-button-2")
             projectPostButtonTwo.onclick="window.open('')"
             break;
         case 3:
-            // Changes image attributes around on image two.
-            const projectPostImageThree = getElementById("recent-project-card-img-3")
+            // Changes image attributes around on image three.
+            const projectPostImageThree = document.getElementById("recent-project-card-img-3")
             projectPostImageThree.style="colour: black;"
             projectPostImageThree.src="";
             projectPostImageThree.alt="";
-            // Changes title on blog two.
-            const projectPostTitleThree = getElementById("recent-project-card-title-3");
+            // Changes title on blog three.
+            const projectPostTitleThree = document.getElementById("recent-project-card-title-3");
             projectPostTitleThree.innerHTML="";
-            // Changes description on blog two.
-            const projectPostDescriptionThree = getElementById("recent-project-card-text-3")
+            // Changes description on blog three.
+            const projectPostDescriptionThree = document.getElementById("recent-project-card-text-3")
             projectPostDescriptionThree.innerHTML="";
-            // Changes button link on blog two.
-            const projectPostButtonThree = getElementById("recent-project-card-button-3")
-            projectPostButtonThree.onclick="window.open('')"
+            // Changes button link on blog three.
+            const projectPostButtonThree = document.getElementById("recent-project-card-button-3")
+            projectPostButtonThree.onclick="window.open('')";
             break;
         default:
             break;
