@@ -108,7 +108,7 @@ function recentProjectContentLoad(projectPostNum){
 //Function to resize email message box based on view width
 function emailMessageBoxResize(){
     const windowSize = window.innerWidth;
-    const contactMessageForm = getElementById("contact-me-form-email-body");
+    const contactMessageForm = document.getElementById("contact-me-form-email-body");
 
     // if statement to change row numbers based on height in pixels
     if( windowSize < 576){
@@ -178,9 +178,9 @@ function blogFilter(filterTopic) {
 // Function sends email via users client
 function sendEmailMessage(){
     // Accesses the values of each field to send email.
-    const sendFromEmailAddress = getElementById().value
-    const sendEmailSubject = getElementById().value
-    const sendEmailBody = getElementById().value
+    const sendFromEmailAddress = document.getElementById().value
+    const sendEmailSubject = document.getElementById().value
+    const sendEmailBody = document.getElementById().value
     
     // Opens the emails client for user to send
     document.location.href = "mailto:KieranPritchard06@gmail.com?subject=" + encodeURIComponent(sendEmailSubject) + "&body=" + encodeURIComponent("Email Send From: " + sendFromEmailAddress + "%0A") + encodeURIComponent(sendEmailBody)
