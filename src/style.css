@@ -50,6 +50,11 @@ ul{
     color: white;
 }
 
+li{
+    font-family: "Source Code Pro";
+    font-size: 1vw;
+}
+
 p{
     font-size: 1.25vw !important;
     font-family: "Source Code Pro";
