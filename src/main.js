@@ -53,52 +53,89 @@ function recentProjectContentLoad(projectPostNum){
     // Switch to load the different content
     switch (projectPostNum) {
         case 1:
-            // Changes image attributes around on image one.
-            const projectPostImageOne = document.getElementById("recent-project-card-img-1")
-            projectPostImageOne.style="colour: black;"
-            projectPostImageOne.src="";
-            projectPostImageOne.alt="";
-            // Changes title on blog one.
-            const projectPostTitleOne = document.getElementById("recent-project-card-title-1");
-            projectPostTitleOne.innerHTML="";
+            // Accesses project post one elements
+            const projectPostImageOne = document.getElementsByClassName("recent-project-card-img-1");
+            const projectPostTitleOne = document.getElementsByClassName("recent-project-card-title-1");
+            const projectPostDescriptionOne = document.getElementsByClassName("recent-project-card-text-1");
+            const projectPostButtonOne = document.getElementsByClassName("recent-project-card-button-1");
+            
+            // Changes image settings on project post one
+            for(let i = 0; i < projectPostImageOne.length; i++){
+                projectPostImageOne[i].style="colour: black;";
+                projectPostImageOne[i].src="";
+                projectPostImageOne[i].alt="";
+            }
+
+            // Changes title on project post one.
+            for(let i = 0; i < projectPostTitleOne.length; i++){
+                projectPostTitleOne[i].innerHTML="";
+            }
+            
             // Changes description on blog one.
-            const projectPostDescriptionOne = document.getElementById("recent-project-card-text-1")
-            projectPostDescriptionOne.innerHTML="";
+            for(let i = 0; i < projectPostDescriptionOne.length; i++){
+                projectPostDescriptionOne[i].innerHTML="";
+            }
+            
             // Changes button link on blog one.
-            const projectPostButtonOne = document.getElementById("recent-project-card-button-1")
-            projectPostButtonOne.onclick="window.open('')"
+            for(let i = 0; i < projectPostButtonOne.length; i++){
+                projectPostButtonOne.onclick="window.open('')"
+            }
             break;
         case 2:
-            // Changes image attributes around on image two.
-            const projectPostImageTwo = document.getElementById("recent-project-card-img-2")
-            projectPostImageTwo.style="colour: black;"
-            projectPostImageTwo.src="";
-            projectPostImageTwo.alt="";
-            // Changes title on blog two.
-            const projectPostTitleTwo = document.getElementById("recent-project-card-title-2");
-            projectPostTitleTwo.innerHTML="";
-            // Changes description on blog two.
-            const projectPostDescriptionTwo = document.getElementById("recent-project-card-text-2")
-            projectPostDescriptionTwo.innerHTML="";
-            // Changes button link on blog two.
-            const projectPostButtonTwo = document.getElementById("recent-project-card-button-2")
-            projectPostButtonTwo.onclick="window.open('')"
+            // Accesses project two posts elements.
+            const projectPostImageTwo = document.getElementsByClassName("recent-project-card-img-2")
+            const projectPostTitleTwo = document.getElementsByClassName("recent-project-card-title-2");
+            const projectPostDescriptionTwo = document.getElementsByClassName("recent-project-card-text-2")
+            const projectPostButtonTwo = document.getElementsByClassName("recent-project-card-button-2")
+
+            // Changes image settings on project post two
+            for(let i = 0; i < projectPostImageTwo.length; i++){
+                projectPostImageTwo[i].style="colour: black;"
+                projectPostImageTwo[i].src="";
+                projectPostImageTwo[i].alt="";
+            }
+            
+            // Changes title on project post two.
+            for(let i = 0; i < projectPostTitleTwo.length; i++){
+                projectPostTitleTwo[i].innerHTML="";
+            }
+            
+            // Changes description on project post two.
+            for(let i = 0; i < projectPostDescriptionTwo.length; i++){
+                projectPostDescriptionTwo[i].innerHTML="";
+            }
+            
+            // Changes button link on project post two.
+            for(let i = 0; i < projectPostButtonTwo.length; i++){
+                projectPostButtonTwo[i].onclick="window.open('')"
+            }
             break;
         case 3:
-            // Changes image attributes around on image three.
-            const projectPostImageThree = document.getElementById("recent-project-card-img-3")
-            projectPostImageThree.style="colour: black;"
-            projectPostImageThree.src="";
-            projectPostImageThree.alt="";
+            const projectPostImageThree = document.getElementsByClassName("recent-project-card-img-3")
+            const projectPostTitleThree = document.getElementsByClassName("recent-project-card-title-3");
+            const projectPostDescriptionThree = document.getElementsByClassName("recent-project-card-text-3")
+            const projectPostButtonThree = document.getElementsByClassName("recent-project-card-button-3")
+
+            // Changes image settings on project post three
+            for(let i = 0; projectPostImageThree.length; i++){
+                projectPostImageThree[i].style="colour: black;"
+                projectPostImageThree[i].src="";
+                projectPostImageThree[i].alt="";
+            }
+            
             // Changes title on blog three.
-            const projectPostTitleThree = document.getElementById("recent-project-card-title-3");
-            projectPostTitleThree.innerHTML="";
+            for(let i = 0; projectPostTitleThree.length; i++){
+                projectPostTitleThree[i].innerHTML="";
+            }
             // Changes description on blog three.
-            const projectPostDescriptionThree = document.getElementById("recent-project-card-text-3")
-            projectPostDescriptionThree.innerHTML="";
+            for(let i = 0; projectPostDescriptionThree.length; i++){
+                projectPostDescriptionThree[i].innerHTML="";
+            }
+            
             // Changes button link on blog three.
-            const projectPostButtonThree = document.getElementById("recent-project-card-button-3")
-            projectPostButtonThree.onclick="window.open('')";
+            for(let i = 0; projectPostButtonThree.length; i++){
+                projectPostButtonThree[i].onclick="window.open('')";
+            }
             break;
         default:
             break;
