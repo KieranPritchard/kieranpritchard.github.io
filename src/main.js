@@ -117,23 +117,23 @@ function recentProjectContentLoad(projectPostNum){
             const projectPostButtonThree = document.getElementsByClassName("recent-project-card-button-3")
 
             // Changes image settings on project post three
-            for(let i = 0; projectPostImageThree.length; i++){
+            for(let i = 0; i < projectPostImageThree.length; i++){
                 projectPostImageThree[i].style="colour: black;"
                 projectPostImageThree[i].src="";
                 projectPostImageThree[i].alt="";
             }
             
             // Changes title on blog three.
-            for(let i = 0; projectPostTitleThree.length; i++){
+            for(let i = 0; i < projectPostTitleThree.length; i++){
                 projectPostTitleThree[i].innerHTML="";
             }
             // Changes description on blog three.
-            for(let i = 0; projectPostDescriptionThree.length; i++){
+            for(let i = 0; i < projectPostDescriptionThree.length; i++){
                 projectPostDescriptionThree[i].innerHTML="";
             }
             
             // Changes button link on blog three.
-            for(let i = 0; projectPostButtonThree.length; i++){
+            for(let i = 0; i < projectPostButtonThree.length; i++){
                 projectPostButtonThree[i].onclick="window.open('')";
             }
             break;
@@ -141,6 +141,10 @@ function recentProjectContentLoad(projectPostNum){
             break;
     }
 }
+
+addEventListener("load", recentProjectContentLoad(1))
+addEventListener("load", recentProjectContentLoad(2))
+addEventListener("load", recentProjectContentLoad(3))
 
 //Function to resize email message box based on view width
 function emailMessageBoxResize(){
@@ -229,8 +233,4 @@ function websiteLoadFunctions(){
     recentBlogContentLoad(1)
     recentBlogContentLoad(2)
     recentBlogContentLoad(3)
-    // Loads all the recent project post contents for home page and projects page.
-    recentProjectContentLoad(1)
-    recentProjectContentLoad(2)
-    recentProjectContentLoad(3)
 }
