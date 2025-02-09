@@ -52,7 +52,7 @@ ul{
 
 li{
     font-family: "Source Code Pro";
-    font-size: 1vw;
+    font-size: 2.5vw;
 }
 
 p{
@@ -672,7 +672,7 @@ table, th, td {
     }
 
     li{
-        font-size: 3.5vw;
+        font-size: 3.5vw !important;
     }
 
     /* Reuseable element styling */
