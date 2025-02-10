@@ -169,6 +169,7 @@ function emailMessageBoxResize(){
 
 window.addEventListener("resize", emailMessageBoxResize())
 
+// Fuction From 3W Schools
 // Function to search through blogs
 function blogSearch(){
     // Variables for function
