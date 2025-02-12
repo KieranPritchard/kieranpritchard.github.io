@@ -18,7 +18,7 @@
 /* Text Styling */
 
 h1{
-    padding-top: 35%;
+    padding-top: 10%;
     font-family: "Red Hat Display";
     text-align: center;
     color: #a9d6e5 !important;
@@ -289,19 +289,13 @@ table, th, td {
 #Hero-Image-Home-Page{
     height: 400px;
     width: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 25%;
 }
 
 #About-Me-Home-Page-Image{
     height: 400px;
     width: auto; 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
+    border-radius: 15%;
 }
 
 #About-Me-Page-Image{
@@ -354,7 +348,7 @@ table, th, td {
 }
 
 #about-page-skills-section-text{
-    padding-top: 1.5%;
+    padding-top: 10%;
 }
 
 .educational-history-row{
