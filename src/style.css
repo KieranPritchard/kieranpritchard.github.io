@@ -301,11 +301,10 @@ table, th, td {
 }
 
 #About-Me-Page-Image{
-    height: 400px;
-    width: auto;
-    display: block;
-    margin-left: auto;
-    margin: auto;
+    height: auto;
+    width: 100%;
+    max-width: 85%;
+    border-radius: 10%;
 }
 
 .home-page-recent-blogs-image{
