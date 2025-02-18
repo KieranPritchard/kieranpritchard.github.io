@@ -563,10 +563,9 @@ table, th, td {
 }
 
 .hobbies-page-image{
-    height: 200px;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
+    height: auto;
+    width: 100%;
+    max-width: 95%;
 }
 
 /* All The Styling For The Contact Page */
@@ -796,6 +795,14 @@ table, th, td {
 
     .project-page-project-card-text{
         font-size: 2.4vw !important;
+    }
+
+    /* Hobbies Page Styling */
+    .hobbies-page-image{
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+        padding: 5% 0;
     }
 
     /* Contact Page Styling */
