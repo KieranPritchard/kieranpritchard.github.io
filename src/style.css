@@ -287,14 +287,16 @@ table, th, td {
 /* Image Styling */
 
 #Hero-Image-Home-Page{
-    height: 400px;
-    width: auto;
+    height: auto;
+    width: 100%;
+    max-width: 85%;
     border-radius: 25%;
 }
 
 #About-Me-Home-Page-Image{
-    height: 400px;
-    width: auto; 
+    height: auto;
+    width: 100%;
+    max-width: 85%;
     border-radius: 15%;
 }
 
