@@ -551,6 +551,15 @@ table, th, td {
     font-size: 1.35vw;
 }
 
+.project-page-project-card-title-link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-page-project-card-title-link:hover{
+    color: #ffc300;
+}
+
 .project-page-project-card-text{
     color: #a9d6e5;
     font-size: 0.85vw !important;
