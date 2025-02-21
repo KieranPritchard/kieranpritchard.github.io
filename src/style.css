@@ -537,6 +537,8 @@ table, th, td {
     background-color: black;
     height: 100%;
     padding: 5% 0;
+    display: flex;
+    justify-content: center;
 }
 
 .project-page-project-card-image{
