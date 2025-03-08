@@ -400,6 +400,7 @@ table, th, td {
 /* All The Styling For The Blog Page */
 
 #blog-sidebar{
+    width: 95%;
     padding: 5%;
     border-radius: 25px;
     margin-right: 15%;
@@ -421,6 +422,10 @@ table, th, td {
 .sidebar-title{
     text-align: left;
     padding-top: 2.5%;
+}
+
+sidebar-recent-blog-title{
+    font-family: "Source Code Pro" !important;
 }
 
 .sidebar-checkbox[type="checkbox"]{
@@ -450,7 +455,7 @@ table, th, td {
     margin-left: 2.5%;
     position:relative;
     top: -6px;
-    
+    font-size: 1.5vw;
 }
 
 .sidebar-recent-blog{
@@ -767,6 +772,10 @@ table, th, td {
         width: 100%;
         height: auto;
         margin-bottom: 5%;
+    }
+
+    .sidebar-labels{
+        font-size: 3vw;
     }
 
     .sidebar-recent-blog{
