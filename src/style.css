@@ -454,19 +454,18 @@ sidebar-recent-blog-title{
     margin-top: 1%;
     margin-left: 2.5%;
     position:relative;
-    top: -6px;
+    top: -7px;
     font-size: 1.5vw;
 }
 
-.sidebar-recent-blog{
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
+.sidebar-blog-post-padding{
+    padding: 2.5% 0;
 }
 
 .sidebar-recent-blog-image{
-    height: 50px;
-    width: auto;
-    border-radius: 25px;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
 }
 
 .sidebar-recent-blog-title{
