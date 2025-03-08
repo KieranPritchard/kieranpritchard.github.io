@@ -61,24 +61,24 @@ function recentProjectContentLoad(projectPostNum){
             
             // Changes image settings on project post one
             for(let i = 0; i < projectPostImageOne.length; i++){
-                projectPostImageOne[i].style="colour: black;";
-                projectPostImageOne[i].src="";
-                projectPostImageOne[i].alt="";
+                projectPostImageOne[i].style="background-color: black;";
+                projectPostImageOne[i].src="/Users/kieranpritchard/Documents/Coding Projects/HTML, CSS & Javascript/Projects/Kieran-Pritchard-Portfolio/res/Digital-Logo-BPC.png";
+                projectPostImageOne[i].alt="Logo for Bournemouth & Poole Colleges digital sector of courses.";
             }
 
             // Changes title on project post one.
             for(let i = 0; i < projectPostTitleOne.length; i++){
-                projectPostTitleOne[i].innerHTML="";
+                projectPostTitleOne[i].innerHTML="My College Course";
             }
             
             // Changes description on blog one.
             for(let i = 0; i < projectPostDescriptionOne.length; i++){
-                projectPostDescriptionOne[i].innerHTML="";
+                projectPostDescriptionOne[i].innerHTML="An overview of all of my course including: practical work, exams, and more. Each topic is spread out over the page around a unit of the course. This page is a working document, this means it is being updated all the time.";
             }
             
             // Changes button link on blog one.
             for(let i = 0; i < projectPostButtonOne.length; i++){
-                projectPostButtonOne.onclick="window.open('')"
+                projectPostButtonOne[i].href = "./Portfolio-Posts/College-Course.html"
             }
             break;
         case 2:
@@ -90,24 +90,24 @@ function recentProjectContentLoad(projectPostNum){
 
             // Changes image settings on project post two
             for(let i = 0; i < projectPostImageTwo.length; i++){
-                projectPostImageTwo[i].style="colour: black;"
-                projectPostImageTwo[i].src="";
-                projectPostImageTwo[i].alt="";
+                projectPostImageTwo[i].style="background-color: white;"
+                projectPostImageTwo[i].src="/Users/kieranpritchard/Documents/Coding Projects/HTML, CSS & Javascript/Projects/Kieran-Pritchard-Portfolio/res/IDEA-Logo.png";
+                projectPostImageTwo[i].alt="The logo for the iDEA award E-learning platform";
             }
             
             // Changes title on project post two.
             for(let i = 0; i < projectPostTitleTwo.length; i++){
-                projectPostTitleTwo[i].innerHTML="";
+                projectPostTitleTwo[i].innerHTML="My iDEA Awards";
             }
             
             // Changes description on project post two.
             for(let i = 0; i < projectPostDescriptionTwo.length; i++){
-                projectPostDescriptionTwo[i].innerHTML="";
+                projectPostDescriptionTwo[i].innerHTML="An overview and account of my time gaining my iDEA awards. The page only goes up to silver at the moment however, once gold realeases I will go ahead and gain the certifacate for that.";
             }
             
             // Changes button link on project post two.
             for(let i = 0; i < projectPostButtonTwo.length; i++){
-                projectPostButtonTwo[i].onclick="window.open('')"
+                projectPostButtonTwo[i].href="./Portfolio-Posts/My-iDEA-Awards.html"
             }
             break;
         case 3:
@@ -118,23 +118,23 @@ function recentProjectContentLoad(projectPostNum){
 
             // Changes image settings on project post three
             for(let i = 0; i < projectPostImageThree.length; i++){
-                projectPostImageThree[i].style="colour: black;"
-                projectPostImageThree[i].src="";
-                projectPostImageThree[i].alt="";
+                projectPostImageThree[i].style="background-color: white;"
+                projectPostImageThree[i].src="/Users/kieranpritchard/Documents/Coding Projects/HTML, CSS & Javascript/Projects/Kieran-Pritchard-Portfolio/res/Sololearn-Logo.png";
+                projectPostImageThree[i].alt="The logo for the SoloLearn App.";
             }
             
             // Changes title on blog three.
             for(let i = 0; i < projectPostTitleThree.length; i++){
-                projectPostTitleThree[i].innerHTML="";
+                projectPostTitleThree[i].innerHTML="SoloLearn Certifacates";
             }
             // Changes description on blog three.
             for(let i = 0; i < projectPostDescriptionThree.length; i++){
-                projectPostDescriptionThree[i].innerHTML="";
+                projectPostDescriptionThree[i].innerHTML="A recount of my progress through SoloLearn, a online course platform for learning different programming langauages. This shows all of the certifacates I learned, as well as my thoughts and feelings on each course.";
             }
             
             // Changes button link on blog three.
             for(let i = 0; i < projectPostButtonThree.length; i++){
-                projectPostButtonThree[i].onclick="window.open('')";
+                projectPostButtonThree[i].href="./Portfolio-Posts/SoloLearn-Certifacates.html";
             }
             break;
         default:
