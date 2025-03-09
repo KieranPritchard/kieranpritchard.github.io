@@ -3,46 +3,61 @@ function recentBlogContentLoad(blogPostNum){
     // Switch statement to load different posts
     switch (blogPostNum) {
         case 1:
+            const blogImageOne = document.getElementsByClassName("recent-blog-image-1");
+            const blogTitleOne = document.getElementsByClassName("blog-post-title-1");
+            const blogTextOne = document.getElementsByClassName("blog-post-text-1");
             // Switches image tag attributes around on first image.
-            const blogImageOne = document.getElementById("recent-blog-image-1");
-            blogImageOne.src ="../res/A-Day-In-My-Life-As-A-Student-Thumbnail.jpg";
-            blogImageOne.alt ="Thumbnail image of a computer on a desk in a dark room";
+            for(let i = 0; i < blogImageOne.length; i++){
+                blogImageOne[i].src ="../res/A-Day-In-My-Life-As-A-Student-Thumbnail.jpg";
+                blogImageOne[i].alt ="Thumbnail image of a computer on a desk in a dark room";
+            }
             // Changes the title and link of blog post 1
-            const blogTitleLinkOne = document.getElementById("blog-post-title-link-1");
-            const blogTitleOne = document.getElementById("blog-post-title-1");
-            blogTitleLinkOne.href="./Blog-Posts/A-Day-In-My-Life-As-A-Student.html";
-            blogTitleOne.innerHTML="A Day In The Life Of A Student";
+            for(let i = 0; i < blogTitleOne.length; i++){
+                blogTitleOne[i].href="./Blog-Posts/A-Day-In-My-Life-As-A-Student.html";
+                blogTitleOne[i].innerHTML="A Day In The Life Of A Student";
+            }
             // Changes the descript of blog post 1
-            const blogTextOne = document.getElementById("blog-post-text-1");
-            blogTextOne.innerHTML = "A view into my world, my current routines, thoughts on college life. I have also included accounts of changes to my life since going to college, including how it has benefited me massively in the long run and the experences it's opened up for me.";      
+            for(let i = 0; i < blogTextOne.length; i++){
+                blogTextOne[i].innerHTML = "A view into my world, my current routines, thoughts on college life. I have also included accounts of changes to my life since going to college, including how it has benefited me massively in the long run and the experences it's opened up for me.";
+            }      
             break;
         case 2:
+            const blogImageTwo = document.getElementsByClassName("recent-blog-image-2");
+            const blogTitleTwo = document.getElementsByClassName("blog-post-title-2");
+            const blogTextTwo = document.getElementsByClassName("blog-post-text-2");
             // Switches image tag attributes around on second image.
-            const blogImageTwo = document.getElementById("recent-blog-image-2");
-            blogImageTwo.src ="../res/How-I-Started-Programming-Thumbnail.jpg";
-            blogImageTwo.alt ="Thumbnail image of code on a monitor in a dark room";
+            for(let i = 0; i < blogImageTwo.length; i++){
+                blogImageTwo[i].src ="../res/How-I-Started-Programming-Thumbnail.jpg";
+                blogImageTwo[i].alt ="Thumbnail image of code on a monitor in a dark room";
+            }
             // Changes the title and link of blog post 2
-            const blogTitleLinkTwo = document.getElementById("blog-post-title-link-2");
-            const blogTitleTwo = document.getElementById("blog-post-title-2");
-            blogTitleLinkTwo.href="./Blog-Posts/How-I-Started-Programming.html";
-            blogTitleTwo.innerHTML="How I Started Programming";
+            for(let i = 0; i < blogTitleTwo.length; i++){
+                blogTitleTwo[i].href="./Blog-Posts/How-I-Started-Programming.html";
+                blogTitleTwo[i].innerHTML="How I Started Programming";
+            }
             // Changes the descript of blog post 2
-            const blogTextTwo = document.getElementById("blog-post-text-2");
-            blogTextTwo.innerHTML = "This blog post is a look back on the start of my programming journey. With this post i wanted to share to the masses about how i started, how began learning, and my personal tips as well as advice on how to get started.";  
+            for(let i = 0; i < blogTextTwo.length; i++){
+                blogTextTwo[i].innerHTML = "This blog post is a look back on the start of my programming journey. With this post i wanted to share to the masses about how i started, how began learning, and my personal tips as well as advice on how to get started.";  
+            }
             break;
         case 3:
-            // Switches image tag attributes around on second image.
             const blogImageThree = document.getElementById("recent-blog-image-3");
-            blogImageThree.src = "../res/How-My-Opinions-On-AI-Changed-Thumbnail.jpg";
-            blogImageThree.alt = "Thumbnail Image of someone a robot with circuts for brains to represent ai";
-            // Changes the title and link of blog post 2
-            const blogTitleLinkThree = document.getElementById("blog-post-title-link-3");
             const blogTitleThree = document.getElementById("blog-post-title-3");
-            blogTitleLinkThree.href="./Blog-Posts/./Blog-Posts/How-I-Started-Programming.html";
-            blogTitleThree.innerHTML="How My Opinions On AI Changed";
-            // Changes the descript of blog post 2
             const blogTextThree = document.getElementById("blog-post-text-3");
-            blogTextThree.innerHTML ="A small introspective piece on how my opinions and views of AI have changed and grown since the first realease of ChatGPT in November 2022, to the present day where it has become an part of everyones life to some extent";
+            // Switches image tag attributes around on third image.
+            for(let i = 0; i < blogImageThree.length; i++){
+                blogImageThree[i].src = "../res/How-My-Opinions-On-AI-Changed-Thumbnail.jpg";
+                blogImageThree[i].alt = "Thumbnail Image of someone a robot with circuts for brains to represent A.I";
+            }
+            // Changes the title and link of blog post 3
+            for(let i = 0; i < blogTitleThree.length; i++){
+                blogTitleThree[i].href="./Blog-Posts/./Blog-Posts/How-I-Started-Programming.html";
+                blogTitleThree[i].innerHTML="How My Opinions On AI Changed";
+            }
+            // Changes the descript of blog post 3
+            for(let i = 0; i < blogTitleThree.length; i++){
+                blogTextThree[i].innerHTML ="A small introspective piece on how my opinions and views of AI have changed and grown since the first realease of ChatGPT in November 2022, to the present day where it has become an part of everyones life to some extent";
+            }
         default:
             break;
     }
