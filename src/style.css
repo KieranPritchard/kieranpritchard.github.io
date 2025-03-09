@@ -639,8 +639,9 @@ sidebar-recent-blog-title{
 }
 
 .indivual-post-page-header-image{
-    height: 100px;
-    width: auto;
+    height: auto;
+    width: 25%;
+    max-width: 50%;
 }
 
 .indivual-post-page-image{
