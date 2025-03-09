@@ -41,9 +41,9 @@ function recentBlogContentLoad(blogPostNum){
             }
             break;
         case 3:
-            const blogImageThree = document.getElementById("recent-blog-image-3");
-            const blogTitleThree = document.getElementById("blog-post-title-3");
-            const blogTextThree = document.getElementById("blog-post-text-3");
+            const blogImageThree = document.getElementsByClassName("recent-blog-image-3");
+            const blogTitleThree = document.getElementsByClassName("blog-post-title-3");
+            const blogTextThree = document.getElementsByClassName("blog-post-text-3");
             // Switches image tag attributes around on third image.
             for(let i = 0; i < blogImageThree.length; i++){
                 blogImageThree[i].src = "../res/How-My-Opinions-On-AI-Changed-Thumbnail.jpg";
