@@ -62,7 +62,7 @@ function recentProjectContentLoad(projectPostNum){
             // Changes image settings on project post one
             for(let i = 0; i < projectPostImageOne.length; i++){
                 projectPostImageOne[i].style="background-color: black;";
-                projectPostImageOne[i].src="/Users/kieranpritchard/Documents/Coding Projects/HTML, CSS & Javascript/Projects/Kieran-Pritchard-Portfolio/res/Digital-Logo-BPC.png";
+                projectPostImageOne[i].src="../res/Digital-Logo-BPC.png";
                 projectPostImageOne[i].alt="Logo for Bournemouth & Poole Colleges digital sector of courses.";
             }
 
@@ -91,7 +91,7 @@ function recentProjectContentLoad(projectPostNum){
             // Changes image settings on project post two
             for(let i = 0; i < projectPostImageTwo.length; i++){
                 projectPostImageTwo[i].style="background-color: white;"
-                projectPostImageTwo[i].src="/Users/kieranpritchard/Documents/Coding Projects/HTML, CSS & Javascript/Projects/Kieran-Pritchard-Portfolio/res/IDEA-Logo.png";
+                projectPostImageTwo[i].src="../res/IDEA-Logo.png";
                 projectPostImageTwo[i].alt="The logo for the iDEA award E-learning platform";
             }
             
@@ -119,7 +119,7 @@ function recentProjectContentLoad(projectPostNum){
             // Changes image settings on project post three
             for(let i = 0; i < projectPostImageThree.length; i++){
                 projectPostImageThree[i].style="background-color: white;"
-                projectPostImageThree[i].src="/Users/kieranpritchard/Documents/Coding Projects/HTML, CSS & Javascript/Projects/Kieran-Pritchard-Portfolio/res/Sololearn-Logo.png";
+                projectPostImageThree[i].src="../res/Sololearn-Logo.png";
                 projectPostImageThree[i].alt="The logo for the SoloLearn App.";
             }
             
