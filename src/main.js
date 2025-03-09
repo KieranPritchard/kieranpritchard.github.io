@@ -54,14 +54,19 @@ function recentProjectContentLoad(projectPostNum){
     switch (projectPostNum) {
         case 1:
             // Accesses project post one elements
+            const projectPostImageBackgroundOne = document.getElementsByClassName("recent-project-img-background-1")
             const projectPostImageOne = document.getElementsByClassName("recent-project-card-img-1");
             const projectPostTitleOne = document.getElementsByClassName("recent-project-card-title-1");
             const projectPostDescriptionOne = document.getElementsByClassName("recent-project-card-text-1");
             const projectPostButtonOne = document.getElementsByClassName("recent-project-card-button-1");
             
+            // Changes Image Background on project post one
+            for(let i; i < projectPostImageBackgroundOne.length; i++){
+                projectPostImageBackgroundOne[i].style="background-color: black;";
+            }
+
             // Changes image settings on project post one
             for(let i = 0; i < projectPostImageOne.length; i++){
-                projectPostImageOne[i].style="background-color: black;";
                 projectPostImageOne[i].src="../res/Digital-Logo-BPC.png";
                 projectPostImageOne[i].alt="Logo for Bournemouth & Poole Colleges digital sector of courses.";
             }
@@ -83,14 +88,18 @@ function recentProjectContentLoad(projectPostNum){
             break;
         case 2:
             // Accesses project two posts elements.
+            const projectPostImageBackgroundTwo = document.getElementsByClassName("recent-project-img-background-2")
             const projectPostImageTwo = document.getElementsByClassName("recent-project-card-img-2")
             const projectPostTitleTwo = document.getElementsByClassName("recent-project-card-title-2");
             const projectPostDescriptionTwo = document.getElementsByClassName("recent-project-card-text-2")
             const projectPostButtonTwo = document.getElementsByClassName("recent-project-card-button-2")
 
+            for(let i = 0; i < projectPostImageBackgroundTwo.length; i++){
+                projectPostImageBackgroundTwo[i].style ="background-color: white;"
+            }
+
             // Changes image settings on project post two
             for(let i = 0; i < projectPostImageTwo.length; i++){
-                projectPostImageTwo[i].style="background-color: white;"
                 projectPostImageTwo[i].src="../res/IDEA-Logo.png";
                 projectPostImageTwo[i].alt="The logo for the iDEA award E-learning platform";
             }
@@ -111,14 +120,18 @@ function recentProjectContentLoad(projectPostNum){
             }
             break;
         case 3:
+            const projectPostImageBackgroundThree = document.getElementsByClassName("recent-project-img-background-3")
             const projectPostImageThree = document.getElementsByClassName("recent-project-card-img-3")
             const projectPostTitleThree = document.getElementsByClassName("recent-project-card-title-3");
             const projectPostDescriptionThree = document.getElementsByClassName("recent-project-card-text-3")
             const projectPostButtonThree = document.getElementsByClassName("recent-project-card-button-3")
 
+            for(let i = 0; i < projectPostImageBackgroundThree.length; i++){
+                projectPostImageBackgroundThree[i].style="background-color: white;"
+            }
+
             // Changes image settings on project post three
             for(let i = 0; i < projectPostImageThree.length; i++){
-                projectPostImageThree[i].style="background-color: white;"
                 projectPostImageThree[i].src="../res/Sololearn-Logo.png";
                 projectPostImageThree[i].alt="The logo for the SoloLearn App.";
             }
