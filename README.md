@@ -1,4 +1,4 @@
-# Kieran Pritcha
+# Kieran Pritchard Portfolio
 
 <div align="center">
 
