@@ -55,7 +55,7 @@ function recentBlogContentLoad(blogPostNum){
                 blogTitleThree[i].innerHTML="How My Opinions On AI Changed";
             }
             // Changes the descript of blog post 3
-            for(let i = 0; i < blogTitleThree.length; i++){
+            for(let i = 0; i < blogTextThree.length; i++){
                 blogTextThree[i].innerHTML ="A small introspective piece on how my opinions and views of AI have changed and grown since the first realease of ChatGPT in November 2022, to the present day where it has become an part of everyones life to some extent";
             }
         default:
