@@ -95,7 +95,7 @@ body{
 
 .recent-blog-post-title{
     margin-top: 0.5%;
-    padding-top: 0.5%;
+    padding-top: 1.5%;
     padding-bottom: 0.5%;
     color: #a9d6e5 !important;
     font-size: 1.25vw !important;
@@ -307,12 +307,13 @@ table, th, td {
 }
 
 .home-page-recent-blogs-image{
-    height: 120px;
-    width: auto;
-    display: block;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: auto;
+    height: auto;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-bottom: 10%;
 }
 
 .recent-project-card-img{
