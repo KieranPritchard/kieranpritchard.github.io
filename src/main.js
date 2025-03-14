@@ -251,9 +251,18 @@ function sendEmailMessage(){
     const sendFromEmailAddress = document.getElementById("contact-me-form-your-email").value
     const sendEmailSubject = document.getElementById("contact-me-form-email-subject").value
     const sendEmailBody = document.getElementById("contact-me-form-email-body").value
+    const sendEmailStructure = "mailto:KieranPritchard06@gmail.com?subject=" + encodeURIComponent(sendEmailSubject) + "&body=" + encodeURIComponent("Email Send From: " + sendFromEmailAddress + " ") + encodeURIComponent(sendEmailBody)
     
-    // Opens the emails client for user to send
-    window.open("mailto:KieranPritchard06@gmail.com?subject=" + encodeURIComponent(sendEmailSubject) + "&body=" + encodeURIComponent("Email Send From: " + sendFromEmailAddress + " ") + encodeURIComponent(sendEmailBody))
+    if(sendFromEmailAddress.includes("@") || sendFromEmailAddress.includes(".")){
+        if(sendEmailSubject && sendEmailBody){
+            window.open(sendEmailStructure)
+        } else{
+            alert("Please include a subject and a message.")
+        }
+    } else{
+        alert("Incorrect email address format.")
+        return
+    }
 }
 
 // Function executes all functions to be loaded
