@@ -589,6 +589,16 @@ sidebar-recent-blog-title{
     list-style: none;
 }
 
+.contact-page-list-link{
+    color: white;
+    text-decoration: none;
+}
+
+.contact-page-list-link:hover{
+    color: #ffc300;
+    transition: ease-in 0.3s;
+}
+
 .contact-page-list-item{
     margin-bottom: 7.5%;
     font-size: 1.25vw;
