@@ -682,6 +682,13 @@ sidebar-recent-blog-title{
     text-align: left;
 }
 
+@media screen and (max-width: 768px){
+    .auto-background-md{
+        height: auto;
+        padding-bottom: 3%;
+    }    
+}
+
 /* Media query for when website view is small */
 @media screen and (max-width: 576px) {
     /* Text heading */
@@ -712,7 +719,7 @@ sidebar-recent-blog-title{
 
     /* Backgrounds */
     
-    .auto-background{
+    .auto-background-sm{
         height: auto;
         padding-bottom: 3%;
     }
