@@ -632,6 +632,11 @@ sidebar-recent-blog-title{
     color: white !important;
 }
 
+.breadcrumb-item-link:hover{
+    color: #ffc300 !important;
+    transition: ease 0.3s;
+}
+
 .indivual-post-page-title{
     text-align: left;
     padding-top: 2%;
