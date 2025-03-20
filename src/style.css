@@ -625,7 +625,7 @@ sidebar-recent-blog-title{
 
 .breadcrumb-item{
     color: white !important;
-    font-size: 2vw !important;
+    font-size: 2vw;
 }
 
 .breadcrumb-item-link{
@@ -872,6 +872,10 @@ sidebar-recent-blog-title{
     }
 
     /* Indivual Post Pages Styling */
+    .breadcrumb-item{
+        font-size: 1vw !important;
+    }
+
     .indivual-post-page-date{
         font-size: 3vw!important;
     }
