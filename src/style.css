@@ -683,6 +683,24 @@ sidebar-recent-blog-title{
     margin-bottom: 2.5%;
 }
 
+.blog-post-background-odd{
+    min-height: 50vh;
+    background-color: #001d3d;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    line-height: 1.6;
+}
+
+.blog-post-background-even{
+    min-height: 50vh;
+    background-color: #003566;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    line-height: 1.6;
+}
+
 .portfolio-post-page-heading{
     text-align: left;
 }
