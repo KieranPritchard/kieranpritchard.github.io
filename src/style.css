@@ -308,9 +308,8 @@ table, th, td {
 
 .home-page-recent-blogs-image{
     height: auto;
-    width: 85%;
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    max-width: 85%;
     margin-top: 10%;
     margin-left: 10%;
     margin-bottom: 10%;
@@ -705,8 +704,24 @@ sidebar-recent-blog-title{
     text-align: left;
 }
 
-@media screen and (max-width: 1400px) {
-    
+@media screen and (min-width: 1400px) {
+    .recent-blog-post{
+        margin-top: 0.75%;
+        margin-bottom: 0.75%;
+    }
+
+    .home-page-recent-blogs-image{
+        height: auto;
+        width: 100%;
+        max-width: 80%;
+        display: flex;
+        justify-content: center;
+        margin-top: 7.5%;
+        margin-left: 7.5%;
+        margin-bottom: 7.5%;
+    }
+
+
 }
 
 @media screen and (max-width: 768px){
