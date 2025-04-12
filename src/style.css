@@ -90,7 +90,7 @@ body{
     background-color: #003566;
     border-radius: 25px;
     margin-top: 1.5%;
-    margin-bottom: 1%;
+    margin-bottom: 1.5%;
 }
 
 .recent-blog-post-title{
@@ -752,6 +752,7 @@ sidebar-recent-blog-title{
     .recent-blog-post-title{
         margin-left: 4%;
         margin-right: 4%;
+        padding-left: 0%;
         font-size: 4.5vw !important;
     }
 

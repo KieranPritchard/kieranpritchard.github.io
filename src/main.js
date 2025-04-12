@@ -37,7 +37,7 @@ function recentBlogContentLoad(blogPostNum){
             }
             // Changes the descript of blog post 2
             for(let i = 0; i < blogTextTwo.length; i++){
-                blogTextTwo[i].innerHTML = "This blog post is a look back on the start of my programming journey. With this post i wanted to share to the masses about how i started, how began learning, and my personal tips as well as advice on how to get started.";  
+                blogTextTwo[i].innerHTML = "This blog post is a look back on the start of my programming journey. With this post I wanted to share to the you all about how got I started, how began learning, and my personal tips as well as advice on how to get started.";  
             }
             break;
         case 3:
