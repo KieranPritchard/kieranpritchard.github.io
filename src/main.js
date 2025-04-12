@@ -126,7 +126,7 @@ function recentProjectContentLoad(projectPostNum){
             
             // Changes description on project post two.
             for(let i = 0; i < projectPostDescriptionTwo.length; i++){
-                projectPostDescriptionTwo[i].innerHTML="An overview and account of my time gaining my iDEA awards. The page only goes up to silver at the moment however, once gold realeases I will go ahead and gain the certifacate for that.";
+                projectPostDescriptionTwo[i].innerHTML="An overview and account of my time gaining my iDEA awards and badges. The page only goes up to the silver award at the moment because of gold being in devlopement however, once gold realeases I will go ahead and gain the certifacate for that.";
             }
             
             // Changes button link on project post two.
