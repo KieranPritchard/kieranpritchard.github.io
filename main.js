@@ -8,7 +8,7 @@ function recentBlogContentLoad(blogPostNum){
             const blogTextOne = document.getElementsByClassName("blog-post-text-1");
             // Switches image tag attributes around on first image.
             for(let i = 0; i < blogImageOne.length; i++){
-                blogImageOne[i].src ="../res/A-Day-In-My-Life-As-A-Student-Thumbnail.jpg";
+                blogImageOne[i].src ="./res/A-Day-In-My-Life-As-A-Student-Thumbnail.jpg";
                 blogImageOne[i].alt ="Thumbnail image of a computer on a desk in a dark room";
             }
             // Changes the title and link of blog post 1
@@ -27,7 +27,7 @@ function recentBlogContentLoad(blogPostNum){
             const blogTextTwo = document.getElementsByClassName("blog-post-text-2");
             // Switches image tag attributes around on second image.
             for(let i = 0; i < blogImageTwo.length; i++){
-                blogImageTwo[i].src ="../res/How-I-Started-Programming-Thumbnail.jpg";
+                blogImageTwo[i].src ="./res/How-I-Started-Programming-Thumbnail.jpg";
                 blogImageTwo[i].alt ="Thumbnail image of code on a monitor in a dark room";
             }
             // Changes the title and link of blog post 2
@@ -46,7 +46,7 @@ function recentBlogContentLoad(blogPostNum){
             const blogTextThree = document.getElementsByClassName("blog-post-text-3");
             // Switches image tag attributes around on third image.
             for(let i = 0; i < blogImageThree.length; i++){
-                blogImageThree[i].src = "../res/How-My-Opinions-On-AI-Changed-Thumbnail.jpg";
+                blogImageThree[i].src = "./res/How-My-Opinions-On-AI-Changed-Thumbnail.jpg";
                 blogImageThree[i].alt = "Thumbnail Image of someone a robot with circuts for brains to represent A.I";
             }
             // Changes the title and link of blog post 3
@@ -82,7 +82,7 @@ function recentProjectContentLoad(projectPostNum){
 
             // Changes image settings on project post one
             for(let i = 0; i < projectPostImageOne.length; i++){
-                projectPostImageOne[i].src="../res/Digital-Logo-BPC.png";
+                projectPostImageOne[i].src="./res/Digital-Logo-BPC.png";
                 projectPostImageOne[i].alt="Logo for Bournemouth & Poole Colleges digital sector of courses.";
             }
 
@@ -115,7 +115,7 @@ function recentProjectContentLoad(projectPostNum){
 
             // Changes image settings on project post two
             for(let i = 0; i < projectPostImageTwo.length; i++){
-                projectPostImageTwo[i].src="../res/IDEA-Logo.png";
+                projectPostImageTwo[i].src="./res/IDEA-Logo.png";
                 projectPostImageTwo[i].alt="The logo for the iDEA award E-learning platform";
             }
             
@@ -147,7 +147,7 @@ function recentProjectContentLoad(projectPostNum){
 
             // Changes image settings on project post three
             for(let i = 0; i < projectPostImageThree.length; i++){
-                projectPostImageThree[i].src="../res/Sololearn-Logo.png";
+                projectPostImageThree[i].src="./res/Sololearn-Logo.png";
                 projectPostImageThree[i].alt="The logo for the SoloLearn App.";
             }
             
