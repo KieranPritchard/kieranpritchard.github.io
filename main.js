@@ -18,7 +18,7 @@ function recentBlogContentLoad(blogPostNum){
             }
             // Changes the descript of blog post 1
             for(let i = 0; i < blogTextOne.length; i++){
-                blogTextOne[i].innerHTML = "A view into my world, my current routines, thoughts on college life. I have also included accounts of changes to my life since going to college, including how it has benefited me massively in the long run and the experences it's opened up for me.";
+                blogTextOne[i].innerHTML = "A glimpse into my world: my current routines, reflections on college life, and the changes I've experienced since starting college. I've also included how this journey has significantly benefited me in the long run and the valuable experiences and opportunities it has opened up for me.";
             }      
             break;
         case 2:
@@ -37,7 +37,7 @@ function recentBlogContentLoad(blogPostNum){
             }
             // Changes the descript of blog post 2
             for(let i = 0; i < blogTextTwo.length; i++){
-                blogTextTwo[i].innerHTML = "This blog post is a look back on the start of my programming journey. With this post I wanted to share to the you all about how got I started, how began learning, and my personal tips as well as advice on how to get started.";  
+                blogTextTwo[i].innerHTML = "This blog post is a reflection on the beginning of my programming journey. I wanted to share with you how I got started, how I began learning, and offer some personal tips and advice for anyone looking to start their own path in programming.";  
             }
             break;
         case 3:
@@ -56,7 +56,7 @@ function recentBlogContentLoad(blogPostNum){
             }
             // Changes the descript of blog post 3
             for(let i = 0; i < blogTextThree.length; i++){
-                blogTextThree[i].innerHTML ="A small introspective piece on how my opinions and views of AI have changed and grown since the first realease of ChatGPT in November 2022, to the present day where it has become an part of everyones life to some extent";
+                blogTextThree[i].innerHTML ="A short introspective piece on how my opinions and views on AI have evolved since the initial release of ChatGPT in November 2022, to the present day where it has, to some extent, become a part of everyone's daily life.";
             }
         default:
             break;
@@ -93,7 +93,7 @@ function recentProjectContentLoad(projectPostNum){
             
             // Changes description on blog one.
             for(let i = 0; i < projectPostDescriptionOne.length; i++){
-                projectPostDescriptionOne[i].innerHTML="An overview of all of my course including: practical work, exams, and more. Each topic is spread out over the page around a unit of the course. This page is a working document, this means it is being updated all the time.";
+                projectPostDescriptionOne[i].innerHTML="An overview of my entire course, including practical work, exams, and more. Each topic is organized around a specific unit of the course and spread throughout the page. This page is a working document, meaning it is continuously being updated.        ";
             }
             
             // Changes button link on blog one.
