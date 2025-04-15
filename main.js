@@ -126,7 +126,7 @@ function recentProjectContentLoad(projectPostNum){
             
             // Changes description on project post two.
             for(let i = 0; i < projectPostDescriptionTwo.length; i++){
-                projectPostDescriptionTwo[i].innerHTML="An overview and account of my time gaining my iDEA awards and badges. The page only goes up to the silver award at the moment because of gold being in devlopement however, once gold realeases I will go ahead and gain the certifacate for that.";
+                projectPostDescriptionTwo[i].innerHTML="An overview and account of my time gaining my iDEA awards and badges. This page only goes up to the Silver Award at the moment because Gold is still in development. However, once Gold is released, I will go ahead and earn the certificate for that as well.";
             }
             
             // Changes button link on project post two.
@@ -157,7 +157,7 @@ function recentProjectContentLoad(projectPostNum){
             }
             // Changes description on blog three.
             for(let i = 0; i < projectPostDescriptionThree.length; i++){
-                projectPostDescriptionThree[i].innerHTML="A recount of my progress through SoloLearn, a online course platform for learning different programming langauages. This shows all of the certifacates I learned, as well as my thoughts and feelings on each course.";
+                projectPostDescriptionThree[i].innerHTML="A recount of my progress through SoloLearn, an online course platform for learning different programming languages. This showcases all of the certificates I earned, as well as my thoughts and feelings on each course.";
             }
             
             // Changes button link on blog three.
