@@ -762,7 +762,7 @@ sidebar-recent-blog-title{
     
     .auto-background-sm{
         height: auto;
-        padding-bottom: 3%;
+        padding-bottom: 5%;
     }
 
     /* Blog post styling */
@@ -910,7 +910,7 @@ sidebar-recent-blog-title{
 
     /* Indivual Post Pages Styling */
     .breadcrumb-item{
-        font-size: 1vw !important;
+        font-size: 2.5vw !important;
     }
 
     .indivual-post-page-date{
@@ -920,5 +920,19 @@ sidebar-recent-blog-title{
     .indivual-post-page-topics{
         font-size: 2.5vw !important;
         margin-bottom: 5% !important;
+    }
+
+    .indivual-post-page-header-image-background{
+        background-color: white;
+        padding: 7.5% 0;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5%;
+    }
+    
+    .indivual-post-page-header-image{
+        height: auto;
+        width: 100%;
+        max-width: 70%;
     }
 }
