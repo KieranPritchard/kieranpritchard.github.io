@@ -60,6 +60,14 @@ p{
     color: white;
 }
 
+a{
+    color: #a9d6e5 !important;
+}
+
+a:hover{
+    color: #ffc300 !important;
+}
+
 b{
     font-family: "Source Code Pro";
 }
@@ -556,7 +564,7 @@ sidebar-recent-blog-title{
 
 .project-page-project-card-title-link{
     text-decoration: none;
-    color: inherit;
+    color: #a9d6e5 !important;
 }
 
 .project-page-project-card-title-link:hover{
