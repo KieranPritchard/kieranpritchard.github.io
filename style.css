@@ -348,18 +348,16 @@ table, th, td {
 }
 
 .recent-project-card-img{
-    height: 125px;
+    height: 100px;
     width: auto;
-    display: block;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
 }
 
 .Recent-Projects-Image-Background{
-    margin-left: auto;
-    margin-right: auto;
+    background-color: black;
+    height: 100%;
+    padding: 5% 0;
+    display: flex;
+    justify-content: center;
 }
 
 /* All The Styling For The Home Page */
@@ -572,7 +570,7 @@ sidebar-recent-blog-title{
 .project-page-project-card-image-background{
     background-color: black;
     height: 100%;
-    padding: 5% 0;
+    padding: 7.5% 2.5%;
     display: flex;
     justify-content: center;
 }
