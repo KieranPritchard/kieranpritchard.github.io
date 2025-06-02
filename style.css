@@ -15,13 +15,25 @@
     font-style: normal;
 }
 
+/* Root Colours */
+
+:root,
+[data-bs-theme="dark"]{
+    --background: #001d3d;
+    --background-secondary: #003566;
+    --base-text: white;
+    --image-background: black;
+    --main-accent: #a9d6e5;
+    --hover-highlight: #ffc300;
+}
+
 /* Text Styling */
 
 h1{
     padding-top: 10%;
     font-family: "Red Hat Display";
     text-align: center;
-    color: #a9d6e5 !important;
+    color: var(--main-accent) !important;
     font-size: 3vw !important;
 }
 
@@ -29,12 +41,12 @@ h2{
     padding-top: 2.5%;
     font-family: "Red Hat Display";
     text-align: center;
-    color: #a9d6e5 !important;
+    color: var(--main-accent) !important;
     font-size: 2vw !important;
 }
 
 h3{
-    color: #a9d6e5 !important;
+    color: var(--main-accent) !important;
     text-align: center;
     font-family: "Red Hat Display";
     font-size: 1.75vw !important;
@@ -42,12 +54,12 @@ h3{
 
 h5{
     font-family: "Red Hat Display";
-    color: #a9d6e5 !important;
+    color: var(--main-accent) !important;
     
 }
 
 ul{
-    color: white;
+    color: var(--base-text);
 }
 
 li{
@@ -57,15 +69,15 @@ li{
 p{
     font-size: 1.25vw !important;
     font-family: "Source Code Pro";
-    color: white;
+    color: var(--base-text);
 }
 
 a{
-    color: #a9d6e5 !important;
+    color: var(--main-accent) !important;
 }
 
 a:hover{
-    color: #ffc300 !important;
+    color: var(--hover-highlight) !important;
 }
 
 b{
@@ -75,18 +87,18 @@ b{
 /* Styling for universial elements (To be used on mulitple pages) */
 
 body{
-    background-color: #001d3d !important;
+    background-color: var(--background) !important;
 }
 
 .background-odd{
-    background-color: #001d3d;
+    background-color: var(--background);
     height: 100vh;
     padding-left: 5%;
     padding-right: 5%;
 }
 
 .background-even{
-    background-color: #003566;
+    background-color: var(--background-secondary);
     height: 100vh;
     padding-left: 5%;
     padding-right: 5%;
@@ -95,7 +107,7 @@ body{
 /* Recent Blog Post Styling */
 
 .recent-blog-post{
-    background-color: #003566;
+    background-color: var(--background-secondary);
     border-radius: 25px;
     margin-top: 1.5%;
     margin-bottom: 1.5%;
@@ -105,18 +117,18 @@ body{
     margin-top: 0.5%;
     padding-top: 1.5%;
     padding-bottom: 0.5%;
-    color: #a9d6e5 !important;
+    color: var(--main-accent) !important;
     font-size: 1.25vw !important;
 }
 
 .recent-blog-post-title-link{
-    color: #a9d6e5;
+    color: var(--main-accent);
     text-decoration: none;
     transition: ease 0.5s;
 }
 
 .recent-blog-post-title-link:hover{
-    color: #ffc300;
+    color: var(--hover-highlight);
 }
 
 .recent-blog-post-text{
@@ -131,11 +143,11 @@ body{
     margin-top: 5%;
     border-radius: 25px;
     padding: 4%;
-    box-shadow: 0px 0px 20px 1px #a9d6e5;
+    box-shadow: 0px 0px 20px 1px var(--main-accent);
 }
 
 .recent-project-card-img-background{
-    background-color: black;
+    background-color: var(--image-background);
     padding: 10%;
 }
 
@@ -159,8 +171,8 @@ body{
     height: 50px; /*Find fix for not using percentage.*/
     border-radius: 15px;
     border-style: solid;
-    border-color: #a9d6e5;
-    color: #a9d6e5;
+    border-color: var(--main-accent);
+    color: var(--main-accent);
     border-width: 1px;
     font-family: "Source Code Pro";
     background-color: transparent;
@@ -168,8 +180,8 @@ body{
 }
 
 .recent-project-card-button:hover{
-    background-color: #a9d6e5;
-    color: #003566;
+    background-color: var(--main-accent);
+    color: var(--background-secondary);
 }
 
 /* Email Styling */
@@ -184,7 +196,7 @@ body{
     height: 7.5%;
     margin-bottom: 0.75%;
     padding-left: 1%;
-    background-color: #a9d6e5;
+    background-color: var(--main-accent);
     border-style: none;
     border-radius: 15px;
 }
@@ -192,7 +204,7 @@ body{
 #contact-me-form-email-body{
     width: 100%;
     padding-left: 1%;
-    background-color: #a9d6e5;
+    background-color: var(--main-accent);
     border-style: none;
     border-radius: 15px;
 }
@@ -217,16 +229,16 @@ body{
     padding: 1.5% 0;
     border-style: solid;
     border-width: 1px;
-    border-color: #a9d6e5;
+    border-color: var(--main-accent);
     border-radius: 25px;
-    color: #a9d6e5;
+    color: var(--main-accent);
     background-color: transparent;
     transition: ease 0.25s;
 }
 
 .submit-btn:hover{
-    background-color: #a9d6e5;
-    color: #001d3d;
+    background-color: var(--main-accent);
+    color: var(--image-background);
 }
 
 /* Styling for topic*/
@@ -241,8 +253,8 @@ body{
 /* Table Styling */
 
 table{
-    background-color: #a9d6e5;
-    border-color: #001d3d !important;
+    background-color: var(--main-accent);
+    border-color: var(--background) !important;
     width: 100%;
     font-size: 1vw;
 }
@@ -250,11 +262,11 @@ table{
 th{
     height: 5vh;
     text-align: center !important;
-    background-color: #003566;
+    background-color: var(--background-secondary);
 }
 
 .table-title-text{
-    color: #a9d6e5;
+    color: var(--main-accent);
     font-family: "Red Hat Display";
 }
 
@@ -266,27 +278,27 @@ table, th, td {
 /* Navigation Styling */
 
 .navbar{
-    background-color: #001d3d;
+    background-color: var(--background);
     padding-left: 5% !important;
     padding-right: 10% !important;
 }
 
 .navbar-brand{
     font-family: "Red Hat Display";
-    color: white !important;
+    color: var(--base-text) !important;
 }
 
 .nav-link{
     font-family: "Source Code Pro";
-    color: white !important;
+    color: var(--base-text) !important;
 }
 
 .nav-link:hover{
-    color: #ffc300 !important;
+    color: var(--hover-highlight) !important;
 }
 
 #Active-Page{
-    color: #ffc300;
+    color: var(--hover-highlight);
 }
 
 
@@ -421,7 +433,7 @@ table, th, td {
     width: 100%;
     padding: 3.5%;
     border-radius: 25px;
-    background-color: #a9d6e5;
+    background-color: var(--main-accent);
     border-style: none;
 }
 
@@ -438,16 +450,16 @@ sidebar-recent-blog-title{
     height: 25px;
     width: 25px;
     appearance: none;
-    background-color: #a9d6e5;
+    background-color: var(--main-accent);
     border-width: 2px;
     border-style: solid;
-    border-color: #a9d6e5;
+    border-color: var(--main-accent);
     border-radius: 5px;
     margin-left: 3%;
 }
 
 .sidebar-checkbox[type="checkbox"]:checked{
-    background-color: #003566;
+    background-color: var(--background-secondary);
 }
 
 .sidebar-checkbox[type="checkbox"]:checked::after{
@@ -455,7 +467,7 @@ sidebar-recent-blog-title{
 }
 
 .sidebar-labels{
-    color: white;
+    color: var(--base-text);
     font-family: "Source Code Pro" !important;
     margin-top: 1%;
     margin-left: 2.5%;
@@ -478,12 +490,12 @@ sidebar-recent-blog-title{
     margin-left: 2.5%;
     font-family: "Source Code Pro";
     text-decoration: none;
-    color: white;
+    color: var(--base-text);
     font-size: 0.85vw;
 }
 
 .sidebar-recent-blog-title:hover{
-    color: #ffc300;
+    color: var(--hover-highlight);
     font-weight: bold;
 }
 
@@ -494,7 +506,7 @@ sidebar-recent-blog-title{
 }
 
 .blog-post{
-    border-bottom: solid #a9d6e5;
+    border-bottom: solid var(--main-accent);
     padding: 3% 0;
 }
 
@@ -510,7 +522,7 @@ sidebar-recent-blog-title{
 }
 
 .blog-post-title:hover{
-    color: #ffc300 !important;
+    color: var(--hover-highlight) !important;
 }
 
 .blog-post-title-line{
@@ -520,7 +532,7 @@ sidebar-recent-blog-title{
 
 .blog-post-date{
     font-family: "Red Hat Display";
-    color: #a9d6e5;
+    color: var(--main-accent);
     font-size: 1vw !important;
 }
 
@@ -536,11 +548,11 @@ sidebar-recent-blog-title{
 }
 
 .project-page-project-card{
-    background-color: #003566;
+    background-color: var(--background);
     margin-top: 2.5%;
     padding: 4.5%;
     border-radius: 25px;
-    box-shadow: 0px 0px 20px 0.1px #a9d6e5;
+    box-shadow: 0px 0px 20px 0.1px var(--main-accent);
 }
 
 .project-page-project-card-image-background{
@@ -564,15 +576,15 @@ sidebar-recent-blog-title{
 
 .project-page-project-card-title-link{
     text-decoration: none;
-    color: #a9d6e5 !important;
+    color: var(--main-accent) !important;
 }
 
 .project-page-project-card-title-link:hover{
-    color: #ffc300;
+    color: var(--hover-highlight);
 }
 
 .project-page-project-card-text{
-    color: #a9d6e5;
+    color: var(--main-accent);
     font-size: 0.85vw !important;
 }
 
@@ -596,12 +608,12 @@ sidebar-recent-blog-title{
 }
 
 .contact-page-list-link{
-    color: white;
+    color: var(--base-text);
     text-decoration: none;
 }
 
 .contact-page-list-link:hover{
-    color: #ffc300;
+    color: var(--hover-highlight);
     transition: ease-in 0.3s;
 }
 
@@ -614,9 +626,9 @@ sidebar-recent-blog-title{
     margin-right: 15px;
     font-size: 1.5vw;
     padding: 2.5% 3%;
-    background-color: #a9d6e5;
+    background-color: var(--main-accent);
     border-radius: 100%;
-    color: #001d3d;
+    color: var(--background);
 }
 
 #contact-page-button{
@@ -626,20 +638,20 @@ sidebar-recent-blog-title{
 /* Indivual blog/portfolio post styling */
 
 .breadcrumb-item::before{
-    color: white !important;
+    color: var(--base-text) !important;
 }
 
 .breadcrumb-item{
-    color: white !important;
+    color: var(--base-text) !important;
     font-size: 1vw;
 }
 
 .breadcrumb-item-link{
-    color: white !important;
+    color: var(--base-text) !important;
 }
 
 .breadcrumb-item-link:hover{
-    color: #ffc300 !important;
+    color: var(--hover-highlight) !important;
     transition: ease 0.3s;
 }
 
@@ -653,12 +665,12 @@ sidebar-recent-blog-title{
     margin: 1.5% 0;
     font-size: 1.5vw!important;
     font-family: "Red Hat Display";
-    color: #a9d6e5;
+    color: var(--main-accent);
 }
 
 .indivual-post-page-topics{
     font-size: 1.25vw !important;
-    color: #a9d6e5;
+    color: var(--main-accent);
     position: relative;
     top: 5px;
     margin-top: 1%;
@@ -691,7 +703,7 @@ sidebar-recent-blog-title{
 
 .blog-post-background-odd{
     min-height: 50vh;
-    background-color: #001d3d;
+    background-color: var(--background-secondary);
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 5%;
@@ -700,7 +712,7 @@ sidebar-recent-blog-title{
 
 .blog-post-background-even{
     min-height: 50vh;
-    background-color: #003566;
+    background-color: var(--background-secondary);
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 5%;
