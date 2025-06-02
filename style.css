@@ -18,12 +18,23 @@
 /* Root Colours */
 
 :root,
+[data-bs-theme="light"]{
+    --background: #e3e3e3;
+    --background-secondary: #5f7f9e;
+    --base-text: #4a4a4a;
+    --image-background: black;
+    --main-accent: #2a3c4b;
+    --border: #b1b5ba;
+    --hover-highlight: #527aa3;
+}
+
 [data-bs-theme="dark"]{
     --background: #001d3d;
     --background-secondary: #003566;
     --base-text: white;
     --image-background: black;
     --main-accent: #a9d6e5;
+    --border: #a9d6e5;
     --hover-highlight: #ffc300;
 }
 
@@ -375,7 +386,7 @@ table, th, td {
 }
 
 .educational-history-card{
-    background-color: #003566;
+    background-color: var(--background-secondary);
     border-radius: 25px;
     padding: 1%;
 }
@@ -434,6 +445,7 @@ table, th, td {
     padding: 3.5%;
     border-radius: 25px;
     background-color: var(--main-accent);
+    border-color: var(--border);
     border-style: none;
 }
 
@@ -467,7 +479,7 @@ sidebar-recent-blog-title{
 }
 
 .sidebar-labels{
-    color: var(--base-text);
+    color: var(--base-text) !important;
     font-family: "Source Code Pro" !important;
     margin-top: 1%;
     margin-left: 2.5%;
@@ -490,7 +502,7 @@ sidebar-recent-blog-title{
     margin-left: 2.5%;
     font-family: "Source Code Pro";
     text-decoration: none;
-    color: var(--base-text);
+    color: var(--base-text) !important;
     font-size: 0.85vw;
 }
 
