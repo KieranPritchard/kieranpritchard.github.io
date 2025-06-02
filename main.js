@@ -1,3 +1,10 @@
+// Event listener to load correct mode for website
+window.addEventListener("DOMContentLoaded", function () {
+  const currentTheme = document.documentElement.getAttribute("data-bs-theme");
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-bs-theme", newTheme);
+});
+
 // Function to load recent blog content.
 function recentBlogContentLoad(blogPostNum){
     // Switch statement to load different posts

@@ -283,7 +283,9 @@ th{
 
 table, th, td {
     text-align: center;
+    color: var(--background);
     border: 1px solid !important;
+    border-color: var(--background) !important;
 }
 
 /* Navigation Styling */
@@ -560,7 +562,7 @@ sidebar-recent-blog-title{
 }
 
 .project-page-project-card{
-    background-color: var(--background);
+    background-color: var(--background-secondary);
     margin-top: 2.5%;
     padding: 4.5%;
     border-radius: 25px;
