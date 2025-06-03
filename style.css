@@ -691,15 +691,14 @@ sidebar-recent-blog-title{
 
 .indivual-post-page-header-image-background{
     background-color: white;
-    padding: 2.5% 0;
     display: flex;
     justify-content: center;
 }
 
 .indivual-post-page-header-image{
     height: auto;
-    width: 20%;
-    max-width: 50%;
+    width: 75%;
+    max-width: 100%;
 }
 
 .indivual-post-page-image{
