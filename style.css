@@ -40,33 +40,25 @@
 
 /* Text Styling */
 
+/* Heading Styling*/
+
+h1, h2, h3, h5{
+    font-family: "Red Hat Display";
+    color: var(--main-accent) !important;
+}
+
 h1{
     padding-top: 10%;
-    font-family: "Red Hat Display";
-    text-align: center;
-    color: var(--main-accent) !important;
     font-size: 3vw !important;
 }
 
 h2{
     padding-top: 2.5%;
-    font-family: "Red Hat Display";
-    text-align: center;
-    color: var(--main-accent) !important;
     font-size: 2vw !important;
 }
 
 h3{
-    color: var(--main-accent) !important;
-    text-align: center;
-    font-family: "Red Hat Display";
     font-size: 1.75vw !important;
-}
-
-h5{
-    font-family: "Red Hat Display";
-    color: var(--main-accent) !important;
-    
 }
 
 ul{
@@ -120,14 +112,12 @@ body{
 .recent-blog-post{
     background-color: var(--background-secondary);
     border-radius: 25px;
-    margin-top: 1.5%;
-    margin-bottom: 1.5%;
+    margin: 1.5% 0;
 }
 
 .recent-blog-post-title{
-    margin-top: 0.5%;
-    padding-top: 1.5%;
-    padding-bottom: 0.5%;
+    margin-top: 0.5%;     
+    padding: 1.5% 0 0.5%;
     color: var(--main-accent) !important;
     font-size: 1.25vw !important;
 }
@@ -153,7 +143,7 @@ body{
 .recent-project-card{
     margin-top: 5%;
     border-radius: 25px;
-    padding: 4%;
+    padding: 5%;
     box-shadow: 0px 0px 20px 1px var(--main-accent);
 }
 
@@ -199,7 +189,7 @@ body{
 
 
 #contact-me-form{
-    margin-top: 4%;
+    margin-top: 5%;
 }
 
 #contact-me-form-your-email, #contact-me-form-email-subject{
