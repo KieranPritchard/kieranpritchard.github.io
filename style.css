@@ -108,7 +108,7 @@ body{
 }
 
 .content-container{
-    height: 85%;
+    height: 85% !important;
 }
 
 /* Recent Blog Post Styling */
