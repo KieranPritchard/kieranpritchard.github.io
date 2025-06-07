@@ -107,6 +107,10 @@ body{
     padding-right: 5%;
 }
 
+.content-container{
+    height: 85%;
+}
+
 /* Recent Blog Post Styling */
 
 .recent-blog-post{
