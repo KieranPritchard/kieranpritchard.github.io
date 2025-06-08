@@ -708,7 +708,7 @@ sidebar-recent-blog-title{
 
 .blog-post-background-odd{
     min-height: 50vh;
-    background-color: var(--background-secondary);
+    background-color: var(--background-odd);
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 5%;
