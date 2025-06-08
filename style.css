@@ -93,6 +93,40 @@ body{
     background-color: var(--background) !important;
 }
 
+#contact-footer-list{
+    list-style: none;
+    margin-left: -5%;
+}
+
+.contact-footer-list-link{
+    color: var(--base-text);
+    text-decoration: none;
+}
+
+.contact-footer-list-link:hover{
+    color: var(--hover-highlight);
+    transition: ease-in 0.3s;
+}
+
+.contact-footer-list-item{
+    margin-bottom: 7.5%;
+    font-size: 1vw;
+}
+
+.footer-icon{
+    font-size: 1.75vw;
+}
+
+.contact-footer-icon-background{
+    margin-right: 3%;
+    height: 2.5vw;
+    width: 3vw;
+    font-size: 1.5vw;
+    background-color: var(--main-accent);
+    border-radius: 50%;
+    color: var(--background);
+}
+
 .background-odd{
     background-color: var(--background);
     height: 100vh;
