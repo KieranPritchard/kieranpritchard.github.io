@@ -1,0 +1,41 @@
+title: Kieran Pritchard Portfolio
+description: Digital Technology Student Portfolio and Blog
+baseurl: ""  # For local development
+url: ""
+
+# Build settings
+markdown: kramdown
+
+# Permalink settings (only one permalink setting)
+permalink: /:categories/:year/:month/:day/:title.html
+
+# Include files that Jekyll would otherwise ignore
+include:
+  - "*.html"
+  - "*.css"
+  - "*.js"
+  - "res"
+  - "Portfolio-Posts"
+  - "Blog-Posts"
+  - "src"
+
+# Exclude specific files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .DS_Store
+  - .git/
+  - .jekyll-cache/
+  - node_modules/
+
+# Set default layout for HTML files
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "blog_post"

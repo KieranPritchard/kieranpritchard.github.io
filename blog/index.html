@@ -1,0 +1,64 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+
+<div class="background-odd">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Blog Sidebar -->
+            <div class="col-sm-4">
+                <div id="blog-sidebar" class="background-even">
+                    <div class="searchbar-container">
+                        <input type="text" name="" id="blog-searchbar" placeholder="Search" onkeyup="blogSearch()">
+                    </div>
+                    <div>
+                        <h3 class="sidebar-title">Categories</h3>
+                        <input class="sidebar-checkbox" type="checkbox" onclick="blogFilter('topicOne')" id="blog-topic-1">
+                        <label class="sidebar-labels" for="blog-topic-1">Career</label><br>
+                        <input class="sidebar-checkbox" type="checkbox" onclick="blogFilter('topicTwo')" id="blog-topic-2">
+                        <label class="sidebar-labels" for="blog-topic-2">Programming</label><br>
+                        <input class="sidebar-checkbox" type="checkbox" onclick="blogFilter('topicThree')" id="blog-topic-3">
+                        <label class="sidebar-labels" for="blog-topic-3">Thoughts & Opinions</label><br>
+                    </div>
+                    <div>
+                        <h3 class="sidebar-title">Recent Blogs</h3>
+                        {% for post in site.posts limit:3 %}
+                        <div class="row sidebar-blog-post-padding">
+                            <div class="col-3 w-25 d-none d-md-block">
+                                <img class="sidebar-recent-blog-image recent-blog-image-{{ forloop.index }} d-none d-md-block" src="{{ post.thumbnail | relative_url }}" alt="{{ post.thumbnail_alt }}">
+                            </div>
+                            <div class="col-9 align-content-center">
+                                <a class="sidebar-recent-blog-title blog-post-title-{{ forloop.index }}" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog posts list -->
+            <div class="col-sm-8">
+                <ul id="blog-list">
+                    {% for post in site.posts %}
+                    <li class="{{ post.topic_class }}">
+                        <div class="blog-post row">
+                            <div class="col-sm-3 d-none d-md-block">
+                                <img class="blog-post-image" src="{{ post.thumbnail | relative_url }}" alt="{{ post.thumbnail_alt }}">
+                            </div>
+                            <div class="col-sm-9">
+                                <h3 class="blog-post-title">
+                                    <a class="blog-post-title-line" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                                </h3>
+                                <p class="blog-post-date">Date Published: {{ post.date | date: "%d/%m/%Y" }}</p>
+                                <p class="blog-post-description">{{ post.description }}</p>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
