@@ -28,6 +28,11 @@ exclude:
   - .jekyll-cache/
   - node_modules/
 
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:title/
+
 # Set default layout for HTML files
 defaults:
   - scope:
@@ -39,3 +44,8 @@ defaults:
       type: "posts"
     values:
       layout: "blog_post"
+  - scope:
+      path: "_portfolio"
+      type: "portfolio"
+    values:
+      layout: "portfolio_post"
