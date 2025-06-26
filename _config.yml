@@ -15,7 +15,6 @@ include:
   - "*.css"
   - "*.js"
   - "res"
-  - "Portfolio-Posts"
   - "Blog-Posts"
   - "src"
 
@@ -31,7 +30,7 @@ exclude:
 collections:
   portfolio:
     output: true
-    permalink: /portfolio/:title/
+    permalink: /portfolio/:name/
 
 # Set default layout for HTML files
 defaults:

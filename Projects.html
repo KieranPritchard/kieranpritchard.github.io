@@ -24,80 +24,45 @@ permalink: /Projects.html
     <h2 class="text-center">Recent Projects</h2>
     <!-- Cards for recent Projects-->
     <div class="row h-75 align-content-center">
+        {% for project in site.portfolio limit:3 %}
         <div class="col-lg">
             <div class="recent-project-card text-center">
-                <div class="recent-project-card-img-background recent-project-img-background-1">
-                    <img class="recent-project-card-img recent-project-card-img-1">
+                <div class="recent-project-card-img-background">
+                    <img class="recent-project-card-img" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
                 </div>
                 <div>
-                    <h5 class="recent-project-card-title recent-project-card-title-1">My College Course</h5>
-                    <p class="recent-project-card-text recent-project-card-text-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod repellendus neque enim consequuntur iste architecto laboriosam explicabo autem voluptatem, deleniti molestias nostrum provident magni, dolorem possimus nihil sapiente quam odit.</p>
-                    <a class="recent-project-card-button-1" href=""><button class="recent-project-card-button">Find Out More</button></a>
+                    <h5 class="recent-project-card-title">{{ project.title }}</h5>
+                    <p class="recent-project-card-text">{{ project.description }}</p>
+                    <a href="{{ project.url | relative_url }}"><button class="recent-project-card-button">Find Out More</button></a>
                 </div>
             </div>
         </div>
-        <div class="col-md">
-            <div class="recent-project-card text-center">
-                <div class="recent-project-card-img-background recent-project-img-background-2">
-                    <img class="recent-project-card-img recent-project-card-img-2">
-                </div>
-                <div>
-                    <h5 class="recent-project-card-title recent-project-card-title-2">Project Title</h5>
-                    <p class="recent-project-card-text recent-project-card-text-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod repellendus neque enim consequuntur iste architecto laboriosam explicabo autem voluptatem, deleniti molestias nostrum provident magni, dolorem possimus nihil sapiente quam odit.</p>
-                    <a class="recent-project-card-button-2"><button class="recent-project-card-button">Find Out More</button></a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md">
-            <div class="recent-project-card text-center">
-                <div class="recent-project-card-img-background recent-project-img-background-3">
-                    <img class="recent-project-card-img recent-project-card-img-3">
-                </div>
-                <div>
-                    <h5 class="recent-project-card-title recent-project-card-title-3">Project Title</h5>
-                    <p class="recent-project-card-text recent-project-card-text-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod repellendus neque enim consequuntur iste architecto laboriosam explicabo autem voluptatem, deleniti molestias nostrum provident magni, dolorem possimus nihil sapiente quam odit.</p>
-                    <a class="recent-project-card-button-3"><button class="recent-project-card-button">Find Out More</button></a>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
 
 <div class="background-odd auto-background-sm">
     <h2 class="text-center">Overview of Work</h2>
     <div class="row row-cols-1 row-cols-md-3">
-        <div class="col-md">
-            <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="{{ '/res/Icons/Digital-Logo-BPC.png' | relative_url }}">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title"><a class="project-page-project-card-title-link" href="{{ '/Portfolio-Posts/btec-first-foundation-in-tech.html' | relative_url }}">My College Course</a></h5>
-                    <p class="project-page-project-card-text">Topics: <span class="topic">Education</span></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md">
-            <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background" style="background-color: white;">
-                    <img class="project-page-project-card-image" src="{{ '/res/Icons/IDEA-Logo.png' | relative_url }}">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title"><a class="project-page-project-card-title-link" href="{{ '/Portfolio-Posts/My-iDEA-Awards.html' | relative_url }}">iDEA Awards</a></h5>
-                    <p class="project-page-project-card-text">Topics: <span class="topic">Self-Paced Learning</span> <span class="topic">Certifacates</span></p>
+        {% for project in site.portfolio %}
+            {% assign path_parts = project.relative_path | split: '/' %}
+            {% if path_parts.size == 2 %}
+            <div class="col-md">
+                <div class="project-page-project-card">
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title"><a class="project-page-project-card-title-link" href="{{ project.url | relative_url }}">{{ project.title }}</a></h5>
+                        <p class="project-page-project-card-text">Topics: 
+                            {% for topic in project.topics %}
+                            <span class="topic">{{ topic }}</span>
+                            {% endfor %}
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md">
-            <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background" style="background-color: white;">
-                    <img class="project-page-project-card-image" src="{{ '/res/Icons/Sololearn-Logo.png' | relative_url }}">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title"><a class="project-page-project-card-title-link" href="{{ '/Portfolio-Posts/SoloLearn-Certifacates.html' | relative_url }}">SoloLearn Certifacates</a></h5>
-                    <p class="project-page-project-card-text">Topics: <span class="topic">Certifacates</span> <span class="topic">Self-Paced Learning</span></p>
-                </div>
-            </div>
-        </div>
+            {% endif %}
+        {% endfor %}
     </div>
 </div>

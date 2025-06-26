@@ -110,7 +110,7 @@ function recentProjectContentLoad(projectPostNum){
             
             // Changes button link on blog one.
             for(let i = 0; i < projectPostButtonOne.length; i++){
-                projectPostButtonOne[i].href = "./Portfolio-Posts/College-Course.html"
+                projectPostButtonOne[i].href = "./portfolio/btec-first-foundation-in-tech/"
             }
             break;
         case 2:
@@ -143,7 +143,7 @@ function recentProjectContentLoad(projectPostNum){
             
             // Changes button link on project post two.
             for(let i = 0; i < projectPostButtonTwo.length; i++){
-                projectPostButtonTwo[i].href="./Portfolio-Posts/My-iDEA-Awards.html"
+                projectPostButtonTwo[i].href="./portfolio/My-iDEA-Awards/"
             }
             break;
         case 3:
@@ -174,7 +174,7 @@ function recentProjectContentLoad(projectPostNum){
             
             // Changes button link on blog three.
             for(let i = 0; i < projectPostButtonThree.length; i++){
-                projectPostButtonThree[i].href="./Portfolio-Posts/SoloLearn-Certifacates.html";
+                projectPostButtonThree[i].href="./portfolio/SoloLearn-Certifacates/"
             }
             break;
         default:
@@ -188,10 +188,10 @@ addEventListener("load", recentProjectContentLoad(3))
 
 //Function to resize email message box based on view width
 function emailMessageBoxResize(){
-    const windowSize = window.innerWidth;
     const contactMessageForm = document.getElementById("contact-me-form-email-body");
+    if (!contactMessageForm) return; // Only run if the element exists
 
-    // if statement to change row numbers based on height in pixels
+    const windowSize = window.innerWidth;
     if( windowSize < 576){
         contactMessageForm.rows="15"
     } else if(windowSize >= 576){
@@ -284,3 +284,98 @@ function websiteLoadFunctions(){
     recentBlogContentLoad(2)
     recentBlogContentLoad(3)
 }
+
+// Function to automatically set background colors for icon containers
+function setIconBackgroundColors() {
+    // Get all icon containers
+    const iconContainers = document.querySelectorAll('.recent-project-card-img-background, .project-page-project-card-image-background');
+    iconContainers.forEach((container) => {
+        const img = container.querySelector('img');
+        if (img) {
+            if (img.complete) {
+                setBackgroundFromImage(container, img);
+            } else {
+                img.addEventListener('load', () => {
+                    setBackgroundFromImage(container, img);
+                });
+            }
+        }
+    });
+}
+
+// Function to automatically set background colors for header image containers
+function setHeaderImageBackgroundColors() {
+    const headerContainers = document.querySelectorAll('.indivual-post-page-header-image-background');
+    headerContainers.forEach((container) => {
+        const img = container.querySelector('img');
+        if (img) {
+            const imgSrc = img.src.toLowerCase();
+            if (imgSrc.includes('idea-logo')) {
+                container.style.setProperty('background-color', '#ffffff', 'important');
+                return;
+            }
+            if (img.complete) {
+                setBackgroundFromImage(container, img);
+            } else {
+                img.addEventListener('load', () => {
+                    setBackgroundFromImage(container, img);
+                });
+            }
+        }
+    });
+}
+
+// Function to analyze image and set background color
+function setBackgroundFromImage(container, img) {
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+    try {
+        ctx.drawImage(img, 0, 0);
+        // Sample the center area
+        const centerX = Math.floor(canvas.width / 2);
+        const centerY = Math.floor(canvas.height / 2);
+        const size = Math.min(10, Math.floor(canvas.width / 4));
+        const imageData = ctx.getImageData(centerX - size, centerY - size, size * 2, size * 2);
+        const data = imageData.data;
+        let r = 0, g = 0, b = 0, count = 0;
+        for (let i = 0; i < data.length; i += 4) {
+            if (data[i + 3] > 0) { // not transparent
+                r += data[i];
+                g += data[i + 1];
+                b += data[i + 2];
+                count++;
+            }
+        }
+        if (count > 0) {
+            r = Math.round(r / count);
+            g = Math.round(g / count);
+            b = Math.round(b / count);
+            container.style.setProperty('background-color', `rgb(${r}, ${g}, ${b})`, 'important');
+            return;
+        }
+    } catch (error) {
+        // If canvas fails (CORS, etc), fallback below
+    }
+    // Fallback: filename-based color
+    const imgSrc = img.src.toLowerCase();
+    if (imgSrc.includes('digital-logo-bpc')) {
+        container.style.setProperty('background-color', '#000000', 'important');
+    } else if (imgSrc.includes('idea-logo')) {
+        container.style.setProperty('background-color', '#ffffff', 'important');
+    } else if (imgSrc.includes('sololearn-logo')) {
+        container.style.setProperty('background-color', '#ffffff', 'important');
+    } else {
+        container.style.setProperty('background-color', '#f0f0f0', 'important');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    setIconBackgroundColors();
+    setHeaderImageBackgroundColors();
+});
+window.addEventListener('load', function() {
+    setIconBackgroundColors();
+    setHeaderImageBackgroundColors();
+});
