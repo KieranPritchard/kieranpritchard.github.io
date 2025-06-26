@@ -25,19 +25,26 @@ permalink: /Projects.html
     <!-- Cards for recent Projects-->
     <div class="row h-75 align-content-center">
         {% assign sorted_portfolio = site.portfolio | sort: 'date' | reverse %}
-        {% for project in sorted_portfolio limit:3 %}
-        <div class="col-lg">
-            <div class="recent-project-card text-center">
-                <div class="recent-project-card-img-background">
-                    <img class="recent-project-card-img" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
-                </div>
-                <div>
-                    <h5 class="recent-project-card-title">{{ project.title }}</h5>
-                    <p class="recent-project-card-text">{{ project.description }}</p>
-                    <a href="{{ project.url | relative_url }}"><button class="recent-project-card-button">Find Out More</button></a>
+        {% assign main_projects = '' | split: '' %}
+        {% for project in sorted_portfolio %}
+            {% assign path_parts = project.relative_path | split: '/' %}
+            {% if path_parts.size == 2 %}
+                {% assign main_projects = main_projects | push: project %}
+            {% endif %}
+        {% endfor %}
+        {% for project in main_projects limit:3 %}
+            <div class="col-lg">
+                <div class="recent-project-card text-center">
+                    <div class="recent-project-card-img-background">
+                        <img class="recent-project-card-img" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
+                    </div>
+                    <div>
+                        <h5 class="recent-project-card-title">{{ project.title }}</h5>
+                        <p class="recent-project-card-text">{{ project.description }}</p>
+                        <a href="{{ project.url | relative_url }}"><button class="recent-project-card-button">Find Out More</button></a>
+                    </div>
                 </div>
             </div>
-        </div>
         {% endfor %}
     </div>
 </div>

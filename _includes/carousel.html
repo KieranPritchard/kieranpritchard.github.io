@@ -1,0 +1,23 @@
+{% comment %}
+  Photo carousel include for portfolio posts
+  Usage: {% include carousel.html images=page.carousel_images carousel_id="unique-id" %}
+  
+  In the front matter, define carousel_images as an array of objects:
+  carousel_images:
+    - src: "/path/to/image1.jpg"
+      alt: "Description of image 1"
+    - src: "/path/to/image2.jpg"
+      alt: "Description of image 2"
+{% endcomment %}
+
+<div class="col-md order-md-1 order-first align-content-center text-center">
+    <div id="{{ include.carousel_id }}" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            {% for image in include.images %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <img class="indivual-post-page-image" src="{{ image.src | relative_url }}" alt="{{ image.alt }}">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div> 
