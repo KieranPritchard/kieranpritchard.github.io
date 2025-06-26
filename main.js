@@ -7,8 +7,97 @@ window.addEventListener("DOMContentLoaded", function () {
         const theme = prefersDark ? "dark" : "light";
         document.documentElement.setAttribute("data-bs-theme", theme);
     }
+    
+    // Initialize Bootstrap carousels
+    initializeCarousels();
 });
 
+// Function to initialize Bootstrap carousels
+function initializeCarousels() {
+    // Get all carousel elements
+    const carousels = document.querySelectorAll('.carousel');
+    
+    carousels.forEach(function(carousel) {
+        // Check if Bootstrap is available
+        if (typeof bootstrap !== 'undefined' && bootstrap.Carousel) {
+            // Check if auto-advance is enabled (data-bs-ride attribute present)
+            const hasAutoAdvance = carousel.hasAttribute('data-bs-ride');
+            
+            // Initialize the carousel
+            new bootstrap.Carousel(carousel, {
+                interval: hasAutoAdvance ? 5000 : false, // Auto-advance every 5 seconds only if enabled
+                wrap: true,     // Allow continuous cycling
+                keyboard: true, // Allow keyboard navigation
+                pause: hasAutoAdvance ? 'hover' : false  // Pause on mouse hover only if auto-advance is enabled
+            });
+        } else {
+            // Fallback for when Bootstrap is not loaded
+            console.warn('Bootstrap not available, using fallback carousel initialization');
+            initializeFallbackCarousel(carousel);
+        }
+    });
+}
+
+// Fallback carousel initialization for when Bootstrap is not available
+function initializeFallbackCarousel(carousel) {
+    const items = carousel.querySelectorAll('.carousel-item');
+    const indicators = carousel.querySelectorAll('.carousel-indicators button');
+    const prevButton = carousel.querySelector('.carousel-control-prev');
+    const nextButton = carousel.querySelector('.carousel-control-next');
+    
+    let currentIndex = 0;
+    
+    function showSlide(index) {
+        // Hide all slides
+        items.forEach(item => {
+            item.classList.remove('active');
+        });
+        
+        // Remove active class from all indicators
+        indicators.forEach(indicator => {
+            indicator.classList.remove('active');
+            indicator.removeAttribute('aria-current');
+        });
+        
+        // Show current slide
+        if (items[index]) {
+            items[index].classList.add('active');
+        }
+        
+        // Activate current indicator
+        if (indicators[index]) {
+            indicators[index].classList.add('active');
+            indicators[index].setAttribute('aria-current', 'true');
+        }
+        
+        currentIndex = index;
+    }
+    
+    // Initialize first slide
+    showSlide(0);
+    
+    // Add click handlers for indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            showSlide(index);
+        });
+    });
+    
+    // Add click handlers for navigation buttons
+    if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            const newIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
+            showSlide(newIndex);
+        });
+    }
+    
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            const newIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0;
+            showSlide(newIndex);
+        });
+    }
+}
 
 // Function to load recent blog content.
 function recentBlogContentLoad(blogPostNum){
@@ -374,8 +463,31 @@ function setBackgroundFromImage(container, img) {
 document.addEventListener('DOMContentLoaded', function() {
     setIconBackgroundColors();
     setHeaderImageBackgroundColors();
+    
+    // Initialize all carousels
+    const carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(carousel => {
+        new bootstrap.Carousel(carousel, {
+            interval: 5000, // Auto-advance every 5 seconds
+            wrap: true, // Allow continuous cycling
+            keyboard: true, // Allow keyboard navigation
+            pause: 'hover' // Pause on mouse hover
+        });
+    });
 });
+
 window.addEventListener('load', function() {
     setIconBackgroundColors();
     setHeaderImageBackgroundColors();
+    
+    // Re-initialize carousels after all content is loaded
+    const carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(carousel => {
+        new bootstrap.Carousel(carousel, {
+            interval: 5000,
+            wrap: true,
+            keyboard: true,
+            pause: 'hover'
+        });
+    });
 });

@@ -54,7 +54,8 @@ assignment_three_images:
         </div>
         {% include carousel.html 
             images=page.starting_out_images 
-            carousel_id="starting-out-carousel" %}
+            carousel_id="starting-out-carousel"
+            auto_advance=false %}
     </div>
 </div>
 
@@ -64,7 +65,8 @@ assignment_three_images:
     <div class="row h-100">
         {% include carousel.html 
             images=page.assignment_one_images 
-            carousel_id="assignment-one-carousel" %}
+            carousel_id="assignment-one-carousel"
+            auto_advance=false %}
         <div class="col-md align-content-center">
             <p>
                 For the first asssignment, we were tasked with reviewing two different types of website via a presentaition.
@@ -89,7 +91,8 @@ assignment_three_images:
         </div>
         {% include carousel.html 
             images=page.assignment_two_images 
-            carousel_id="assignment-two-carousel" %}
+            carousel_id="assignment-two-carousel"
+            auto_advance=false %}
     </div>
 </div>
 
@@ -106,7 +109,8 @@ assignment_three_images:
         </div>
         {% include carousel.html 
             images=page.assignment_three_images 
-            carousel_id="assignment-three-carousel" %}
+            carousel_id="assignment-three-carousel"
+            auto_advance=false %}
     </div>
 </div>
 

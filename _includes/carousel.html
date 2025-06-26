@@ -1,6 +1,6 @@
 {% comment %}
   Photo carousel include for portfolio posts
-  Usage: {% include carousel.html images=page.carousel_images carousel_id="unique-id" %}
+  Usage: {% include carousel.html images=page.carousel_images carousel_id="unique-id" auto_advance=false %}
   
   In the front matter, define carousel_images as an array of objects:
   carousel_images:
@@ -8,26 +8,36 @@
       alt: "Description of image 1"
     - src: "/path/to/image2.jpg"
       alt: "Description of image 2"
+  
+  Parameters:
+  - images: Array of image objects with src and alt properties
+  - carousel_id: Unique identifier for the carousel
+  - auto_advance: Optional boolean to enable/disable auto-advance (default: true)
 {% endcomment %}
 
+{% assign auto_advance = include.auto_advance | default: true %}
+
 <div class="col-md order-md-1 order-first align-content-center text-center">
-    <div id="{{ include.carousel_id }}" class="carousel slide" data-bs-ride="carousel">
+    <div id="{{ include.carousel_id }}" class="carousel slide" {% if auto_advance %}data-bs-ride="carousel" data-bs-interval="5000"{% endif %}>
         <!-- Carousel Indicators -->
+        {% if include.images.size > 1 %}
         <div class="carousel-indicators">
             {% for image in include.images %}
             <button type="button" data-bs-target="#{{ include.carousel_id }}" data-bs-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active" aria-current="true"{% endif %} aria-label="Slide {{ forloop.index }}"></button>
             {% endfor %}
         </div>
+        {% endif %}
         
         <div class="carousel-inner">
             {% for image in include.images %}
             <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                <img class="indivual-post-page-image" src="{{ image.src | relative_url }}" alt="{{ image.alt }}">
+                <img class="indivual-post-page-image" src="{{ image.src | relative_url }}" alt="{{ image.alt }}" loading="lazy">
             </div>
             {% endfor %}
         </div>
         
         <!-- Carousel Controls -->
+        {% if include.images.size > 1 %}
         <button class="carousel-control-prev" type="button" data-bs-target="#{{ include.carousel_id }}" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -36,5 +46,6 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
+        {% endif %}
     </div>
 </div> 
