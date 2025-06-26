@@ -86,7 +86,7 @@
     {% assign sections = content_with_separator | split: '|||SPLIT|||' %}
     {% for section in sections %}
         {% if forloop.first and section == "" %}{% continue %}{% endif %}
-        <div class="background-{% cycle 'odd', 'even' %} align-content-center">
+        <div class="background-{% cycle 'even', 'odd' %} align-content-center">
             {{ section }}
         </div>
     {% endfor %}

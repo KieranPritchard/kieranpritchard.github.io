@@ -88,7 +88,7 @@ function recentProjectContentLoad(projectPostNum){
             const projectPostButtonOne = document.getElementsByClassName("recent-project-card-button-1");
             
             // Changes Image Background on project post one
-            for(let i; i < projectPostImageBackgroundOne.length; i++){
+            for(let i = 0; i < projectPostImageBackgroundOne.length; i++){
                 projectPostImageBackgroundOne[i].style="background-color: black;";
             }
 
