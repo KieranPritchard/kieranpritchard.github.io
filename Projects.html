@@ -24,7 +24,8 @@ permalink: /Projects.html
     <h2 class="text-center">Recent Projects</h2>
     <!-- Cards for recent Projects-->
     <div class="row h-75 align-content-center">
-        {% for project in site.portfolio limit:3 %}
+        {% assign sorted_portfolio = site.portfolio | sort: 'date' | reverse %}
+        {% for project in sorted_portfolio limit:3 %}
         <div class="col-lg">
             <div class="recent-project-card text-center">
                 <div class="recent-project-card-img-background">
@@ -44,7 +45,8 @@ permalink: /Projects.html
 <div class="background-odd auto-background-sm">
     <h2 class="text-center">Overview of Work</h2>
     <div class="row row-cols-1 row-cols-md-3">
-        {% for project in site.portfolio %}
+        {% assign sorted_portfolio = site.portfolio | sort: 'date' | reverse %}
+        {% for project in sorted_portfolio %}
             {% assign path_parts = project.relative_path | split: '/' %}
             {% if path_parts.size == 2 %}
             <div class="col-md">
