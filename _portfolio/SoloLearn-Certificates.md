@@ -1,7 +1,7 @@
 ---
 layout: portfolio_post
 title: "SoloLearn Certificates"
-description: "A showcase of my SoloLearn programming certificates, including C++, CSS, HTML, JavaScript, and Python."
+description: "A detailed account of my learning experience on SoloLearn, an online platform for mastering various programming languages. Each certificate is accompanied by insights into the course content, my personal progress, and the practical skills I developed. The page is regularly updated to reflect new achievements and my evolving thoughts on each course."
 date: 2024-12-10
 topics: ["Education", "Programming", "Certificates"]
 header_image: "/res/Header-Images/SoloLearn-Header.jpg"
