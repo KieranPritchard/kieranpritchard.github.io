@@ -416,32 +416,35 @@ function setHeaderImageBackgroundColors() {
 
 // Function to analyze image and set background color
 function setBackgroundFromImage(container, img) {
+    // Resize image to a small canvas for performance
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
-    canvas.width = img.naturalWidth;
-    canvas.height = img.naturalHeight;
+    const sampleSize = 20; // 20x20 pixels
+    canvas.width = sampleSize;
+    canvas.height = sampleSize;
     try {
-        ctx.drawImage(img, 0, 0);
-        // Sample the center area
-        const centerX = Math.floor(canvas.width / 2);
-        const centerY = Math.floor(canvas.height / 2);
-        const size = Math.min(10, Math.floor(canvas.width / 4));
-        const imageData = ctx.getImageData(centerX - size, centerY - size, size * 2, size * 2);
+        ctx.drawImage(img, 0, 0, sampleSize, sampleSize);
+        const imageData = ctx.getImageData(0, 0, sampleSize, sampleSize);
         const data = imageData.data;
-        let r = 0, g = 0, b = 0, count = 0;
+        const colorCount = {};
+        let maxCount = 0;
+        let dominantColor = null;
+        // Quantize and count colors
         for (let i = 0; i < data.length; i += 4) {
-            if (data[i + 3] > 0) { // not transparent
-                r += data[i];
-                g += data[i + 1];
-                b += data[i + 2];
-                count++;
+            if (data[i + 3] < 128) continue; // skip transparent pixels
+            // Quantize color to reduce unique colors
+            const r = Math.round(data[i] / 16) * 16;
+            const g = Math.round(data[i + 1] / 16) * 16;
+            const b = Math.round(data[i + 2] / 16) * 16;
+            const colorKey = `${r},${g},${b}`;
+            colorCount[colorKey] = (colorCount[colorKey] || 0) + 1;
+            if (colorCount[colorKey] > maxCount) {
+                maxCount = colorCount[colorKey];
+                dominantColor = colorKey;
             }
         }
-        if (count > 0) {
-            r = Math.round(r / count);
-            g = Math.round(g / count);
-            b = Math.round(b / count);
-            container.style.setProperty('background-color', `rgb(${r}, ${g}, ${b})`, 'important');
+        if (dominantColor) {
+            container.style.setProperty('background-color', `rgb(${dominantColor})`, 'important');
             return;
         }
     } catch (error) {
