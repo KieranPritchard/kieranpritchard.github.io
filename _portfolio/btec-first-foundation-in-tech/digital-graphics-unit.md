@@ -7,101 +7,124 @@ topics: ["Education", "Graphics", "Design"]
 header_image: "/res/Header-Images/Digital-Logo-BPC.jpg"
 breadcrumb: ["My College Course", "Digital Graphics Unit"]
 parent: "btec-first-foundation-in-tech"
-intro_images:
-  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_1.jpg"
-    alt: "Digital graphic created using Adobe Photoshop"
-  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_2.jpg"
-    alt: "Vector graphic created using Adobe Illustrator"
+starting_out_images:
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_3.jpg"
-    alt: "Logo design project using Illustrator"
-photoshop_images:
+    alt: "Photoshoped image of the tardis on a planet with a blue moon."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_4.jpg"
-    alt: "Photoshop workspace showing layers and tools"
+    alt: "Moodboard showing off different things that I like and different albums I love."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_5.jpg"
-    alt: "Image editing project using Photoshop filters"
+    alt: "Purple and blue nameblock with embossed text."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_6.jpg"
-    alt: "Photo manipulation project"
-illustrator_images:
-  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_7.png"
-    alt: "Vector illustration created in Illustrator"
-  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_8.png"
-    alt: "Logo design using vector shapes"
-  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_9.png"
-    alt: "Typography project in Illustrator"
-final_images:
-  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_10.png"
-    alt: "Final project showing combined Photoshop and Illustrator work"
-  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_11.png"
-    alt: "Portfolio of digital graphics work"
+    alt: "Postcard design of computer related design."
+assignment_one_images:
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_12.png"
-    alt: "Documentation of design process"
+    alt: "Document discussing about the graphics intended purpose."
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_13.png"
+    alt: "Document discussing about the graphics strengths and weeknesses."
+assignment_two_images:
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_1.jpg"
+    alt: "Image of chocolate wrapper design planner showing designs and annoitations."
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_2.jpg"
+    alt: "Image of magazine advert design planner showing designs and annoitations."
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_15.png"
+    alt: "Image of one of the moodboards I made to help with planning the two graphics."
+assignment_three:
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_16.png"
+    alt: "Image of chocolate wrapper showing the design and annoitations to test suitablity."
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_17.png"
+    alt: "Image of a before and after of the magazine advert after revisions were made."
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_18.png"
+    alt: "Image of the magazine advert showing the design and annoitations to test suitablity."
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_19.png"
+    alt: "Image of the magazine advert."
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_20.png"
+    alt: "Image of the chocolate bar wrapper."
+extra_section:
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_7.png"
+    alt: "Abstract imagery of computer parts."
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_8.png"
+    alt: "Abstract imagery of a circuit board."
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_9.png"
+    alt: "imagery of robot owl with bright neon colours"
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_10.png"
+    alt: "image of table of various different designs."
 ---
 
-## Introduction to Digital Graphics
+## Starting Out
 
 <div class="content-container container-fluid">
     <div class="row h-100">
         <div class="col-md align-content-center">
             <p>
-                The Digital Graphics unit was one of the most challenging units for me, as it was the first time I had worked with professional graphic design software.
-                This unit introduced me to Adobe Photoshop and Illustrator, tools that are essential in the digital design industry.
-                The unit focused on understanding graphic design principles, working with different file formats, and creating professional-quality graphics.
+                We started the unit off with getting hands on with Adobe Photoshop. We did this by being given a tutor made course on the software; how it worked was we would watch a video on for example, the history brush and then do a task involving using it. Unfortunately, while we were supposed to also have training on illustrator we couldnt because the virtual learning enviroment wasnt being cooperative. I have selected a couple graphics i had made using this in the carosel below and feel free to scroll through.
             </p>
         </div>
         {% include carousel.html 
-            images=page.intro_images 
-            carousel_id="intro-carousel" %}
+            images=page.starting_out_images 
+            carousel_id="starting_out_carousel" %}
     </div>
 </div>
 
-## Learning Adobe Photoshop
+## Assignment one: Investigate Two Different Graphics Products
 
 <div class="content-container container-fluid">
     <div class="row h-100">
         {% include carousel.html 
-            images=page.photoshop_images 
-            carousel_id="photoshop-carousel" %}
+            images=page.assignment_one_images 
+            carousel_id="assignment-one-carousel" %}
         <div class="col-md align-content-center">
             <p>
-                Adobe Photoshop was the first software we learned in this unit. I found it quite challenging initially due to the complexity of the interface and the many tools available.
-                We learned about layers, masks, filters, and various selection tools. The most interesting part was learning about non-destructive editing techniques that allow you to make changes without permanently altering the original image.
-                We worked on several projects including photo retouching, creating composite images, and designing graphics for different purposes.
+                For this assignment we were tasked with reviewing two graphics products with different purposes. To complete the assignment we had to explain the intended purpose and features of the two products; review how the two are fit for their purpose; and discuss about their strengths and weeknesses. The two products i reviewed have a personal connection to me because The panic at the disco poster was from the first concert i went too and the infographic is to do with cyber security which is my career goal.
             </p>
         </div>
     </div>
 </div>
 
-## Working with Adobe Illustrator
+## Assignment two: Researching and Designing Digital Graphics
 
 <div class="content-container container-fluid">
     <div class="row h-100">
         <div class="col-md align-content-center">
             <p>
-                Adobe Illustrator was the second major software we learned. Unlike Photoshop, which is primarily for raster graphics, Illustrator works with vector graphics.
-                This means graphics created in Illustrator can be scaled to any size without losing quality. We learned about the pen tool, shape tools, and how to create logos and illustrations.
-                The vector-based approach was quite different from what I was used to, but it opened up new possibilities for creating scalable graphics.
+                This assignment tasked us with researching and designing a chocolate bar wrapper and a magazine advert for said chocolate. We first had to research and make moodboards for our planned moodboards; gather our needed assets; make alternative designs; annotaite our designs; and justify them. We planned and did most of the assignments on two custom made planning sheets. while the assets was on a seperate word document. Overall this made up the bulk of the planning the graphics.
             </p>
         </div>
         {% include carousel.html 
-            images=page.illustrator_images 
-            carousel_id="illustrator-carousel" %}
+            images=page.assignment_two_images 
+            carousel_id="assignment-two-carousel" %}
     </div>
 </div>
 
-## Final Projects and Assessment
+## Assignment three: Create, Test, and Review Digital Graphics
 
 <div class="content-container container-fluid">
     <div class="row h-100">
         {% include carousel.html 
-            images=page.final_images 
-            carousel_id="final-carousel" %}
+            images=page.assignment_three 
+            carousel_id="assignment-three" %}
         <div class="col-md align-content-center">
             <p>
-                For the final assessment, we had to create a portfolio of work demonstrating our skills in both Photoshop and Illustrator.
-                This included creating a logo design, editing photographs, and producing graphics for different purposes.
-                The assessment also required us to document our design process and explain the technical decisions we made.
-                While this unit was challenging due to my lack of prior experience with these tools, it gave me valuable skills that I can use in future projects.
+                For the final assignment of this unit, we actually made our planned designs. 
+                So we started by making our first designs and updating our assets where nessary.
+                We then had to gather feedback and then build off of that to improve the products intill they were at their best.
+                Then once the products were of a high enough quality we had to evalute the changes between them
             </p>
         </div>
     </div>
-</div> 
+</div>
+
+## Extra Section
+
+<div class="content-container container-fluid">
+    <div class="row h-100">
+        <div class="col-md align-content-center">
+            <p>
+                As part of practising photoshop we were also urged to explore AI images using canva.
+                This was part of a task that we were part of which involved making graphics for new posters and desk accessorys that the college staff wanted to make.
+            </p>
+        </div>
+        {% include carousel.html 
+            images=page.extra_section 
+            carousel_id="extra-section-carousel" %}
+    </div>
+</div>
