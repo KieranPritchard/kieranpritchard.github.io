@@ -1,0 +1,19 @@
+res/Header-Images/Sololearn-Logo.jpg
+res/Portfolio-Post-Images/Adobe Express - file.png
+res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_21.png
+res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_14.jpg
+res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_17.jpg
+res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_18.jpg
+res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_19.jpg
+res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_20.jpg
+res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_22.jpg
+res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_23.jpg
+res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_30.jpg
+res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_31.jpg
+res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_32.jpg
+res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_33.jpg
+res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_34.jpg
+res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_55.png
+res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_57.png
+res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_17.png
+res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_18.png

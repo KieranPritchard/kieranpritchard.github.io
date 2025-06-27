@@ -18,7 +18,7 @@ starting_out_images:
     alt: "Postcard design of computer related design."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_11.png"
     alt: "Image of lady in black and white smelling a red rose that is in colour"
-  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_14.png"
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_21.png"
     alt: "Graphic of linkedin banner which I had made."
 assignment_one_images:
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_12.png"
