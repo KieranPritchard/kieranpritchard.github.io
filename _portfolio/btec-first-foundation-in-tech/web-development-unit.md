@@ -32,13 +32,21 @@ assignment_two_images:
     alt: "Image showing alternative designs."
 assignment_three_images:
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_11.png"
-    alt: "Screenshot of the website during development showing the homepage."
+    alt: "Screenshot of summary of user feedback that was given to me."
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_16.png"
+    alt: "Screenshot showing css code."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_12.png"
-    alt: "Screenshot showing the projects page during development."
+    alt: "Screenshot showing the changes that were made to the website."
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_16.png"
+    alt: "Screenshot showing javascript code."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_13.png"
     alt: "Screenshot of the contact page during development."
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_16.png"
+    alt: "Screenshot showing html code."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_14.png"
-    alt: "Screenshot showing the blog page during development."
+    alt: "Screenshot showing the showing post feedback changes."
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_15.png"
+    alt: "Screenshot showing in devlopement blog post."
 ---
 
 ## Starting Out

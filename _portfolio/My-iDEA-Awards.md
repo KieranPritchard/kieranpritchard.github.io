@@ -5,7 +5,7 @@ description: "A comprehensive overview of my journey earning iDEA awards and bad
 date: 2024-12-15
 topics: ["Education", "Awards", "Digital"]
 header_image: "/res/Header-Images/IDEA-Logo.jpg"
-icon: "/res/Icons/IDEA-Logo.png"
+icon: "/res/Header-Images/IDEA-Logo.png"
 breadcrumb: ["My iDEA Awards"]
 ---
 

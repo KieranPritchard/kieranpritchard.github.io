@@ -16,6 +16,10 @@ starting_out_images:
     alt: "Purple and blue nameblock with embossed text."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_6.jpg"
     alt: "Postcard design of computer related design."
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_11.png"
+    alt: "Image of lady in black and white smelling a red rose that is in colour"
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_14.png"
+    alt: "Graphic of linkedin banner which I had made."
 assignment_one_images:
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_12.png"
     alt: "Document discussing about the graphics intended purpose."
@@ -26,6 +30,8 @@ assignment_two_images:
     alt: "Image of chocolate wrapper design planner showing designs and annoitations."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_2.jpg"
     alt: "Image of magazine advert design planner showing designs and annoitations."
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_14.png"
+    alt: "Image of research i had to do for the graphics i was planning."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Digital-Graphics/Digital_Graphics_15.png"
     alt: "Image of one of the moodboards I made to help with planning the two graphics."
 assignment_three:
