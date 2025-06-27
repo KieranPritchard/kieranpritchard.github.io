@@ -4,9 +4,9 @@ title: "How My Opinions On AI Changed"
 date: 2025-03-02
 category: "Thoughts & Opinions"
 topic_class: topicThree
-header_image: /res/Header-Images/How-My-Opinions-On-AI-Changed-Header.jpg
+header_image: /res/Header-Images/How-My-Opinions-On-AI-Changed-Header.webp
 header_image_alt: "Stylized image of a robot head with circuits."
-thumbnail: /res/Icons/How-My-Opinions-On-AI-Changed-Thumbnail.jpg
+thumbnail: /res/Icons/How-My-Opinions-On-AI-Changed-Thumbnail.webp
 thumbnail_alt: "Thumbnail Image of an android with circuits for brains to represent A.I."
 description: "A small introspective piece on how my opinions and views of AI have changed and grown since the first release of ChatGPT in November 2022, to the present day where it has become a part of everyone's life to some extent."
 ---

@@ -4,23 +4,23 @@ title: "Technology Systems Unit"
 description: "A detailed look at the technology systems unit, covering computer components, programming terminology, and system architecture."
 date: 2025-02-10
 topics: ["Education", "Systems", "Hardware"]
-header_image: "/res/Header-Images/Digital-Logo-BPC.jpg"
+header_image: "/res/Header-Images/Digital-Logo-BPC.webp"
 breadcrumb: ["My College Course", "Technology Systems Unit"]
 parent: "btec-first-foundation-in-tech"
 starting_out_images:
-  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Tech-Systems/Tech-Systems-1.png"
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Tech-Systems/Tech-Systems-1.webp"
     alt: "Image shows an example of what we learn based off of one of the text book."
-  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Tech-Systems/Tech-Systems-2.png"
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Tech-Systems/Tech-Systems-2.webp"
     alt: "Image shows my revision notes for the final exam of the unit."
 revision_images:
-  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Tech-Systems/Tech-Systems-3.png"
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Tech-Systems/Tech-Systems-3.webp"
     alt: "Image of KnowItAllNinja presentaition on user interfaces."
-  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Tech-Systems/Tech-Systems-4.png"
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Tech-Systems/Tech-Systems-4.webp"
     alt: "Image of KnowItAllNinja technology systems unit main page."
 exam_images:
-  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Tech-Systems/Tech-Systems-5.jpeg"
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Tech-Systems/Tech-Systems-5.webp"
     alt: "Image of revision guide textbook showing off section based on automation systems."
-  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Tech-Systems/Tech-Systems-6.jpeg"
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Tech-Systems/Tech-Systems-6.webp"
     alt: "Image of practise guide textbook showing off section based on different types of networks."
 ---
 

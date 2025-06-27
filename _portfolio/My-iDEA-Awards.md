@@ -4,8 +4,8 @@ title: "iDEA Awards"
 description: "A comprehensive overview of my journey earning iDEA awards and badges, detailing the skills and knowledge I gained through each module. The page is organized by award level, with reflections on the challenges and achievements encountered along the way. Currently, it covers up to the Silver Award, with plans to update the page as soon as the Gold Award becomes available."
 date: 2024-12-15
 topics: ["Education", "Awards", "Digital"]
-header_image: "/res/Header-Images/IDEA-Logo.png"
-icon: "/res/Header-Images/IDEA-Logo.png"
+header_image: "/res/Header-Images/IDEA-Logo.webp"
+icon: "/res/Header-Images/IDEA-Logo.webp"
 breadcrumb: ["My iDEA Awards"]
 ---
 
@@ -22,7 +22,7 @@ breadcrumb: ["My iDEA Awards"]
         </div>
         <div class="col-md order-md-1 order-first align-content-center text-center">
             <div>
-                <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/my-idea-awards/Bronze Certifacate.jpg' | relative_url }}" alt="Bronze iDEA Award Certificate">
+                <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/my-idea-awards/Bronze Certifacate.webp' | relative_url }}" alt="Bronze iDEA Award Certificate">
             </div>
         </div>
     </div>
@@ -33,7 +33,7 @@ breadcrumb: ["My iDEA Awards"]
 <div class="container-fluid content-container">
     <div class="row h-100">
         <div class="col-md align-content-center text-center">
-            <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/my-idea-awards/Sliver Certifacate.jpg' | relative_url }}" alt="Silver iDEA Award Certificate">
+            <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/my-idea-awards/Sliver Certifacate.webp' | relative_url }}" alt="Silver iDEA Award Certificate">
         </div>
         <div class="col-md align-content-center">
             <p>

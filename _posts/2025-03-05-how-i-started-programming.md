@@ -4,9 +4,9 @@ title: "How I Started Programming"
 date: 2025-03-05
 category: Programming
 topic_class: topicTwo
-header_image: /res/Header-Images/How-I-Started-Programming-Thumbnail.jpg
+header_image: /res/Header-Images/How-I-Started-Programming-Thumbnail.webp
 header_image_alt: "Code on a computer screen."
-thumbnail: /res/Icons/How-I-Started-Programming-Thumbnail.jpg
+thumbnail: /res/Icons/How-I-Started-Programming-Thumbnail.webp
 thumbnail_alt: "Thumbnail image of code on a monitor in a dark room."
 description: "This blog post is a reflection on the beginning of my programming journey. I wanted to share with you how I got started, how I began learning, and offer some personal tips and advice for anyone looking to start their own path in programming."
 ---

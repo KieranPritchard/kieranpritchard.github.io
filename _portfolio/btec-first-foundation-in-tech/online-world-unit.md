@@ -4,23 +4,23 @@ title: "Online World Unit"
 description: "An exploration of the online world unit, covering cloud computing, online software, and digital tools."
 date: 2025-01-20
 topics: ["Education", "Online", "Cloud"]
-header_image: "/res/Header-Images/Digital-Logo-BPC.jpg"
+header_image: "/res/Header-Images/Digital-Logo-BPC.webp"
 breadcrumb: ["My College Course", "Online World Unit"]
 parent: "btec-first-foundation-in-tech"
 starting_out_images:
-  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Online-World/Online-World-1.png"
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Online-World/Online-World-1.webp"
     alt: "Screenshot of KnowItAllNinja online learning platform"
-  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Online-World/Online-World-2.png"
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Online-World/Online-World-2.webp"
     alt: "Example of online learning content from the course"
 tools_images:
-  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Online-World/Online-World-3.png"
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Online-World/Online-World-3.webp"
     alt: "Screenshot of Notebook LM interface"
-  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Online-World/Online-World-4.png"
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Online-World/Online-World-4.webp"
     alt: "Example of AI tools and software explored during the course"
 exam_images:
-  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Online-World/Online-World-5.jpeg"
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Online-World/Online-World-5.webp"
     alt: "Revision materials and exam preparation"
-  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Online-World/Online-World-6.jpeg"
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Online-World/Online-World-6.webp"
     alt: "Exam results and assessment feedback"
 ---
 

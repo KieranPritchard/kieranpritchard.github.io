@@ -4,8 +4,8 @@ title: "SoloLearn Certificates"
 description: "A detailed account of my learning experience on SoloLearn, an online platform for mastering various programming languages. Each certificate is accompanied by insights into the course content, my personal progress, and the practical skills I developed. The page is regularly updated to reflect new achievements and my evolving thoughts on each course."
 date: 2024-12-10
 topics: ["Education", "Programming", "Certificates"]
-header_image: "/res/Header-Images/SoloLearn-Header.jpg"
-icon: "/res/Icons/Sololearn-Logo.png"
+header_image: "/res/Header-Images/SoloLearn-Header.webp"
+icon: "/res/Icons/Sololearn-Logo.webp"
 breadcrumb: ["SoloLearn Certificates"]
 ---
 
@@ -21,7 +21,7 @@ breadcrumb: ["SoloLearn Certificates"]
             </p>
         </div>
         <div class="col-md order-md-1 order-first align-content-center text-center">
-            <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/sololearn-certificates/SoloLearn-Python-Certifcate.jpg' | relative_url }}" alt="Image of my Certifacate for 'Introduction to Python' from SoloLearn">
+            <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/sololearn-certificates/SoloLearn-Python-Certifcate.webp' | relative_url }}" alt="Image of my Certifacate for 'Introduction to Python' from SoloLearn">
         </div>
     </div>
 </div>
@@ -31,7 +31,7 @@ breadcrumb: ["SoloLearn Certificates"]
 <div class="container-fluid content-container">
     <div class="row h-100">
         <div class="col-md align-content-center text-center">
-            <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/sololearn-certificates/SoloLearn-HTML-Certifactate.jpg' | relative_url }}" alt="Image of my Certifacate for 'Introduction to HTML' from SoloLearn">
+            <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/sololearn-certificates/SoloLearn-HTML-Certifactate.webp' | relative_url }}" alt="Image of my Certifacate for 'Introduction to HTML' from SoloLearn">
         </div>
         <div class="col-md align-content-center">
             <p>
@@ -55,7 +55,7 @@ breadcrumb: ["SoloLearn Certificates"]
         </div>
         <div class="col-md order-md-1 order-first align-content-center text-center">
             <div>
-                <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/sololearn-certificates/SoloLearn-CSS-Certactate.jpg' | relative_url }}" alt="Image of my Certifacate for 'Introduction to CSS' from SoloLearn">
+                <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/sololearn-certificates/SoloLearn-CSS-Certactate.webp' | relative_url }}" alt="Image of my Certifacate for 'Introduction to CSS' from SoloLearn">
             </div>
         </div>
     </div>
@@ -66,7 +66,7 @@ breadcrumb: ["SoloLearn Certificates"]
 <div class="container-fluid content-container">
     <div class="row h-100">
         <div class="col-md align-content-center text-center">
-            <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/sololearn-certificates/SoloLearn-C++-Certifacate.jpg' | relative_url }}" alt="Image of my Certifacate for 'Introduction to C++' from SoloLearn">
+            <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/sololearn-certificates/SoloLearn-C++-Certifacate.webp' | relative_url }}" alt="Image of my Certifacate for 'Introduction to C++' from SoloLearn">
         </div>
         <div class="col-md align-content-center">
             <p>
@@ -90,7 +90,7 @@ breadcrumb: ["SoloLearn Certificates"]
         </div>
         <div class="col-md order-md-1 order-first align-content-center text-center">
             <div>
-                <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/sololearn-certificates/SoloLearn-JavaScript-Certifacate.jpg' | relative_url }}" alt="Image of my Certifacate for 'Introduction to JavaScript' from SoloLearn">
+                <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/sololearn-certificates/SoloLearn-JavaScript-Certifacate.webp' | relative_url }}" alt="Image of my Certifacate for 'Introduction to JavaScript' from SoloLearn">
             </div>
         </div>
     </div>
