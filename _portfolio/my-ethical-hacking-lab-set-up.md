@@ -1,0 +1,89 @@
+---
+layout: portfolio_post
+title: "My Ethical Hacking Lab Setup"
+description: "A full breakdown of how I set up my ethical hacking lab using VirtualBox on my MacBook, where I installed both Ubuntu and Kali Linux. I go over everything from fixing compatibility issues to getting internet access working, and I’ve included screenshots and notes on what I did throughout the process."
+date: 2025-07-13
+topics: ["Ethical-Hacking", "Home-Lab"]
+header_image: ""
+icon: ""
+breadcrumb: ["My Ethical Hacking Lab Setup"]
+background_images:
+    - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_14.webp"
+      alt: "Screenshot of finished virtual box install."
+    - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_13.webp"
+      alt: "Screenshot of me opening virtual box for the first time."
+ubuntu_set_up:
+    - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_12.webp"
+      alt: "Screenshot of me assigning resources on virtual box."
+    - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_11.webp"
+      alt: "Screenshot of the uncompatible linux console active."
+    - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_10.webp"
+      alt: "Screenshot of the compatible ufei console active."
+    - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_9.webp"
+      alt: "Screenshot of linux desktop."
+    - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_8.webp"
+      alt: "Screenshot of linux terminal."
+    - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_6.webp"
+      alt: "Screenshot of youtube playing in the virtual machine."
+setting_up_kali_linux:
+    - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_5.webp"
+      alt: "Screenshot of the Kali Linux homepage."
+    - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_4.webp"
+      alt: "Screenshot of the Kali Linux install page."
+    - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_2.webp"
+      alt: "Screenshot of the Kali Linux virtual machine installing the OS."
+    - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_1.webp"
+      alt: "Screenshot of the Kali Linux virtual machine desktop."
+---
+
+
+## Background
+
+<div class="container-fluid content-container">
+    <div class="row h-100">
+        <div class="col-md align-content-center">
+            <p>
+                I created this setup because I wanted to build a Kali Linux lab to practice and experiment with tools on platforms like TryHackMe. At the time, I didn’t have any way to access these platforms, so I decided to assess my needs. I settled on using virtual machines, which allowed me to boot up a lab environment whenever needed without purchasing additional hardware. This approach lets me use the lab on demand without affecting other parts of my host machine.
+            </p>
+        </div>
+        <div class="col-md order-md-1 order-first align-content-center text-center">
+            {% include carousel.html 
+            images=page.ubuntu_set_up 
+            carousel_id="ubuntu-set-up-carousel" %}
+        </div>
+    </div>
+</div>
+
+## Ubuntu Set-Up
+
+<div class="container-fluid content-container">
+    <div class="row h-100">
+        <div class="col-md align-content-center text-center">
+            {% include carousel.html 
+            images=page.background_images 
+            carousel_id="background-images-carousel" %}
+        </div>
+        <div class="col-md align-content-center order-md-1 order-first">
+            <p>
+                My first goal was to get everything running on my MacBook using Ubuntu. VirtualBox installed without any issues, and I set it up in Expert Mode based on what I had learned in college. I downloaded an Ubuntu Server ISO image and loaded it into VirtualBox. However, it opened into the UEFI console. I began troubleshooting—first by searching online for fixes, and then by asking ChatGPT for help. Eventually, I realized I had downloaded the wrong image for my host machine's architecture. After installing the correct version, I created a user account and installed Guest Additions to enable internet access, which I tested by watching My Chemical Romance music videos on YouTube.
+            </p>
+        </div>
+    </div>
+</div>
+
+## Setting up kali linux
+
+<div class="container-fluid content-container">
+    <div class="row h-100">
+        <div class="col-md align-content-center">
+            <p>
+                I first downloaded a compatible Kali Linux image for my MacBook. I then loaded it into VirtualBox and allocated system resources to the virtual machine. After booting it up, I created a user account, installed Guest Additions, and made sure everything worked correctly. Finally, I installed any missing tools and customized the OS to my preferences.
+            </p>
+        </div>
+        <div class="col-md order-md-1 order-first align-content-center text-center">
+            {% include carousel.html 
+            images=page.setting_up_kali_linux 
+            carousel_id="setting-up-kali-linux-carousel" %}
+        </div>
+    </div>
+</div>
