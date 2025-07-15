@@ -376,14 +376,15 @@ table, th, td {
 }
 
 .recent-project-card-img{
-    height: 100px;
+    height: 150px;
+    max-width: 95%;
     width: auto;
 }
 
 .Recent-Projects-Image-Background{
     background-color: black;
     height: 100%;
-    padding: 5% 0;
+    padding: 2.5% 2.5%;
     display: flex;
     justify-content: center;
 }
@@ -598,13 +599,14 @@ sidebar-recent-blog-title{
 .project-page-project-card-image-background{
     background-color: black;
     height: 100%;
-    padding: 7.5% 2.5%;
+    padding: 2.5% 2.5%;
     display: flex;
     justify-content: center;
 }
 
 .project-page-project-card-image{
-    height: 100px;
+    height: 150px;
+    max-width: 95%;
     width: auto;
 }
 
@@ -936,6 +938,20 @@ sidebar-recent-blog-title{
     }
 
     /* Project Page Styling */
+
+    .project-page-project-card-image-background{
+    background-color: black;
+    height: 100%;
+    padding: 2.5% 1.25%;
+    display: flex;
+    justify-content: center;
+}
+
+    .project-page-project-card-image{
+        height: 200px;
+        max-width: 95%;
+        width: auto;
+    }
 
     .project-page-project-card-title{
         font-size: 3.4vw !important;

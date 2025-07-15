@@ -1,11 +1,11 @@
 ---
 layout: portfolio_post
 title: "My Ethical Hacking Lab Setup"
-description: "A full breakdown of how I set up my ethical hacking lab using VirtualBox on my MacBook, where I installed both Ubuntu and Kali Linux. I go over everything from fixing compatibility issues to getting internet access working, and I’ve included screenshots and notes on what I did throughout the process."
+description: "A full breakdown of how I set up my ethical hacking lab using VirtualBox on my MacBook, where I installed both Ubuntu, which was to test if virtual box was working, and Kali Linux for my ethical hacking lab. I go over everything from fixing compatibility issues to getting internet access working, and I’ve included screenshots and notes on what I did throughout the process."
 date: 2025-07-13
 topics: ["Ethical-Hacking", "Home-Lab"]
 header_image: "/res/Header-Images/My_Ethical_Hacking_Lab_Setup_HeaderImage.png"
-icon: "/res/Icons/My_Ethical_Hacking_Lab_Setup_Icon.png"
+icon: "/res/Icons/My_Ethical_Hacking_Lab_Setup_Icon.webp"
 breadcrumb: ["My Ethical Hacking Lab Setup"]
 background_images:
     - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_14.webp"
