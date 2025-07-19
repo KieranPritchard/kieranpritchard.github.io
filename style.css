@@ -338,7 +338,7 @@ table, th, td {
 }
 
 #Active-Page{
-    color: var(--hover-highlight);
+    color: var(--hover-highlight) !important;
 }
 
 
