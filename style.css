@@ -187,7 +187,6 @@ body{
 
 .recent-project-card-img-background{
     background-color: var(--image-background);
-    padding: 10%;
 }
 
 .recent-project-card-img{
@@ -600,7 +599,6 @@ sidebar-recent-blog-title{
 .project-page-project-card-image-background{
     background-color: black;
     height: 100%;
-    padding: 2.5% 2.5%;
     display: flex;
     justify-content: center;
 }

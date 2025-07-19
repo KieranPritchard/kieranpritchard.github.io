@@ -1,7 +1,7 @@
 ---
 layout: portfolio_post
 title: "CTF Write-Ups"
-description: "An overview of my GitHub repository containing Capture The Flag (CTF) write-ups from various platforms. I explain the purpose of the repo, how it showcases my cybersecurity skills, and how it serves as both a reference and portfolio. The page links directly to the repository for easy access."
+description: "An overview of my GitHub repository containing Capture The Flag (CTF) write-ups from various platforms. I explain the purpose of the repo, how it showcases my cybersecurity and ethical hacking skills, and how it serves as both a reference and portfolio of work. The page links directly to the repository for easy access."
 date: 2025-07-18
 topics: ["Ethical-Hacking", "Write-Ups"]
 header_image: "/res/Header-Images/CTF-Write-Ups-Header-Image.png"
