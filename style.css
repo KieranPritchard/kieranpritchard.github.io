@@ -998,7 +998,6 @@ sidebar-recent-blog-title{
 
     .indivual-post-page-header-image-background{
         background-color: white;
-        padding: 7.5% 0;
         display: flex;
         justify-content: center;
         margin-bottom: 5%;
@@ -1007,7 +1006,6 @@ sidebar-recent-blog-title{
     .indivual-post-page-header-image{
         height: auto;
         width: 100%;
-        max-width: 70%;
     }
 }
 
