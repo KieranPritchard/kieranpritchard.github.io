@@ -19,7 +19,7 @@ breadcrumb: ["CTF Write-Ups"]
             </p>
         </div>
         <div class="col-md order-md-1 order-first align-content-center text-center">
-            
+            <img class="indivual-post-page-image" src="{{ 'res/Portfolio-Post-Images/ctf-write-ups/ctf-write-ups-image.webp' | relative_url }}" alt="Image of write up page.">
         </div>
     </div>
 </div>
