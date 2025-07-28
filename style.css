@@ -55,27 +55,15 @@ h1, h2, h3, h5{
     color: var(--main-accent) !important;
 }
 
-h1{
-    padding-top: 10%;
-    font-size: 3vw !important;
-}
+h1{ padding-top: 10%; font-size: 3vw !important; }
 
-h2{
-    padding-top: 2.5%;
-    font-size: 2vw !important;
-}
+h2{ padding-top: 2.5%; font-size: 2vw !important;}
 
-h3{
-    font-size: 1.75vw !important;
-}
+h3{ font-size: 1.75vw !important;}
 
-ul{
-    color: var(--base-text);
-}
+ul{ color: var(--base-text);}
 
-li{
-    font-family: "Source Code Pro";
-}
+li{ font-family: "Source Code Pro"; }
 
 p{
     font-size: 1.25vw !important;
@@ -83,47 +71,25 @@ p{
     color: var(--base-text);
 }
 
-a{
-    color: var(--main-accent) !important;
-}
+a{ color: var(--main-accent) !important; }
 
-a:hover{
-    color: var(--hover-highlight) !important;
-}
+a:hover{ color: var(--hover-highlight) !important; }
 
-b{
-    font-family: "Source Code Pro";
-}
+b{ font-family: "Source Code Pro"; }
 
 /* Styling for universial elements (To be used on mulitple pages) */
 
-body{
-    background-color: var(--background) !important;
-}
+body{ background-color: var(--background) !important; }
 
-#contact-footer-list{
-    list-style: none;
-    margin-left: -5%;
-}
+#contact-footer-list{ list-style: none; margin-left: -5%; }
 
-.contact-footer-list-link{
-    color: var(--base-text);
-    text-decoration: none;
-}
+.contact-footer-list-link{ color: var(--base-text); text-decoration: none;}
 
-.contact-footer-list-link:hover{
-    color: var(--hover-highlight);
-    transition: ease-in 0.3s;
-}
+.contact-footer-list-link:hover{ color: var(--hover-highlight); transition: ease-in 0.3s;}
 
-.contact-footer-list-item{
-    margin-bottom: 7.5%;
-    font-size: 1vw;
-}
+.contact-footer-list-item{ margin-bottom: 7.5%; font-size: 1vw; }
 
-.footer-icon{
-    font-size: 1.75vw;
-}
+.footer-icon{ font-size: 1.75vw; }
 
 .contact-footer-icon-background{
     margin-right: 3%;
@@ -149,9 +115,7 @@ body{
     padding-right: 5%;
 }
 
-.content-container{
-    height: 85% !important;
-}
+.content-container{ height: 85% !important; }
 
 /* Recent Blog Post Styling */
 
@@ -542,10 +506,7 @@ sidebar-recent-blog-title{
     font-size: 0.85vw;
 }
 
-.sidebar-recent-blog-title:hover{
-    color: var(--hover-highlight);
-    font-weight: bold;
-}
+.sidebar-recent-blog-title:hover{ color: var(--hover-highlight); font-weight: bold;}
 
 #blog-list{
     margin: 0%;
@@ -553,10 +514,7 @@ sidebar-recent-blog-title{
     list-style: none;
 }
 
-.blog-post{
-    border-bottom: solid var(--main-accent);
-    padding: 3% 0;
-}
+.blog-post{ border-bottom: solid var(--main-accent); padding: 3% 0; }
 
 .blog-post-image{
     height: 150px;
@@ -564,19 +522,11 @@ sidebar-recent-blog-title{
     border-radius: 25px;
 }
 
-.blog-post-title{
-    text-align: left;
-    font-size: 1.30vw !important;
-}
+.blog-post-title{ text-align: left; font-size: 1.30vw !important; }
 
-.blog-post-title:hover{
-    color: var(--hover-highlight) !important;
-}
+.blog-post-title:hover{ color: var(--hover-highlight) !important; }
 
-.blog-post-title-line{
-    color: inherit;
-    text-decoration: none;
-}
+.blog-post-title-line{ color: inherit; text-decoration: none; }
 
 .blog-post-date{
     font-family: "Red Hat Display";
@@ -584,16 +534,11 @@ sidebar-recent-blog-title{
     font-size: 1vw !important;
 }
 
-.blog-post-description{
-    font-size: 1vw !important;
-}
+.blog-post-description{ font-size: 1vw !important; }
 
 /* All The Styling For The Projects Page */
 
-#project-page-intro-section-text{
-    padding-top: 1.5%;
-    font-size: 1vw;
-}
+#project-page-intro-section-text{ padding-top: 1.5%; font-size: 1vw; }
 
 .project-page-project-card{
     background-color: var(--background-secondary);
@@ -623,26 +568,15 @@ sidebar-recent-blog-title{
     font-size: 1.35vw;
 }
 
-.project-page-project-card-title-link{
-    text-decoration: none;
-    color: var(--main-accent) !important;
-}
+.project-page-project-card-title-link{ text-decoration: none; color: var(--main-accent) !important;}
 
-.project-page-project-card-title-link:hover{
-    color: var(--hover-highlight);
-}
+.project-page-project-card-title-link:hover{ color: var(--hover-highlight); }
 
-.project-page-project-card-text{
-    color: var(--main-accent);
-    font-size: 0.85vw !important;
-}
-
+.project-page-project-card-text{ color: var(--main-accent); font-size: 0.85vw !important;}
 
 /* All The Styling For The Hobbies Page */
 
-#hobbies-page-programming-section-title{
-    padding-bottom: 2.5%;
-}
+#hobbies-page-programming-section-title{ padding-bottom: 2.5%; }
 
 .hobbies-page-image{
     height: auto;
@@ -652,24 +586,13 @@ sidebar-recent-blog-title{
 
 /* All The Styling For The Contact Page */
 
-#contact-page-list{
-    list-style: none;
-}
+#contact-page-list{ list-style: none; }
 
-.contact-page-list-link{
-    color: var(--base-text);
-    text-decoration: none;
-}
+.contact-page-list-link{ color: var(--base-text); text-decoration: none; }
 
-.contact-page-list-link:hover{
-    color: var(--hover-highlight);
-    transition: ease-in 0.3s;
-}
+.contact-page-list-link:hover{ color: var(--hover-highlight); transition: ease-in 0.3s; }
 
-.contact-page-list-item{
-    margin-bottom: 7.5%;
-    font-size: 1.25vw;
-}
+.contact-page-list-item{ margin-bottom: 7.5%; font-size: 1.25vw; }
 
 .contact-page-icon-background{
     margin-right: 15px;
@@ -680,34 +603,19 @@ sidebar-recent-blog-title{
     color: var(--background);
 }
 
-#contact-page-button{
-    font-size: 1vw;
-}
+#contact-page-button{ font-size: 1vw; }
 
 /* Indivual blog/portfolio post styling */
 
-.breadcrumb-item::before{
-    color: var(--base-text) !important;
-}
+.breadcrumb-item::before{ color: var(--base-text) !important; }
 
-.breadcrumb-item{
-    color: var(--base-text) !important;
-    font-size: 1vw;
-}
+.breadcrumb-item{ color: var(--base-text) !important; font-size: 1vw; }
 
-.breadcrumb-item-link{
-    color: var(--base-text) !important;
-}
+.breadcrumb-item-link{ color: var(--base-text) !important; }
 
-.breadcrumb-item-link:hover{
-    color: var(--hover-highlight) !important;
-    transition: ease 0.3s;
-}
+.breadcrumb-item-link:hover{ color: var(--hover-highlight) !important; transition: ease 0.3s; }
 
-.indivual-post-page-title{
-    text-align: left;
-    padding-top: 0.5%;
-}
+.indivual-post-page-title{ text-align: left; padding-top: 0.5%;}
 
 .indivual-post-page-date{
     margin: 0;
@@ -744,10 +652,7 @@ sidebar-recent-blog-title{
     max-width: 100%;
 }
 
-.blog-post-page-heading{
-    text-align: left;
-    margin-bottom: 2.5%;
-}
+.blog-post-page-heading{ text-align: left; margin-bottom: 2.5%;}
 
 .blog-post-background-odd{
     min-height: 50vh;
@@ -767,17 +672,18 @@ sidebar-recent-blog-title{
     line-height: 1.6;
 }
 
-.portfolio-post-page-heading{
-    text-align: left;
-}
+.portfolio-post-page-heading{ text-align: left; }
 
+/* ===== COMBINED MEDIA QUERIES ===== */
+
+/* Large Desktop (1400px and up) */
 @media screen and (min-width: 1400px) {
-    .recent-blog-post{
+    .recent-blog-post {
         margin-top: 0.75%;
         margin-bottom: 0.75%;
     }
 
-    .home-page-recent-blogs-image{
+    .home-page-recent-blogs-image {
         height: auto;
         width: 100%;
         max-width: 80%;
@@ -787,391 +693,16 @@ sidebar-recent-blog-title{
         margin-left: 7.5%;
         margin-bottom: 7.5%;
     }
-
-
 }
 
-@media screen and (max-width: 768px){
-    .auto-background-md{
+/* Tablet (768px and down) */
+@media screen and (max-width: 768px) {
+    .auto-background-md {
         height: auto;
         padding-bottom: 3%;
-    }    
-}
-
-/* Media query for when website view is small */
-@media screen and (max-width: 576px) {
-    /* Text heading */
-    h1{
-        font-size: 6vw !important;
-    }
-
-    h2{
-        font-size: 4.5vw !important;
-    }
-
-    p{
-        font-size: 2.75vw !important;
-    }
-
-    li{
-        font-size: 3.5vw !important;
-    }
-
-    /* Reuseable element styling */
-
-    /* Navbar */
-
-    .navbar{
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-
-    /* Backgrounds */
-    
-    .auto-background-sm{
-        height: auto;
-        padding-bottom: 5%;
-    }
-
-    /* Blog post styling */
-
-    .recent-blog-post-title{
-        margin-left: 4%;
-        margin-right: 4%;
-        padding-left: 0%;
-        font-size: 4.5vw !important;
-    }
-
-    .recent-blog-post-text{
-        margin-left: 4%;
-        margin-right: 4%;
-        font-size: 2.4vw !important;
-    }
-
-    /* Table Styling */
-
-    table{
-        font-size: 2.5vw;
     }
     
-    th{
-        height: 3.75vh;
-    }
-
-    /* Recent Project Card Styling */
-
-    .recent-project-card-title{
-        font-size: 3.8vw !important;
-    }
-
-    .recent-project-card-text{
-        font-size: 2.4vw !important;
-    }
-
-    /* Home page styling */
-
-    #Home-Page-About-Me-Paragraph{
-        padding: 0;
-    }
-
-    /* About page styling */
-
-    .about-page-heading{
-        padding: 0;
-        padding-top: 2%;
-        font-size: 3.5vw !important;
-    }
-
-    .educational-history-title{
-        font-size: 3.75vw !important;
-    }
-
-    .educational-history-date{
-        font-size: 2.75vw !important;
-    }
-
-    .educational-history-list{
-        font-size: 2.5vw !important;
-    }
-
-    .about-contact-page-list{
-        font-size: 6vw !important;
-    }
-
-    .about-contact-page-list-item{
-        font-size: 4vw;
-    }
-
-    .about-contact-page-icon-background{
-        font-size: 4vw;
-    }
-
-    /* Blog Page styling */
-
-    #blog-sidebar{
-        width: 100%;
-        height: auto;
-        margin-bottom: 5%;
-    }
-
-    .sidebar-labels{
-        font-size: 3vw;
-    }
-
-    .sidebar-recent-blog{
-        padding: 0;
-        padding-top: 1%;
-        padding-bottom: 1%;
-    }
-
-    .sidebar-recent-blog-title{
-        font-size: 2vw !important;
-    }
-
-    .sidebar-title{
-        font-size: 2.75vw !important;
-    }
-
-    .blog-post-title{
-        font-size: 3.6vw !important;
-    }
-
-    .blog-post-date{
-        font-size: 2vw !important;
-    }
-
-    .blog-post-description{
-        font-size: 2vw !important;
-    }
-
-    /* Project Page Styling */
-
-    .project-page-project-card-image-background{
-    background-color: black;
-    height: 100%;
-    padding: 2.5% 1.25%;
-    display: flex;
-    justify-content: center;
-}
-
-    .project-page-project-card-image{
-        height: 200px;
-        max-width: 95%;
-        width: auto;
-    }
-
-    .project-page-project-card-title{
-        font-size: 3.4vw !important;
-    }
-
-    .project-page-project-card-text{
-        font-size: 2.4vw !important;
-    }
-
-    /* Hobbies Page Styling */
-    .hobbies-page-image{
-        height: auto;
-        width: 100%;
-        max-width: 100%;
-        padding: 5% 0;
-    }
-
-    /* Contact Page Styling */
-    .contact-page-list-item{
-        font-size: 3.75vw;
-    }
-    
-    .contact-page-icon-background{
-        font-size: 4vw;
-        padding: 2.5% 3.5%;
-    }
-    
-    #contact-page-button{
-        font-size: 2.75vw;
-    }
-
-    /* Indivual Post Pages Styling */
-    .breadcrumb-item{
-        font-size: 2.5vw !important;
-    }
-
-    .indivual-post-page-date{
-        font-size: 3vw!important;
-    }
-    
-    .indivual-post-page-topics{
-        font-size: 2.5vw !important;
-        margin-bottom: 5% !important;
-    }
-
-    .indivual-post-page-header-image-background{
-        background-color: white;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 5%;
-    }
-    
-    .indivual-post-page-header-image{
-        height: auto;
-        width: 100%;
-    }
-}
-
-/* Carousel Styles */
-.carousel {
-    position: relative;
-    margin-bottom: 2rem;
-}
-
-.carousel-inner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.carousel-item {
-    position: relative;
-    display: none;
-    float: left;
-    width: 100%;
-    margin-right: -100%;
-    backface-visibility: hidden;
-    transition: transform 0.6s ease-in-out;
-}
-
-.carousel-item.active,
-.carousel-item-next,
-.carousel-item-prev {
-    display: block;
-}
-
-.carousel-item-next:not(.carousel-item-start),
-.active.carousel-item-end {
-    transform: translateX(100%);
-}
-
-.carousel-item-prev:not(.carousel-item-end),
-.active.carousel-item-start {
-    transform: translateX(-100%);
-}
-
-/* Carousel image styling */
-.carousel-item img {
-    width: 100%;
-    height: auto;
-    max-height: 500px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-}
-
-.carousel-indicators {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin-right: 15%;
-    margin-left: 15%;
-    margin-bottom: 1rem;
-    list-style: none;
-}
-
-.carousel-indicators [data-bs-target] {
-    box-sizing: content-box;
-    flex: 0 1 auto;
-    width: 30px;
-    height: 3px;
-    padding: 0;
-    margin-right: 3px;
-    margin-left: 3px;
-    text-indent: -999px;
-    cursor: pointer;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    opacity: 0.5;
-    transition: opacity 0.6s ease;
-}
-
-.carousel-indicators .active {
-    opacity: 1;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 15%;
-    padding: 0;
-    color: #fff;
-    text-align: center;
-    background: none;
-    border: 0;
-    opacity: 0.5;
-    transition: opacity 0.15s ease;
-}
-
-.carousel-control-prev:hover,
-.carousel-control-prev:focus,
-.carousel-control-next:hover,
-.carousel-control-next:focus {
-    color: #fff;
-    text-decoration: none;
-    outline: 0;
-    opacity: 0.9;
-}
-
-.carousel-control-prev {
-    left: 0;
-}
-
-.carousel-control-next {
-    right: 0;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    display: inline-block;
-    width: 2rem;
-    height: 2rem;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: 100% 100%;
-}
-
-.carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
-}
-
-.carousel-control-next-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-}
-
-.visually-hidden {
-    position: absolute !important;
-    width: 1px !important;
-    height: 1px !important;
-    padding: 0 !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    clip: rect(0, 0, 0, 0) !important;
-    white-space: nowrap !important;
-    border: 0 !important;
-}
-
-/* Responsive carousel adjustments */
-@media screen and (max-width: 768px) {
+    /* Carousel adjustments for tablet */
     .carousel-item img {
         max-height: 300px;
     }
@@ -1188,15 +719,140 @@ sidebar-recent-blog-title{
     }
 }
 
+/* Mobile (576px and down) */
 @media screen and (max-width: 576px) {
-    .carousel-item img {
-        max-height: 250px;
+    /* Typography */
+    h1 { font-size: 6vw !important; }
+    h2 { font-size: 4.5vw !important; }
+    p { font-size: 2.75vw !important; }
+    li { font-size: 3.5vw !important; }
+
+    /* Layout */
+    .navbar {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
     
-    .carousel-indicators {
-        margin-bottom: 0.5rem;
+    .auto-background-sm {
+        height: auto;
+        padding-bottom: 5%;
+    }
+
+    /* Blog Components */
+    .recent-blog-post-title {
+        margin-left: 4%;
+        margin-right: 4%;
+        padding-left: 0%;
+        font-size: 4.5vw !important;
+    }
+
+    .recent-blog-post-text {
+        margin-left: 4%;
+        margin-right: 4%;
+        font-size: 2.4vw !important;
+    }
+
+    /* Tables */
+    table { font-size: 2.5vw; }
+    th { height: 3.75vh; }
+
+    /* Project Cards */
+    .recent-project-card-title { font-size: 3.8vw !important; }
+    .recent-project-card-text { font-size: 2.4vw !important; }
+
+    /* Home Page */
+    #Home-Page-About-Me-Paragraph { padding: 0; }
+
+    /* About Page */
+    .about-page-heading {
+        padding: 0;
+        padding-top: 2%;
+        font-size: 3.5vw !important;
+    }
+
+    .educational-history-title { font-size: 3.75vw !important; }
+    .educational-history-date { font-size: 2.75vw !important; }
+    .educational-history-list { font-size: 2.5vw !important; }
+    .about-contact-page-list { font-size: 6vw !important; }
+    .about-contact-page-list-item { font-size: 4vw; }
+    .about-contact-page-icon-background { font-size: 4vw; }
+
+    /* Blog Page */
+    #blog-sidebar {
+        width: 100%;
+        height: auto;
+        margin-bottom: 5%;
+    }
+
+    .sidebar-labels { font-size: 3vw; }
+    .sidebar-recent-blog {
+        padding: 0;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+    .sidebar-recent-blog-title { font-size: 2vw !important; }
+    .sidebar-title { font-size: 2.75vw !important; }
+    .blog-post-title { font-size: 3.6vw !important; }
+    .blog-post-date { font-size: 2vw !important; }
+    .blog-post-description { font-size: 2vw !important; }
+
+    /* Project Page */
+    .project-page-project-card-image-background {
+        background-color: black;
+        height: 100%;
+        padding: 2.5% 1.25%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .project-page-project-card-image {
+        height: 200px;
+        max-width: 95%;
+        width: auto;
+    }
+
+    .project-page-project-card-title { font-size: 3.4vw !important; }
+    .project-page-project-card-text { font-size: 2.4vw !important; }
+
+    /* Hobbies Page */
+    .hobbies-page-image {
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+        padding: 5% 0;
+    }
+
+    /* Contact Page */
+    .contact-page-list-item { font-size: 3.75vw; }
+    .contact-page-icon-background {
+        font-size: 4vw;
+        padding: 2.5% 3.5%;
+    }
+    #contact-page-button { font-size: 2.75vw; }
+
+    /* Individual Post Pages */
+    .breadcrumb-item { font-size: 2.5vw !important; }
+    .indivual-post-page-date { font-size: 3vw !important; }
+    .indivual-post-page-topics {
+        font-size: 2.5vw !important;
+        margin-bottom: 5% !important;
+    }
+
+    .indivual-post-page-header-image-background {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5%;
     }
     
+    .indivual-post-page-header-image {
+        height: auto;
+        width: 100%;
+    }
+
+    /* Carousel adjustments for mobile */
+    .carousel-item img { max-height: 250px; }
+    .carousel-indicators { margin-bottom: 0.5rem; }
     .carousel-indicators [data-bs-target] {
         width: 20px;
         height: 2px;
