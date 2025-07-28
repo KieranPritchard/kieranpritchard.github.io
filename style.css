@@ -26,6 +26,10 @@
     --main-accent: #2a3c4b;
     --border: #b1b5ba;
     --hover-highlight: #527aa3;
+    --table-header-background: #2a3c4b;
+    --table-header-text: #e3e3e3;
+    --table-body-background: #e3e3e3;
+    --table-body-text: #4a4a4a;
 }
 
 [data-bs-theme="dark"]{
@@ -36,6 +40,10 @@
     --main-accent: #a9d6e5;
     --border: #a9d6e5;
     --hover-highlight: #ffc300;
+    --table-header-background: #003566;
+    --table-header-text: #a9d6e5;
+    --table-body-background: #527aa3;
+    --table-body-text: white;
 }
 
 /* Text Styling */
@@ -291,8 +299,8 @@ body{
 /* Table Styling */
 
 table{
-    background-color: var(--main-accent);
-    border-color: var(--background) !important;
+    background-color: var(--table-body-background);
+    border-color: var(--table-header-background) !important;
     width: 100%;
     font-size: 1vw;
 }
@@ -300,19 +308,19 @@ table{
 th{
     height: 5vh;
     text-align: center !important;
-    background-color: var(--background-secondary);
+    background-color: var(--table-header-background);
 }
 
 .table-title-text{
-    color: var(--main-accent);
+    color: var(--table-header-text);
     font-family: "Red Hat Display";
 }
 
 table, th, td {
     text-align: center;
-    color: var(--background);
+    color: var(--table-body-text);
     border: 1px solid !important;
-    border-color: var(--background) !important;
+    border-color: var(--table-header-background) !important;
 }
 
 /* Navigation Styling */
