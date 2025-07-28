@@ -35,7 +35,13 @@
                     <li>
                         <a href="{{ '/Contact.html' | relative_url }}" class="nav-link {% if page.url contains 'Contact' %}active{% endif %}" id="{% if page.url contains 'Contact' %}Active-Page{% endif %}">Contact</a>
                     </li>
-                </ul> 
+                </ul>
+                
+                <div class="d-flex ms-auto align-items-center">
+                    <button class="navbar-button" onclick="themeSwitcher()">
+                        <i id="themeToggle" class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
