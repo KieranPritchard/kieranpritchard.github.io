@@ -314,6 +314,7 @@ table, th, td {
 }
 
 .navbar-button{
+    all: unset;
     width: 2.5em !important;
     height: 2.5em !important;
     border-radius: 50% !important;
@@ -323,9 +324,9 @@ table, th, td {
     font-size: 1.2em !important;
     color: var(--main-accent) !important;
     background-color: transparent !important;
-    border: 1px solid var(--main-accent) !important;
+    border: 1px solid var(--main-accent);
     transition: background-color 0.3s ease, transform 0.2s ease !important;
-    border: none !important;
+    border: none;
 }
 
 .navbar-button:hover {
