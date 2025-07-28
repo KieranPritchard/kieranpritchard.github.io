@@ -314,23 +314,24 @@ table, th, td {
 }
 
 .navbar-button{
-    width: 2.5em;
-    height: 2.5em;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2em;
-    color: var(--main-accent);
-    background-color: transparent;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    border: none;
+    width: 2.5em !important;
+    height: 2.5em !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.2em !important;
+    color: var(--main-accent) !important;
+    background-color: transparent !important;
+    border: 1px solid var(--main-accent) !important;
+    transition: background-color 0.3s ease, transform 0.2s ease !important;
+    border: none !important;
 }
 
 .navbar-button:hover {
-    background-color: var(--main-accent);
-    color: var(--hover-highlight);
-    transform: scale(1.05);
+    background-color: var(--main-accent) !important;
+    color: var(--hover-highlight) !important;
+    transform: scale(1.05) !important;
 }
 
 /* Image Styling */
