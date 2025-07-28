@@ -19,31 +19,31 @@
 
 :root,
 [data-bs-theme="light"]{
-    --background: #e3e3e3;
-    --background-secondary: #5f7f9e;
-    --base-text: #4a4a4a;
-    --image-background: black;
-    --main-accent: #2a3c4b;
-    --border: #b1b5ba;
-    --hover-highlight: #527aa3;
+    --background: #f9fafb;                 
+    --background-secondary: #d7e1ec;       
+    --base-text: #1f2933;                  
+    --image-background: #ffffff;           
+    --main-accent: #2a3c4b;               
+    --border: #d0d5db;                     
+    --hover-highlight: #5a8ab8;
     --table-header-background: #2a3c4b;
-    --table-header-text: #e3e3e3;
-    --table-body-background: #e3e3e3;
-    --table-body-text: #4a4a4a;
+    --table-header-text: #f9fafb;
+    --table-body-background: #f9fafb;
+    --table-body-text: #1f2933;
 }
 
 [data-bs-theme="dark"]{
-    --background: #001d3d;
-    --background-secondary: #003566;
-    --base-text: white;
-    --image-background: black;
-    --main-accent: #a9d6e5;
-    --border: #a9d6e5;
-    --hover-highlight: #ffc300;
-    --table-header-background: #003566;
+    --background: #0d1b2a;                 
+    --background-secondary: #1b2b41;       
+    --base-text: #f0f4f8;                 
+    --image-background: #0a0a0a;           
+    --main-accent: #a9d6e5;                
+    --border: #3a4f63;                     
+    --hover-highlight: #ffbf00;  
+    --table-header-background: #1b2b41;
     --table-header-text: #a9d6e5;
-    --table-body-background: #527aa3;
-    --table-body-text: white;
+    --table-body-background: #3a4f63;
+    --table-body-text: #f0f4f8;
 }
 
 /* Text Styling */
@@ -242,7 +242,7 @@ body{
     height: 7.5%;
     margin-bottom: 0.75%;
     padding-left: 1%;
-    background-color: var(--main-accent);
+    background-color: var(--background);
     border-style: none;
     border-radius: 15px;
 }
@@ -250,7 +250,7 @@ body{
 #contact-me-form-email-body{
     width: 100%;
     padding-left: 1%;
-    background-color: var(--main-accent);
+    background-color: var(--background);
     border-style: none;
     border-radius: 15px;
 }
