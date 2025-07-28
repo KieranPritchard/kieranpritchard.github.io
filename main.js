@@ -5,11 +5,17 @@ window.addEventListener("DOMContentLoaded", function () {
     if (!currentTheme) {
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         const theme = prefersDark ? "dark" : "light";
-        const icon = theme === "dark" ? "fa-solid fa-sun" : "fa-solid fa-moon";
+        const iconClass = theme === "dark" ? "fa-solid fa-sun themeToggle" : "fa-solid fa-moon themeToggle";
+
         document.documentElement.setAttribute("data-bs-theme", theme);
-        document.getElementById("themeToggle").className = icon
+
+        // Update all themeToggle icons
+        const icons = document.getElementsByClassName("themeToggle");
+        for (let i = 0; i < icons.length; i++) {
+            icons[i].className = iconClass;
+        }
     }
-    
+
     // Initialize Bootstrap carousels
     initializeCarousels();
 });
@@ -17,12 +23,15 @@ window.addEventListener("DOMContentLoaded", function () {
 // Switches dark and light modes
 function themeSwitcher() {
     const currentTheme = document.documentElement.getAttribute("data-bs-theme");
-    if (currentTheme === "dark") {
-        document.documentElement.setAttribute("data-bs-theme", "light");
-        document.getElementById("themeToggle").className = "fa-solid fa-moon"
-    } else {
-        document.documentElement.setAttribute("data-bs-theme", "dark");
-        document.getElementById("themeToggle").className = "fa-solid fa-sun"
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+    const iconClass = newTheme === "dark" ? "fa-solid fa-sun themeToggle" : "fa-solid fa-moon themeToggle";
+
+    document.documentElement.setAttribute("data-bs-theme", newTheme);
+
+    // Update all themeToggle icons
+    const icons = document.getElementsByClassName("themeToggle");
+    for (let i = 0; i < icons.length; i++) {
+        icons[i].className = iconClass;
     }
 }
 
