@@ -11,17 +11,22 @@
 <body id="themeLoaded">
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
+            <!-- Brand -->
             <a href="{{ '/' | relative_url }}" class="navbar-brand">Kieran Pritchard</a>
+
+            <!-- Toggler button (hamburger) -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-1 mb-lg-0 mx-auto">
+
+            <!-- Collapsible navbar content -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav flex-lg-row gap-lg-4 text-center mx-auto">
                     <li class="nav-item">
                         <a href="{{ '/' | relative_url }}" class="nav-link {% if page.url contains '/index' or page.url == '/' %}active{% endif %}" id="{% if page.url contains '/index' or page.url == '/' %}Active-Page{% endif %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ '/About.html' | relative_url }}" class="nav-link {% if page.url contains 'About' %}active{% endif %}" id="{% if page.url contains 'About' %}Active-Page{% endif %}" >About</a>
+                        <a href="{{ '/About.html' | relative_url }}" class="nav-link {% if page.url contains 'About' %}active{% endif %}" id="{% if page.url contains 'About' %}Active-Page{% endif %}">About</a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ '/blog/' | relative_url }}" class="nav-link {% if page.url contains 'blog' %}active{% endif %}" id="{% if page.url contains 'blog' %}Active-Page{% endif %}">Blog</a>
@@ -32,16 +37,24 @@
                     <li class="nav-item">
                         <a href="{{ '/Hobbies.html' | relative_url }}" class="nav-link {% if page.url contains 'Hobbies' %}active{% endif %}" id="{% if page.url contains 'Hobbies' %}Active-Page{% endif %}">Hobbies</a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a href="{{ '/Contact.html' | relative_url }}" class="nav-link {% if page.url contains 'Contact' %}active{% endif %}" id="{% if page.url contains 'Contact' %}Active-Page{% endif %}">Contact</a>
                     </li>
+
+                    <!-- Theme toggle shown only in collapsed menu -->
+                    <li class="nav-item d-lg-none mt-2">
+                        <button class="btn btn-outline-secondary w-100" onclick="themeSwitcher()">
+                            <i id="themeToggle" class="fa-solid fa-moon"></i> Toggle Theme
+                        </button>
+                    </li>
                 </ul>
-                
-                <div class="d-flex ms-auto align-items-center">
-                    <button class="navbar-button" onclick="themeSwitcher()">
-                        <i id="themeToggle" class="fa-solid fa-moon"></i>
-                    </button>
-                </div>
+            </div>
+
+            <!-- Theme toggle shown only on large screens (outside collapse) -->
+            <div class="d-none d-lg-flex align-items-center ms-auto">
+                <button class="navbar-button" onclick="themeSwitcher()">
+                    <i id="themeToggle" class="fa-solid fa-moon"></i>
+                </button>
             </div>
         </div>
     </nav>
