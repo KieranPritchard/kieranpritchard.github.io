@@ -77,6 +77,11 @@ a:hover{ color: var(--hover-highlight) !important; }
 
 b{ font-family: "Source Code Pro"; }
 
+blockquote{
+    font-size: 2.5vw;
+    font-family: "Source Code Pro";
+}
+
 /* Styling for universial elements (To be used on mulitple pages) */
 
 body{ background-color: var(--background) !important; }
@@ -113,6 +118,10 @@ body{ background-color: var(--background) !important; }
     height: 100vh;
     padding-left: 5%;
     padding-right: 5%;
+}
+
+.background-auto{
+    height: auto;
 }
 
 .content-container{ height: 85% !important; }
@@ -194,8 +203,56 @@ body{ background-color: var(--background) !important; }
     color: var(--background-secondary);
 }
 
-/* Email Styling */
+/* Timeline styling */
 
+.timeline {
+    position: relative;
+    margin: 2rem 0;
+    padding: 1rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: var(--background-secondary);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-item .timeline-dot {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--main-accent);
+    border-radius: 50%;
+    z-index: 1;
+    }
+
+.timeline-item .card {
+    width: 45%;
+    background-color:var(--background);
+}
+
+.timeline-item.left .card {
+    margin-right: auto;
+}
+
+.timeline-item.right .card {
+    margin-left: auto;
+}
+
+/* Email Styling */
 
 #contact-me-form{
     margin-top: 5%;
@@ -410,6 +467,7 @@ table, th, td {
     background-color: var(--background-secondary);
     border-radius: 25px;
     padding: 1%;
+    box-shadow: 0px 0px 20px 1px var(--main-accent);
 }
 
 .educational-history-title{
