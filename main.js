@@ -1,37 +1,43 @@
-// Event listener to load correct mode for website
 window.addEventListener("DOMContentLoaded", function () {
-    const currentTheme = document.documentElement.getAttribute("data-bs-theme");
-
-    if (!currentTheme) {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const theme = prefersDark ? "dark" : "light";
-        const iconClass = theme === "dark" ? "fa-solid fa-sun themeToggle" : "fa-solid fa-moon themeToggle";
-
-        document.documentElement.setAttribute("data-bs-theme", theme);
-
-        // Update all themeToggle icons
-        const icons = document.getElementsByClassName("themeToggle");
-        for (let i = 0; i < icons.length; i++) {
-            icons[i].className = iconClass;
-        }
-    }
-
-    // Initialize Bootstrap carousels
+    applyTheme();
     initializeCarousels();
 });
 
-// Switches dark and light modes
+function applyTheme() {
+    // Get stored theme or system preference
+    let storedTheme = localStorage.getItem("preferredTheme");
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = storedTheme || (prefersDark ? "dark" : "light");
+
+    // Apply theme
+    document.documentElement.setAttribute("data-bs-theme", theme);
+
+    // Set correct icon
+    const iconToAdd = theme === "dark" ? "fa-sun" : "fa-moon";
+    const iconToRemove = theme === "dark" ? "fa-moon" : "fa-sun";
+
+    const icons = document.getElementsByClassName("themeToggle");
+    for (let icon of icons) {
+        icon.classList.remove(iconToRemove);
+        icon.classList.add(iconToAdd);
+    }
+}
+
+// Theme switcher toggles theme and saves preference
 function themeSwitcher() {
     const currentTheme = document.documentElement.getAttribute("data-bs-theme");
     const newTheme = currentTheme === "dark" ? "light" : "dark";
-    const iconClass = newTheme === "dark" ? "fa-solid fa-sun themeToggle" : "fa-solid fa-moon themeToggle";
 
     document.documentElement.setAttribute("data-bs-theme", newTheme);
+    localStorage.setItem("preferredTheme", newTheme);
 
-    // Update all themeToggle icons
+    const iconToAdd = newTheme === "dark" ? "fa-sun" : "fa-moon";
+    const iconToRemove = newTheme === "dark" ? "fa-moon" : "fa-sun";
+
     const icons = document.getElementsByClassName("themeToggle");
-    for (let i = 0; i < icons.length; i++) {
-        icons[i].className = iconClass;
+    for (let icon of icons) {
+        icon.classList.remove(iconToRemove);
+        icon.classList.add(iconToAdd);
     }
 }
 
