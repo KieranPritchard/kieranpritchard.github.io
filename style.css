@@ -210,7 +210,6 @@ body{ background-color: var(--background) !important; }
     margin: 2rem 0;
     padding: 1rem 0;
 }
-
 .timeline::before {
     content: '';
     position: absolute;
@@ -221,12 +220,10 @@ body{ background-color: var(--background) !important; }
     height: 100%;
     background-color: var(--background-secondary);
 }
-
 .timeline-item {
     position: relative;
     margin-bottom: 2rem;
 }
-
 .timeline-item .timeline-dot {
     position: absolute;
     top: 0;
@@ -237,19 +234,36 @@ body{ background-color: var(--background) !important; }
     background-color: var(--main-accent);
     border-radius: 50%;
     z-index: 1;
-    }
-
+    border: 3px solid var(--background);
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
 .timeline-item .card {
     width: 45%;
-    background-color:var(--background);
+    background-color: var(--background);
+    /* prepare for animation */
+    opacity: 0;
+    transition: opacity .6s ease-out, transform .6s ease-out;
+    transform: translateY(30px);
 }
-
 .timeline-item.left .card {
     margin-right: auto;
 }
-
 .timeline-item.right .card {
     margin-left: auto;
+}
+
+/* Directional offsets before reveal */
+.timeline-card.from-left {
+    transform: translateX(-50px) translateY(0);
+}
+.timeline-card.from-right {
+    transform: translateX(50px) translateY(0);
+}
+
+/* Visible state: reset transform + fade in */
+.timeline-card.visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
 }
 
 /* Email Styling */
@@ -769,6 +783,24 @@ sidebar-recent-blog-title{
         margin-top: 7.5%;
         margin-left: 7.5%;
         margin-bottom: 7.5%;
+    }
+}
+
+/* Timeline items */
+@media (max-width: 991px) {
+    .timeline::before {
+        left: 8px;
+    }
+    .timeline-item .timeline-dot {
+        left: 8px;
+    }
+    .timeline-item .card {
+        width: 100%;
+        margin-left: 2rem;
+    }
+    .timeline-item.left .card,
+    .timeline-item.right .card {
+        margin: 0 0 0 2rem;
     }
 }
 

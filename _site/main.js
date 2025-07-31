@@ -1,6 +1,7 @@
 window.addEventListener("DOMContentLoaded", function () {
     applyTheme();
     initializeCarousels();
+    setupTimelineObserver()
 });
 
 function applyTheme() {
@@ -523,3 +524,22 @@ window.addEventListener('load', function() {
         });
     });
 });
+
+function setupTimelineObserver() {
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                obs.unobserve(entry.target);
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: '0px 0px -10% 0px',
+        threshold: 0
+    });
+
+    document.querySelectorAll('.timeline-card').forEach(card => {
+        observer.observe(card);
+    });
+}
