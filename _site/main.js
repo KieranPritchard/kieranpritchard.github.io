@@ -542,4 +542,57 @@ function setupTimelineObserver() {
     document.querySelectorAll('.timeline-card').forEach(card => {
         observer.observe(card);
     });
+
+    // Add timeline line animation observer
+    const timelineObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const timeline = entry.target;
+                timeline.classList.add('animate-line');
+                
+                // Start the progressive line drawing
+                startProgressiveLineDrawing(timeline);
+                
+                timelineObserver.unobserve(timeline);
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: '0px 0px -20% 0px',
+        threshold: 0
+    });
+
+    // Observe the timeline container
+    const timelineContainer = document.querySelector('.timeline');
+    if (timelineContainer) {
+        timelineObserver.observe(timelineContainer);
+    }
+}
+
+function startProgressiveLineDrawing(timeline) {
+    const timelineItems = timeline.querySelectorAll('.timeline-item');
+    
+    // Create the progressive line drawing
+    timelineItems.forEach((item, index) => {
+        const delay = (index + 1) * 1000; // 1s, 2s, 3s, 4s
+        
+        setTimeout(() => {
+            const progress = ((index + 1) / timelineItems.length) * 100;
+            
+            // Create a style element to override the pseudo-element
+            const styleId = `timeline-line-${Date.now()}`;
+            let styleElement = document.getElementById(styleId);
+            if (!styleElement) {
+                styleElement = document.createElement('style');
+                styleElement.id = styleId;
+                document.head.appendChild(styleElement);
+            }
+            
+            styleElement.textContent = `
+                .timeline.animate-line::before {
+                    height: ${progress}% !important;
+                }
+            `;
+        }, delay);
+    });
 }
