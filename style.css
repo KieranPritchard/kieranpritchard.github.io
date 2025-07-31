@@ -1,3 +1,6 @@
+/* ========================================
+   IMPORTS & FONTS
+   ======================================== */
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
@@ -15,8 +18,9 @@
     font-style: normal;
 }
 
-/* Root Colours */
-
+/* ========================================
+   CSS VARIABLES & THEMES
+   ======================================== */
 :root,
 [data-bs-theme="light"]{
     --background: #f9fafb;                 
@@ -46,23 +50,24 @@
     --table-body-text: #f0f4f8;
 }
 
-/* Text Styling */
+/* ========================================
+   GLOBAL STYLES
+   ======================================== */
+body{ 
+    background-color: var(--background) !important; 
+}
 
-/* Heading Styling*/
-
+/* Typography */
 h1, h2, h3, h5{
     font-family: "Red Hat Display";
     color: var(--main-accent) !important;
 }
 
 h1{ padding-top: 10%; font-size: 3vw !important; }
-
 h2{ padding-top: 2.5%; font-size: 2vw !important;}
-
 h3{ font-size: 1.75vw !important;}
 
 ul{ color: var(--base-text);}
-
 li{ font-family: "Source Code Pro"; }
 
 p{
@@ -72,7 +77,6 @@ p{
 }
 
 a{ color: var(--main-accent) !important; }
-
 a:hover{ color: var(--hover-highlight) !important; }
 
 b{ font-family: "Source Code Pro"; }
@@ -82,30 +86,7 @@ blockquote{
     font-family: "Source Code Pro";
 }
 
-/* Styling for universial elements (To be used on mulitple pages) */
-
-body{ background-color: var(--background) !important; }
-
-#contact-footer-list{ list-style: none; margin-left: -5%; }
-
-.contact-footer-list-link{ color: var(--base-text); text-decoration: none;}
-
-.contact-footer-list-link:hover{ color: var(--hover-highlight); transition: ease-in 0.3s;}
-
-.contact-footer-list-item{ margin-bottom: 7.5%; font-size: 1vw; }
-
-.footer-icon{ font-size: 1.75vw; }
-
-.contact-footer-icon-background{
-    margin-right: 3%;
-    height: 2.5vw;
-    width: 3vw;
-    font-size: 1.5vw;
-    background-color: var(--main-accent);
-    border-radius: 50%;
-    color: var(--background);
-}
-
+/* Layout Components */
 .background-odd{
     background-color: var(--background);
     height: 100vh;
@@ -126,276 +107,9 @@ body{ background-color: var(--background) !important; }
 
 .content-container{ height: 85% !important; }
 
-/* Recent Blog Post Styling */
-
-.recent-blog-post{
-    background-color: var(--background-secondary);
-    border-radius: 25px;
-    margin: 1% 0;
-}
-
-.recent-blog-post-title{
-    margin-top: 0.5%;     
-    padding: 1.5% 0 0.5%;
-    color: var(--main-accent) !important;
-    font-size: 1.25vw !important;
-}
-
-.recent-blog-post-title-link{
-    color: var(--main-accent);
-    text-decoration: none;
-    transition: ease 0.5s;
-}
-
-.recent-blog-post-title-link:hover{
-    color: var(--hover-highlight);
-}
-
-.recent-blog-post-text{
-    padding-bottom: 1.5%;
-    padding-right: 1.5%;
-    font-size: 1vw !important;
-}
-
-/* Recent Project Card Styling */
-
-.recent-project-card{
-    margin-top: 5%;
-    border-radius: 25px;
-    padding: 5%;
-    box-shadow: 0px 0px 20px 1px var(--main-accent);
-}
-
-.recent-project-card-img-background{
-    background-color: var(--image-background);
-}
-
-.recent-project-card-img{
-    height: auto;
-    width: 100%;
-    max-width: 100%;
-}
-
-.recent-project-card-title{
-    margin-top: 2.5%;
-    font-size: 1.45vw;
-}
-
-.recent-project-card-text{
-    font-size: 0.85vw !important;
-}
-
-.recent-project-card-button{
-    width: 95%;
-    height: 50px; /*Find fix for not using percentage.*/
-    border-radius: 15px;
-    border-style: solid;
-    border-color: var(--main-accent);
-    color: var(--main-accent);
-    border-width: 1px;
-    font-family: "Source Code Pro";
-    background-color: transparent;
-    transition: ease 0.25s;
-}
-
-.recent-project-card-button:hover{
-    background-color: var(--main-accent);
-    color: var(--background-secondary);
-}
-
-/* Timeline styling */
-
-.timeline {
-    position: relative;
-    margin: 2rem 0;
-    padding: 1rem 0;
-}
-.timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    height: 0%; /* Start with 0 height */
-    background-color: var(--background-secondary);
-    transition: height 0.5s ease-out;
-}
-.timeline-item {
-    position: relative;
-    margin-bottom: 2rem;
-}
-.timeline-item .timeline-dot {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1rem;
-    height: 1rem;
-    background-color: var(--main-accent);
-    border-radius: 50%;
-    z-index: 1;
-    border: 3px solid var(--background);
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    /* Add animation for dot appearance */
-    opacity: 0;
-    animation: fadeInDot 0.5s ease-out forwards;
-    animation-delay: 0.5s;
-    animation-play-state: paused;
-}
-.timeline-item .card {
-    width: 45%;
-    background-color: var(--background);
-    /* prepare for animation */
-    opacity: 0;
-    transition: opacity .6s ease-out, transform .6s ease-out;
-    transform: translateY(30px);
-}
-.timeline-item.left .card {
-    margin-right: auto;
-}
-.timeline-item.right .card {
-    margin-left: auto;
-}
-
-/* Directional offsets before reveal */
-.timeline-card.from-left {
-    transform: translateX(-50px) translateY(0);
-}
-.timeline-card.from-right {
-    transform: translateX(50px) translateY(0);
-}
-
-/* Visible state: reset transform + fade in */
-.timeline-card.visible {
-    opacity: 1;
-    transform: translateX(0) translateY(0);
-}
-
-@keyframes fadeInDot {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-    }
-}
-
-/* Timeline animation states */
-.timeline.animate-line .timeline-item .timeline-dot {
-    animation-play-state: running;
-}
-
-/* Timeline animation delays for each dot */
-.timeline-item:nth-child(1) .timeline-dot {
-    animation-delay: 0.5s;
-}
-.timeline-item:nth-child(2) .timeline-dot {
-    animation-delay: 1.5s;
-}
-.timeline-item:nth-child(3) .timeline-dot {
-    animation-delay: 2.5s;
-}
-.timeline-item:nth-child(4) .timeline-dot {
-    animation-delay: 3.5s;
-}
-
-/* Email Styling */
-
-#contact-me-form{
-    margin-top: 5%;
-}
-
-#contact-me-form-your-email, #contact-me-form-email-subject{
-    width: 100%;
-    height: 7.5%;
-    margin-bottom: 0.75%;
-    padding-left: 1%;
-    background-color: var(--background);
-    border-style: none;
-    border-radius: 15px;
-}
-
-#contact-me-form-email-body{
-    width: 100%;
-    padding-left: 1%;
-    background-color: var(--background);
-    border-style: none;
-    border-radius: 15px;
-}
-
-.contact-me-form-your-email::placeholder, .contact-me-form-email-subject::placeholder{
-    padding-left: 1%;
-    font-family: "Source Code Pro";
-}
-
-.contact-me-form-email-body::placeholder{
-    padding-left: 1%;
-    font-family: "Source Code Pro";
-}
-
-.btn-container{
-    margin-top: 2.5%;
-    text-align: center;
-}
-
-.submit-btn{
-    width: 50%;
-    padding: 1.5% 0;
-    border-style: solid;
-    border-width: 1px;
-    border-color: var(--main-accent);
-    border-radius: 25px;
-    color: var(--main-accent);
-    background-color: transparent;
-    transition: ease 0.25s;
-}
-
-.submit-btn:hover{
-    background-color: var(--main-accent);
-    color: var(--image-background);
-}
-
-/* Styling for topic*/
-
-.topic{
-    border-style: solid;
-    border-radius: 25px;
-    padding: 1% 2.5%;
-    font-size: 10px;
-}
-
-/* Table Styling */
-
-table{
-    background-color: var(--table-body-background);
-    border-color: var(--table-header-background) !important;
-    width: 100%;
-    font-size: 1vw;
-}
-
-th{
-    height: 5vh;
-    text-align: center !important;
-    background-color: var(--table-header-background);
-}
-
-.table-title-text{
-    color: var(--table-header-text);
-    font-family: "Red Hat Display";
-}
-
-table, th, td {
-    text-align: center;
-    color: var(--table-body-text);
-    border: 1px solid !important;
-    border-color: var(--table-header-background) !important;
-}
-
-/* Navigation Styling */
-
+/* ========================================
+   NAVIGATION
+   ======================================== */
 .navbar{
     background-color: var(--background);
     padding-left: 5% !important;
@@ -442,8 +156,18 @@ table, th, td {
     transform: scale(1.05) !important;
 }
 
-/* Image Styling */
+/* ========================================
+   HOME PAGE
+   ======================================== */
+#Intro-Section-Paragraph{
+    padding-top: 2%;
+}
 
+#Home-Page-About-Me-Paragraph{
+    padding: 30% 0;
+}
+
+/* Hero Images */
 #Hero-Image-Home-Page{
     height: auto;
     width: 100%;
@@ -458,13 +182,6 @@ table, th, td {
     border-radius: 15%;
 }
 
-#About-Me-Page-Image{
-    height: auto;
-    width: 100%;
-    max-width: 85%;
-    border-radius: 10%;
-}
-
 .home-page-recent-blogs-image{
     height: auto;
     width: 100%;
@@ -474,10 +191,79 @@ table, th, td {
     margin-bottom: 10%;
 }
 
+/* Recent Blog Posts */
+.recent-blog-post{
+    background-color: var(--background-secondary);
+    border-radius: 25px;
+    margin: 1% 0;
+}
+
+.recent-blog-post-title{
+    margin-top: 0.5%;     
+    padding: 1.5% 0 0.5%;
+    color: var(--main-accent) !important;
+    font-size: 1.25vw !important;
+}
+
+.recent-blog-post-title-link{
+    color: var(--main-accent);
+    text-decoration: none;
+    transition: ease 0.5s;
+}
+
+.recent-blog-post-title-link:hover{
+    color: var(--hover-highlight);
+}
+
+.recent-blog-post-text{
+    padding-bottom: 1.5%;
+    padding-right: 1.5%;
+    font-size: 1vw !important;
+}
+
+/* Recent Project Cards */
+.recent-project-card{
+    margin-top: 5%;
+    border-radius: 25px;
+    padding: 5%;
+    box-shadow: 0px 0px 20px 1px var(--main-accent);
+}
+
+.recent-project-card-img-background{
+    background-color: var(--image-background);
+}
+
 .recent-project-card-img{
     height: 150px;
     max-width: 95%;
     width: auto;
+}
+
+.recent-project-card-title{
+    margin-top: 2.5%;
+    font-size: 1.45vw;
+}
+
+.recent-project-card-text{
+    font-size: 0.85vw !important;
+}
+
+.recent-project-card-button{
+    width: 95%;
+    height: 50px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: var(--main-accent);
+    color: var(--main-accent);
+    border-width: 1px;
+    font-family: "Source Code Pro";
+    background-color: transparent;
+    transition: ease 0.25s;
+}
+
+.recent-project-card-button:hover{
+    background-color: var(--main-accent);
+    color: var(--background-secondary);
 }
 
 .Recent-Projects-Image-Background{
@@ -488,18 +274,9 @@ table, th, td {
     justify-content: center;
 }
 
-/* All The Styling For The Home Page */
-
-#Intro-Section-Paragraph{
-    padding-top: 2%;
-}
-
-#Home-Page-About-Me-Paragraph{
-    padding: 30% 0;
-}
-
-/* All The Styling For The About Page */
-
+/* ========================================
+   ABOUT PAGE
+   ======================================== */
 .about-page-heading{
     padding-top: 2.5%;
     font-size: 1.5vw !important;
@@ -509,6 +286,14 @@ table, th, td {
     padding-top: 10%;
 }
 
+#About-Me-Page-Image{
+    height: auto;
+    width: 100%;
+    max-width: 85%;
+    border-radius: 10%;
+}
+
+/* Educational History */
 .educational-history-row{
     width: 100%;
 }
@@ -536,6 +321,7 @@ table, th, td {
     margin-left: 4%;
 }
 
+/* Contact Section */
 #about-contact-page-list{
     padding: 0% !important;
     display: block;
@@ -555,8 +341,10 @@ table, th, td {
     font-size: 1.5vw;
 }
 
-/* All The Styling For The Blog Page */
-
+/* ========================================
+   BLOG PAGE
+   ======================================== */
+/* Sidebar */
 #blog-sidebar{
     width: 95%;
     padding: 5%;
@@ -635,15 +423,22 @@ sidebar-recent-blog-title{
     font-size: 0.85vw;
 }
 
-.sidebar-recent-blog-title:hover{ color: var(--hover-highlight); font-weight: bold;}
+.sidebar-recent-blog-title:hover{ 
+    color: var(--hover-highlight); 
+    font-weight: bold;
+}
 
+/* Blog List */
 #blog-list{
     margin: 0%;
     padding: 0%;
     list-style: none;
 }
 
-.blog-post{ border-bottom: solid var(--main-accent); padding: 3% 0; }
+.blog-post{ 
+    border-bottom: solid var(--main-accent); 
+    padding: 3% 0; 
+}
 
 .blog-post-image{
     height: 150px;
@@ -651,11 +446,19 @@ sidebar-recent-blog-title{
     border-radius: 25px;
 }
 
-.blog-post-title{ text-align: left; font-size: 1.30vw !important; }
+.blog-post-title{ 
+    text-align: left; 
+    font-size: 1.30vw !important; 
+}
 
-.blog-post-title:hover{ color: var(--hover-highlight) !important; }
+.blog-post-title:hover{ 
+    color: var(--hover-highlight) !important; 
+}
 
-.blog-post-title-line{ color: inherit; text-decoration: none; }
+.blog-post-title-line{ 
+    color: inherit; 
+    text-decoration: none; 
+}
 
 .blog-post-date{
     font-family: "Red Hat Display";
@@ -663,11 +466,17 @@ sidebar-recent-blog-title{
     font-size: 1vw !important;
 }
 
-.blog-post-description{ font-size: 1vw !important; }
+.blog-post-description{ 
+    font-size: 1vw !important; 
+}
 
-/* All The Styling For The Projects Page */
-
-#project-page-intro-section-text{ padding-top: 1.5%; font-size: 1vw; }
+/* ========================================
+   PROJECTS PAGE
+   ======================================== */
+#project-page-intro-section-text{ 
+    padding-top: 1.5%; 
+    font-size: 1vw; 
+}
 
 .project-page-project-card{
     background-color: var(--background-secondary);
@@ -697,15 +506,26 @@ sidebar-recent-blog-title{
     font-size: 1.35vw;
 }
 
-.project-page-project-card-title-link{ text-decoration: none; color: var(--main-accent) !important;}
+.project-page-project-card-title-link{ 
+    text-decoration: none; 
+    color: var(--main-accent) !important;
+}
 
-.project-page-project-card-title-link:hover{ color: var(--hover-highlight); }
+.project-page-project-card-title-link:hover{ 
+    color: var(--hover-highlight); 
+}
 
-.project-page-project-card-text{ color: var(--main-accent); font-size: 0.85vw !important;}
+.project-page-project-card-text{ 
+    color: var(--main-accent); 
+    font-size: 0.85vw !important;
+}
 
-/* All The Styling For The Hobbies Page */
-
-#hobbies-page-programming-section-title{ padding-bottom: 2.5%; }
+/* ========================================
+   HOBBIES PAGE
+   ======================================== */
+#hobbies-page-programming-section-title{ 
+    padding-bottom: 2.5%; 
+}
 
 .hobbies-page-image{
     height: auto;
@@ -713,15 +533,27 @@ sidebar-recent-blog-title{
     max-width: 95%;
 }
 
-/* All The Styling For The Contact Page */
+/* ========================================
+   CONTACT PAGE
+   ======================================== */
+#contact-page-list{ 
+    list-style: none; 
+}
 
-#contact-page-list{ list-style: none; }
+.contact-page-list-link{ 
+    color: var(--base-text); 
+    text-decoration: none; 
+}
 
-.contact-page-list-link{ color: var(--base-text); text-decoration: none; }
+.contact-page-list-link:hover{ 
+    color: var(--hover-highlight); 
+    transition: ease-in 0.3s; 
+}
 
-.contact-page-list-link:hover{ color: var(--hover-highlight); transition: ease-in 0.3s; }
-
-.contact-page-list-item{ margin-bottom: 7.5%; font-size: 1.25vw; }
+.contact-page-list-item{ 
+    margin-bottom: 7.5%; 
+    font-size: 1.25vw; 
+}
 
 .contact-page-icon-background{
     margin-right: 15px;
@@ -732,19 +564,127 @@ sidebar-recent-blog-title{
     color: var(--background);
 }
 
-#contact-page-button{ font-size: 1vw; }
+#contact-page-button{ 
+    font-size: 1vw; 
+}
 
-/* Indivual blog/portfolio post styling */
+/* Contact Form */
+#contact-me-form{
+    margin-top: 5%;
+}
 
-.breadcrumb-item::before{ color: var(--base-text) !important; }
+#contact-me-form-your-email, #contact-me-form-email-subject{
+    width: 100%;
+    height: 7.5%;
+    margin-bottom: 0.75%;
+    padding-left: 1%;
+    background-color: var(--background);
+    border-style: none;
+    border-radius: 15px;
+}
 
-.breadcrumb-item{ color: var(--base-text) !important; font-size: 1vw; }
+#contact-me-form-email-body{
+    width: 100%;
+    padding-left: 1%;
+    background-color: var(--background);
+    border-style: none;
+    border-radius: 15px;
+}
 
-.breadcrumb-item-link{ color: var(--base-text) !important; }
+.contact-me-form-your-email::placeholder, .contact-me-form-email-subject::placeholder{
+    padding-left: 1%;
+    font-family: "Source Code Pro";
+}
 
-.breadcrumb-item-link:hover{ color: var(--hover-highlight) !important; transition: ease 0.3s; }
+.contact-me-form-email-body::placeholder{
+    padding-left: 1%;
+    font-family: "Source Code Pro";
+}
 
-.indivual-post-page-title{ text-align: left; padding-top: 0.5%;}
+.btn-container{
+    margin-top: 2.5%;
+    text-align: center;
+}
+
+.submit-btn{
+    width: 50%;
+    padding: 1.5% 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--main-accent);
+    border-radius: 25px;
+    color: var(--main-accent);
+    background-color: transparent;
+    transition: ease 0.25s;
+}
+
+.submit-btn:hover{
+    background-color: var(--main-accent);
+    color: var(--image-background);
+}
+
+/* Footer */
+#contact-footer-list{ 
+    list-style: none; 
+    margin-left: -5%; 
+}
+
+.contact-footer-list-link{ 
+    color: var(--base-text); 
+    text-decoration: none;
+}
+
+.contact-footer-list-link:hover{ 
+    color: var(--hover-highlight); 
+    transition: ease-in 0.3s;
+}
+
+.contact-footer-list-item{ 
+    margin-bottom: 7.5%; 
+    font-size: 1vw; 
+}
+
+.footer-icon{ 
+    font-size: 1.75vw; 
+}
+
+.contact-footer-icon-background{
+    margin-right: 3%;
+    height: 2.5vw;
+    width: 3vw;
+    font-size: 1.5vw;
+    background-color: var(--main-accent);
+    border-radius: 50%;
+    color: var(--background);
+}
+
+/* ========================================
+   INDIVIDUAL POST PAGES (BLOG & PORTFOLIO)
+   ======================================== */
+/* Breadcrumbs */
+.breadcrumb-item::before{ 
+    color: var(--base-text) !important; 
+}
+
+.breadcrumb-item{ 
+    color: var(--base-text) !important; 
+    font-size: 1vw; 
+}
+
+.breadcrumb-item-link{ 
+    color: var(--base-text) !important; 
+}
+
+.breadcrumb-item-link:hover{ 
+    color: var(--hover-highlight) !important; 
+    transition: ease 0.3s; 
+}
+
+/* Post Header */
+.indivual-post-page-title{ 
+    text-align: left; 
+    padding-top: 0.5%;
+}
 
 .indivual-post-page-date{
     margin: 0;
@@ -781,8 +721,16 @@ sidebar-recent-blog-title{
     max-width: 100%;
 }
 
-.blog-post-page-heading{ text-align: left; margin-bottom: 2.5%;}
+.blog-post-page-heading{ 
+    text-align: left; 
+    margin-bottom: 2.5%;
+}
 
+.portfolio-post-page-heading{ 
+    text-align: left; 
+}
+
+/* Post Content Backgrounds */
 .blog-post-background-odd{
     min-height: 50vh;
     background-color: var(--background-odd);
@@ -801,8 +749,137 @@ sidebar-recent-blog-title{
     line-height: 1.6;
 }
 
-.portfolio-post-page-heading{ text-align: left; }
+/* ========================================
+   COMPONENTS
+   ======================================== */
+/* Timeline */
+.timeline {
+    position: relative;
+    margin: 2rem 0;
+    padding: 1rem 0;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 0%;
+    background-color: var(--background-secondary);
+    transition: height 0.5s ease-out;
+}
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+.timeline-item .timeline-dot {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--main-accent);
+    border-radius: 50%;
+    z-index: 1;
+    border: 3px solid var(--background);
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    opacity: 0;
+    animation: fadeInDot 0.5s ease-out forwards;
+    animation-delay: 0.5s;
+    animation-play-state: paused;
+}
+.timeline-item .card {
+    width: 45%;
+    background-color: var(--background);
+    opacity: 0;
+    transition: opacity .6s ease-out, transform .6s ease-out;
+    transform: translateY(30px);
+}
+.timeline-item.left .card {
+    margin-right: auto;
+}
+.timeline-item.right .card {
+    margin-left: auto;
+}
 
+.timeline-card.from-left {
+    transform: translateX(-50px) translateY(0);
+}
+.timeline-card.from-right {
+    transform: translateX(50px) translateY(0);
+}
+.timeline-card.visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+@keyframes fadeInDot {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.timeline.animate-line .timeline-item .timeline-dot {
+    animation-play-state: running;
+}
+
+.timeline-item:nth-child(1) .timeline-dot {
+    animation-delay: 0.5s;
+}
+.timeline-item:nth-child(2) .timeline-dot {
+    animation-delay: 1.5s;
+}
+.timeline-item:nth-child(3) .timeline-dot {
+    animation-delay: 2.5s;
+}
+.timeline-item:nth-child(4) .timeline-dot {
+    animation-delay: 3.5s;
+}
+
+/* Tables */
+table{
+    background-color: var(--table-body-background);
+    border-color: var(--table-header-background) !important;
+    width: 100%;
+    font-size: 1vw;
+}
+
+th{
+    height: 5vh;
+    text-align: center !important;
+    background-color: var(--table-header-background);
+}
+
+.table-title-text{
+    color: var(--table-header-text);
+    font-family: "Red Hat Display";
+}
+
+table, th, td {
+    text-align: center;
+    color: var(--table-body-text);
+    border: 1px solid !important;
+    border-color: var(--table-header-background) !important;
+}
+
+/* Topics/Tags */
+.topic{
+    border-style: solid;
+    border-radius: 25px;
+    padding: 1% 2.5%;
+    font-size: 10px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
 /* Large Desktop (1400px and up) */
 @media screen and (min-width: 1400px) {
     .recent-blog-post {
@@ -847,7 +924,6 @@ sidebar-recent-blog-title{
         padding-bottom: 3%;
     }
     
-    /* Carousel adjustments for tablet */
     .carousel-item img {
         max-height: 300px;
     }
