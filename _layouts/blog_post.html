@@ -69,7 +69,7 @@
 
         <h1 class="indivual-post-page-title">{{ page.title }}</h1>
         <p class="indivual-post-page-date">Date Published: {{ page.date | date: "%d/%m/%Y" }}</p>
-        <p class="indivual-post-page-topics">Topics: <span class="topic">{{ page.category }}</span></p>
+        <p class="indivual-post-page-topics">Topics: <span class="post-topic">{{ page.category }}</span></p>
         
         {% if page.header_image %}
         <div class="indivual-post-page-header-image-background" style="background-color: black;">
