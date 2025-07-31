@@ -792,7 +792,7 @@ sidebar-recent-blog-title{
 }
 .timeline-item .card {
     width: 45%;
-    background-color: var(--background);
+    background-color: var(--background-secondary);
     opacity: 0;
     transition: opacity .6s ease-out, transform .6s ease-out;
     transform: translateY(30px);
