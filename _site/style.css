@@ -86,6 +86,40 @@ blockquote{
     font-family: "Source Code Pro";
 }
 
+.main-button{
+    padding: 2% 2.5%;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: var(--main-accent);
+    color: var(--background) !important;
+    text-decoration: none !important;
+    border-width: 1px;
+    font-family: "Source Code Pro";
+    background-color: var(--main-accent);
+    transition: ease 0.25s;
+}
+
+.main-button:hover{
+    border-style: solid;
+    border-color: var(--main-accent) !important;
+    color: var(--main-accent) !important;
+    border-width: 1px;
+    background-color: transparent;
+}
+
+.secondary-button{
+    width: 95%;
+    height: 50px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: var(--main-accent);
+    color: var(--main-accent);
+    border-width: 1px;
+    font-family: "Source Code Pro";
+    background-color: transparent;
+    transition: ease 0.25s;
+}
+
 /* Layout Components */
 .background-odd{
     background-color: var(--background);
