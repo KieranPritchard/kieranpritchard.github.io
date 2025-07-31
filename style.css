@@ -162,6 +162,8 @@ blockquote{
 
 .nav-link:hover{
     color: var(--hover-highlight) !important;
+    transition: ease 0.25s;
+    transform: scale(1.05) !important;
 }
 
 #Active-Page{
@@ -247,6 +249,7 @@ blockquote{
 
 .recent-blog-post-title-link:hover{
     color: var(--hover-highlight);
+    transition: ease 0.25s;
 }
 
 .recent-blog-post-text{
@@ -298,6 +301,7 @@ blockquote{
 .recent-project-card-button:hover{
     background-color: var(--main-accent);
     color: var(--background-secondary);
+    transition: ease 0.5s;
 }
 
 .Recent-Projects-Image-Background{
@@ -463,6 +467,7 @@ sidebar-recent-blog-title{
 .sidebar-recent-blog-title:hover{ 
     color: var(--hover-highlight); 
     font-weight: bold;
+    transition: ease 0.5s;
 }
 
 /* Blog List */
@@ -485,11 +490,13 @@ sidebar-recent-blog-title{
 
 .blog-post-title{ 
     text-align: left; 
-    font-size: 1.30vw !important; 
+    font-size: 1.30vw !important;
+    transition: ease 0.5s;
 }
 
 .blog-post-title:hover{ 
     color: var(--hover-highlight) !important; 
+    transition: ease 0.5s;
 }
 
 .blog-post-title-line{ 
@@ -687,7 +694,7 @@ sidebar-recent-blog-title{
 
 .contact-footer-list-link:hover{ 
     color: var(--hover-highlight); 
-    transition: ease-in 0.3s;
+    transition: ease 0.3s !important;
 }
 
 .contact-footer-list-item{ 
