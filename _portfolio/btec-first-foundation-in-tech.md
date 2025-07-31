@@ -3,6 +3,7 @@ layout: portfolio_post
 title: "BTEC First Foundation in Digital"
 description: "A complete overview of my time on Bournemouth & Poole College’s “T-Level Foundation in Digital” course, where I explored everything from the online world and technology systems to web development, digital graphics, and networking. Each section of this page gives a personal look at the different units, with work samples where i am able to give them as well."
 date: 2025-06-25
+featured: true
 topics: ["Education", "Technology", "College"]
 header_image: "/res/Header-Images/Digital-Logo-BPC.webp"
 icon: "/res/Icons/Digital-Logo-BPC.webp"

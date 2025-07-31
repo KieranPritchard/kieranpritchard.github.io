@@ -72,87 +72,31 @@ permalink: /About.html
 <div class="background-even">
     <h2 class="text-center">My Top Projects</h2>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-auto">
+        <div class="row row-cols-1 row-cols-md-3">
+            {% assign top_projects = site.portfolio | sort: 'date' | reverse | where: "featured", true | limit: 6 %}
+            {% for project in top_projects %}
+            <div class="col-md">
                 <div class="project-page-project-card">
                     <div class="project-page-project-card-image-background">
-                        <img class="project-page-project-card-image" src="" alt="">
+                        {% if project.icon %}
+                        <img class="project-page-project-card-image" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
+                        {% else %}
+                        <img class="project-page-project-card-image" src="{{ '/res/Icons/default-project-icon.webp' | relative_url }}" alt="{{ project.title }}">
+                        {% endif %}
                     </div>
                     <div>
-                        <h5 class="project-page-project-card-title"><a class="project-page-project-card-title-link" href=""></a></h5>
+                        <h5 class="project-page-project-card-title">
+                            <a class="project-page-project-card-title-link" href="{{ project.url | relative_url }}">{{ project.title }}</a>
+                        </h5>
                         <p class="project-page-project-card-text">Topics: 
-                            <span class="topic"></span>
+                            {% for topic in project.topics %}
+                            <span class="topic">{{ topic }}</span>
+                            {% endfor %}
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="col-auto">
-                <div class="project-page-project-card">
-                    <div class="project-page-project-card-image-background">
-                        <img class="project-page-project-card-image" src="" alt="">
-                    </div>
-                    <div>
-                        <h5 class="project-page-project-card-title"><a class="project-page-project-card-title-link" href=""></a></h5>
-                        <p class="project-page-project-card-text">Topics: 
-                            <span class="topic"></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-auto">
-                <div class="project-page-project-card">
-                    <div class="project-page-project-card-image-background">
-                        <img class="project-page-project-card-image" src="" alt="">
-                    </div>
-                    <div>
-                        <h5 class="project-page-project-card-title"><a class="project-page-project-card-title-link" href=""></a></h5>
-                        <p class="project-page-project-card-text">Topics: 
-                            <span class="topic"></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-auto">
-                <div class="project-page-project-card">
-                    <div class="project-page-project-card-image-background">
-                        <img class="project-page-project-card-image" src="" alt="">
-                    </div>
-                    <div>
-                        <h5 class="project-page-project-card-title"><a class="project-page-project-card-title-link" href=""></a></h5>
-                        <p class="project-page-project-card-text">Topics: 
-                            <span class="topic"></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-auto">
-                <div class="project-page-project-card">
-                    <div class="project-page-project-card-image-background">
-                        <img class="project-page-project-card-image" src="" alt="">
-                    </div>
-                    <div>
-                        <h5 class="project-page-project-card-title"><a class="project-page-project-card-title-link" href=""></a></h5>
-                        <p class="project-page-project-card-text">Topics: 
-                            <span class="topic"></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-auto">
-                <div class="project-page-project-card">
-                    <div class="project-page-project-card-image-background">
-                        <img class="project-page-project-card-image" src="" alt="">
-                    </div>
-                    <div>
-                        <h5 class="project-page-project-card-title"><a class="project-page-project-card-title-link" href=""></a></h5>
-                        <p class="project-page-project-card-text">Topics: 
-                            <span class="topic"></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </div>
