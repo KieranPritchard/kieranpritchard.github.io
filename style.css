@@ -363,12 +363,15 @@ blockquote{
     border-radius: 25px;
     background-color: var(--main-accent);
     border-color: var(--border);
+    color: var(--border);
     border-style: none;
+    font-family: "Source Code Pro"
 }
 
 .sidebar-title{
     text-align: left;
     padding-top: 2.5%;
+    font-family: "Red Hat Display" !important;
 }
 
 sidebar-recent-blog-title{

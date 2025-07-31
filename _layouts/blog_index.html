@@ -69,7 +69,7 @@
                             <input type="text" name="" id="blog-searchbar" placeholder="Search" onkeyup="blogSearch()">
                         </div>
                         <div>
-                            <h3 class="sidebar-title">Categories</h3>
+                            <h4 class="sidebar-title">Categories</h4>
                             <input class="sidebar-checkbox" type="checkbox" onclick="blogFilter('topicOne')" id="blog-topic-1">
                             <label class="sidebar-labels" for="blog-topic-1">Career</label><br>
                             <input class="sidebar-checkbox" type="checkbox" onclick="blogFilter('topicTwo')" id="blog-topic-2">
@@ -78,7 +78,7 @@
                             <label class="sidebar-labels" for="blog-topic-3">Thoughts & Opinions</label><br>
                         </div>
                         <div>
-                            <h3 class="sidebar-title">Recent Blogs</h3>
+                            <h4 class="sidebar-title">Recent Blogs</h4>
                             {% for post in site.posts limit:3 %}
                             <div class="row sidebar-blog-post-padding">
                                 <div class="col-3 w-25 d-none d-md-block">
