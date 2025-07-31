@@ -5,8 +5,8 @@ description: "A recount of my experience using AWS Educate, a beginner-friendly 
 date: 2025-07-29
 featured: true
 topics: ["Cloud Computing", "AWS"]
-header_image: "res/Header-Images/aws-educate-badges-header-image.png"
-icon: "res/Icons/aws-educate-badges-icon.png"
+header_image: "res/Header-Images/aws-educate-badges-header-image.webp"
+icon: "res/Icons/aws-educate-badges-icon.webp"
 breadcrumb: ["AWS Educate Badges"]
 ---
 
@@ -26,7 +26,7 @@ breadcrumb: ["AWS Educate Badges"]
             </p>
         </div>
         <div class="col-md order-md-1 order-first align-content-center text-center">
-            <img class="indivual-post-page-image" src="{{ '/res/badges/aws-educate-introduction-to-cloud-101.png' | relative_url }}" alt="">
+            <img class="indivual-post-page-image" src="{{ '/res/badges/aws-educate-introduction-to-cloud-101.webp' | relative_url }}" alt="">
         </div>
     </div>
 </div>
@@ -37,7 +37,7 @@ breadcrumb: ["AWS Educate Badges"]
 <div class="container-fluid content-container">
     <div class="row h-100">
         <div class="col-md align-content-center text-center">
-            <img class="indivual-post-page-image" src="{{ '/res/badges/aws-educate-getting-started-with-storage.png' | relative_url }}" alt="">
+            <img class="indivual-post-page-image" src="{{ '/res/badges/aws-educate-getting-started-with-storage.webp' | relative_url }}" alt="">
         </div>
         <div class="col-md order-md-1 order-first align-content-center">
             <p>
