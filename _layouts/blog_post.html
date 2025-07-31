@@ -81,9 +81,9 @@
     </div>
 
     {% comment %}
-      This block replaces the single {{ content }} tag.
-      It splits the post content by each H2 tag and then wraps
-      each resulting section in a div with an alternating class.
+        This block replaces the single {{ content }} tag.
+        It splits the post content by each H2 tag and then wraps
+        each resulting section in a div with an alternating class.
     {% endcomment %}
     {% assign content_with_separator = content | replace: '<h2', '|||SPLIT|||<h2' %}
     {% assign sections = content_with_separator | split: '|||SPLIT|||' %}
