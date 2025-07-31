@@ -10,6 +10,7 @@
  */
 window.addEventListener("DOMContentLoaded", function () {
     applyTheme();
+    emailFormSize()
     initializeCarousels();
     setupTimelineObserver();
 });
@@ -194,6 +195,32 @@ function sendEmailMessage() {
         return;
     }
 }
+
+function emailFormSize() {
+    const messageInput = document.getElementById("contact-me-form-email-body");
+    if (!messageInput) return;
+
+    const width = window.innerWidth;
+    let rows = 10;
+
+    switch (true) {
+        case width < 1400:
+            rows = 15;
+            break;
+        case width >= 1200:
+            rows = 15;
+            break;
+        case width === 768:
+        case width === 992:
+        case width === 576:
+        default:
+            rows = 10;
+            break;
+    }
+
+    messageInput.setAttribute("rows", String(rows));
+}
+
 
 // ============================================================================
 // SEARCH AND FILTERING
