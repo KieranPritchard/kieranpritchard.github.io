@@ -286,6 +286,7 @@ function blogFilter(filterTopic) {
 /**
  * Automatically sets background colors for icon containers
  * Analyzes images to determine appropriate background colors
+ * Skips 16:9 aspect ratio images to avoid background color changes
  */
 function setIconBackgroundColors() {
     const iconContainers = document.querySelectorAll('.recent-project-card-img-background, .project-page-project-card-image-background');
@@ -293,14 +294,40 @@ function setIconBackgroundColors() {
         const img = container.querySelector('img');
         if (img) {
             if (img.complete) {
-                setBackgroundFromImage(container, img);
+                checkAndSetBackgroundFromImage(container, img);
             } else {
                 img.addEventListener('load', () => {
-                    setBackgroundFromImage(container, img);
+                    checkAndSetBackgroundFromImage(container, img);
                 });
             }
         }
     });
+}
+
+/**
+ * Checks if image is 16:9 aspect ratio and sets background accordingly
+ * @param {HTMLElement} container - The container element to set background for
+ * @param {HTMLImageElement} img - The image to analyze
+ */
+function checkAndSetBackgroundFromImage(container, img) {
+    // Calculate aspect ratio
+    const aspectRatio = img.naturalWidth / img.naturalHeight;
+    const targetRatio = 16 / 9; // 16:9 aspect ratio
+    const tolerance = 0.1; // Allow for some variation
+    
+    // Check if image is approximately 16:9
+    if (Math.abs(aspectRatio - targetRatio) <= tolerance) {
+        // For 16:9 images, make them fill the container width with consistent height
+        img.style.setProperty('width', '100%', 'important');
+        img.style.setProperty('height', '150px', 'important');
+        img.style.setProperty('object-fit', 'cover', 'important');
+        // Still apply background color analysis for 16:9 images
+        setBackgroundFromImage(container, img);
+        return;
+    }
+    
+    // For non-16:9 images, proceed with normal background color analysis
+    setBackgroundFromImage(container, img);
 }
 
 /**
@@ -498,6 +525,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Re-initialize after all content is loaded
 window.addEventListener('load', function() {
+    isBackgroundNeeded()
     setIconBackgroundColors();
     setHeaderImageBackgroundColors();
     
