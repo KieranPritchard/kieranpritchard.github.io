@@ -556,12 +556,26 @@ sidebar-recent-blog-title{
 }
 
 .contact-page-icon-background{
-    margin-right: 15px;
-    font-size: 1.5vw;
-    padding: 2.5% 3%;
-    background-color: var(--main-accent);
-    border-radius: 100%;
-    color: var(--background);
+    margin-right: 3% !important;
+    all: unset;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: var(--main-accent);
+    background-color: transparent;
+    border: 1px solid var(--main-accent);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+}
+
+.contact-page-icon-background:hover{
+    background-color: var(--main-accent) !important;
+    color: var(--hover-highlight) !important;
+    transform: scale(1.05) !important;
 }
 
 #contact-page-button{ 
@@ -649,13 +663,26 @@ sidebar-recent-blog-title{
 }
 
 .contact-footer-icon-background{
-    margin-right: 3%;
-    height: 2.5vw;
-    width: 3vw;
-    font-size: 1.5vw;
-    background-color: var(--main-accent);
+    margin-right: 3% !important;
+    all: unset;
+    width: 2em;
+    height: 2em;
     border-radius: 50%;
-    color: var(--background);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: var(--main-accent);
+    background-color: transparent;
+    border: 1px solid var(--main-accent);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+}
+
+.contact-footer-icon-background:hover{
+    background-color: var(--main-accent) !important;
+    color: var(--hover-highlight) !important;
+    transform: scale(1.05) !important;
 }
 
 /* ========================================
