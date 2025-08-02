@@ -200,14 +200,14 @@ blockquote{
 #Hero-Image-Home-Page{
     height: auto;
     width: 100%;
-    max-width: 85%;
+    max-width: 90%;
     border-radius: 25%;
 }
 
 #About-Me-Home-Page-Image{
     height: auto;
     width: 100%;
-    max-width: 85%;
+    max-width: 90%;
 }
 
 .home-page-recent-blogs-image{
@@ -231,7 +231,7 @@ blockquote{
     margin-top: 0.5%;     
     padding: 1.5% 0 0.5%;
     color: var(--main-accent) !important;
-    font-size: 1.25vw !important;
+    font-size: 1.75vw !important;
 }
 
 .recent-blog-post-title-link{
@@ -248,7 +248,7 @@ blockquote{
 .recent-blog-post-text{
     padding-bottom: 1.5%;
     padding-right: 1.5%;
-    font-size: 1vw !important;
+    font-size: 1.25vw !important;
 }
 
 /* Recent Project Cards */
@@ -409,24 +409,47 @@ sidebar-recent-blog-title{
     font-family: "Source Code Pro" !important;
 }
 
-.sidebar-checkbox[type="checkbox"]{
+.sidebar-checkbox[type="checkbox"] {
+    position: relative;
     height: 25px;
     width: 25px;
     appearance: none;
-    background-color: var(--main-accent);
-    border-width: 2px;
-    border-style: solid;
-    border-color: var(--main-accent);
+    border: 2px solid var(--main-accent);
     border-radius: 5px;
     margin-left: 3%;
+    cursor: pointer;
+    transition: background 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
 }
 
-.sidebar-checkbox[type="checkbox"]:checked{
+/* accent border on focus for accessibility */
+.sidebar-checkbox[type="checkbox"]:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.6); /* example subtle glow; adjust color/opacity as desired */
+}
+
+/* checked state: background + stronger accent border */
+.sidebar-checkbox[type="checkbox"]:checked {
     background-color: var(--background-secondary);
+    border: 2px solid var(--main-accent);
 }
 
-.sidebar-checkbox[type="checkbox"]:checked::after{
-    appearance: initial;
+/* tick animation */
+.sidebar-checkbox[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s ease;
+}
+
+.sidebar-checkbox[type="checkbox"]:checked::after {
+    content: "\2713";
+    font-size: 16px;
+    color: var(--main-accent);
+    font-weight: bold;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: none;
 }
 
 .sidebar-labels{

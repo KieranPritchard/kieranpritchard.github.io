@@ -221,6 +221,38 @@ function emailFormSize() {
     messageInput.setAttribute("rows", String(rows));
 }
 
+function contactLinks(icon){
+    switch (icon) {
+        case "phone":
+            navigator.clipboard.writeText(text = "+44 07763 534145")
+                .then(() => {
+                    alert("Phone number copied to clipboard.")
+                    console.log("Copied to clipboard:", text);
+                })
+                .catch(err => {
+                    console.error("Failed to copy:", err);
+                });
+            break;
+        case "email":
+            navigator.clipboard.writeText(text = "KieranPritchard06@gmail.com")
+                .then(() => {
+                    alert("Email copied to clipboard.")
+                    console.log("Copied to clipboard:", text);
+                })
+                .catch(err => {
+                    console.error("Failed to copy:", err);
+                });
+            break
+        case "linkedin":
+            window.open("https://www.linkedin.com/in/kieran-pritchard/")
+            break
+        case "github":
+            window.open("https://github.com/KieranPritchard")
+            break
+        default:
+            break;
+    }
+}
 
 // ============================================================================
 // SEARCH AND FILTERING
