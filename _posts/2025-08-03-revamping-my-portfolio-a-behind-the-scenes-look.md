@@ -5,7 +5,7 @@ date: 2025-08-02
 category: Programming
 topic_class: topicTwo
 header_image: "res/Header-Images/Revamping-My-Portfolio-header-image.webp"
-header_image_alt: "An icon showing a website mockup in a Figma-like application on a tablet. A stylus is shown interacting with the screen. The tablet is set against a solid background color."
+header_image_alt: "An icon showing a website mockup in a Figma-like app on a tablet. A stylus is shown interacting with the screen. The tablet is set against a solid background color."
 thumbnail: "res/Icons/Revamping-My-Portfolio-Icon.webp"
 thumbnail_alt: "An icon showing a website mockup in a Figma-like application on a tablet. A stylus is shown interacting with the screen. The tablet is set against a solid background color."
 description: "A deep dive into the recent updates I made to my portfolio website. going from improving the design and color scheme to adding new skills, certifications, and accessibility features. as well as new styling and sections to existing pages."
