@@ -26,7 +26,7 @@ breadcrumb: ["AWS Educate Badges"]
             </p>
         </div>
         <div class="col-md order-md-1 order-first align-content-center text-center">
-            <img class="indivual-post-page-image" src="{{ '/res/badges/aws-educate-introduction-to-cloud-101.webp' | relative_url }}" alt="">
+            <img class="indivual-post-page-image" src="{{ '/res/badges/aws-educate-introduction-to-cloud-101.webp' | relative_url }}" alt="Introduction To Cloud Computing 101 Badge">
         </div>
     </div>
 </div>
@@ -37,7 +37,7 @@ breadcrumb: ["AWS Educate Badges"]
 <div class="container-fluid content-container">
     <div class="row h-100">
         <div class="col-md align-content-center text-center">
-            <img class="indivual-post-page-image" src="{{ '/res/badges/aws-educate-getting-started-with-storage.webp' | relative_url }}" alt="">
+            <img class="indivual-post-page-image" src="{{ '/res/badges/aws-educate-getting-started-with-storage.webp' | relative_url }}" alt="Getting Started With Storage Badge">
         </div>
         <div class="col-md order-md-1 order-first align-content-center">
             <p>
@@ -52,6 +52,21 @@ breadcrumb: ["AWS Educate Badges"]
             <p>
                 The final assessment required me to upload website files to an S3 bucket, configure permissions, and make certain files either private or publicly accessible from the internet.
             </p>
+        </div>
+    </div>
+</div>
+
+## Getting Started With Compute
+
+<div class="container-fluid content-container">
+    <div class="row h-100">
+        <div class="col-md align-content-center">
+            <p>
+                In this module, there isn’t a lot that is unique compared to other AWS Educate learning paths, as it follows the same structured approach to teaching cloud concepts. What sets it apart is its focus on compute services, particularly Amazon EC2. The course introduces the fundamentals of EC2, including launching and managing virtual servers, understanding instance types, and working with key configuration options. In addition to the theoretical knowledge, it provides substantial hands-on practice, allowing learners to experiment with creating, connecting to, and managing EC2 instances in a guided environment.
+            </p>
+        </div>
+        <div class="col-md order-md-1 order-first align-content-center text-center">
+            <img class="indivual-post-page-image" src="{{ '/res/badges/aws-educate-getting-started-with-compute.webp' | relative_url }}" alt="Getting Started With Badge">
         </div>
     </div>
 </div>
