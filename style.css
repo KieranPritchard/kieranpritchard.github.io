@@ -265,7 +265,7 @@ blockquote{
 
 .recent-project-card-img{
     height: 150px;
-    max-width: 95%;
+    max-width: 100%;
     width: auto;
 }
 
@@ -405,7 +405,7 @@ blockquote{
     font-family: "Red Hat Display" !important;
 }
 
-sidebar-recent-blog-title{
+.sidebar-recent-blog-title{
     font-family: "Source Code Pro" !important;
 }
 
@@ -556,7 +556,7 @@ sidebar-recent-blog-title{
 
 .project-page-project-card-image{
     height: 150px;
-    max-width: 95%;
+    max-width: 100%;
     width: auto;
 }
 
@@ -798,8 +798,9 @@ sidebar-recent-blog-title{
 
 .indivual-post-page-header-image{
     height: auto;
-    width: 75%;
+    width: 100%;
     max-width: 100%;
+    object-fit: cover;
 }
 
 .indivual-post-page-image{
