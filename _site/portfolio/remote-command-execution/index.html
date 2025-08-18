@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="/Kieran-Pritchard-Portfolio/res/favicon/Website%20Favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="/Kieran-Pritchard-Portfolio">
+    <meta name="description" content="/Kieran-Pritchard-Portfolio/A%20showcase%20of%20my%20Python%20remote%20command%20execution%20project%20using%20sockets%20and%20the%20subprocess%20module,%20showcasing%20my%20learning%20in%20client-server%20communication%20and%20system%20command%20handling.%20The%20project%20demonstrates%20sending%20commands%20from%20a%20client%20to%20a%20server,%20executing%20them%20in%20real%20time,%20and%20returning%20results%20with%20error%20handling.%20It%20highlights%20my%20practical%20skills%20in%20Python,%20networking,%20and%20cybersecurity%20experimentation.">
     <title>Remote Command Execution - Kieran Pritchard Portfolio</title>
 </head>
 <body id="themeLoaded">
@@ -74,7 +74,7 @@
         
         
         <div class="my-4 indivual-post-page-header-image-background" style="background-color: black;">
-            <img class="indivual-post-page-header-image" src="/Kieran-Pritchard-Portfolio" alt="Remote Command Execution">
+            <img class="indivual-post-page-header-image" src="/Kieran-Pritchard-Portfolio/res/Header-Images/Remote_Command_Execution_Header_Image.webp" alt="Remote Command Execution">
         </div>
         
         
@@ -93,7 +93,7 @@
         
         
         
-        <p class="mt-4"></p>
+        <p class="mt-4">A showcase of my Python remote command execution project using sockets and the subprocess module, showcasing my learning in client-server communication and system command handling. The project demonstrates sending commands from a client to a server, executing them in real time, and returning results with error handling. It highlights my practical skills in Python, networking, and cybersecurity experimentation.</p>
         
     </div>
 
@@ -102,8 +102,81 @@
     
     
         
+        
         <div class="background-even align-content-center">
-            
+            <h2 id="overview">Overview</h2>
+<p>This project is a hands-on simulation of remote command execution using Python sockets. It demonstrates how a client can send commands to a server, the server executes those commands on the host machine, and then sends the results back to the client in real time.
+The goal was to strengthen my understanding of client-server architecture, command handling, and network programming with Python. You find the <a href="https://github.com/KieranPritchard/Remote-Command-Execution">repository here</a></p>
+
+<h3 id="what-i-used">What I Used</h3>
+<ul>
+  <li>Python for development</li>
+  <li>Socket module for networking</li>
+  <li>Subprocess module for executing system commands</li>
+  <li>Git &amp; VS Code for version control and coding</li>
+</ul>
+
+<h3 id="challenges">Challenges</h3>
+<p>The biggest issue I encountered was port conflicts — some ports I chose were already in use by other applications. After troubleshooting and selecting an available port, the client-server connection worked smoothly. From there, the project was more straightforward, as it built on socket programming patterns I had already practiced.</p>
+
+<h3 id="result">Result</h3>
+<p>The system works as a simple remote shell simulation:</p>
+
+<ul>
+  <li>The server waits for incoming client connections and executes commands sent to it.</li>
+  <li>The client connects to the server, takes user input, and displays the output returned by the server.</li>
+  <li>Both successful output and errors are handled and displayed.</li>
+</ul>
+
+<p>This project gave me practical experience with network debugging, error handling, and system command execution via Python.</p>
+
+
+        </div>
+    
+        
+        <div class="background-odd align-content-center">
+            <h2 id="how-it-works">How It Works</h2>
+
+<h3 id="1-starting-the-server">1. Starting the Server</h3>
+
+<ul>
+  <li>Run python server.py.</li>
+  <li>The server binds to 127.0.0.1:5001 and begins listening for client connections.</li>
+</ul>
+
+<h3 id="2-connecting-the-client">2. Connecting the Client</h3>
+<ul>
+  <li>In a separate terminal, run python client.py.</li>
+  <li>The client connects to the server and prompts the user: “Please input a command:”</li>
+</ul>
+
+<h3 id="3-sending-commands">3. Sending Commands</h3>
+
+<ul>
+  <li>Type any system command (e.g., ls, dir, echo Hello World, whoami).</li>
+  <li>The client sends the command to the server.</li>
+</ul>
+
+<h3 id="4-server-execution">4. Server Execution</h3>
+<ul>
+  <li>The server receives the command.</li>
+  <li>It uses Python’s subprocess module to execute the command on the host system.</li>
+  <li>The command’s output (or error message, if any) is captured.</li>
+</ul>
+
+<h3 id="5-returning-results">5. Returning Results</h3>
+<ul>
+  <li>The server sends the result back to the client.</li>
+  <li>The client displays it instantly in the terminal.</li>
+</ul>
+
+<h3 id="6-disconnecting">6. Disconnecting</h3>
+<ul>
+  <li>If the client closes (e.g., with Ctrl+C), the server logs the disconnection.</li>
+  <li>The server continues listening for new clients until stopped manually.</li>
+</ul>
+
+<p>⚠️ Important: This is an educational simulation. Running a real remote command execution system can pose security risks if misused.</p>
 
         </div>
     

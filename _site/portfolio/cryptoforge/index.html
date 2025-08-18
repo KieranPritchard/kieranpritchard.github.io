@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="/Kieran-Pritchard-Portfolio/res/favicon/Website%20Favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="/Kieran-Pritchard-Portfolio">
+    <meta name="description" content="/Kieran-Pritchard-Portfolio/An%20overview%20of%20my%20Python-based%20cryptography%20utility,%20Cryptoforge,%20built%20with%20the%20cryptography%20library.%20The%20project%20provides%20a%20command-line%20interface%20for%20encryption,%20decryption,%20hashing,%20and%20digital%20signatures,%20with%20simplified%20commands%20compared%20to%20OpenSSL.%20It%20highlights%20my%20learning%20in%20key%20management,%20algorithm%20implementation,%20and%20secure%20data%20handling,%20while%20reinforcing%20practical%20skills%20in%20Python%20and%20applied%20cryptography.">
     <title>Cryptoforge - Kieran Pritchard Portfolio</title>
 </head>
 <body id="themeLoaded">
@@ -74,7 +74,7 @@
         
         
         <div class="my-4 indivual-post-page-header-image-background" style="background-color: black;">
-            <img class="indivual-post-page-header-image" src="/Kieran-Pritchard-Portfolio" alt="Cryptoforge">
+            <img class="indivual-post-page-header-image" src="/Kieran-Pritchard-Portfolio/res/Header-Images/Cryptoforge_Header_Image.webp" alt="Cryptoforge">
         </div>
         
         
@@ -93,7 +93,7 @@
         
         
         
-        <p class="mt-4"></p>
+        <p class="mt-4">An overview of my Python-based cryptography utility, Cryptoforge, built with the cryptography library. The project provides a command-line interface for encryption, decryption, hashing, and digital signatures, with simplified commands compared to OpenSSL. It highlights my learning in key management, algorithm implementation, and secure data handling, while reinforcing practical skills in Python and applied cryptography.</p>
         
     </div>
 
@@ -102,8 +102,102 @@
     
     
         
+        
+        <div class="background-even align-content-center">
+            <h2 id="overview">Overview</h2>
+<p>Cryptoforge is a command-line cryptography toolkit built in Python. It brings together encryption, decryption, hashing, and digital signature algorithms into one accessible utility. Designed with simplicity in mind, it streamlines cryptographic operations that often feel complex in tools like OpenSSL. 
+The project helped me dive deeper into cryptography fundamentals, key management, and the practical use of secure algorithms. It also gave me hands-on experience in building a command-line tool with clean, reusable commands.</p>
+
+<h3 id="what-i-used">What I Used</h3>
+<ul>
+  <li>Python 3 for development</li>
+  <li>cryptography library for cryptographic primitives</li>
+  <li>argparse for command-line interface design</li>
+</ul>
+
+<h3 id="challenges">Challenges</h3>
+<p>One of the main hurdles was managing keys efficiently and avoiding repetitive command inputs. I solved this by adding a feature where the last loaded key is automatically reused for subsequent operations. This improved usability and reduced command overhead compared to raw OpenSSL workflows.</p>
+
+<h3 id="result">Result</h3>
+<p>The final tool provides a full suite of cryptographic operations, including:</p>
+
+<ul>
+  <li>Encryption &amp; Decryption (AES, Blowfish, ChaCha20)</li>
+  <li>Hashing (SHA-2, SHA-3, Blake2)</li>
+  <li>Key Management (save, load, rename, delete keys)</li>
+  <li>Digital Signatures (RSA, ECDSA)</li>
+</ul>
+
+<p>It serves as a versatile sandbox for experimenting with cryptography and a practical utility for lightweight secure data processing.</p>
+
+
+        </div>
+    
+        
         <div class="background-odd align-content-center">
-            
+            <h2 id="how-it-works">How It Works</h2>
+
+<h3 id="1-key-management">1. Key Management</h3>
+
+<ul>
+  <li>Save, load, list, rename, and delete cryptographic keys.</li>
+  <li>Supports AES, Blowfish, ChaCha20, RSA, and ECC/EDSCA keys.</li>
+  <li>The tool remembers the last loaded key for easier workflows.</li>
+</ul>
+
+<h3 id="2-encryption--decryption">2. Encryption &amp; Decryption</h3>
+
+<ul>
+  <li>Encrypt/decrypt both files and plaintext strings.</li>
+  <li>Choose from AES (with IV), Blowfish, or ChaCha20 (with nonce).</li>
+  <li>Output can be saved to a file or displayed directly in the terminal.</li>
+</ul>
+
+<h3 id="3-hashing">3. Hashing</h3>
+
+<ul>
+  <li>Compute secure hashes using SHA-2, SHA-3, or Blake2.</li>
+  <li>Flexible output formats (hex or raw bytes).</li>
+  <li>Works with both text input and files.</li>
+</ul>
+
+<h3 id="4-digital-signatures">4. Digital Signatures</h3>
+<ul>
+  <li>Generate and verify RSA or ECDSA signatures.</li>
+  <li>Use PEM private/public keys for signing or verification.</li>
+  <li>Verification accepts either a public key or a private key (with public key derived automatically).</li>
+</ul>
+
+
+        </div>
+    
+        
+        <div class="background-even align-content-center">
+            <h2 id="workflow-example">Workflow Example</h2>
+<ul>
+  <li>Load an AES key → Encrypt a file → Hash the encrypted output → Sign the hash with RSA.</li>
+  <li>All steps are performed via simple commands, reducing complexity compared to OpenSSL.</li>
+</ul>
+
+<h3 id="example-commands">Example Commands</h3>
+<ul>
+  <li><strong>Load a key:</strong> python Cryptoforge.py keymgmt –load-key my_aes_key.key</li>
+  <li><strong>Encrypt a file using AES:</strong> python Cryptoforge.py aes –operation encrypt –input plaintext.txt –iv <iv-hex></iv-hex></li>
+  <li><strong>Hash a file with SHA-3:</strong> python Cryptoforge.py sha300 –input document.txt –hash-type sha3_256</li>
+  <li><strong>Sign a message with RSA:</strong> python Cryptoforge.py rsa_signature –operation sign –input message.txt –key private.pem –output message.sig</li>
+  <li><strong>Verify a signature:</strong> python Cryptoforge.py rsa_signature –operation verify –input message.txt –key private.pem –signature message.sig</li>
+</ul>
+
+<h3 id="key-features">Key Features</h3>
+
+<ul>
+  <li>Supports AES, Blowfish, ChaCha20, SHA-2, SHA-3, Blake2, RSA, and ECDSA</li>
+  <li>Full key management system for easier cryptographic workflows</li>
+  <li>Reusable key-loading mechanism to reduce repetitive commands</li>
+  <li>Unified command-line syntax powered by argparse</li>
+</ul>
+
+<p>⚠️ Disclaimer: Cryptoforge is an educational project and not intended for production-level security.</p>
 
         </div>
     
