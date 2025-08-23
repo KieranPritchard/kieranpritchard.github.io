@@ -571,7 +571,7 @@ blockquote{
 }
 
 .project-page-project-card-image{
-    height: 150px;
+    height: 185px;
     width: 100%;
     max-width: 100%;
     width: auto;
@@ -1059,6 +1059,7 @@ table, th, td {
     /* Typography */
     h1 { font-size: 6vw !important; }
     h2 { font-size: 4.5vw !important; }
+    h3 { font-size: 3vw !important; }
     p { font-size: 2.75vw !important; }
     li { font-size: 3.5vw !important; }
     blockquote{font-size: 4.5vw !important;}
@@ -1146,14 +1147,12 @@ table, th, td {
     .project-page-project-card-image-background {
         background-color: black;
         height: 100%;
-        padding: 2.5% 1.25%;
         display: flex;
         justify-content: center;
     }
 
     .project-page-project-card-image {
-        height: 200px;
-        max-width: 95%;
+        max-width: 100%;
         width: auto;
     }
 
