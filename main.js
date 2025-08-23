@@ -570,6 +570,31 @@ const projectObserver = new IntersectionObserver((entries, observer) => {
 
 projects.forEach(project => projectObserver.observe(project))
 
+
+const text = `"I develop software and study cybersecurity, blending my code craftsmanship with a passion for ethical hacking."` +
+    `\n- Kieran Pritchard`;
+
+let i = 0;
+const speed = 50;   // normal typing speed
+const pause = 800;  // pause duration at line break (ms)
+
+function typeWriter() {
+    if (i < text.length) {
+        const char = text.charAt(i);
+        document.getElementById("typewriter").innerHTML += char;
+
+        i++;
+        if (char === "\n") {
+            // longer pause at line break
+            setTimeout(typeWriter, pause);
+        } else {
+            setTimeout(typeWriter, speed);
+        }
+    }
+}
+
+window.onload = typeWriter;
+
 // ============================================================================
 // EVENT LISTENERS AND INITIALIZATION
 // ============================================================================

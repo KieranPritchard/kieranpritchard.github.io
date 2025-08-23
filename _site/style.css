@@ -329,6 +329,23 @@ blockquote{
     font-size: 1.5vw !important;
 }
 
+#typewriter {
+    border-right: 2px solid #000;
+    white-space: pre-line; /* preserves \n and still wraps text */
+    overflow: hidden;
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+    0% { border-color: transparent; }
+    50% { border-color: var(--table-body-text) }
+    100% { border-color: transparent; }
+}
+
+#typewriter {
+    animation: blink 0.7s step-end infinite;
+}
+
 #about-page-skills-section-text{
     padding-top: 10%;
 }
