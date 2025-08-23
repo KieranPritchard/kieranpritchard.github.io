@@ -570,7 +570,24 @@ const projectObserver = new IntersectionObserver((entries, observer) => {
 
 projects.forEach(project => projectObserver.observe(project))
 
+// certificate observers
 
+const certificates = document.querySelectorAll('.certifications')
+
+const certificateObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry=> {
+        if (entry.isIntersecting){
+            entry.target.classList.add('fade-in')
+            observer.unobserve(entry.target)
+        }
+    })
+}, {threshold: 0.2})
+
+certificates.forEach(certificate => certificateObserver.observe(certificate))
+
+// ============================================================================
+// TYPEWRITER ANIMATIONS
+// ============================================================================
 const text = `"I develop software and study cybersecurity, blending my code craftsmanship with a passion for ethical hacking."` +
     `\n- Kieran Pritchard`;
 

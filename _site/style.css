@@ -357,6 +357,17 @@ blockquote{
     border-radius: 10%;
 }
 
+.certifications{
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.certifications.fade-in{
+    opacity: 1;
+    transform: translateX(0);
+}
+
 /* Educational History */
 .educational-history-row{
     width: 100%;
