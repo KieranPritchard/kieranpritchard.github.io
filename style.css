@@ -221,10 +221,18 @@ blockquote{
 
 /* Recent Blog Posts */
 .recent-blog-post{
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     background-color: var(--background-secondary);
     box-shadow: 0 0 8px var(--main-accent);
     border-radius: 25px;
     margin: 1% 0;
+}
+
+.recent-blog-post.fade-in{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .recent-blog-post-title{
@@ -253,10 +261,18 @@ blockquote{
 
 /* Recent Project Cards */
 .recent-project-card{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     margin-top: 5%;
     border-radius: 25px;
     padding: 5%;
     box-shadow: 0px 0px 20px 1px var(--main-accent);
+}
+
+.recent-project-card.fade-in{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .recent-project-card-img-background{

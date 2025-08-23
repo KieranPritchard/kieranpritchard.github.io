@@ -535,6 +535,42 @@ function startProgressiveLineDrawing(timeline) {
 }
 
 // ============================================================================
+// FADE IN ANIMATIONS
+// ============================================================================
+
+// Recent blog posts observer
+const blogPosts = document.querySelectorAll('.recent-blog-post')
+
+const blogObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry=> {
+        if (entry.isIntersecting){
+            entry.target.classList.add('fade-in')
+            observer.unobserve(entry.target)
+        }
+    })
+}, {threshold: 0.2})
+
+blogPosts.forEach(post => blogObserver.observe(post))
+
+// Recent projects posts observers
+
+const projects = document.querySelectorAll('.recent-project-card')
+
+const projectObserver = new IntersectionObserver((entries, observer) => {
+    // Find the most visible one
+    const visible = entries
+        .filter(e => e.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
+
+    if (visible) {
+        visible.target.classList.add('fade-in')
+        observer.unobserve(visible.target)
+    }
+}, { threshold: [0.2, 0.6, 1] })
+
+projects.forEach(project => projectObserver.observe(project))
+
+// ============================================================================
 // EVENT LISTENERS AND INITIALIZATION
 // ============================================================================
 
