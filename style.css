@@ -368,6 +368,17 @@ blockquote{
     transform: translateX(0);
 }
 
+.badge{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.badge.fade-in{
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Educational History */
 .educational-history-row{
     width: 100%;

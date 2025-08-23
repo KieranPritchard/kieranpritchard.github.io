@@ -585,6 +585,24 @@ const certificateObserver = new IntersectionObserver((entries, observer) => {
 
 certificates.forEach(certificate => certificateObserver.observe(certificate))
 
+// badge observer
+
+const badges = document.querySelectorAll('.badge')
+
+const badgeObserver = new IntersectionObserver((entries, observer) => {
+    // Find the most visible one
+    const visible = entries
+        .filter(e => e.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
+
+    if (visible) {
+        visible.target.classList.add('fade-in')
+        observer.unobserve(visible.target)
+    }
+}, { threshold: [0.2, 0.4, 0.6, 1] })
+
+badges.forEach(badge => badgeObserver.observe(badge))
+
 // ============================================================================
 // TYPEWRITER ANIMATIONS
 // ============================================================================
