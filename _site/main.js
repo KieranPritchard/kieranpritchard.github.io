@@ -599,9 +599,24 @@ const badgeObserver = new IntersectionObserver((entries, observer) => {
         visible.target.classList.add('fade-in')
         observer.unobserve(visible.target)
     }
-}, { threshold: [0.2, 0.4, 0.6, 1] })
+}, { threshold: [0.2, 0.4, 0.6, 0.8] })
 
 badges.forEach(badge => badgeObserver.observe(badge))
+
+// educational history animations
+
+const educationEntries = document.querySelectorAll('.educational-history-card');
+
+const educationObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.2 });
+
+educationEntries.forEach(education => educationObserver.observe(education));
 
 // ============================================================================
 // TYPEWRITER ANIMATIONS
