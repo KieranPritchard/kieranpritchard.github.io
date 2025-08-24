@@ -9,6 +9,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Read Kieran Pritchard's latest blog posts on programming, cybersecurity, career insights, and personal thoughts. Explore categories, search articles, and stay updated with recent posts.">
     <title>{{ page.title }} - {{ site.title }}</title>
+    
+    <!-- Inline CSS fallback for footer overlap fix -->
+    <style>
+        /* Blog page specific layout fixes */
+        .background-odd:has(#blog-sidebar),
+        .background-odd:has(#blog-list) {
+            height: auto !important;
+            min-height: auto !important;
+        }
+        
+        /* Blog page specific layout fixes */
+        .background-odd.background-auto {
+            min-height: auto !important;
+            padding-bottom: 2rem !important;
+        }
+        
+        /* Ensure proper spacing between blog content and footer */
+        .background-odd.background-auto + footer {
+            margin-top: 2rem !important;
+        }
+        
+        /* Alternative approach: target blog page elements directly */
+        #blog-sidebar + .col-sm-8,
+        #blog-sidebar ~ .col-sm-8 {
+            margin-bottom: 2rem;
+        }
+        
+        /* Target blog page structure using more specific selectors */
+        .background-odd:has(#blog-sidebar) {
+            min-height: auto !important;
+            height: auto !important;
+            padding-bottom: 3rem !important;
+        }
+        
+        /* Fallback for browsers without :has() support */
+        .background-odd #blog-sidebar {
+            margin-bottom: 2rem;
+        }
+        
+        .background-odd #blog-list {
+            margin-bottom: 2rem;
+        }
+        
+        /* Ensure footer spacing on blog pages */
+        .background-odd + footer {
+            margin-top: 2rem !important;
+        }
+        
+        /* Additional footer positioning fixes */
+        footer {
+            position: relative !important;
+            clear: both !important;
+            width: 100% !important;
+            z-index: 1 !important;
+        }
+        
+        /* Blog page footer specific spacing */
+        .background-odd:has(#blog-sidebar) + footer,
+        .background-odd #blog-sidebar ~ footer {
+            margin-top: 3rem !important;
+        }
+        
+        /* Mobile responsive fixes */
+        @media screen and (max-width: 576px) {
+            .background-odd.background-auto {
+                padding-bottom: 3rem !important;
+                margin-bottom: 1rem !important;
+            }
+            
+            footer {
+                margin-top: 2rem !important;
+                position: relative !important;
+            }
+            
+            .blog-post {
+                padding: 4% 0;
+                margin-bottom: 1rem;
+            }
+            
+            #blog-list {
+                margin-bottom: 2rem;
+            }
+            
+            .col-sm-4, .col-sm-8 {
+                width: 100% !important;
+                margin-bottom: 2rem;
+            }
+            
+            .container {
+                padding-bottom: 2rem;
+            }
+            
+            .row {
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
 </head>
 <body id="themeLoaded" class="blog-index-page">
     <nav class="navbar navbar-expand-lg">

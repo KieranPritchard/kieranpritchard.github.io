@@ -6,6 +6,19 @@ url: "https://kieranpritchard.github.io"
 # Build settings
 markdown: kramdown
 
+# Jekyll 4.x static files handling
+static_files:
+  - "*.css"
+  - "*.js"
+  - "*.png"
+  - "*.jpg"
+  - "*.jpeg"
+  - "*.gif"
+  - "*.webp"
+  - "*.ico"
+  - "*.svg"
+  - "*.pdf"
+
 # Permalink settings (only one permalink setting)
 permalink: /:categories/:year/:month/:day/:title.html
 
@@ -17,6 +30,12 @@ include:
   - "res"
   - "Blog-Posts"
   - "src"
+  - "_assets"
+
+# Ensure static files are copied
+keep_files:
+  - "*.css"
+  - "*.js"
 
 # Exclude specific files
 exclude:
