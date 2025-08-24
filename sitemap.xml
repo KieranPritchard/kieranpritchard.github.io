@@ -1,180 +1,157 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!--
- created with Free Online Sitemap Generator www.xml-sitemaps.com 
--->
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/
-    </loc>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>1.00</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/About.html
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/About.html</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>0.80</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/blog/
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/blog/</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>0.80</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/Projects.html
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/Projects.html</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>0.80</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/Hobbies.html
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/Hobbies.html</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>0.80</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/Contact.html
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/Contact.html</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>0.80</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/programming/2025/08/02/revamping-my-portfolio-2025.html
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/programming/2025/08/02/revamping-my-portfolio-2025.html</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>0.80</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/career/2025/03/09/a-day-in-my-life-as-a-student.html
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/career/2025/03/09/a-day-in-my-life-as-a-student.html</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>0.80</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/programming/2025/03/05/how-i-started-programming.html
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/programming/2025/03/05/how-i-started-programming.html</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>0.80</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/port-scanner/
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/port-scanner/</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>0.80</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/cryptoforge/
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/cryptoforge/</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>0.80</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/remote-command-execution/
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/remote-command-execution/</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>0.80</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/index.html
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/index.html</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>0.80</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/aws-educate-badges/
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/aws-educate-badges/</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>0.64</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/ctf-write-ups/
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/ctf-write-ups/</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>0.64</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/my-ethical-hacking-lab-set-up/
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/my-ethical-hacking-lab-set-up/</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>0.64</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/btec-first-foundation-in-tech/
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/btec-first-foundation-in-tech/</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>0.64</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/my-idea-awards/
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/my-idea-awards/</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>0.64</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/sololearn-certificates/
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/sololearn-certificates/</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>0.64</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/thoughts%20&amp;%20opinions/2025/03/02/how-my-opinions-on-ai-changed.html
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/thoughts%20&amp;%20opinions/2025/03/02/how-my-opinions-on-ai-changed.html</loc>
     <lastmod>2025-08-24T18:21:04+00:00</lastmod>
     <priority>0.64</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/online-world-unit/
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/online-world-unit/</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>0.51</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/technology-systems-unit/
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/technology-systems-unit/</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>0.51</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/web-development-unit/
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/web-development-unit/</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>0.51</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/digital-graphics-unit/
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/digital-graphics-unit/</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>0.51</priority>
-</url>
-<url>
-    <loc>
-        https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/networking-unit/
-    </loc>
+  </url>
+
+  <url>
+    <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/networking-unit/</loc>
     <lastmod>2025-08-24T09:20:04+00:00</lastmod>
     <priority>0.51</priority>
-</url>
+  </url>
+
 </urlset>
