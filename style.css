@@ -137,8 +137,23 @@ blockquote{
 
 .background-auto{
     height: auto !important;
+    min-height: auto !important;
 }
 
+/* Ensure content doesn't overflow on small viewports */
+.background-auto .container {
+    overflow: visible;
+    height: auto;
+}
+
+/* Override height for blog pages to prevent footer overlap */
+.background-odd:has(#blog-sidebar),
+.background-odd:has(#blog-list) {
+    height: auto !important;
+    min-height: auto !important;
+}
+
+/* Content container adjustments */
 .content-container{ height: 85% !important; }
 
 /* ========================================
@@ -605,6 +620,89 @@ blockquote{
     font-size: 1vw !important; 
 }
 
+/* Blog page specific layout fixes */
+.background-odd.background-auto {
+    min-height: auto !important;
+    padding-bottom: 2rem !important;
+}
+
+/* Ensure proper spacing between blog content and footer */
+.background-odd.background-auto + footer {
+    margin-top: 2rem !important;
+}
+
+/* Alternative approach: target blog page structure directly */
+.blog-index-page .background-odd,
+.blog-index-page .background-odd.background-auto {
+    min-height: auto !important;
+    padding-bottom: 2rem !important;
+}
+
+/* Target the blog page container specifically */
+.background-odd:has(.container) {
+    min-height: auto !important;
+    padding-bottom: 2rem !important;
+}
+
+/* Fallback for browsers that don't support :has() */
+.background-odd .container {
+    margin-bottom: 2rem;
+}
+
+/* Blog index page specific fixes */
+.blog-index-page .background-odd {
+    min-height: auto !important;
+    height: auto !important;
+    padding-bottom: 3rem !important;
+}
+
+.blog-index-page footer {
+    margin-top: 2rem !important;
+    position: relative !important;
+    clear: both !important;
+}
+
+/* Alternative approach: target blog page elements directly */
+#blog-sidebar + .col-sm-8,
+#blog-sidebar ~ .col-sm-8 {
+    margin-bottom: 2rem;
+}
+
+/* Target blog page structure using more specific selectors */
+.background-odd:has(#blog-sidebar) {
+    min-height: auto !important;
+    height: auto !important;
+    padding-bottom: 3rem !important;
+}
+
+/* Fallback for browsers without :has() support */
+.background-odd #blog-sidebar {
+    margin-bottom: 2rem;
+}
+
+.background-odd #blog-list {
+    margin-bottom: 2rem;
+}
+
+/* Ensure footer spacing on blog pages */
+.background-odd + footer {
+    margin-top: 2rem !important;
+}
+
+/* Additional footer positioning fixes */
+footer {
+    position: relative !important;
+    clear: both !important;
+    width: 100% !important;
+    z-index: 1 !important;
+}
+
+/* Blog page footer specific spacing */
+.background-odd:has(#blog-sidebar) + footer,
+.background-odd #blog-sidebar ~ footer {
+    margin-top: 3rem !important;
+}
+
 /* ========================================
    PROJECTS PAGE
    ======================================== */
@@ -820,6 +918,22 @@ blockquote{
     background-color: var(--main-accent) !important;
     color: var(--hover-highlight) !important;
     transform: scale(1.05) !important;
+}
+
+/* Footer positioning and spacing fixes */
+footer {
+    position: relative;
+    clear: both;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Ensure proper spacing above footer */
+footer:before {
+    content: '';
+    display: block;
+    height: 2rem;
+    clear: both;
 }
 
 /* ========================================
@@ -1194,6 +1308,7 @@ table, th, td {
         width: 100%;
         height: auto;
         margin-bottom: 5%;
+        margin-right: 0;
     }
 
     .sidebar-labels { font-size: 3vw; }
@@ -1207,6 +1322,45 @@ table, th, td {
     .blog-post-title { font-size: 3.6vw !important; }
     .blog-post-date { font-size: 2vw !important; }
     .blog-post-description { font-size: 2vw !important; }
+
+    /* Blog layout mobile fixes */
+    .background-odd.background-auto {
+        padding-bottom: 3rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    /* Ensure footer doesn't overlap on mobile */
+    footer {
+        margin-top: 2rem !important;
+        position: relative !important;
+    }
+
+    /* Blog post spacing on mobile */
+    .blog-post {
+        padding: 4% 0;
+        margin-bottom: 1rem;
+    }
+
+    /* Blog list container */
+    #blog-list {
+        margin-bottom: 2rem;
+    }
+
+    /* Bootstrap grid fixes for mobile */
+    .col-sm-4, .col-sm-8 {
+        width: 100% !important;
+        margin-bottom: 2rem;
+    }
+
+    /* Container spacing on mobile */
+    .container {
+        padding-bottom: 2rem;
+    }
+
+    /* Row spacing on mobile */
+    .row {
+        margin-bottom: 1rem;
+    }
 
     /* Project Page */
     .project-page-project-card-image-background {
