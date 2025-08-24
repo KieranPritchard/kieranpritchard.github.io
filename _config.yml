@@ -49,6 +49,9 @@ exclude:
   - .jekyll-cache/
   - node_modules/
 
+plugins:
+  - jekyll-sitemap
+
 collections:
   portfolio:
     output: true
