@@ -22,25 +22,25 @@
         /* Blog page specific layout fixes */
         .background-odd.background-auto {
             min-height: auto !important;
-            padding-bottom: 2rem !important;
+            padding-bottom: 1.5rem !important;
         }
         
         /* Ensure proper spacing between blog content and footer */
         .background-odd.background-auto + footer {
-            margin-top: 2rem !important;
+            margin-top: 1rem !important;
         }
         
         /* Alternative approach: target blog page elements directly */
         #blog-sidebar + .col-sm-8,
         #blog-sidebar ~ .col-sm-8 {
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
         }
         
         /* Target blog page structure using more specific selectors */
         .background-odd:has(#blog-sidebar) {
             min-height: auto !important;
             height: auto !important;
-            padding-bottom: 3rem !important;
+            padding-bottom: 1.5rem !important;
         }
         
         /* Fallback for browsers without :has() support */
@@ -49,12 +49,12 @@
         }
         
         .background-odd #blog-list {
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
         }
         
         /* Ensure footer spacing on blog pages */
         .background-odd + footer {
-            margin-top: 2rem !important;
+            margin-top: 1rem !important;
         }
         
         /* Additional footer positioning fixes */
@@ -68,18 +68,18 @@
         /* Blog page footer specific spacing */
         .background-odd:has(#blog-sidebar) + footer,
         .background-odd #blog-sidebar ~ footer {
-            margin-top: 3rem !important;
+            margin-top: 1.5rem !important;
         }
         
         /* Mobile responsive fixes */
         @media screen and (max-width: 576px) {
             .background-odd.background-auto {
-                padding-bottom: 3rem !important;
-                margin-bottom: 1rem !important;
+                padding-bottom: 1rem !important;
+                margin-bottom: 0.5rem !important;
             }
             
             footer {
-                margin-top: 2rem !important;
+                margin-top: 1rem !important;
                 position: relative !important;
             }
             
@@ -89,20 +89,20 @@
             }
             
             #blog-list {
-                margin-bottom: 2rem;
+                margin-bottom: 1rem;
             }
             
             .col-sm-4, .col-sm-8 {
                 width: 100% !important;
-                margin-bottom: 2rem;
+                margin-bottom: 1rem;
             }
             
             .container {
-                padding-bottom: 2rem;
+                padding-bottom: 1rem;
             }
             
             .row {
-                margin-bottom: 1rem;
+                margin-bottom: 0.5rem;
             }
         }
     </style>
