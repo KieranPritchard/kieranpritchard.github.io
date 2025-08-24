@@ -1165,7 +1165,8 @@ table, th, td {
     #Hero-Image-Home-Page{
         height: auto;
         width: 100%;
-        max-width: 65%;
+        padding-top: 0%;
+        max-width: 75%;
         border-radius: 25%;
     }
 
