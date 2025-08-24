@@ -63,7 +63,7 @@ h1, h2, h3, h5{
     color: var(--main-accent) !important;
 }
 
-h1{ padding-top: 10%; font-size: 3vw !important; }
+h1{ padding-top: 10%; font-size: 3vw !important;}
 h2{ padding-top: 2.5%; font-size: 2vw !important;}
 h3{ font-size: 1.75vw !important;}
 
@@ -209,6 +209,17 @@ blockquote{
     width: 100%;
     max-width: 90%;
 }
+
+#tagline {
+    font-family: "Red Hat Display";
+    color: var(--main-accent);
+    font-size: 1.5vw;
+    font-weight: 500;
+    border-right: 2px solid var(--table-body-text);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 
 .home-page-recent-blogs-image{
     height: auto;
@@ -1154,8 +1165,12 @@ table, th, td {
     #Hero-Image-Home-Page{
         height: auto;
         width: 100%;
-        max-width: 75%;
+        max-width: 65%;
         border-radius: 25%;
+    }
+
+    #tagline{
+        font-size: 3vw;
     }
 
     /* About Page */

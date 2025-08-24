@@ -619,8 +619,52 @@ const educationObserver = new IntersectionObserver((entries, observer) => {
 educationEntries.forEach(education => educationObserver.observe(education));
 
 // ============================================================================
+// TAGLINE ANIMATIONS
+// ============================================================================
+
+const taglines = [
+    "Student at Bournemouth & Poole College",
+    "Aspiring Programmer & Ethical Hacker",
+    "Passionate About Cybersecurity"
+];
+
+let index = 0;
+let charIndex = 0;
+const taglineElement = document.getElementById("tagline");
+const typingSpeed = 100;   // ms per character
+const erasingSpeed = 50;   // ms per character when erasing
+const delayBetween = 2000; // pause before erasing (2s)
+
+function type() {
+    if (charIndex < taglines[index].length) {
+        taglineElement.textContent += taglines[index].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingSpeed);
+    } else {
+        setTimeout(erase, delayBetween);
+    }
+}
+
+function erase() {
+    if (charIndex > 0) {
+        taglineElement.textContent = taglines[index].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, erasingSpeed);
+    } else {
+        index = (index + 1) % taglines.length;
+        setTimeout(type, typingSpeed);
+    }
+}
+
+// Start typing after page loads
+document.addEventListener("DOMContentLoaded", () => {
+    type();
+});
+
+// ============================================================================
 // TYPEWRITER ANIMATIONS
 // ============================================================================
+
 const text = `"I develop software and study cybersecurity, blending my code craftsmanship with a passion for ethical hacking."` +
     `\n- Kieran Pritchard`;
 
