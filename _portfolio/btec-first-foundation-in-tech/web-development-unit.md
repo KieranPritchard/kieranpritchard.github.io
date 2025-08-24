@@ -4,7 +4,7 @@ title: "Web Development Unit"
 description: "A look at the web development unit, covering website research, design, and building this portfolio."
 date: 2025-02-21
 topics: ["Education", "Web", "Development"]
-header_image: "/res/Header-Images/Digital-Logo-BPC.webp"
+header_image: "/res/Header-Images/project-header-images/Digital-Logo-BPC.webp"
 breadcrumb: ["My College Course", "Web Development Unit"]
 parent: "btec-first-foundation-in-tech"
 starting_out_images:

@@ -4,7 +4,7 @@ title: "Digital Graphics Unit"
 description: "An overview of the digital graphics unit, covering Adobe Photoshop, Illustrator, and digital design principles."
 date: 2025-04-05
 topics: ["Education", "Graphics", "Design"]
-header_image: "/res/Header-Images/Digital-Logo-BPC.webp"
+header_image: "/res/Header-Images/project-header-images/Digital-Logo-BPC.webp"
 breadcrumb: ["My College Course", "Digital Graphics Unit"]
 parent: "btec-first-foundation-in-tech"
 starting_out_images:

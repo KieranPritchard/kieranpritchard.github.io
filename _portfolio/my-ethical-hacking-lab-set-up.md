@@ -5,7 +5,7 @@ description: "A full breakdown of how I set up my ethical hacking lab using Virt
 date: 2025-07-15
 featured: true
 topics: ["Ethical-Hacking", "Home-Lab"]
-header_image: "/res/Header-Images/My_Ethical_Hacking_Lab_Setup_HeaderImage.webp"
+header_image: "/res/Header-Images/project-header-images/My_Ethical_Hacking_Lab_Setup_HeaderImage.webp"
 icon: "/res/Icons/portfolio-icons/My_Ethical_Hacking_Lab_Setup_Icon.webp"
 breadcrumb: ["My Ethical Hacking Lab Setup"]
 background_images:

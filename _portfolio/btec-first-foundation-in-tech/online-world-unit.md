@@ -4,7 +4,7 @@ title: "Online World Unit"
 description: "An exploration of the online world unit, covering cloud computing, online software, and digital tools."
 date: 2025-01-20
 topics: ["Education", "Online", "Cloud"]
-header_image: "/res/Header-Images/Digital-Logo-BPC.webp"
+header_image: "/res/Header-Images/project-header-images/Digital-Logo-BPC.webp"
 breadcrumb: ["My College Course", "Online World Unit"]
 parent: "btec-first-foundation-in-tech"
 starting_out_images:

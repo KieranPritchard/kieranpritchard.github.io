@@ -5,7 +5,7 @@ description: "An overview of my GitHub repository containing Capture The Flag (C
 date: 2025-07-18
 featured: true
 topics: ["Ethical-Hacking", "Write-Ups"]
-header_image: "/res/Header-Images/CTF-Write-Ups-Header-Image.webp"
+header_image: "/res/Header-Images/project-header-images/CTF-Write-Ups-Header-Image.webp"
 icon: "/res/Icons/portfolio-icons/CTF-Write-Ups-Icon.webp"
 breadcrumb: ["CTF Write-Ups"]
 ---

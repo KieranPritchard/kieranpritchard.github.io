@@ -4,7 +4,7 @@ title: "How My Opinions On AI Changed"
 date: 2025-03-02
 category: "Thoughts & Opinions"
 topic_class: topicThree
-header_image: /res/Header-Images/How-My-Opinions-On-AI-Changed-Header.webp
+header_image: /res/Header-Images/blog-header-images/How-My-Opinions-On-AI-Changed-Header.webp
 header_image_alt: "A graphic illustration of a human head with a circuit board brain, representing artificial intelligence."
 thumbnail: /res/Icons/blog-icons/How-My-Opinions-On-AI-Changed-Thumbnail.webp
 thumbnail_alt: "A graphic illustration of a human head with a circuit board brain, representing artificial intelligence."

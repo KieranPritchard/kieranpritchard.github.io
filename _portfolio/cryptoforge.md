@@ -5,7 +5,7 @@ description: "An overview of my Python-based cryptography utility, Cryptoforge, 
 date: 2025-8-10
 featured: false
 topics: ["Cryptography", "Programming"]
-header_image: "/res/Header-Images/Cryptoforge_Header_Image.webp"
+header_image: "/res/Header-Images/project-header-images/Cryptoforge_Header_Image.webp"
 icon: "/res/Icons/portfolio-icons/Cryptoforge_Icon.webp"
 breadcrumb: ["Cryptoforge"]
 ---

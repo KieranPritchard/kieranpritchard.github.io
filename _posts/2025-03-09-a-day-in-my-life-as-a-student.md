@@ -4,7 +4,7 @@ title: "A Day In My Life As A Student"
 date: 2025-03-09
 category: Career
 topic_class: topicOne
-header_image: /res/Header-Images/A-Day-In-My-Life-As-A-Student-Header.webp
+header_image: /res/Header-Images/blog-header-images/A-Day-In-My-Life-As-A-Student-Header.webp
 header_image_alt: "A computer monitor displaying a student report document with text and an image."
 thumbnail: /res/Icons/blog-icons/A-Day-In-My-Life-As-A-Student-Thumbnail.webp
 thumbnail_alt: "A computer monitor displaying a student report document with text and an image."

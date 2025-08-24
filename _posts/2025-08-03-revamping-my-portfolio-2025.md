@@ -4,7 +4,7 @@ title: "Revamping My Portfolio"
 date: 2025-08-02
 category: Programming
 topic_class: topicTwo
-header_image: "res/Header-Images/Revamping-My-Portfolio-header-image.webp"
+header_image: "res/Header-Images/blog-header-images/Revamping-My-Portfolio-header-image.webp"
 header_image_alt: "A graphic illustration of a hand using a stylus to design a website mockup on a tablet."
 thumbnail: "res/Icons/blog-icons/Revamping-My-Portfolio-Icon.webp"
 thumbnail_alt: "A graphic illustration of a hand using a stylus to design a website mockup on a tablet."

@@ -4,7 +4,7 @@ title: "How I Started Programming"
 date: 2025-03-05
 category: Programming
 topic_class: topicTwo
-header_image: /res/Header-Images/How-I-Started-Programming-Thumbnail.webp
+header_image: /res/Header-Images/blog-header-images/How-I-Started-Programming-Thumbnail.webp
 header_image_alt: "A computer monitor displaying a Python code file in a dark-themed programming editor."
 thumbnail: /res/Icons/blog-icons/How-I-Started-Programming-Thumbnail.webp
 thumbnail_alt: "A computer monitor displaying a Python code file in a dark-themed programming editor."

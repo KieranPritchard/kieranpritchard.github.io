@@ -5,7 +5,7 @@ description: "A complete overview of my time on Bournemouth & Poole College’s 
 date: 2025-06-25
 featured: true
 topics: ["Education", "Technology", "College"]
-header_image: "/res/Header-Images/Digital-Logo-BPC.webp"
+header_image: "/res/Header-Images/project-header-images/Digital-Logo-BPC.webp"
 icon: "/res/Icons/portfolio-icons/Digital-Logo-BPC.webp"
 breadcrumb: ["My College Course"]
 online_world_images:

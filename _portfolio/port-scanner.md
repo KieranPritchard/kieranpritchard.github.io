@@ -5,7 +5,7 @@ description: "An overview of my Python port scanner built with the socket module
 date: 2025-8-10
 featured: false
 topics: ["Cyber Security", "Programming"]
-header_image: "/res/Header-Images/Port_Scanner_Header_Image.webp"
+header_image: "/res/Header-Images/project-header-images/Port_Scanner_Header_Image.webp"
 icon: "/res/Icons/portfolio-icons/Port_Scanner_Icon.webp"
 breadcrumb: ["Port Scanner"]
 ---

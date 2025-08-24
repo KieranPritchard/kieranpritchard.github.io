@@ -4,7 +4,7 @@ title: "Networking Unit"
 description: "A comprehensive look at the networking unit, covering network topologies, protocols, and security."
 date: 2025-03-15
 topics: ["Education", "Networking", "Security"]
-header_image: "/res/Header-Images/Digital-Logo-BPC.webp"
+header_image: "/res/Header-Images/project-header-images/Digital-Logo-BPC.webp"
 breadcrumb: ["My College Course", "Networking Unit"]
 parent: "btec-first-foundation-in-tech"
 starting_out_images:

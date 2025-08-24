@@ -5,7 +5,7 @@ description: "A detailed account of my learning experience on SoloLearn, an onli
 date: 2024-12-10
 featured: true
 topics: ["Programming", "Certificates"]
-header_image: "/res/Header-Images/SoloLearn-Header.webp"
+header_image: "/res/Header-Images/project-header-images/SoloLearn-Header.webp"
 icon: "/res/Icons/portfolio-icons/Sololearn-Logo.webp"
 breadcrumb: ["SoloLearn Certificates"]
 ---

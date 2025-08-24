@@ -4,7 +4,7 @@ title: "Technology Systems Unit"
 description: "A detailed look at the technology systems unit, covering computer components, programming terminology, and system architecture."
 date: 2025-02-10
 topics: ["Education", "Systems", "Hardware"]
-header_image: "/res/Header-Images/Digital-Logo-BPC.webp"
+header_image: "/res/Header-Images/project-header-images/Digital-Logo-BPC.webp"
 breadcrumb: ["My College Course", "Technology Systems Unit"]
 parent: "btec-first-foundation-in-tech"
 starting_out_images:

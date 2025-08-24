@@ -5,7 +5,7 @@ description: "A recount of my experience using AWS Educate, a beginner-friendly 
 date: 2025-07-29
 featured: true
 topics: ["Cloud Computing", "AWS"]
-header_image: "res/Header-Images/aws-educate-badges-header-image.webp"
+header_image: "res/Header-Images/project-header-images/aws-educate-badges-header-image.webp"
 icon: "res/Icons/portfolio-icons/aws-educate-badges-icon.webp"
 breadcrumb: ["AWS Educate Badges"]
 ---
