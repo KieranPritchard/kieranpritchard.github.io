@@ -6,7 +6,7 @@ date: 2025-8-10
 featured: false
 topics: ["Ethical Hacking", "Programming"]
 header_image: "/res/Header-Images/Remote_Command_Execution_Header_Image.webp"
-icon: "/res/Icons/Remote_Command_Execution_Icon.webp"
+icon: "/res/Icons/portfolio-icons/Remote_Command_Execution_Icon.webp"
 breadcrumb: ["Remote Command Execution"]
 ---
 

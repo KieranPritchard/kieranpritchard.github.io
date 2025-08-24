@@ -6,7 +6,7 @@ date: 2025-06-25
 featured: true
 topics: ["Education", "Technology", "College"]
 header_image: "/res/Header-Images/Digital-Logo-BPC.webp"
-icon: "/res/Icons/Digital-Logo-BPC.webp"
+icon: "/res/Icons/portfolio-icons/Digital-Logo-BPC.webp"
 breadcrumb: ["My College Course"]
 online_world_images:
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Online-World/Online-World-1.webp"

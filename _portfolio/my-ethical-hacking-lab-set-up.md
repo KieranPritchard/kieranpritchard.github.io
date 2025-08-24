@@ -6,35 +6,35 @@ date: 2025-07-15
 featured: true
 topics: ["Ethical-Hacking", "Home-Lab"]
 header_image: "/res/Header-Images/My_Ethical_Hacking_Lab_Setup_HeaderImage.webp"
-icon: "/res/Icons/My_Ethical_Hacking_Lab_Setup_Icon.webp"
+icon: "/res/Icons/portfolio-icons/My_Ethical_Hacking_Lab_Setup_Icon.webp"
 breadcrumb: ["My Ethical Hacking Lab Setup"]
 background_images:
     - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_14.webp"
-      alt: "Screenshot of finished virtual box install."
+      alt: "A pop-up window confirming that the Oracle VirtualBox installation was completed successfully."
     - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_13.webp"
-      alt: "Screenshot of me opening virtual box for the first time."
+      alt: "The welcome screen for Oracle VirtualBox, explaining the difference between Basic Mode and Expert Mode."
 ubuntu_set_up:
     - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_12.webp"
-      alt: "Screenshot of me assigning resources on virtual box."
+      alt: "The Oracle VirtualBox wizard for creating a new virtual machine, with the settings for an Ubuntu Linux system."
     - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_11.webp"
-      alt: "Screenshot of the uncompatible linux console active."
+      alt: "A running Ubuntu Desktop virtual machine in VirtualBox showing the initial boot sequence."
     - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_10.webp"
-      alt: "Screenshot of the compatible ufei console active."
+      alt: "An Ubuntu Server virtual machine with a terminal window displaying the system's installation log."
     - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_9.webp"
-      alt: "Screenshot of linux desktop."
+      alt: "The desktop of an Ubuntu Server virtual machine running inside Oracle VirtualBox."
     - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_8.webp"
-      alt: "Screenshot of linux terminal."
+      alt: "An Ubuntu Server virtual machine with a terminal showing commands to install VirtualBox Guest Additions."
     - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_6.webp"
-      alt: "Screenshot of youtube playing in the virtual machine."
+      alt: "An Ubuntu Server virtual machine running in VirtualBox, with a YouTube video open in a web browser."
 setting_up_kali_linux:
     - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_5.webp"
-      alt: "Screenshot of the Kali Linux homepage."
+      alt: "The official Kali Linux homepage, highlighting its use as a penetration testing distribution."
     - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_4.webp"
-      alt: "Screenshot of the Kali Linux install page."
+      alt: "The official Kali Linux website download page, showing different installer options."
     - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_2.webp"
-      alt: "Screenshot of the Kali Linux virtual machine installing the OS."
+      alt: "The software installation progress for a Kali Linux virtual machine within Oracle VirtualBox."
     - src: "/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_1.webp"
-      alt: "Screenshot of the Kali Linux virtual machine desktop."
+      alt: "A running Kali Linux virtual machine in VirtualBox, showing the setup process in a terminal window."
 ---
 
 

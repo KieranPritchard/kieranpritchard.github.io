@@ -5,9 +5,9 @@ date: 2025-03-09
 category: Career
 topic_class: topicOne
 header_image: /res/Header-Images/A-Day-In-My-Life-As-A-Student-Header.webp
-header_image_alt: "Header image showing a day in student life"
-thumbnail: /res/Icons/A-Day-In-My-Life-As-A-Student-Thumbnail.webp
-thumbnail_alt: "Thumbnail of a computer on a desk in a dark room"
+header_image_alt: "A computer monitor displaying a student report document with text and an image."
+thumbnail: /res/Icons/blog-icons/A-Day-In-My-Life-As-A-Student-Thumbnail.webp
+thumbnail_alt: "A computer monitor displaying a student report document with text and an image."
 description: "A glimpse into my world—my current routines and thoughts on college life. I've also included reflections on how my life has changed since starting college, highlighting the significant benefits and the new experiences it has opened up for me."
 ---
 

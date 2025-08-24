@@ -9,44 +9,44 @@ breadcrumb: ["My College Course", "Web Development Unit"]
 parent: "btec-first-foundation-in-tech"
 starting_out_images:
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_1.webp"
-    alt: "Image of homepage from bootstrap practice exercise."
+    alt: "A web page screenshot showing a banner image of Bournemouth beach and pier, with a navigation bar at the top."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_2.webp"
-    alt: "Image of about page from bootstrap practice exercise showing fontawesome useage"
+    alt: "A web page screenshot of the 'About The Town' section, listing key information, landmarks, and notable people from Bournemouth."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_3.webp"
-    alt: "Image showing table which was made."
+    alt: "A web page screenshot displaying the 'Statistics' section in a table format, showing data about Bournemouth like population and authority."
 assignment_one_images:
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_4.webp"
-    alt: "Image of a slide explaining the use and features of a website."
+    alt: "A presentation slide titled 'It's Intended Use & Features,' outlining the purpose and features of a typing website, including customization options and a leaderboard."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_5.webp"
-    alt: "A slide explaining the features in more detail."
+    alt: "A presentation slide comparing 'Presentation' and 'Usability' of a website, with bullet points on minimalistic design, customization, and icon navigation."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_6.webp"
-    alt: "A slide showing the websites strengths."
+    alt: "A presentation slide titled 'Strengths,' listing website advantages like customization options, fast loading, and minimalist design."
 assignment_two_images:
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_7.webp"
-    alt: "Image the first page of the assignment file showing audience and purpose research and project timeline."
+    alt: "A screenshot of a Word document for a web development assignment, showing the project purpose, user requirements, and a timeline of tasks."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_8.webp"
-    alt: "Image of a page showing annoitations."
+    alt: "A screenshot of a Word document with a website design mockup for a portfolio, including styled sections for 'Recent Blogs' and 'Recent Projects' with design notes."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_9.webp"
-    alt: "Image showing sitemap and test plan."
+    alt: "A screenshot of a Word document displaying a website sitemap flowchart and a test plan table for a web development project."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_10.webp"
-    alt: "Image showing alternative designs."
+    alt: "A screenshot of a Word document showing a website design mockup and detailed notes explaining the final design choices."
 assignment_three_images:
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_11.webp"
-    alt: "Screenshot of summary of user feedback that was given to me."
-  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_16.webp"
-    alt: "Screenshot showing css code."
+    alt: "A screenshot of a Word document with a summary of user feedback and a list of suggestions for a website, including centering content and adding breadcrumbs."
+  - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopement/Web_Devlopement_Image_16.webp"
+    alt: "A screenshot of a Visual Studio Code window showing CSS code that imports and styles Google Fonts for a website."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_12.webp"
-    alt: "Screenshot showing the changes that were made to the website."
+    alt: "A screenshot of a Word document with a log of website changes and a table of new digital assets used, including a certificate and award."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_17.webp"
-    alt: "Screenshot showing javascript code."
+    alt: "A screenshot of a Visual Studio Code window displaying JavaScript code for resizing elements and searching for blog posts."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_13.webp"
-    alt: "Screenshot of the contact page during development."
+    alt: "A screenshot of a Word document displaying a table with website changes made in response to user feedback, with before and after images."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_18.webp"
-    alt: "Screenshot showing html code."
+    alt: "A screenshot of a Visual Studio Code window showing HTML code for a website, with `div` elements and class structures for layout."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_14.webp"
-    alt: "Screenshot showing the showing post feedback changes."
+    alt: "A screenshot of a Word document explaining how a website is suitable for its target audience and meets its purpose and user requirements."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_15.webp"
-    alt: "Screenshot showing in devlopement blog post."
+    alt: "A screenshot of a generic website blog page with a dark color scheme, featuring a sidebar for categories and recent posts."
 ---
 
 ## Starting Out
@@ -127,7 +127,7 @@ assignment_three_images:
 <div class="content-container container-fluid">
     <div class="row h-100">
         <div class="col-md align-content-center text-center">
-            <img src="{{ '/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_14.png' | relative_url }}" class="indivual-post-page-image d-block w-100" alt="Image showing part of the review report.">
+            <img src="{{ '/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Web-Devlopment/Web_Devlopement_Image_14.png' | relative_url }}" class="indivual-post-page-image d-block w-100" alt="A screenshot of a Word document explaining how a website is suitable for its target audience and meets its purpose and user requirements.">
         </div>
         <div class="col-md align-content-center">
             <p>

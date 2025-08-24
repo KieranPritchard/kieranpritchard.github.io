@@ -6,7 +6,7 @@ date: 2024-12-10
 featured: true
 topics: ["Programming", "Certificates"]
 header_image: "/res/Header-Images/SoloLearn-Header.webp"
-icon: "/res/Icons/Sololearn-Logo.webp"
+icon: "/res/Icons/portfolio-icons/Sololearn-Logo.webp"
 breadcrumb: ["SoloLearn Certificates"]
 ---
 
@@ -22,7 +22,7 @@ breadcrumb: ["SoloLearn Certificates"]
             </p>
         </div>
         <div class="col-md order-md-1 order-first align-content-center text-center">
-            <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/sololearn-certificates/SoloLearn-Python-Certifcate.webp' | relative_url }}" alt="Image of my Certifacate for 'Introduction to Python' from SoloLearn">
+            <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/sololearn-certificates/SoloLearn-Python-Certifcate.webp' | relative_url }}" alt="A Sololearn course certificate for the 'Introduction to Python' course, awarded to Kieran Pritchard on November 24, 2023.">
         </div>
     </div>
 </div>
@@ -32,7 +32,7 @@ breadcrumb: ["SoloLearn Certificates"]
 <div class="container-fluid content-container">
     <div class="row h-100">
         <div class="col-md align-content-center text-center">
-            <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/sololearn-certificates/SoloLearn-HTML-Certifactate.webp' | relative_url }}" alt="Image of my Certifacate for 'Introduction to HTML' from SoloLearn">
+            <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/sololearn-certificates/SoloLearn-HTML-Certifactate.webp' | relative_url }}" alt="A Sololearn course certificate for the 'Introduction to HTML' course, awarded to Kieran Pritchard on December 17, 2023.">
         </div>
         <div class="col-md align-content-center">
             <p>
@@ -67,7 +67,7 @@ breadcrumb: ["SoloLearn Certificates"]
 <div class="container-fluid content-container">
     <div class="row h-100">
         <div class="col-md align-content-center text-center">
-            <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/sololearn-certificates/SoloLearn-C++-Certifacate.webp' | relative_url }}" alt="Image of my Certifacate for 'Introduction to C++' from SoloLearn">
+            <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/sololearn-certificates/SoloLearn-C++-Certifacate.webp' | relative_url }}" alt="A Sololearn course certificate for the 'Introduction to C++' course, awarded to Kieran Pritchard on June 2, 2024.">
         </div>
         <div class="col-md align-content-center">
             <p>
@@ -91,7 +91,7 @@ breadcrumb: ["SoloLearn Certificates"]
         </div>
         <div class="col-md order-md-1 order-first align-content-center text-center">
             <div>
-                <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/sololearn-certificates/SoloLearn-JavaScript-Certifacate.webp' | relative_url }}" alt="Image of my Certifacate for 'Introduction to JavaScript' from SoloLearn">
+                <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/sololearn-certificates/SoloLearn-JavaScript-Certifacate.webp' | relative_url }}" alt="A Sololearn course certificate for the 'Introduction to JavaScript' course, awarded to Kieran Pritchard on October 27, 2024.">
             </div>
         </div>
     </div>

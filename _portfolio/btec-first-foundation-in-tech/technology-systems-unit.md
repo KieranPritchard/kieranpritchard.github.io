@@ -9,19 +9,19 @@ breadcrumb: ["My College Course", "Technology Systems Unit"]
 parent: "btec-first-foundation-in-tech"
 starting_out_images:
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Tech-Systems/Tech-Systems-1.webp"
-    alt: "Image shows an example of what we learn based off of one of the text book."
+    alt: "A textbook open to pages about 'Technology systems,' detailing their uses in various sectors like manufacturing and healthcare, along with a discussion of computer security and copyright."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Tech-Systems/Tech-Systems-2.webp"
-    alt: "Image shows my revision notes for the final exam of the unit."
+    alt: "A spiral notebook with handwritten notes on technology systems, covering topics like database keys, healthcare technology, and point-of-sale benefits."
 revision_images:
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Tech-Systems/Tech-Systems-3.webp"
-    alt: "Image of KnowItAllNinja presentaition on user interfaces."
+    alt: "A screenshot of an online lesson about 'User Interfaces,' specifically focusing on mobile operating systems and their unique requirements."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Tech-Systems/Tech-Systems-4.webp"
-    alt: "Image of KnowItAllNinja technology systems unit main page."
+    alt: "A screenshot of the 'KnowitAll Ninja' course dashboard for 'Technology Systems,' showing the course overview and completion status."
 exam_images:
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Tech-Systems/Tech-Systems-5.webp"
-    alt: "Image of revision guide textbook showing off section based on automation systems."
+    alt: "A textbook open to pages on 'Automated systems' and 'Devices to capture data,' featuring information and diagrams of technologies like OCR, RFID, and barcode scanners."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Tech-Systems/Tech-Systems-6.webp"
-    alt: "Image of practise guide textbook showing off section based on different types of networks."
+    alt: "A textbook open to pages on the 'Types and uses of networks' and the 'Benefits of networks,' with questions and diagrams about computer networking."
 ---
 
 ## Starting out

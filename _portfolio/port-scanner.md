@@ -6,7 +6,7 @@ date: 2025-8-10
 featured: false
 topics: ["Cyber Security", "Programming"]
 header_image: "/res/Header-Images/Port_Scanner_Header_Image.webp"
-icon: "/res/Icons/Port_Scanner_Icon.webp"
+icon: "/res/Icons/portfolio-icons/Port_Scanner_Icon.webp"
 breadcrumb: ["Port Scanner"]
 ---
 

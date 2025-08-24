@@ -6,7 +6,7 @@ date: 2024-12-15
 featured: true
 topics: ["Education", "Awards", "Digital"]
 header_image: "/res/Header-Images/IDEA-Logo.webp"
-icon: "/res/Icons/IDEA-Logo.webp"
+icon: "/res/Icons/portfolio-icons/IDEA-Logo.webp"
 breadcrumb: ["My iDEA Awards"]
 ---
 
@@ -23,7 +23,7 @@ breadcrumb: ["My iDEA Awards"]
         </div>
         <div class="col-md order-md-1 order-first align-content-center text-center">
             <div>
-                <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/my-idea-awards/Bronze Certifacate.webp' | relative_url }}" alt="Bronze iDEA Award Certificate">
+                <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/my-idea-awards/Bronze Certifacate.webp' | relative_url }}" alt="A digital certificate from the iDEA program, which is a bronze award earned on September 11, 2024.">
             </div>
         </div>
     </div>
@@ -34,7 +34,7 @@ breadcrumb: ["My iDEA Awards"]
 <div class="container-fluid content-container">
     <div class="row h-100">
         <div class="col-md align-content-center text-center">
-            <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/my-idea-awards/Sliver Certifacate.webp' | relative_url }}" alt="Silver iDEA Award Certificate">
+            <img class="indivual-post-page-image" src="{{ '/res/Portfolio-Post-Images/my-idea-awards/Sliver Certifacate.webp' | relative_url }}" alt="A digital certificate from the iDEA program, showing a silver award earned on September 24, 2024.">
         </div>
         <div class="col-md align-content-center">
             <p>

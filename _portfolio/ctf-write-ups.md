@@ -6,7 +6,7 @@ date: 2025-07-18
 featured: true
 topics: ["Ethical-Hacking", "Write-Ups"]
 header_image: "/res/Header-Images/CTF-Write-Ups-Header-Image.webp"
-icon: "/res/Icons/CTF-Write-Ups-Icon.webp"
+icon: "/res/Icons/portfolio-icons/CTF-Write-Ups-Icon.webp"
 breadcrumb: ["CTF Write-Ups"]
 ---
 
@@ -20,7 +20,7 @@ breadcrumb: ["CTF Write-Ups"]
             </p>
         </div>
         <div class="col-md order-md-1 order-first align-content-center text-center">
-            <img class="indivual-post-page-image" src="{{ 'res/Portfolio-Post-Images/ctf-write-ups/ctf-write-ups-image.webp' | relative_url }}" alt="Image of write up page.">
+            <img class="indivual-post-page-image" src="{{ 'res/Portfolio-Post-Images/ctf-write-ups/ctf-write-ups-image.webp' | relative_url }}" alt="A screenshot of a GitHub repository for CTF (Capture The Flag) write-ups, showing a README file with an overview and a Gemini-generated image of a person at a computer workstation.">
         </div>
     </div>
 </div>

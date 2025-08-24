@@ -9,19 +9,19 @@ breadcrumb: ["My College Course", "Online World Unit"]
 parent: "btec-first-foundation-in-tech"
 starting_out_images:
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Online-World/Online-World-1.webp"
-    alt: "Screenshot of KnowItAllNinja online learning platform"
+    alt: "A screenshot of an online quiz on packet switching with a multiple-choice question about error control bits."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Online-World/Online-World-2.webp"
-    alt: "Example of online learning content from the course"
+    alt: "A screenshot of an online lesson explaining 'How the Web Works' with an illustration of website structure."
 tools_images:
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Online-World/Online-World-3.webp"
-    alt: "Screenshot of Notebook LM interface"
+    alt: "A screenshot of a Google NotebookLM page titled 'Learning For Python Sockets Library' with sources and a chat interface."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Online-World/Online-World-4.webp"
-    alt: "Example of AI tools and software explored during the course"
+    alt: "A screenshot from ChatGPT showing 25 project ideas for Python's socket module, including projects for beginners."
 exam_images:
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Online-World/Online-World-5.webp"
-    alt: "Revision materials and exam preparation"
+    alt: "A textbook open to pages on 'Cloud computing' and 'Ubiquitous computing' with various questions and exercises."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Online-World/Online-World-6.webp"
-    alt: "Exam results and assessment feedback"
+    alt: "A textbook open to pages on 'The internet - hardware' and 'The internet - network diagrams,' showing descriptions and diagrams of network components."
 ---
 
 ## Starting Out

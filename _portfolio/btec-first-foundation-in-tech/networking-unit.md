@@ -9,18 +9,18 @@ breadcrumb: ["My College Course", "Networking Unit"]
 parent: "btec-first-foundation-in-tech"
 starting_out_images:
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_27.webp"
-    alt: "Image of ethernet cable wire, wire connectors, wire tester, and wire cutter"
+    alt: "A close-up shot of the blue and blue-white twisted pairs of wires inside a cut Ethernet cable."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_28.webp"
-    alt: "Image of first attempt at wire."
+    alt: "A close-up shot of the clear plastic end of a gray Ethernet cable, showing the internal colored wires."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_29.webp"
-    alt: "Image of finished cable."
+    alt: "A coiled gray Ethernet cable with clear plastic connectors on both ends, lying on a wood grain desktop."
 assignment_one_images:
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_46.webp"
-    alt: "Powerpoint slide discussing the features of a LAN"
+    alt: "A screenshot of a Windows command prompt with a ping test running, showing successful replies from an IPv4 address."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_47.webp"
-    alt: "Powerpoint slide discussing the benefits of a LAN"
+    alt: "A screenshot of a Windows command prompt with the command `tracert` executed, showing the network path and hops to a specific IP address."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_48.webp"
-    alt: "Powerpoint slide showing a table explaining the user expierence."
+    alt: "A screenshot of a Windows command prompt with a ping test running, showing a `Request timed out` error."
 assignment_two_images:
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_49.webp"
     alt: "Network diagram showing the layout and connections of the hypothetical network design."
@@ -34,29 +34,29 @@ assignment_two_images:
     alt: "Summary of client requirements and final network design choices."
 assignment_three_images:
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_11.webp"
-    alt: "Screenshot of Windows Server 2019 virtual machine setup for the network assignment."
+    alt: "A screenshot of the Windows Computer Management window, showing a dialog to select users or groups for properties."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_12.webp"
-    alt: "Screenshot showing user account creation in the virtual network environment."
+    alt: "A screenshot of the File Explorer window showing the 'Network access' sharing settings for a local disk."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_13.webp"
-    alt: "Shared folders and files configured on the network for assignment tasks."
+    alt: "A screenshot of two Oracle VirtualBox virtual machines side-by-side, one showing the local server dashboard and the other a command prompt with a ping test."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_15.webp"
-    alt: "Demonstration of shared hardware resource setup within the network."
+    alt: "A screenshot of two Oracle VirtualBox virtual machines, one displaying Windows Defender Firewall inbound rules and the other a command prompt with a successful ping test."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_16.webp"
-    alt: "Demonstration of shared software resource setup within the network."
+    alt: "A screenshot of the System Properties window on a virtual machine, showing the computer name and network settings."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_21.webp"
-    alt: "Feedback form or user feedback collected on the network setup."
+    alt: "A screenshot of the Windows settings to create a user account, with fields for username, password, and a security question."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_24.webp"
-    alt: "Screenshot of network permissions and access controls."
+    alt: "A screenshot of a virtual machine's File Explorer, showing user folders like 'ShopAdmin' and 'ShopCustomers'."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_25.webp"
-    alt: "Screenshot of network permissions and access controls."
+    alt: "A screenshot of the Windows Computer Management window, showing the dialog box to create a new user group."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_26.webp"
-    alt: "Network performance test results or monitoring dashboard."
+    alt: "A photograph of a gray Ethernet cable showing the individual twisted pairs of colored wires inside."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_46.webp"
-    alt: "Summary of network users and their assigned roles."
+    alt: "A screenshot of a Windows command prompt with a ping test running, showing successful replies from an IPv4 address."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_41.webp"
-    alt: "Network topology diagram created for the assignment."
+    alt: "A screenshot of the Windows settings for `Network and Internet`, showing the current status as `No internet access`."
   - src: "/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_54.webp"
-    alt: "Suggestions for network improvements based on user feedback."
+    alt: "A slide from an assignment comparing two different network types: LAN and WAN, listing characteristics such as scale, speed, and cost."
 ---
 
 ## Starting out
@@ -139,7 +139,7 @@ assignment_three_images:
             </p>
         </div>
         <div class="col-md align-content-center">
-            <img src="{{ '/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_56.png' | relative_url }}" class="indivual-post-page-image d-block w-100" alt="Reflection slide summarizing the review and recommendations for the network project.">
+            <img src="{{ '/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_56.png' | relative_url }}" class="indivual-post-page-image d-block w-100" alt="A presentation slide titled 'Review & Recommendations' summarizing the outcomes of a network project, including a final network design and feedback."
         </div>
     </div>
 </div> 
