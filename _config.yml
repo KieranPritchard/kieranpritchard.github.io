@@ -32,6 +32,8 @@ include:
   - "Blog-Posts"
   - "src"
   - "_assets"
+  - "sitemap.xml"
+  - "robots.txt"
 
 # Ensure static files are copied
 keep_files:
