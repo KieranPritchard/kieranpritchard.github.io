@@ -24,6 +24,7 @@ permalink: /:categories/:year/:month/:day/:title.html
 
 # Include files that Jekyll would otherwise ignore
 include:
+  - google1234567890abcdef.html
   - "*.html"
   - "*.css"
   - "*.js"
