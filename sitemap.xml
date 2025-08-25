@@ -9,19 +9,19 @@ layout: null
   <url>
     <loc>{{ site.url }}{{ site.baseurl }}{{ page.url | remove: '.html' }}</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <priority>0.8</priority>
+    <priority>1</priority>
     <changefreq>weekly</changefreq>
   </url>{% endif %}{% endfor %}{% for post in site.posts %}
   <url>
     <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
     <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>{% endfor %}{% for portfolio in site.portfolio %}
   <url>
     <loc>{{ site.url }}{{ site.baseurl }}{{ portfolio.url }}</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>{% endfor %}
 </urlset>
