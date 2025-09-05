@@ -10,3 +10,7 @@ gem "webrick"
 gem "rack", ">= 2.2.0"
 gem "liquid", ">= 4.0.0"
 gem "rouge", ">= 3.0.0"
+
+group :jekyll_plugins do
+    gem "jekyll-sitemap"
+end
