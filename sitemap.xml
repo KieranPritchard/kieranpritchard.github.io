@@ -1,137 +1,41 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
+{% for page in site.pages %}
+  {% if page.layout != null and page.layout != 'feed' and page.layout != 'null' %}
+    {% unless page.url contains '/assets/' or page.url contains 'sitemap.xml' %}
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}{{ page.url | remove: '.html' }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <priority>1</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+    {% endunless %}
+  {% endif %}
+{% endfor %}
 
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/About.html</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/blog/</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/Projects.html</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/Hobbies.html</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/Contact.html</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/programming/2025/08/02/revamping-my-portfolio-2025.html</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/career/2025/03/09/a-day-in-my-life-as-a-student.html</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/programming/2025/03/05/how-i-started-programming.html</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/port-scanner/</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/cryptoforge/</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/remote-command-execution/</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/index.html</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/aws-educate-badges/</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/ctf-write-ups/</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/my-ethical-hacking-lab-set-up/</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/btec-first-foundation-in-tech/</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/my-idea-awards/</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/sololearn-certificates/</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/thoughts-and-opinions/2025/03/02/how-my-opinions-on-ai-changed.html</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/online-world-unit/</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/technology-systems-unit/</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/web-development-unit/</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/digital-graphics-unit/</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/portfolio/networking-unit/</loc>
-  <lastmod>2025-09-05T14:53:43+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
+{% for post in site.posts %}
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
+    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+{% endfor %}
 
+{% for portfolio in site.portfolio %}
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}{{ portfolio.url }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+{% endfor %}
 
 </urlset>
