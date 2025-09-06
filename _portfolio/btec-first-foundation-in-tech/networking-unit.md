@@ -139,7 +139,7 @@ assignment_three_images:
             </p>
         </div>
         <div class="col-md align-content-center">
-            <img src="{{ '/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_56.png' | relative_url }}" class="indivual-post-page-image d-block w-100" alt="A presentation slide titled 'Review & Recommendations' summarizing the outcomes of a network project, including a final network design and feedback."
+            <img src="{{ '/res/Portfolio-Post-Images/btec-first-foundation-in-tech/Networking/Networking_56.webp' | relative_url }}" class="indivual-post-page-image d-block w-100" alt="A presentation slide titled 'Review & Recommendations' summarizing the outcomes of a network project, including a final network design and feedback.">
         </div>
     </div>
 </div> 

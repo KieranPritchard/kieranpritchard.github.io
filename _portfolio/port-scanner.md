@@ -8,6 +8,15 @@ topics: ["Cyber Security", "Programming"]
 header_image: "/res/Header-Images/project-header-images/Port_Scanner_Header_Image.webp"
 icon: "/res/Icons/portfolio-icons/Port_Scanner_Icon.webp"
 breadcrumb: ["Port Scanner"]
+port_scanner_images:
+    - src: "/res/Portfolio-Post-Images/port_scanner/Port_Scanner_Screenshots_1.webp"
+      alt: "A dark-themed code editor displays a Python script for a port scanner. The terminal shows the program running, with a menu offering two options: 'Scan most used ports' and 'Scan all ports' on an IP. This image is a great representation of cybersecurity tools and network programming."
+    - src: "/res/Portfolio-Post-Images/port_scanner/Port_Scanner_Screenshots_2.webp"
+      alt: "A screenshot of a terminal window shows the output of a Python port scanner program. The user has selected option '1' to scan the most common ports on an IP address. The program has successfully identified that ports 22, 25, 80, and 443 are open, while others like 20 and 21 are closed. This image is an excellent example of a successful port scan."
+    - src: "/res/Portfolio-Post-Images/port_scanner/Port_Scanner_Screenshots_3.webp"
+      alt: " A screenshot of a terminal window shows the output of a Python port scanner. The user has selected option '2' to scan a range of ports on an IP address. The program is actively scanning and reporting the status of each port from 1 to 24. This image effectively illustrates a comprehensive port scan in action."
+    - src: "/res/Portfolio-Post-Images/port_scanner/Port_Scanner_Screenshots_4.webp"
+      alt: "A close-up view of the Python code for a port scanner in a code editor. The script shows two functions, scan_all_ports and scan_most_used_ports, which use Python's socket library to connect to different ports and check their status. The code is well-structured and includes comments, making it easy to understand. This image is a valuable resource for anyone interested in network security, ethical hacking, or Python programming."
 ---
 
 ## Project Overview
@@ -51,8 +60,7 @@ The port scanner follows a simple, interactive workflow:
 
 ### 4. Behind the Scenes
 * Using Python’s socket module, the program tries to establish a connection on each port.
-* If the connection succeeds, the port is marked as OPEN.
-* If it fails, the port is marked as CLOSED.
+* If the connection succeeds, the port is marked as OPEN. If it fails, the port is marked as CLOSED.
 * A timeout mechanism ensures the scan doesn’t stall on unresponsive ports.
 
 ### 5. Viewing the Results
@@ -62,3 +70,9 @@ The port scanner follows a simple, interactive workflow:
 ### 6. Practical Takeaway
 * The scanner gives immediate insight into the network surface of the target.
 * It’s not meant to replace professional tools like Nmap but serves as a hands-on learning project that demonstrates how port scanning works under the hood.
+
+## Screenshots
+
+{% include carousel.html 
+            images=page.port_scanner_images
+            carousel_id="port-scanner-carousel" %}
