@@ -8,6 +8,15 @@ topics: ["Ethical Hacking", "Programming"]
 header_image: "/res/Header-Images/project-header-images/Remote_Command_Execution_Header_Image.webp"
 icon: "/res/Icons/portfolio-icons/Remote_Command_Execution_Icon.webp"
 breadcrumb: ["Remote Command Execution"]
+command_execution_images: 
+    - src: "/Users/kieranpritchard/Documents/Coding Projects/HTML, CSS & Javascript/Projects/Kieran-Pritchard-Portfolio/res/Portfolio-Post-Images/remote_code_execution/Remote_Code_Execution_Screenshots_1.png"
+      alt: "Alt text: A screenshot of a Visual Studio Code window displaying Python code for a client-side script. The code imports the socket library and sets up a connection to a server at 127.0.0.1 on port 5001. A while loop prompts the user to input a command, sends it to the server, and prints the returned data."
+    - src: "/Users/kieranpritchard/Documents/Coding Projects/HTML, CSS & Javascript/Projects/Kieran-Pritchard-Portfolio/res/Portfolio-Post-Images/remote_code_execution/Remote_Code_Execution_Screenshots_2.png"
+      alt: "A screenshot of a Visual Studio Code window showing Python code for a server-side script. The code uses the socket and subprocess libraries to create a server that listens on 127.0.0.1:5001. It accepts client connections and enters a while loop to receive, decode, and execute commands from the client using subprocess.check_output(). The script then encodes and sends the command's output back to the client."
+    - src: "/Users/kieranpritchard/Documents/Coding Projects/HTML, CSS & Javascript/Projects/Kieran-Pritchard-Portfolio/res/Portfolio-Post-Images/remote_code_execution/Remote_Code_Execution_Screenshots_3.png"
+      alt: "A terminal screenshot in Visual Studio Code showing a server script in Python running. The terminal output confirms the server has started and is listening on 127.0.0.1 at port 5001. It then shows a client connecting from 127.0.0.1 and the server receiving and executing the command whoami."
+    - src: "/Users/kieranpritchard/Documents/Coding Projects/HTML, CSS & Javascript/Projects/Kieran-Pritchard-Portfolio/res/Portfolio-Post-Images/remote_code_execution/Remote_Code_Execution_Screenshots_4.png"
+      alt: "A terminal screenshot in Visual Studio Code showing a client-side script running in Python. The terminal output prompts the user with 'Please input a command:'. The user has typed the command whoami, which the script executes, and the output kieranpritchard is displayed, confirming that the command was successfully executed on the remote system."
 ---
 
 ## Overview
@@ -62,3 +71,9 @@ This project gave me practical experience with network debugging, error handling
 * The server continues listening for new clients until stopped manually.
 
 ⚠️ Important: This is an educational simulation. Running a real remote command execution system can pose security risks if misused.
+
+## Screenshots
+
+{% include carousel.html 
+            images=page.command_execution_images
+            carousel_id="command-execution-carousel" %}
