@@ -12,7 +12,7 @@ breadcrumb: ["Cryptoforge"]
 
 ## Overview
 Cryptoforge is a command-line cryptography toolkit built in Python. It brings together encryption, decryption, hashing, and digital signature algorithms into one accessible utility. Designed with simplicity in mind, it streamlines cryptographic operations that often feel complex in tools like OpenSSL. 
-The project helped me dive deeper into cryptography fundamentals, key management, and the practical use of secure algorithms. It also gave me hands-on experience in building a command-line tool with clean, reusable commands.
+The project helped me dive deeper into cryptography fundamentals, key management, and the practical use of secure algorithms. It also gave me hands-on experience in building a command-line tool with clean, reusable commands. [Click here to learn more.](https://github.com/KieranPritchard/Cryptoforge)
 
 ### What I Used
 * Python 3 for development
