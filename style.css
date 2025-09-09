@@ -590,8 +590,9 @@ blockquote{
 }
 
 .blog-post-image{
-    height: 150px;
-    width: auto;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
     border-radius: 25px;
 }
 
@@ -1222,6 +1223,22 @@ table, th, td {
         margin-top: 7.5%;
         margin-left: 7.5%;
         margin-bottom: 7.5%;
+    }
+
+    .sidebar-labels{
+        font-size: 1vw;
+    }
+
+    .blog-post-description{ 
+        font-size: 0.85vw !important; 
+    }
+
+    .recent-project-card-img{
+        height: 300px !important;
+    }
+
+    .project-page-project-card-image{
+        height: 250px;
     }
 }
 

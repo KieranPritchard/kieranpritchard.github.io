@@ -347,11 +347,14 @@ function checkAndSetBackgroundFromImage(container, img) {
     const targetRatio = 16 / 9; // 16:9 aspect ratio
     const tolerance = 0.5; // Allow for some variation
     
+    // Determine height based on viewport size
+    const height = window.innerWidth > 1400 ? '250px' : '185px';
+
     // Check if image is approximately 16:9
     if (Math.abs(aspectRatio - targetRatio) <= tolerance) {
         // For 16:9 images, make them fill the container width with consistent height
         img.style.setProperty('width', '100%', 'important');
-        img.style.setProperty('height', '185px', 'important');
+        img.style.setProperty('height', height, 'important');
         img.style.setProperty('object-fit', 'cover', 'important');
         // Still apply background color analysis for 16:9 images
         setBackgroundFromImage(container, img);
