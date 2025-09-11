@@ -602,7 +602,7 @@ const badgeObserver = new IntersectionObserver((entries, observer) => {
         visible.target.classList.add('fade-in')
         observer.unobserve(visible.target)
     }
-}, { threshold: [0.2, 0.4, 0.6, 0.8] })
+}, { threshold: [0.2, 0.3, 0.4, 0.5, 0.6] })
 
 badges.forEach(badge => badgeObserver.observe(badge))
 
