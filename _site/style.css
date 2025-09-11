@@ -1,0 +1,1486 @@
+/* ========================================
+   IMPORTS & FONTS
+   ======================================== */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+.red-hat-display-black {
+    font-family: "Red Hat Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.source-code-pro-regular {
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ========================================
+   CSS VARIABLES & THEMES
+   ======================================== */
+:root,
+[data-bs-theme="light"]{
+    --background: #f9fafb;                 
+    --background-secondary: #d7e1ec;       
+    --base-text: #1f2933;                  
+    --image-background: #ffffff;           
+    --main-accent: #2a3c4b;               
+    --border: #d0d5db;                     
+    --hover-highlight: #5a8ab8;
+    --table-header-background: #2a3c4b;
+    --table-header-text: #f9fafb;
+    --table-body-background: #f9fafb;
+    --table-body-text: #1f2933;
+}
+
+[data-bs-theme="dark"]{
+    --background: #0d1b2a;                 
+    --background-secondary: #1b2b41;       
+    --base-text: #f0f4f8;                 
+    --image-background: #0a0a0a;           
+    --main-accent: #a9d6e5;                
+    --border: #3a4f63;                     
+    --hover-highlight: #ffbf00;  
+    --table-header-background: #1b2b41;
+    --table-header-text: #a9d6e5;
+    --table-body-background: #3a4f63;
+    --table-body-text: #f0f4f8;
+}
+
+/* ========================================
+   GLOBAL STYLES
+   ======================================== */
+body{ 
+    background-color: var(--background) !important; 
+}
+
+/* Typography */
+h1, h2, h3, h5{
+    font-family: "Red Hat Display";
+    color: var(--main-accent) !important;
+}
+
+h1{ padding-top: 10%; font-size: 3vw !important;}
+h2{ padding-top: 2.5%; font-size: 2vw !important;}
+h3{ font-size: 1.75vw !important;}
+
+ul{ color: var(--base-text);}
+li{ font-family: "Source Code Pro"; }
+
+p{
+    font-size: 1.25vw !important;
+    font-family: "Source Code Pro";
+    color: var(--base-text);
+}
+
+a{ color: var(--main-accent) !important; }
+a:hover{ color: var(--hover-highlight) !important; }
+
+b{ font-family: "Source Code Pro"; }
+
+blockquote{
+    font-size: 2.5vw;
+    font-family: "Source Code Pro";
+}
+
+.main-button{
+    padding: 2% 2.5%;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: var(--main-accent) !important;
+    color: var(--background) !important;
+    text-decoration: none !important;
+    border-width: 1px;
+    font-family: "Source Code Pro";
+    background-color: var(--main-accent);
+    transition: ease 0.25s;
+}
+
+.main-button:hover{
+    border-style: solid;
+    border-color: var(--main-accent) !important;
+    color: var(--main-accent) !important;
+    border-width: 1px;
+    background-color: transparent;
+}
+
+.secondary-button{
+    width: 95%;
+    height: 50px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: var(--main-accent);
+    color: var(--main-accent);
+    border-width: 1px;
+    font-family: "Source Code Pro";
+    background-color: transparent;
+    transition: ease 0.25s;
+}
+
+/* Layout Components */
+.background-odd{
+    background-color: var(--background);
+    height: 100vh;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.background-even{
+    background-color: var(--background-secondary);
+    height: 100vh;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.background-auto{
+    height: auto !important;
+    min-height: auto !important;
+}
+
+/* Ensure content doesn't overflow on small viewports */
+.background-auto .container {
+    overflow: visible;
+    height: auto;
+}
+
+/* Override height for blog pages to prevent footer overlap */
+.background-odd:has(#blog-sidebar),
+.background-odd:has(#blog-list) {
+    height: auto !important;
+    min-height: auto !important;
+}
+
+/* Content container adjustments */
+.content-container{ height: 85% !important; }
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+.navbar{
+    background-color: var(--background);
+    padding-left: 5% !important;
+    padding-right: 10% !important;
+}
+
+.navbar-brand{
+    font-family: "Red Hat Display";
+    color: var(--base-text) !important;
+}
+
+.nav-link{
+    font-family: "Source Code Pro";
+    color: var(--base-text) !important;
+}
+
+.nav-link:hover{
+    color: var(--hover-highlight) !important;
+    transition: ease 0.25s;
+    transform: scale(1.05) !important;
+}
+
+#Active-Page{
+    color: var(--hover-highlight) !important;
+}
+
+.navbar-button{
+    all: unset;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: var(--main-accent);
+    background-color: transparent;
+    border: 1px solid var(--main-accent);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+}
+
+.navbar-button:hover {
+    background-color: var(--main-accent) !important;
+    color: var(--hover-highlight) !important;
+    transform: scale(1.05) !important;
+}
+
+/* ========================================
+   HOME PAGE
+   ======================================== */
+
+/* Hero Images */
+#Hero-Image-Home-Page{
+    height: auto;
+    width: 100%;
+    max-width: 90%;
+    border-radius: 25%;
+}
+
+#About-Me-Home-Page-Image{
+    height: auto;
+    width: 100%;
+    max-width: 90%;
+}
+
+#tagline {
+    font-family: "Red Hat Display";
+    color: var(--main-accent);
+    font-size: 1.5vw;
+    font-weight: 500;
+    border-right: 2px solid var(--table-body-text);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+.home-page-recent-blogs-image{
+    height: auto;
+    width: 100%;
+    max-width: 85%;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-bottom: 10%;
+}
+
+/* Recent Blog Posts */
+.recent-blog-post{
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    background-color: var(--background-secondary);
+    box-shadow: 0 0 8px var(--main-accent);
+    border-radius: 25px;
+    margin: 1% 0;
+}
+
+.recent-blog-post.fade-in{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.recent-blog-post-title{
+    margin-top: 0.5%;     
+    padding: 1.5% 0 0.5%;
+    color: var(--main-accent) !important;
+    font-size: 1.75vw !important;
+}
+
+.recent-blog-post-title-link{
+    color: var(--main-accent);
+    text-decoration: none;
+    transition: ease 0.5s;
+}
+
+.recent-blog-post-title-link:hover{
+    color: var(--hover-highlight);
+    transition: ease 0.25s;
+}
+
+.recent-blog-post-text{
+    padding-bottom: 1.5%;
+    padding-right: 1.5%;
+    font-size: 1.25vw !important;
+}
+
+/* Recent Project Cards */
+.recent-project-card{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    margin-top: 5%;
+    border-radius: 25px;
+    padding: 5%;
+    box-shadow: 0px 0px 20px 1px var(--main-accent);
+}
+
+.recent-project-card.fade-in{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.recent-project-card-img-background{
+    background-color: var(--image-background);
+}
+
+.recent-project-card-img{
+    height: 150px;
+    max-width: 100%;
+    width: auto;
+}
+
+.recent-project-card-title{
+    margin-top: 2.5%;
+    font-size: 1.45vw;
+}
+
+.recent-project-card-text{
+    font-size: 0.85vw !important;
+}
+
+.recent-project-card-button{
+    width: 95%;
+    height: 50px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: var(--main-accent);
+    color: var(--main-accent);
+    border-width: 1px;
+    font-family: "Source Code Pro";
+    background-color: transparent;
+    transition: ease 0.25s;
+}
+
+.recent-project-card-button:hover{
+    background-color: var(--main-accent);
+    color: var(--background-secondary);
+    transition: ease 0.5s;
+}
+
+.Recent-Projects-Image-Background{
+    background-color: black;
+    height: 100%;
+    padding: 2.5% 2.5%;
+    display: flex;
+    justify-content: center;
+}
+
+/* ========================================
+   ABOUT PAGE
+   ======================================== */
+.about-page-heading{
+    padding-top: 2.5%;
+    font-size: 1.5vw !important;
+}
+
+#typewriter {
+    border-right: 2px solid #000;
+    white-space: pre-line; /* preserves \n and still wraps text */
+    overflow: hidden;
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+    0% { border-color: transparent; }
+    50% { border-color: var(--table-body-text) }
+    100% { border-color: transparent; }
+}
+
+#typewriter {
+    animation: blink 0.7s step-end infinite;
+}
+
+#about-page-skills-section-text{
+    padding-top: 10%;
+}
+
+#About-Me-Page-Image{
+    height: auto;
+    width: 100%;
+    max-width: 85%;
+    border-radius: 10%;
+}
+
+.certifications{
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.certifications.fade-in{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.badge{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.badge.fade-in{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Educational History */
+.educational-history-row{
+    width: 100%;
+}
+
+.educational-history-card{
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    background-color: var(--background-secondary);
+    border-radius: 25px;
+    padding: 0.75% 1%;
+    margin-bottom: 2.5%;
+    box-shadow: 0px 0px 20px 1px var(--main-accent);
+}
+
+.educational-history-card.fade-in{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.educational-history-title{
+    margin-top: 0.5%;
+    margin-left: 1.5%;
+    font-size: 1.25vw !important;
+}
+
+.educational-history-date{
+    margin-left: 3.5%;
+    font-size: 1vw !important;
+    margin-bottom: 0.5%;
+}
+
+.educational-history-list{
+    font-size: 1vw !important;
+    margin-left: 4%;
+}
+
+/* Contact Section */
+#about-contact-page-list{
+    padding: 0% !important;
+    display: block;
+    text-align: center;
+}
+
+.about-contact-page-list-item{
+    list-style-type: none;
+    padding-right: 0% !important;
+    margin-left: -10.5% !important;
+    margin-bottom: 3.5%;
+    font-size: 1.25vw;
+}
+
+.about-contact-page-icon-background{
+    margin-right: 2.5%;
+    font-size: 1.5vw;
+}
+
+/* ========================================
+   BLOG PAGE
+   ======================================== */
+/* Sidebar */
+#blog-sidebar{
+    width: 95%;
+    padding: 5%;
+    border-radius: 25px;
+    margin-right: 15%;
+    height: auto;
+}
+
+.searchbar-container{
+    text-align: center;
+}
+
+#blog-searchbar{
+    width: 100%;
+    padding: 3.5%;
+    border-radius: 25px;
+    background-color: var(--main-accent);
+    border-color: var(--border);
+    color: var(--border);
+    border-style: none;
+    font-family: "Source Code Pro"
+}
+
+.sidebar-title{
+    text-align: left;
+    padding-top: 2.5%;
+    font-family: "Red Hat Display" !important;
+}
+
+.sidebar-recent-blog-title{
+    font-family: "Source Code Pro" !important;
+}
+
+.sidebar-checkbox[type="checkbox"] {
+    position: relative;
+    height: 25px;
+    width: 25px;
+    appearance: none;
+    border: 2px solid var(--main-accent);
+    border-radius: 5px;
+    margin-left: 3%;
+    cursor: pointer;
+    transition: background 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
+}
+
+/* accent border on focus for accessibility */
+.sidebar-checkbox[type="checkbox"]:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.6); /* example subtle glow; adjust color/opacity as desired */
+}
+
+/* checked state: background + stronger accent border */
+.sidebar-checkbox[type="checkbox"]:checked {
+    background-color: var(--background-secondary);
+    border: 2px solid var(--main-accent);
+}
+
+/* tick animation */
+.sidebar-checkbox[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s ease;
+}
+
+.sidebar-checkbox[type="checkbox"]:checked::after {
+    content: "\2713";
+    font-size: 16px;
+    color: var(--main-accent);
+    font-weight: bold;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: none;
+}
+
+.sidebar-labels{
+    color: var(--base-text) !important;
+    font-family: "Source Code Pro" !important;
+    margin-top: 1%;
+    margin-left: 2.5%;
+    position:relative;
+    top: -7px;
+    font-size: 1.5vw;
+}
+
+.sidebar-blog-post-padding{
+    padding: 2.5% 0;
+}
+
+.sidebar-recent-blog-image{
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+}
+
+.sidebar-recent-blog-title{
+    margin-left: 2.5%;
+    font-family: "Source Code Pro";
+    text-decoration: none;
+    color: var(--base-text) !important;
+    font-size: 0.85vw;
+}
+
+.sidebar-recent-blog-title:hover{ 
+    color: var(--hover-highlight); 
+    font-weight: bold;
+    transition: ease 0.5s;
+}
+
+/* Blog List */
+#blog-list{
+    margin: 0%;
+    padding: 0%;
+    list-style: none;
+}
+
+.blog-post{ 
+    border-bottom: solid var(--main-accent); 
+    padding: 3% 0; 
+}
+
+.blog-post-image{
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 25px;
+}
+
+.blog-post-title{ 
+    text-align: left; 
+    font-size: 1.30vw !important;
+    transition: ease 0.5s;
+}
+
+.blog-post-title:hover{ 
+    color: var(--hover-highlight) !important; 
+    transition: ease 0.5s;
+}
+
+.blog-post-title-line{ 
+    color: inherit; 
+    text-decoration: none; 
+}
+
+.blog-post-date{
+    font-family: "Red Hat Display";
+    color: var(--main-accent);
+    font-size: 1vw !important;
+}
+
+.blog-post-description{ 
+    font-size: 1vw !important; 
+}
+
+/* Blog page specific layout fixes */
+.background-odd.background-auto {
+    min-height: auto !important;
+    padding-bottom: 2rem !important;
+}
+
+/* Ensure proper spacing between blog content and footer */
+.background-odd.background-auto + footer {
+    margin-top: 2rem !important;
+}
+
+/* Alternative approach: target blog page structure directly */
+.blog-index-page .background-odd,
+.blog-index-page .background-odd.background-auto {
+    min-height: auto !important;
+    padding-bottom: 2rem !important;
+}
+
+/* Target the blog page container specifically */
+.background-odd:has(.container) {
+    min-height: auto !important;
+    padding-bottom: 2rem !important;
+}
+
+/* Fallback for browsers that don't support :has() */
+.background-odd .container {
+    margin-bottom: 2rem;
+}
+
+/* Blog index page specific fixes */
+.blog-index-page .background-odd {
+    min-height: auto !important;
+    height: auto !important;
+    padding-bottom: 3rem !important;
+}
+
+.blog-index-page footer {
+    margin-top: 2rem !important;
+    position: relative !important;
+    clear: both !important;
+}
+
+/* Alternative approach: target blog page elements directly */
+#blog-sidebar + .col-sm-8,
+#blog-sidebar ~ .col-sm-8 {
+    margin-bottom: 2rem;
+}
+
+/* Target blog page structure using more specific selectors */
+.background-odd:has(#blog-sidebar) {
+    min-height: auto !important;
+    height: auto !important;
+    padding-bottom: 3rem !important;
+}
+
+/* Fallback for browsers without :has() support */
+.background-odd #blog-sidebar {
+    margin-bottom: 2rem;
+}
+
+.background-odd #blog-list {
+    margin-bottom: 2rem;
+}
+
+/* Ensure footer spacing on blog pages */
+.background-odd + footer {
+    margin-top: 2rem !important;
+}
+
+/* Additional footer positioning fixes */
+footer {
+    position: relative !important;
+    clear: both !important;
+    width: 100% !important;
+    z-index: 1 !important;
+}
+
+/* Blog page footer specific spacing */
+.background-odd:has(#blog-sidebar) + footer,
+.background-odd #blog-sidebar ~ footer {
+    margin-top: 3rem !important;
+}
+
+/* ========================================
+   PROJECTS PAGE
+   ======================================== */
+#project-page-intro-section-text{ 
+    padding-top: 1.5%; 
+    font-size: 1vw; 
+}
+
+.project-page-project-card{
+    background-color: var(--background-secondary);
+    margin-top: 2.5%;
+    margin-bottom: 4.5%;
+    padding: 4.5%;
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px 0.1px var(--main-accent);
+}
+
+.project-page-project-card-image-background{
+    background-color: black;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.project-page-project-card-image{
+    height: 185px;
+    width: 100%;
+    max-width: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
+.project-page-project-card-title{
+    padding-top: 5%;
+    padding-bottom: 2.5%;
+    font-size: 1.35vw;
+}
+
+.project-page-project-card-title-link{ 
+    text-decoration: none; 
+    color: var(--main-accent) !important;
+}
+
+.project-page-project-card-title-link:hover{ 
+    color: var(--hover-highlight); 
+}
+
+.project-page-project-card-text{ 
+    color: var(--main-accent); 
+    font-size: 0.85vw !important;
+}
+
+/* ========================================
+   HOBBIES PAGE
+   ======================================== */
+#hobbies-page-programming-section-title{ 
+    padding-bottom: 2.5%; 
+}
+
+.hobbies-page-image{
+    height: auto;
+    width: 100%;
+    max-width: 95%;
+}
+
+/* ========================================
+   CONTACT PAGE
+   ======================================== */
+#contact-page-list{ 
+    list-style: none; 
+}
+
+.contact-page-list-link{ 
+    color: var(--base-text); 
+    text-decoration: none; 
+}
+
+.contact-page-list-link:hover{ 
+    color: var(--hover-highlight); 
+    transition: ease-in 0.3s; 
+}
+
+.contact-page-list-item{ 
+    margin-bottom: 7.5%; 
+    font-size: 1.25vw; 
+}
+
+.contact-page-icon-background{
+    margin-right: 3% !important;
+    all: unset;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: var(--main-accent);
+    background-color: transparent;
+    border: 1px solid var(--main-accent);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+}
+
+.contact-page-icon-background:hover{
+    background-color: var(--main-accent) !important;
+    color: var(--hover-highlight) !important;
+    transform: scale(1.05) !important;
+}
+
+#contact-page-button{ 
+    font-size: 1vw; 
+}
+
+/* Contact Form */
+#contact-me-form{
+    margin-top: 5%;
+}
+
+#contact-me-form-your-email, #contact-me-form-email-subject{
+    width: 100%;
+    height: 7.5%;
+    margin-bottom: 0.75%;
+    padding-left: 1%;
+    background-color: var(--background);
+    border-style: none;
+    border-radius: 15px;
+}
+
+#contact-me-form-email-body{
+    width: 100%;
+    padding-left: 1%;
+    background-color: var(--background);
+    border-style: none;
+    border-radius: 15px;
+}
+
+.contact-me-form-your-email::placeholder, .contact-me-form-email-subject::placeholder{
+    padding-left: 1%;
+    font-family: "Source Code Pro";
+}
+
+.contact-me-form-email-body::placeholder{
+    padding-left: 1%;
+    font-family: "Source Code Pro";
+}
+
+.btn-container{
+    margin-top: 2.5%;
+    text-align: center;
+}
+
+.submit-btn{
+    width: 50%;
+    padding: 1.5% 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--main-accent);
+    border-radius: 25px;
+    color: var(--main-accent);
+    background-color: transparent;
+    transition: ease 0.25s;
+}
+
+.submit-btn:hover{
+    background-color: var(--main-accent);
+    color: var(--image-background);
+}
+
+/* Footer */
+#contact-footer-list{ 
+    list-style: none; 
+    margin-left: -5%; 
+}
+
+.contact-footer-list-link{ 
+    color: var(--base-text); 
+    text-decoration: none;
+}
+
+.contact-footer-list-link:hover{ 
+    color: var(--hover-highlight); 
+    transition: ease 0.3s !important;
+}
+
+.contact-footer-list-item{ 
+    margin-bottom: 7.5%; 
+    font-size: 1vw; 
+}
+
+.footer-icon{ 
+    font-size: 1.75vw; 
+}
+
+.contact-footer-icon-background{
+    margin-right: 3% !important;
+    all: unset;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: var(--main-accent);
+    background-color: transparent;
+    border: 1px solid var(--main-accent);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+}
+
+.contact-footer-icon-background:hover{
+    background-color: var(--main-accent) !important;
+    color: var(--hover-highlight) !important;
+    transform: scale(1.05) !important;
+}
+
+/* Footer positioning and spacing fixes */
+footer {
+    position: relative;
+    clear: both;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Ensure proper spacing above footer */
+footer:before {
+    content: '';
+    display: block;
+    height: 2rem;
+    clear: both;
+}
+
+/* ========================================
+   INDIVIDUAL POST PAGES (BLOG & PORTFOLIO)
+   ======================================== */
+/* Breadcrumbs */
+.breadcrumb-item::before{ 
+    color: var(--base-text) !important; 
+}
+
+.breadcrumb-item{ 
+    color: var(--base-text) !important; 
+    font-size: 1vw; 
+}
+
+.breadcrumb-item-link{ 
+    color: var(--base-text) !important; 
+}
+
+.breadcrumb-item-link:hover{ 
+    color: var(--hover-highlight) !important; 
+    transition: ease 0.3s; 
+}
+
+/* Post Header */
+.indivual-post-page-title{ 
+    text-align: left; 
+    padding-top: 0.5%;
+}
+
+.indivual-post-page-date{
+    margin: 0;
+    margin: 1.5% 0;
+    font-size: 1.5vw!important;
+    font-family: "Red Hat Display";
+    color: var(--main-accent);
+}
+
+.indivual-post-page-topics{
+    font-size: 1.25vw !important;
+    color: var(--main-accent);
+    position: relative;
+    top: 5px;
+    margin-top: 1%;
+    margin-bottom: 3.5%;
+}
+
+.indivual-post-page-header-image-background{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.indivual-post-page-header-image{
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.indivual-post-page-image{
+    height: auto;
+    width: 100%;
+    max-width: 90%;
+}
+
+.blog-post-page-heading{ 
+    text-align: left; 
+    margin-bottom: 2.5%;
+}
+
+.portfolio-post-page-heading{ 
+    text-align: left; 
+}
+
+/* Post Content Backgrounds */
+.blog-post-background-odd{
+    min-height: 50vh;
+    background-color: var(--background-odd);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    line-height: 1.6;
+}
+
+.blog-post-background-even{
+    min-height: 50vh;
+    background-color: var(--background-secondary);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    line-height: 1.6;
+}
+
+/* ========================================
+   COMPONENTS
+   ======================================== */
+/* Timeline */
+.timeline {
+    position: relative;
+    margin: 2rem 0;
+    padding: 1rem 0;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 0%;
+    background-color: var(--background-secondary);
+    transition: height 0.5s ease-out;
+}
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+.timeline-item .timeline-dot {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--main-accent);
+    border-radius: 50%;
+    z-index: 1;
+    border: 3px solid var(--background-secondary);
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    opacity: 0;
+    animation: fadeInDot 0.5s ease-out forwards;
+    animation-delay: 0.5s;
+    animation-play-state: paused;
+}
+.timeline-item .card {
+    width: 45%;
+    background-color: var(--background-secondary);
+    box-shadow: 0 0 8px var(--main-accent);
+    opacity: 0;
+    transition: opacity .6s ease-out, transform .6s ease-out;
+    transform: translateY(30px);
+}
+.timeline-item.left .card {
+    margin-right: auto;
+}
+.timeline-item.right .card {
+    margin-left: auto;
+}
+
+.timeline-card.from-left {
+    transform: translateX(-50px) translateY(0);
+}
+.timeline-card.from-right {
+    transform: translateX(50px) translateY(0);
+}
+.timeline-card.visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+@keyframes fadeInDot {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.timeline.animate-line .timeline-item .timeline-dot {
+    animation-play-state: running;
+}
+
+.timeline-item:nth-child(1) .timeline-dot {
+    animation-delay: 0.5s;
+}
+.timeline-item:nth-child(2) .timeline-dot {
+    animation-delay: 1.5s;
+}
+.timeline-item:nth-child(3) .timeline-dot {
+    animation-delay: 2.5s;
+}
+.timeline-item:nth-child(4) .timeline-dot {
+    animation-delay: 3.5s;
+}
+
+/* Tables */
+table{
+    background-color: var(--table-body-background);
+    border-color: var(--table-header-background) !important;
+    width: 100%;
+    font-size: 1vw;
+}
+
+th{
+    height: 5vh;
+    text-align: center !important;
+    background-color: var(--table-header-background);
+}
+
+.table-title-text{
+    color: var(--table-header-text);
+    font-family: "Red Hat Display";
+}
+
+table, th, td {
+    text-align: center;
+    color: var(--table-body-text);
+    border: 1px solid !important;
+    border-color: var(--table-header-background) !important;
+}
+
+/* Topics/Tags */
+.topic{
+    border-style: solid;
+    border-radius: 25px;
+    padding: 1% 2.5%;
+    font-size: 10px;
+}
+
+.post-topic{
+    border-style: solid;
+    border-radius: 25px;
+    padding: 0.5% 1%;
+    font-size: 10px;
+}
+
+/* Carousel colouring */
+
+/* Base reset */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none !important;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--background-secondary) !important;
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+}
+
+/* Specific icons */
+.carousel-control-prev-icon {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 16 16'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 16 16'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: var(--main-accent) !important;
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50%;
+  opacity: 1; /* prevent Bootstrap's fading effect */
+}
+
+.carousel-indicators .active {
+  background-color: var(--main-accent) !important;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+/* Large Desktop (1400px and up) */
+@media screen and (min-width: 1400px) {
+    .recent-blog-post {
+        margin-top: 0.75%;
+        margin-bottom: 0.75%;
+    }
+
+    .home-page-recent-blogs-image {
+        height: auto;
+        width: 100%;
+        max-width: 80%;
+        display: flex;
+        justify-content: center;
+        margin-top: 7.5%;
+        margin-left: 7.5%;
+        margin-bottom: 7.5%;
+    }
+
+    .sidebar-labels{
+        font-size: 1vw;
+    }
+
+    .blog-post-description{ 
+        font-size: 0.85vw !important; 
+    }
+
+    .recent-project-card-img{
+        height: 300px !important;
+    }
+
+    .project-page-project-card-image{
+        height: 250px;
+    }
+}
+
+/* Timeline items */
+@media (max-width: 991px) {
+    .timeline::before {
+        left: 8px;
+    }
+    .timeline-item .timeline-dot {
+        left: 8px;
+    }
+    .timeline-item .card {
+        width: 95%;
+        margin-left: 2rem;
+    }
+    .timeline-item.left .card,
+    .timeline-item.right .card {
+        margin: 0 0 0 2rem;
+    }
+}
+
+/* Tablet (768px and down) */
+@media screen and (max-width: 768px) {
+    .auto-background-md {
+        height: auto;
+        padding-bottom: 3%;
+    }
+    
+    .carousel-item img {
+        max-height: 300px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10%;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+/* Mobile (576px and down) */
+@media screen and (max-width: 576px) {
+    /* Typography */
+    h1 { font-size: 6vw !important; padding-top: 0%; }
+    h2 { font-size: 4.5vw !important; }
+    h3 { font-size: 3vw !important; }
+    p { font-size: 2.75vw !important; }
+    li { font-size: 3.5vw !important; }
+    blockquote{font-size: 4.5vw !important;}
+
+    /* Layout */
+    .navbar {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    .auto-background-sm {
+        height: auto;
+        padding-bottom: 5%;
+    }
+
+    /* Blog Components */
+    .recent-blog-post{
+        margin-bottom: 5%;
+    }
+
+    .recent-blog-post-title {
+        margin-left: 4%;
+        margin-right: 4%;
+        padding-left: 0%;
+        font-size: 4.5vw !important;
+    }
+
+    .recent-blog-post-text {
+        margin-left: 4%;
+        margin-right: 4%;
+        font-size: 2.4vw !important;
+    }
+
+    /* Tables */
+    table { font-size: 2.5vw; }
+    th { height: 3.75vh; }
+
+    /* Project Cards */
+    .recent-project-card{margin-bottom: 5%;}
+    .recent-project-card-title { font-size: 3.8vw !important; }
+    .recent-project-card-text { font-size: 2.4vw !important; }
+
+    /* Home Page */
+    #Hero-Image-Home-Page{
+        height: auto;
+        width: 100%;
+        padding-top: 0%;
+        max-width: 75%;
+        border-radius: 25%;
+    }
+
+    #tagline{
+        font-size: 3vw;
+    }
+
+    /* About Page */
+    .about-page-heading {
+        padding: 0;
+        padding-top: 2%;
+        font-size: 3.5vw !important;
+    }
+
+    .educational-history-card{padding: 2%;}
+    .educational-history-title { font-size: 3.75vw !important; }
+    .educational-history-date { font-size: 2.75vw !important; }
+    .educational-history-list { font-size: 2.5vw !important; }
+    .about-contact-page-list { font-size: 6vw !important; }
+    .about-contact-page-list-item { font-size: 4vw; }
+    .about-contact-page-icon-background { font-size: 4vw; }
+
+    /* Blog Page */
+    #blog-sidebar {
+        width: 100%;
+        height: auto;
+        margin-bottom: 5%;
+        margin-right: 0;
+    }
+
+    .sidebar-labels { font-size: 3vw; }
+    .sidebar-recent-blog {
+        padding: 0;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+    .sidebar-recent-blog-title { font-size: 2vw !important; }
+    .sidebar-title { font-size: 2.75vw !important; }
+    .blog-post-title { font-size: 3.6vw !important; }
+    .blog-post-date { font-size: 2vw !important; }
+    .blog-post-description { font-size: 2vw !important; }
+
+    /* Blog layout mobile fixes */
+    .background-odd.background-auto {
+        padding-bottom: 3rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    /* Ensure footer doesn't overlap on mobile */
+    footer {
+        margin-top: 2rem !important;
+        position: relative !important;
+    }
+
+    /* Blog post spacing on mobile */
+    .blog-post {
+        padding: 4% 0;
+        margin-bottom: 1rem;
+    }
+
+    /* Blog list container */
+    #blog-list {
+        margin-bottom: 2rem;
+    }
+
+    /* Bootstrap grid fixes for mobile */
+    .col-sm-4, .col-sm-8 {
+        width: 100% !important;
+        margin-bottom: 2rem;
+    }
+
+    /* Container spacing on mobile */
+    .container {
+        padding-bottom: 2rem;
+    }
+
+    /* Row spacing on mobile */
+    .row {
+        margin-bottom: 1rem;
+    }
+
+    /* Project Page */
+    .project-page-project-card-image-background {
+        background-color: black;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .project-page-project-card-image {
+        max-width: 100%;
+        width: auto;
+    }
+
+    .project-page-project-card-title { font-size: 3.4vw !important; }
+    .project-page-project-card-text { font-size: 2.4vw !important; }
+
+    /* Hobbies Page */
+    .hobbies-page-image {
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+        padding: 5% 0;
+    }
+
+    /* Contact Page */
+    .contact-page-list-item { font-size: 3.75vw; }
+    .contact-page-icon-background {
+        font-size: 4vw;
+        padding: 2.5% 3.5%;
+    }
+    #contact-page-button { font-size: 2.75vw; }
+
+    /* Individual Post Pages */
+    .breadcrumb-item { font-size: 2.5vw !important; }
+    .indivual-post-page-date { font-size: 3vw !important; }
+    .indivual-post-page-topics {
+        font-size: 2.5vw !important;
+        margin-bottom: 5% !important;
+    }
+
+    .indivual-post-page-header-image-background {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5%;
+    }
+    
+    .indivual-post-page-header-image {
+        height: auto;
+        width: 100%;
+    }
+
+    .indivual-post-page-image{
+        height: auto;
+        width: 95%;
+        max-width: 100%;
+    }
+
+    /* Carousel adjustments for mobile */
+    .carousel-item img { max-height: 250px; }
+    .carousel-indicators { margin-bottom: 0.5rem; }
+    .carousel-indicators [data-bs-target] {
+        width: 20px;
+        height: 2px;
+    }
+}

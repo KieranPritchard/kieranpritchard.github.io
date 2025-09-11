@@ -70,3 +70,18 @@ breadcrumb: ["AWS Educate Badges"]
         </div>
     </div>
 </div>
+
+## Getting Started With Networking
+
+<div class="container-fluid content-container">
+    <div class="row h-100">
+        <div class="col-md align-content-center text-center">
+            <img class="indivual-post-page-image" src="{{ '/res/badges/aws-educate-getting-started-with-networking.webp' | relative_url }}" alt="Getting Started With Networking Badge">
+        </div>
+        <div class="col-md order-md-1 order-first align-content-center">
+            <p>
+                After a short break, I completed Getting Started With Networking. This course provided hands-on experience with Amazon VPC, including how to connect multiple service instances within a network. I also strengthened my understanding of core networking concepts such as IP addresses, and explored more advanced topics like CIDR blocks and subnetting. A key insight was the importance of careful planning when designing networked applications, since many configuration decisions are permanent and can significantly impact scalability and performance.
+            </p>
+        </div>
+    </div>
+</div>
