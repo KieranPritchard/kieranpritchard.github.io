@@ -1,6 +1,6 @@
 # robots.txt for Kieran Pritchard Portfolio
-# Allow all bots to crawl everything
 
+# Allow all bots to crawl everything
 User-agent: *
 Disallow:
 
