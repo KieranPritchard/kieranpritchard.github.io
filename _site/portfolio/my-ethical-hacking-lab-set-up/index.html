@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="/Kieran-Pritchard-Portfolio/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="/Kieran-Pritchard-Portfolio/res/favicon/Website%20Favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="/Kieran-Pritchard-Portfolio/A%20full%20breakdown%20of%20how%20I%20set%20up%20my%20ethical%20hacking%20lab%20using%20VirtualBox%20on%20my%20laptop,%20where%20I%20installed%20both%20Ubuntu,%20which%20was%20to%20test%20virtual%20box,%20and%20Kali%20Linux%20for%20my%20ethical%20hacking%20lab.%20I%20go%20over%20fixing%20compatibility%20issues%20to%20getting%20internet%20access%20working,%20and%20I%E2%80%99ve%20included%20screenshots%20and%20notes%20on%20what%20I%20did%20throughout%20the%20process.%20(image%20generated%20by%20Gemini%20image%20tools)">
+    <title>My Ethical Hacking Lab Setup - Kieran Pritchard Portfolio</title>
+</head>
+<body id="themeLoaded">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a href="/Kieran-Pritchard-Portfolio/" class="navbar-brand">Kieran Pritchard</a>
+
+            <!-- Toggler button (hamburger) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible navbar content -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav flex-lg-row gap-lg-4 text-center mx-auto">
+                    <li class="nav-item">
+                        <a href="/Kieran-Pritchard-Portfolio/" class="nav-link " id="">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Kieran-Pritchard-Portfolio/About.html" class="nav-link " id="">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Kieran-Pritchard-Portfolio/blog/" class="nav-link " id="">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Kieran-Pritchard-Portfolio/Projects.html" class="nav-link " id="">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Kieran-Pritchard-Portfolio/Hobbies.html" class="nav-link " id="">Hobbies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Kieran-Pritchard-Portfolio/Contact.html" class="nav-link " id="">Contact</a>
+                    </li>
+
+                    <!-- Theme toggle shown only in collapsed menu -->
+                    <li class="nav-item d-lg-none mt-2">
+                        <button class="main-button w-100" onclick="themeSwitcher()">
+                            <i id="themeToggle" class="fa-solid fa-moon"></i> Toggle Theme
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Theme toggle shown only on large screens (outside collapse) -->
+            <div class="d-none d-lg-flex align-items-center ms-auto">
+                <button class="navbar-button" onclick="themeSwitcher()">
+                    <i id="themeToggle" class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="background-odd">
+        
+        <nav aria-label="breadcrumb">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a class="breadcrumb-item-link" href="/Kieran-Pritchard-Portfolio/Projects.html">Projects</a></li>
+                
+                <li class="breadcrumb-item" aria-current="page">My Ethical Hacking Lab Setup</li>
+                
+            </ul>
+        </nav>
+        
+        
+        <div class="my-4 indivual-post-page-header-image-background" style="background-color: black;">
+            <img class="indivual-post-page-header-image" src="/Kieran-Pritchard-Portfolio/res/Header-Images/project-header-images/My_Ethical_Hacking_Lab_Setup_HeaderImage.webp" alt="My Ethical Hacking Lab Setup">
+        </div>
+        
+        
+        <h1 class="mt-4 indivual-post-page-title">My Ethical Hacking Lab Setup</h1>
+        
+        <p class="indivual-post-page-date">Date Published: 15/07/2025</p>
+        
+        
+        <p class="indivual-post-page-topics">Topics: 
+            
+            <span class="post-topic">Ethical-Hacking</span>
+            
+            <span class="post-topic">Home-Lab</span>
+            
+        </p>
+        
+        
+        
+        <p class="mt-4">A full breakdown of how I set up my ethical hacking lab using VirtualBox on my laptop, where I installed both Ubuntu, which was to test virtual box, and Kali Linux for my ethical hacking lab. I go over fixing compatibility issues to getting internet access working, and I’ve included screenshots and notes on what I did throughout the process. (image generated by Gemini image tools)</p>
+        
+    </div>
+
+    
+    
+    
+    
+        
+        
+        <div class="background-odd align-content-center auto-background-sm">
+            <h2 id="background">Background</h2>
+
+<div class="container-fluid content-container">
+    <div class="row h-100">
+        <div class="col-md align-content-center">
+            <p>
+                I created this setup because I wanted to build a Kali Linux lab to practice and experiment with tools on platforms like TryHackMe. At the time, I didn’t have any way to access these platforms, so I decided to assess my needs. I settled on using virtual machines, which allowed me to boot up a lab environment whenever needed without purchasing additional hardware. This approach lets me use the lab on demand without affecting other parts of my host machine.
+            </p>
+        </div>
+        <div class="col-md order-md-1 order-first align-content-center text-center">
+            
+
+
+
+<div class="col-md order-md-1 order-first align-content-center text-center">
+    <div id="ubuntu-set-up-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <!-- Carousel Indicators -->
+        
+        <div class="carousel-indicators">
+            
+            <button type="button" data-bs-target="#ubuntu-set-up-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            
+            <button type="button" data-bs-target="#ubuntu-set-up-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            
+            <button type="button" data-bs-target="#ubuntu-set-up-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            
+            <button type="button" data-bs-target="#ubuntu-set-up-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            
+            <button type="button" data-bs-target="#ubuntu-set-up-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            
+            <button type="button" data-bs-target="#ubuntu-set-up-carousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            
+        </div>
+        
+        
+        <div class="carousel-inner">
+            
+            <div class="carousel-item active">
+                <img class="indivual-post-page-image" src="/Kieran-Pritchard-Portfolio/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_12.webp" alt="The Oracle VirtualBox wizard for creating a new virtual machine, with the settings for an Ubuntu Linux system." loading="lazy" />
+            </div>
+            
+            <div class="carousel-item ">
+                <img class="indivual-post-page-image" src="/Kieran-Pritchard-Portfolio/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_11.webp" alt="A running Ubuntu Desktop virtual machine in VirtualBox showing the initial boot sequence." loading="lazy" />
+            </div>
+            
+            <div class="carousel-item ">
+                <img class="indivual-post-page-image" src="/Kieran-Pritchard-Portfolio/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_10.webp" alt="An Ubuntu Server virtual machine with a terminal window displaying the system's installation log." loading="lazy" />
+            </div>
+            
+            <div class="carousel-item ">
+                <img class="indivual-post-page-image" src="/Kieran-Pritchard-Portfolio/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_9.webp" alt="The desktop of an Ubuntu Server virtual machine running inside Oracle VirtualBox." loading="lazy" />
+            </div>
+            
+            <div class="carousel-item ">
+                <img class="indivual-post-page-image" src="/Kieran-Pritchard-Portfolio/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_8.webp" alt="An Ubuntu Server virtual machine with a terminal showing commands to install VirtualBox Guest Additions." loading="lazy" />
+            </div>
+            
+            <div class="carousel-item ">
+                <img class="indivual-post-page-image" src="/Kieran-Pritchard-Portfolio/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_6.webp" alt="An Ubuntu Server virtual machine running in VirtualBox, with a YouTube video open in a web browser." loading="lazy" />
+            </div>
+            
+        </div>
+        
+        <!-- Carousel Controls -->
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#ubuntu-set-up-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#ubuntu-set-up-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        
+    </div>
+</div> 
+        </div>
+    </div>
+</div>
+
+
+        </div>
+    
+        
+        <div class="background-even align-content-center auto-background-sm">
+            <h2 id="ubuntu-set-up">Ubuntu Set-Up</h2>
+
+<div class="container-fluid content-container">
+    <div class="row h-100">
+        <div class="col-md align-content-center text-center">
+            
+
+
+
+<div class="col-md order-md-1 order-first align-content-center text-center">
+    <div id="background-images-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <!-- Carousel Indicators -->
+        
+        <div class="carousel-indicators">
+            
+            <button type="button" data-bs-target="#background-images-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            
+            <button type="button" data-bs-target="#background-images-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            
+        </div>
+        
+        
+        <div class="carousel-inner">
+            
+            <div class="carousel-item active">
+                <img class="indivual-post-page-image" src="/Kieran-Pritchard-Portfolio/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_14.webp" alt="A pop-up window confirming that the Oracle VirtualBox installation was completed successfully." loading="lazy" />
+            </div>
+            
+            <div class="carousel-item ">
+                <img class="indivual-post-page-image" src="/Kieran-Pritchard-Portfolio/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_13.webp" alt="The welcome screen for Oracle VirtualBox, explaining the difference between Basic Mode and Expert Mode." loading="lazy" />
+            </div>
+            
+        </div>
+        
+        <!-- Carousel Controls -->
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#background-images-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#background-images-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        
+    </div>
+</div> 
+        </div>
+        <div class="col-md align-content-center order-md-1 order-first">
+            <p>
+                My first goal was to get everything running on my MacBook using Ubuntu. VirtualBox installed without any issues, and I set it up in Expert Mode based on what I had learned in college. I downloaded an Ubuntu Server ISO image and loaded it into VirtualBox. However, it opened into the UEFI console. I began troubleshooting—first by searching online for fixes, and then by asking ChatGPT for help. Eventually, I realized I had downloaded the wrong image for my host machine's architecture. After installing the correct version, I created a user account and installed Guest Additions to enable internet access, which I tested by watching My Chemical Romance music videos on YouTube.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+        </div>
+    
+        
+        <div class="background-odd align-content-center auto-background-sm">
+            <h2 id="setting-up-kali-linux">Setting up kali linux</h2>
+
+<div class="container-fluid content-container">
+    <div class="row h-100">
+        <div class="col-md align-content-center">
+            <p>
+                I first downloaded a compatible Kali Linux image for my MacBook. I then loaded it into VirtualBox and allocated system resources to the virtual machine. After booting it up, I created a user account, installed Guest Additions, and made sure everything worked correctly. Finally, I installed any missing tools and customized the OS to my preferences.
+            </p>
+        </div>
+        <div class="col-md order-md-1 order-first align-content-center text-center">
+            
+
+
+
+<div class="col-md order-md-1 order-first align-content-center text-center">
+    <div id="setting-up-kali-linux-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <!-- Carousel Indicators -->
+        
+        <div class="carousel-indicators">
+            
+            <button type="button" data-bs-target="#setting-up-kali-linux-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            
+            <button type="button" data-bs-target="#setting-up-kali-linux-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            
+            <button type="button" data-bs-target="#setting-up-kali-linux-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            
+            <button type="button" data-bs-target="#setting-up-kali-linux-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            
+        </div>
+        
+        
+        <div class="carousel-inner">
+            
+            <div class="carousel-item active">
+                <img class="indivual-post-page-image" src="/Kieran-Pritchard-Portfolio/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_5.webp" alt="The official Kali Linux homepage, highlighting its use as a penetration testing distribution." loading="lazy" />
+            </div>
+            
+            <div class="carousel-item ">
+                <img class="indivual-post-page-image" src="/Kieran-Pritchard-Portfolio/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_4.webp" alt="The official Kali Linux website download page, showing different installer options." loading="lazy" />
+            </div>
+            
+            <div class="carousel-item ">
+                <img class="indivual-post-page-image" src="/Kieran-Pritchard-Portfolio/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_2.webp" alt="The software installation progress for a Kali Linux virtual machine within Oracle VirtualBox." loading="lazy" />
+            </div>
+            
+            <div class="carousel-item ">
+                <img class="indivual-post-page-image" src="/Kieran-Pritchard-Portfolio/res/Portfolio-Post-Images/My-Ethical-Hacking-Lab-Setup/My_Ethical_Hacking_Lab_Setup_1.webp" alt="A running Kali Linux virtual machine in VirtualBox, showing the setup process in a terminal window." loading="lazy" />
+            </div>
+            
+        </div>
+        
+        <!-- Carousel Controls -->
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#setting-up-kali-linux-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#setting-up-kali-linux-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        
+    </div>
+</div> 
+        </div>
+    </div>
+</div>
+
+        </div>
+    
+
+    <footer class="background-odd p-2-lg p-4 mt-5 h-auto">
+    <div class="container h-100 align-content-center">
+        <div class="row h-100">
+            <div class="col-md align-content-center">
+                <h2>Kieran Pritchard</h2>
+                <p>Digital Techology Student</p>
+            </div>
+            <div class="col-md">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="/Kieran-Pritchard-Portfolio/index.html">Home</a></li>
+                    <li><a href="/Kieran-Pritchard-Portfolio/About.html">About</a></li>
+                    <li><a href="/Kieran-Pritchard-Portfolio/blog/">Blog</a></li>
+                    <li><a href="/Kieran-Pritchard-Portfolio/Projects.html">Projects</a></li>
+                    <li><a href="/Kieran-Pritchard-Portfolio/Hobbies.html">Hobbies</a></li>
+                    <li><a href="/Kieran-Pritchard-Portfolio/Contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md">
+                <h2>Contact Information</h2>
+                <ul id="contact-footer-list">
+                    <li class="contact-footer-list-item"><button onclick="contactLinks('phone')" class="contact-footer-icon-background"><i class="fa-solid fa-phone"></i></button>+44 07763 534145</li>
+                    <li class="contact-footer-list-item"><button onclick="contactLinks('email')" class="contact-footer-icon-background"><i class="fa-solid fa-envelope"></i></button>KieranPritchard06@gmail.com</li>
+                    <li class="contact-footer-list-item"><button onclick="contactLinks('linkedin')" class="contact-footer-icon-background"><i class="fa-brands fa-linkedin"></i></button>Linkedin</li>
+                    <li class="contact-footer-list-item"><button onclick="contactLinks('github')" class="contact-footer-icon-background"><i class="fa-brands fa-github"></i></button>GitHub</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center p-3">
+            <p>&copy; 2025 Kieran Pritchard. All rights reserved.</p>
+            <p>All copyrighted materials are the property of their respective owners. Used here for portfolio demonstration purposes only.</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // Event listener to load correct mode for website
+        window.addEventListener("DOMContentLoaded", function () {
+            const currentTheme = document.documentElement.getAttribute("data-bs-theme");
+
+            if (!currentTheme) {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const theme = prefersDark ? "dark" : "light";
+                document.documentElement.setAttribute("data-bs-theme", theme);
+            }
+        });
+    </script>
+    <script src="/Kieran-Pritchard-Portfolio/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html> 
