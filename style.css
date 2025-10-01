@@ -108,16 +108,24 @@ blockquote{
 }
 
 .secondary-button{
-    width: 95%;
-    height: 50px;
+    padding: 2% 2.5%;
     border-radius: 15px;
     border-style: solid;
     border-color: var(--main-accent);
     color: var(--main-accent);
     border-width: 1px;
+    text-decoration: none !important;
     font-family: "Source Code Pro";
     background-color: transparent;
     transition: ease 0.25s;
+}
+
+.secondary-button:hover{
+    border-style: solid;
+    border-color: var(--main-accent) !important;
+    color: var(--background) !important;
+    border-width: 1px;
+    background-color: var(--main-accent);
 }
 
 /* Layout Components */
