@@ -4,7 +4,7 @@ title: "AWS Educate Badges"
 description: "A recount of my experience using AWS Educate, a beginner-friendly platform for learning cloud computing and AWS services. This page follows my journey through various courses and hands-on exercises that helped me build practical skills and understand core cloud concepts. Each badge earned marks a step forward in exploring how AWS powers modern technology in real-world settings."
 date: 2025-07-29
 featured: true
-topics: ["Cloud Computing", "AWS"]
+topics: ["Cloud Computing", "AWS", "Certificates"]
 header_image: "res/Header-Images/project-header-images/aws-educate-badges-header-image.webp"
 icon: "res/Icons/portfolio-icons/aws-educate-badges-icon.webp"
 breadcrumb: ["AWS Educate Badges"]

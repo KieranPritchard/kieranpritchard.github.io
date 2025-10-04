@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="/Kieran-Pritchard-Portfolio/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="/Kieran-Pritchard-Portfolio/res/favicon/Website%20Favicon.png">
+    <meta charset="UTF-8">
+    <meta name="description" content="/Kieran-Pritchard-Portfolio/A%20deep%20dive%20into%20the%20recent%20updates%20I%20made%20to%20my%20portfolio%20website.%20going%20from%20improving%20the%20design%20and%20color%20scheme%20to%20adding%20new%20skills,%20certifications,%20and%20accessibility%20features.%20as%20well%20as%20new%20styling%20and%20sections%20to%20existing%20pages.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revamping My Portfolio - Kieran Pritchard Portfolio</title>
+</head>
+<body id="themeLoaded">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a href="/Kieran-Pritchard-Portfolio/" class="navbar-brand">Kieran Pritchard</a>
+
+            <!-- Toggler button (hamburger) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible navbar content -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav flex-lg-row gap-lg-4 text-center mx-auto">
+                    <li class="nav-item">
+                        <a href="/Kieran-Pritchard-Portfolio/" class="nav-link " id="">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Kieran-Pritchard-Portfolio/About.html" class="nav-link " id="">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Kieran-Pritchard-Portfolio/blog/" class="nav-link " id="">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Kieran-Pritchard-Portfolio/Projects.html" class="nav-link " id="">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Kieran-Pritchard-Portfolio/Hobbies.html" class="nav-link " id="">Hobbies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Kieran-Pritchard-Portfolio/Contact.html" class="nav-link " id="">Contact</a>
+                    </li>
+
+                    <!-- Theme toggle shown only in collapsed menu -->
+                    <li class="nav-item d-lg-none mt-2">
+                        <button class="main-button w-100" onclick="themeSwitcher()">
+                            <i id="themeToggle" class="fa-solid fa-moon"></i> Toggle Theme
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Theme toggle shown only on large screens (outside collapse) -->
+            <div class="d-none d-lg-flex align-items-center ms-auto">
+                <button class="navbar-button" onclick="themeSwitcher()">
+                    <i id="themeToggle" class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="background-odd">
+        <nav aria-label="breadcrumb">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a class="breadcrumb-item-link" href="/Kieran-Pritchard-Portfolio/blog/">Blog</a></li>
+                <li class="breadcrumb-item" aria-current="page">Revamping My Portfolio</li>
+            </ul>
+        </nav>
+        
+        
+        <div class="my-4 indivual-post-page-header-image-background" style="background-color: black;">
+            <img class="indivual-post-page-header-image" src="/Kieran-Pritchard-Portfolio/res/Header-Images/blog-header-images/Revamping-My-Portfolio-header-image.webp" alt="A graphic illustration of a hand using a stylus to design a website mockup on a tablet.">
+        </div>
+        
+
+        <h1 class="mt-4 indivual-post-page-title">Revamping My Portfolio</h1>
+        <p class="indivual-post-page-date">Date Published: 02/08/2025</p>
+        <p class="indivual-post-page-topics">Topics: <span class="post-topic">Programming</span></p>
+        
+        <p class="mt-4">A deep dive into the recent updates I made to my portfolio website. going from improving the design and color scheme to adding new skills, certifications, and accessibility features. as well as new styling and sections to existing pages.</p>
+    </div>
+
+    
+    
+    
+    
+        
+        
+        <div class="blog-post-background-even align-content-center">
+            <h2 id="setting-my-goals">Setting My Goals</h2>
+
+<p>After starting to get into a workflow of completing projects, reaching important milestones, or learning and then posting about them on LinkedIn to start making myself visible, I always come back to this website — my portfolio. I made it for one of my assignments at college this year for the website development unit. I think because of that, I didn’t get the time I wanted to really make it styled in the way I had wanted.</p>
+
+<p>So I made a checklist to define what I wanted to add to this website and what improvements to make. I defined these as the things I wanted to include: better colour palettes for the dark and light mode (because the colours seemed too bright on dark mode to me and to others I’d asked for feedback); new sections for the About page, which I wanted to do originally; a favicon; and a lot more interactivity and consistency.</p>
+
+<p>When I needed to test the changes, I would send the links to my friends for real feedback and thoughts on what I could do to make the website better. As a side ramble: I don’t like to give testers any guidance for things like websites. This is because I find it mimics what a real person visiting a website would do. I think this approach gives better feedback, because it lets them explore on their own and form their own opinions without needing to check off a list I send them on Discord or WhatsApp.</p>
+
+
+        </div>
+    
+        
+        <div class="blog-post-background-odd align-content-center">
+            <h2 id="breathing-life-into-the-about-page">Breathing Life into the About Page</h2>
+
+<p>The About page got the biggest transformation. I started by removing the blurb that said, “here are my top skills” to make room for the soft and hard skills sub-headings to go into their own columns. I then added more skills to reflect new things I’ve learned from my course and from my own studies into ethical hacking and cyber security.</p>
+
+<p>I then decided I wanted a timeline for my important milestones on the website, which I had to unfortunately leave out before. I tried to find tutorials on how to use Bootstrap to do this, but I couldn’t find any that weren’t bloated with endless paragraphs. This is where I asked ChatGPT to generate an example that I could style and add to easily. I’m not going to go into my AI work ethics and rules here — but long story short, I like using it because it can explain new concepts to me in a way that I understand, especially because of my autism.</p>
+
+<p>I also made a certification section to show off my badges and list the courses I’ve completed that have certificates. For example, my AWS Educate badges and OpenLearn cyber security course. I made a list for the certs that don’t have badges, and a row of badges for the courses that do.</p>
+
+<p>I felt like including these would make the About page work better not just as a CV dump (which most of them are, if I’m being honest from what I have seen), but also as a timeline that I can easily update to highlight special moments in my professional journey.</p>
+
+
+        </div>
+    
+        
+        <div class="blog-post-background-even align-content-center">
+            <h2 id="designing-for-experience-not-just-looks">Designing for Experience, Not Just Looks</h2>
+
+<p>To create the colour schemes, I took the root colour variables I already had for light and dark modes and gave them to ChatGPT. I asked it to suggest new colours that still used some of the ones I already had. After some prompting, I got colours that complemented dark and light mode better and looked good in practice. The feedback definitely agreed.</p>
+
+<p>I added a dark/light mode toggle to the navigation bar. This was included so users could choose for themselves, without their system mode dictating what the website should use. I wrote a new JavaScript function that switches between the two modes and saves the selection using the local storage API. This was because the website kept defaulting to the original selection whenever I switched pages.</p>
+
+<p>As the last addition, I designed and created a custom favicon for the whole website. I made it in Canva, and my inspiration for the icon was an HTML tag. This helps give the site a bit more personality.</p>
+
+
+        </div>
+    
+        
+        <div class="blog-post-background-odd align-content-center">
+            <h2 id="giving-aws-educate-badges-their-own-space">Giving AWS Educate Badges Their Own Space</h2>
+
+<p>Before this update, my AWS Educate badges and a singlur badge from a free open university course were only on my LinkedIn. I needed to show them on my portfolio too so that it would better represent my skill set and my acheivements and certifications.</p>
+
+<p>I embedded them on the website, both on the About page in a new certifications sections and on a dedicated page within the Projects page.</p>
+
+
+        </div>
+    
+        
+        <div class="blog-post-background-even align-content-center">
+            <h2 id="looking-ahead">Looking Ahead</h2>
+
+<p>This refresh wasn’t just a design update, but a way to make the site more relevant to where I’m at right now. Now that my course is over, I’m finally able to work on it the way I want.</p>
+
+<p>So, the plan is to keep adding new projects, skills, and more things so it grows alongside me — and doesn’t get left in the dirt.</p>
+
+        </div>
+    
+
+    <footer class="background-odd p-2-lg p-4 mt-5 h-auto">
+    <div class="container h-100 align-content-center">
+        <div class="row h-100">
+            <div class="col-md align-content-center">
+                <h2>Kieran Pritchard</h2>
+                <p>Digital Techology Student</p>
+            </div>
+            <div class="col-md">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="/Kieran-Pritchard-Portfolio/index.html">Home</a></li>
+                    <li><a href="/Kieran-Pritchard-Portfolio/About.html">About</a></li>
+                    <li><a href="/Kieran-Pritchard-Portfolio/blog/">Blog</a></li>
+                    <li><a href="/Kieran-Pritchard-Portfolio/Projects.html">Projects</a></li>
+                    <li><a href="/Kieran-Pritchard-Portfolio/Hobbies.html">Hobbies</a></li>
+                    <li><a href="/Kieran-Pritchard-Portfolio/Contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md">
+                <h2>Contact Information</h2>
+                <ul id="contact-footer-list">
+                    <li class="contact-footer-list-item"><button onclick="contactLinks('phone')" class="contact-footer-icon-background"><i class="fa-solid fa-phone"></i></button>+44 07763 534145</li>
+                    <li class="contact-footer-list-item"><button onclick="contactLinks('email')" class="contact-footer-icon-background"><i class="fa-solid fa-envelope"></i></button>KieranPritchard06@gmail.com</li>
+                    <li class="contact-footer-list-item"><button onclick="contactLinks('linkedin')" class="contact-footer-icon-background"><i class="fa-brands fa-linkedin"></i></button>Linkedin</li>
+                    <li class="contact-footer-list-item"><button onclick="contactLinks('github')" class="contact-footer-icon-background"><i class="fa-brands fa-github"></i></button>GitHub</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center p-3">
+            <p>&copy; 2025 Kieran Pritchard. All rights reserved.</p>
+            <p>All copyrighted materials are the property of their respective owners. Used here for portfolio demonstration purposes only.</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // Event listener to load correct mode for website
+        window.addEventListener("DOMContentLoaded", function () {
+            const currentTheme = document.documentElement.getAttribute("data-bs-theme");
+
+            if (!currentTheme) {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const theme = prefersDark ? "dark" : "light";
+                document.documentElement.setAttribute("data-bs-theme", theme);
+            }
+        });
+    </script>
+    <script src="/Kieran-Pritchard-Portfolio/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -4,7 +4,7 @@ title: "iDEA Awards"
 description: "A comprehensive overview of my journey earning iDEA awards and badges, detailing the skills and knowledge I gained through each module. The page is organized by award level, with reflections on the challenges and achievements encountered along the way. Currently, it covers up to the Silver Award, with plans to update the page as soon as the Gold Award becomes available."
 date: 2024-12-15
 featured: true
-topics: ["Education", "Awards", "Digital"]
+topics: ["Education", "Certificates", "Digital"]
 header_image: "/res/Header-Images/project-header-images/IDEA-Page-Header.webp"
 icon: "/res/Icons/portfolio-icons/IDEA-Logo.webp"
 breadcrumb: ["My iDEA Awards"]
