@@ -4,7 +4,7 @@ title: "Cryptoforge"
 description: "An overview of my Python-based cryptography utility, Cryptoforge, built with the cryptography library. The project provides a command-line interface for encryption, decryption, hashing, and digital signatures, with simplified commands compared to OpenSSL. It highlights my learning in key management, algorithm implementation, and secure data handling, while reinforcing practical skills in Python and applied cryptography."
 date: 2025-8-10
 featured: false
-topics: ["Cryptography", "Programming"]
+topics: ["Cyber Security", "Programming"]
 header_image: "/res/Header-Images/project-header-images/Cryptoforge_Header_Image.webp"
 icon: "/res/Icons/portfolio-icons/Cryptoforge_Icon.webp"
 breadcrumb: ["Cryptoforge"]

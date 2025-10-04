@@ -165,8 +165,11 @@ blockquote{
 .content-container{ height: 85% !important; }
 
 /* ========================================
-   NAVIGATION
-   ======================================== */
+NAVIGATION
+======================================== */
+
+/* Navigation bar styling*/
+
 .navbar{
     background-color: var(--background);
     padding-left: 5% !important;
@@ -213,6 +216,30 @@ blockquote{
     background-color: var(--main-accent) !important;
     color: var(--hover-highlight) !important;
     transform: scale(1.05) !important;
+}
+
+/* Tab styling*/
+.custom-pills .nav-pills {
+    border-style: solid;
+    border-radius: 25px;
+    border-width: 2.5px;
+    border-color: var(--main-accent);
+}
+
+.custom-pills .nav-link {
+    font-size: 1.25vw !important;
+    border-radius: 25px !important;
+    color: var(--main-accent); /* optional: base color */
+    transition: all 0.2s ease-in-out; /* smooth hover effect */
+}
+
+.custom-pills .nav-link:hover {
+    color: var(--main-accent) !important;
+}
+
+.custom-pills .nav-link.active {
+    background-color: var(--main-accent) !important;
+    color: var(--background) !important;
 }
 
 /* ========================================
@@ -1315,6 +1342,11 @@ table, th, td {
     .auto-background-sm {
         height: auto;
         padding-bottom: 5%;
+    }
+
+    .custom-pills .nav-link {
+        font-size: 1.5vw !important;
+        border-radius: 25px !important;
     }
 
     /* Blog Components */
