@@ -108,24 +108,16 @@ blockquote{
 }
 
 .secondary-button{
-    padding: 2% 2.5%;
+    width: 95%;
+    height: 50px;
     border-radius: 15px;
     border-style: solid;
     border-color: var(--main-accent);
     color: var(--main-accent);
     border-width: 1px;
-    text-decoration: none !important;
     font-family: "Source Code Pro";
     background-color: transparent;
     transition: ease 0.25s;
-}
-
-.secondary-button:hover{
-    border-style: solid;
-    border-color: var(--main-accent) !important;
-    color: var(--background) !important;
-    border-width: 1px;
-    background-color: var(--main-accent);
 }
 
 /* Layout Components */
@@ -165,11 +157,8 @@ blockquote{
 .content-container{ height: 85% !important; }
 
 /* ========================================
-NAVIGATION
-======================================== */
-
-/* Navigation bar styling*/
-
+   NAVIGATION
+   ======================================== */
 .navbar{
     background-color: var(--background);
     padding-left: 5% !important;
@@ -216,30 +205,6 @@ NAVIGATION
     background-color: var(--main-accent) !important;
     color: var(--hover-highlight) !important;
     transform: scale(1.05) !important;
-}
-
-/* Tab styling*/
-.custom-pills .nav-pills {
-    border-style: solid !important;
-    border-radius: 25px !important;
-    border-width: 2.5px !important;
-    border-color: var(--main-accent) !important;
-}
-
-.custom-pills .nav-link {
-    font-size: 1.25vw !important;
-    border-radius: 25px !important;
-    color: var(--main-accent) !important; /* optional: base color */
-    transition: all 0.2s ease-in-out !important; /* smooth hover effect */
-}
-
-.custom-pills .nav-link:hover {
-    color: var(--main-accent) !important;
-}
-
-.custom-pills .nav-link.active {
-    background-color: var(--main-accent) !important;
-    color: var(--background) !important;
 }
 
 /* ========================================
@@ -422,7 +387,6 @@ NAVIGATION
     opacity: 0;
     transform: translateX(-50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    font-size: 1vw;
 }
 
 .certifications.fade-in{
@@ -434,10 +398,6 @@ NAVIGATION
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.badge-image{
-    max-height: 80px;
 }
 
 .badge.fade-in{
@@ -457,7 +417,6 @@ NAVIGATION
     background-color: var(--background-secondary);
     border-radius: 25px;
     padding: 0.75% 1%;
-    margin-bottom: 2.5%;
     box-shadow: 0px 0px 20px 1px var(--main-accent);
 }
 
@@ -630,9 +589,8 @@ NAVIGATION
 }
 
 .blog-post-image{
-    height: auto;
-    width: 100%;
-    max-width: 100%;
+    height: 150px;
+    width: auto;
     border-radius: 25px;
 }
 
@@ -1038,8 +996,8 @@ footer:before {
 
 .indivual-post-page-image{
     height: auto;
-    width: 100%;
-    max-width: 90%;
+    width: 85%;
+    max-width: 100%;
 }
 
 .blog-post-page-heading{ 
@@ -1206,44 +1164,6 @@ table, th, td {
     font-size: 10px;
 }
 
-/* Carousel colouring */
-
-/* Base reset */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-image: none !important;
-  width: 2rem;
-  height: 2rem;
-  background-color: var(--background-secondary) !important;
-  -webkit-mask-size: 100% 100%;
-  -webkit-mask-repeat: no-repeat;
-  mask-size: 100% 100%;
-  mask-repeat: no-repeat;
-}
-
-/* Specific icons */
-.carousel-control-prev-icon {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 16 16'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 16 16'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
-}
-
-.carousel-control-next-icon {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
-}
-
-.carousel-indicators [data-bs-target] {
-  background-color: var(--main-accent) !important;
-  width: 10px !important;
-  height: 10px !important;
-  border-radius: 50%;
-  opacity: 1; /* prevent Bootstrap's fading effect */
-}
-
-.carousel-indicators .active {
-  background-color: var(--main-accent) !important;
-}
-
 /* ========================================
    RESPONSIVE DESIGN
    ======================================== */
@@ -1263,22 +1183,6 @@ table, th, td {
         margin-top: 7.5%;
         margin-left: 7.5%;
         margin-bottom: 7.5%;
-    }
-
-    .sidebar-labels{
-        font-size: 1vw;
-    }
-
-    .blog-post-description{ 
-        font-size: 0.85vw !important; 
-    }
-
-    .recent-project-card-img{
-        height: 300px !important;
-    }
-
-    .project-page-project-card-image{
-        height: 250px;
     }
 }
 
@@ -1326,7 +1230,7 @@ table, th, td {
 /* Mobile (576px and down) */
 @media screen and (max-width: 576px) {
     /* Typography */
-    h1 { font-size: 6vw !important; padding-top: 0%; }
+    h1 { font-size: 6vw !important; }
     h2 { font-size: 4.5vw !important; }
     h3 { font-size: 3vw !important; }
     p { font-size: 2.75vw !important; }
@@ -1342,11 +1246,6 @@ table, th, td {
     .auto-background-sm {
         height: auto;
         padding-bottom: 5%;
-    }
-
-    .custom-pills .nav-link {
-        font-size: 1.5vw !important;
-        border-radius: 25px !important;
     }
 
     /* Blog Components */
@@ -1513,12 +1412,6 @@ table, th, td {
     .indivual-post-page-header-image {
         height: auto;
         width: 100%;
-    }
-
-    .indivual-post-page-image{
-        height: auto;
-        width: 95%;
-        max-width: 100%;
     }
 
     /* Carousel adjustments for mobile */

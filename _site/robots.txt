@@ -1,0 +1,8 @@
+# robots.txt for Kieran Pritchard Portfolio
+
+# Allow all bots to crawl everything
+User-agent: *
+Disallow:
+
+# Sitemap location
+Sitemap: https://kieranpritchard.github.io/Kieran-Pritchard-Portfolio/sitemap.xml
