@@ -13,6 +13,7 @@ window.addEventListener("DOMContentLoaded", function () {
     emailFormSize()
     initializeCarousels();
     setupTimelineObserver();
+    logScreenWidth();
 });
 
 // ============================================================================
