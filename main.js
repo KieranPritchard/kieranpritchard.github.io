@@ -61,6 +61,16 @@ function themeSwitcher() {
 }
 
 // ============================================================================
+// SCREEN WIDTH
+// ============================================================================
+
+function logScreenWidth() {
+    const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    console.log("Screen width:", width);
+}
+
+
+// ============================================================================
 // CAROUSEL MANAGEMENT
 // ============================================================================
 
