@@ -300,7 +300,7 @@ NAVIGATION
     margin-top: 0.5%;     
     padding: 1.5% 0 0.5%;
     color: var(--main-accent) !important;
-    font-size: 1.75vw !important;
+    font-size: 1.75vw;
 }
 
 .recent-blog-post-title-link{
@@ -1248,12 +1248,83 @@ table, th, td {
    RESPONSIVE DESIGN
    ======================================== */
 @media screen and (min-width: 2560px) {
+    /* Typography */
+    h1, h2, h3, h5{
+        font-family: "Red Hat Display";
+        color: var(--main-accent) !important;
+    }
+
+    h1{ padding-top: 10%; font-size: 2vw !important;}
+    h2{ padding-top: 2.5%; font-size: 1.33vw !important;}
+    h3{ font-size: 1.16vw !important;}
+
+    ul{ color: var(--base-text);}
+    li{ font-family: "Source Code Pro"; font-size: 0.83vw;}
+
+    p{
+        font-size: 0.83vw !important;
+        font-family: "Source Code Pro";
+        color: var(--base-text);
+    }
+
+    a{ color: var(--main-accent) !important; }
+    a:hover{ color: var(--hover-highlight) !important; }
+
+    b{ font-family: "Source Code Pro"; }
+
+    blockquote{
+        font-size: 2.5vw;
+        font-family: "Source Code Pro";
+    }
+
+    .contact-footer-list-item{
+        font-size: 0.75vw;
+    }
+    
     .recent-project-card-img{
         height: 400px;
     }
 
+    .recent-project-card-button{
+        height: 85px;
+    }
+
     .project-page-project-card-image{
         height: 400px !important;
+    }
+
+    .recent-blog-post-title{
+        font-size: 1.5vw;
+    }
+
+    .recent-blog-post-text{
+        font-size: 1.25vw !important;
+    }
+
+    .recent-project-card-button{
+        font-size: 0.85vw;
+    }
+
+    .background-odd{
+        padding-left: 2.5% !important;
+        padding-right: 2.5% !important;
+    }
+
+    .background-even{
+        padding-left: 2.5% !important;
+        padding-right: 2.5% !;
+    }
+
+    .main-button{
+        font-size: 1vw;
+    }
+
+    .secondary-button{
+        font-size: 1vw;
+    }
+
+    .custom-pills .nav-link {
+        font-size: 0.83vw !important;
     }
 }
 
