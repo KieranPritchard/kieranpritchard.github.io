@@ -8,8 +8,8 @@
   
     
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/About</loc>
-    <lastmod>2025-10-04T18:40:05+01:00</lastmod>
+    <loc>http://localhost:4000/About</loc>
+    <lastmod>2025-10-14T19:04:05+01:00</lastmod>
     <priority>1</priority>
     <changefreq>weekly</changefreq>
   </url>
@@ -19,8 +19,8 @@
   
     
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/Contact</loc>
-    <lastmod>2025-10-04T18:40:05+01:00</lastmod>
+    <loc>http://localhost:4000/Contact</loc>
+    <lastmod>2025-10-14T19:04:05+01:00</lastmod>
     <priority>1</priority>
     <changefreq>weekly</changefreq>
   </url>
@@ -30,8 +30,8 @@
   
     
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/Hobbies</loc>
-    <lastmod>2025-10-04T18:40:05+01:00</lastmod>
+    <loc>http://localhost:4000/Hobbies</loc>
+    <lastmod>2025-10-14T19:04:05+01:00</lastmod>
     <priority>1</priority>
     <changefreq>weekly</changefreq>
   </url>
@@ -41,8 +41,8 @@
   
     
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/Projects</loc>
-    <lastmod>2025-10-04T18:40:05+01:00</lastmod>
+    <loc>http://localhost:4000/Projects</loc>
+    <lastmod>2025-10-14T19:04:05+01:00</lastmod>
     <priority>1</priority>
     <changefreq>weekly</changefreq>
   </url>
@@ -52,8 +52,8 @@
   
     
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/blog/</loc>
-    <lastmod>2025-10-04T18:40:05+01:00</lastmod>
+    <loc>http://localhost:4000/blog/</loc>
+    <lastmod>2025-10-14T19:04:05+01:00</lastmod>
     <priority>1</priority>
     <changefreq>weekly</changefreq>
   </url>
@@ -63,8 +63,8 @@
   
     
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/</loc>
-    <lastmod>2025-10-04T18:40:05+01:00</lastmod>
+    <loc>http://localhost:4000/</loc>
+    <lastmod>2025-10-14T19:04:05+01:00</lastmod>
     <priority>1</priority>
     <changefreq>weekly</changefreq>
   </url>
@@ -82,35 +82,35 @@
 
 
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/programming/2025/08/02/revamping-my-portfolio-2025.html</loc>
+    <loc>http://localhost:4000/programming/2025/08/02/revamping-my-portfolio-2025.html</loc>
     <lastmod>2025-08-02T00:00:00+01:00</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/career/2025/03/09/a-day-in-my-life-as-a-student.html</loc>
+    <loc>http://localhost:4000/career/2025/03/09/a-day-in-my-life-as-a-student.html</loc>
     <lastmod>2025-03-09T00:00:00+00:00</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/programming/2025/03/05/how-i-started-programming.html</loc>
+    <loc>http://localhost:4000/programming/2025/03/05/how-i-started-programming.html</loc>
     <lastmod>2025-03-05T00:00:00+00:00</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/thoughts-and-opinions/2025/03/02/review-of-aws-educate.html</loc>
+    <loc>http://localhost:4000/thoughts-and-opinions/2025/03/02/review-of-aws-educate.html</loc>
     <lastmod>2025-03-02T00:00:00+00:00</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/thoughts-and-opinions/2025/03/02/how-my-opinions-on-ai-changed.html</loc>
+    <loc>http://localhost:4000/thoughts-and-opinions/2025/03/02/how-my-opinions-on-ai-changed.html</loc>
     <lastmod>2025-03-02T00:00:00+00:00</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
@@ -119,106 +119,106 @@
 
 
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/portfolio/sololearn-certificates/</loc>
-    <lastmod>2025-10-04T18:40:05+01:00</lastmod>
+    <loc>http://localhost:4000/portfolio/sololearn-certificates/</loc>
+    <lastmod>2025-10-14T19:04:05+01:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/portfolio/my-idea-awards/</loc>
-    <lastmod>2025-10-04T18:40:05+01:00</lastmod>
+    <loc>http://localhost:4000/portfolio/my-idea-awards/</loc>
+    <lastmod>2025-10-14T19:04:05+01:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/portfolio/online-world-unit/</loc>
-    <lastmod>2025-10-04T18:40:05+01:00</lastmod>
+    <loc>http://localhost:4000/portfolio/online-world-unit/</loc>
+    <lastmod>2025-10-14T19:04:05+01:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/portfolio/technology-systems-unit/</loc>
-    <lastmod>2025-10-04T18:40:05+01:00</lastmod>
+    <loc>http://localhost:4000/portfolio/technology-systems-unit/</loc>
+    <lastmod>2025-10-14T19:04:05+01:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/portfolio/web-development-unit/</loc>
-    <lastmod>2025-10-04T18:40:05+01:00</lastmod>
+    <loc>http://localhost:4000/portfolio/web-development-unit/</loc>
+    <lastmod>2025-10-14T19:04:05+01:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/portfolio/networking-unit/</loc>
-    <lastmod>2025-10-04T18:40:05+01:00</lastmod>
+    <loc>http://localhost:4000/portfolio/networking-unit/</loc>
+    <lastmod>2025-10-14T19:04:05+01:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/portfolio/digital-graphics-unit/</loc>
-    <lastmod>2025-10-04T18:40:05+01:00</lastmod>
+    <loc>http://localhost:4000/portfolio/digital-graphics-unit/</loc>
+    <lastmod>2025-10-14T19:04:05+01:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/portfolio/btec-first-foundation-in-tech/</loc>
-    <lastmod>2025-10-04T18:40:05+01:00</lastmod>
+    <loc>http://localhost:4000/portfolio/btec-first-foundation-in-tech/</loc>
+    <lastmod>2025-10-14T19:04:05+01:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/portfolio/my-ethical-hacking-lab-set-up/</loc>
-    <lastmod>2025-10-04T18:40:05+01:00</lastmod>
+    <loc>http://localhost:4000/portfolio/my-ethical-hacking-lab-set-up/</loc>
+    <lastmod>2025-10-14T19:04:05+01:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/portfolio/ctf-write-ups/</loc>
-    <lastmod>2025-10-04T18:40:05+01:00</lastmod>
+    <loc>http://localhost:4000/portfolio/ctf-write-ups/</loc>
+    <lastmod>2025-10-14T19:04:05+01:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/portfolio/aws-educate-badges/</loc>
-    <lastmod>2025-10-04T18:40:05+01:00</lastmod>
+    <loc>http://localhost:4000/portfolio/aws-educate-badges/</loc>
+    <lastmod>2025-10-14T19:04:05+01:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/portfolio/remote-command-execution/</loc>
-    <lastmod>2025-10-04T18:40:05+01:00</lastmod>
+    <loc>http://localhost:4000/portfolio/remote-command-execution/</loc>
+    <lastmod>2025-10-14T19:04:05+01:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/portfolio/cryptoforge/</loc>
-    <lastmod>2025-10-04T18:40:05+01:00</lastmod>
+    <loc>http://localhost:4000/portfolio/cryptoforge/</loc>
+    <lastmod>2025-10-14T19:04:05+01:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/portfolio/port-scanner/</loc>
-    <lastmod>2025-10-04T18:40:05+01:00</lastmod>
+    <loc>http://localhost:4000/portfolio/port-scanner/</loc>
+    <lastmod>2025-10-14T19:04:05+01:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>http://localhost:4000/Kieran-Pritchard-Portfolio/portfolio/linktree/</loc>
-    <lastmod>2025-10-04T18:40:05+01:00</lastmod>
+    <loc>http://localhost:4000/portfolio/linktree/</loc>
+    <lastmod>2025-10-14T19:04:05+01:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>

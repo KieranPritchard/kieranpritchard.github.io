@@ -357,9 +357,17 @@ function checkAndSetBackgroundFromImage(container, img) {
     const aspectRatio = img.naturalWidth / img.naturalHeight;
     const targetRatio = 16 / 9; // 16:9 aspect ratio
     const tolerance = 0.5; // Allow for some variation
-    
+
     // Determine height based on viewport size
-    const height = window.innerWidth > 1400 ? '250px' : '185px';
+    let height;
+    if (window.innerWidth >= 2560) {
+        // 4K screens
+        height = '400px';
+    } else if (window.innerWidth > 1400) {
+        height = '250px';
+    } else {
+        height = '185px';
+    }
 
     // Check if image is approximately 16:9
     if (Math.abs(aspectRatio - targetRatio) <= tolerance) {
@@ -367,11 +375,12 @@ function checkAndSetBackgroundFromImage(container, img) {
         img.style.setProperty('width', '100%', 'important');
         img.style.setProperty('height', height, 'important');
         img.style.setProperty('object-fit', 'cover', 'important');
+
         // Still apply background color analysis for 16:9 images
         setBackgroundFromImage(container, img);
         return;
     }
-    
+
     // For non-16:9 images, proceed with normal background color analysis
     setBackgroundFromImage(container, img);
 }

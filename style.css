@@ -1247,7 +1247,17 @@ table, th, td {
 /* ========================================
    RESPONSIVE DESIGN
    ======================================== */
-/* Large Desktop (1400px and up) */
+@media screen and (min-width: 2560px) {
+    .recent-project-card-img{
+        height: 400px;
+    }
+
+    .project-page-project-card-image{
+        height: 400px !important;
+    }
+}
+
+   /* Large Desktop (1400px and up) */
 @media screen and (min-width: 1400px) {
     .recent-blog-post {
         margin-top: 0.75%;
