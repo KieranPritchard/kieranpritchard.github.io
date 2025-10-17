@@ -1259,7 +1259,7 @@ table, th, td {
     h3{ font-size: 1.16vw !important;}
 
     ul{ color: var(--base-text);}
-    li{ font-family: "Source Code Pro"; font-size: 0.83vw;}
+    li{ font-family: "Source Code Pro"; font-size: 0.83vw !important;}
 
     p{
         font-size: 0.83vw !important;
@@ -1273,20 +1273,20 @@ table, th, td {
     b{ font-family: "Source Code Pro"; }
 
     blockquote{
-        font-size: 2.5vw;
+        font-size: 2.5vw !important;
         font-family: "Source Code Pro";
     }
 
     .contact-footer-list-item{
-        font-size: 0.75vw;
+        font-size: 0.75vw !important;
     }
     
     .recent-project-card-img{
-        height: 400px;
+        height: 400px !important;
     }
 
     .recent-project-card-button{
-        height: 85px;
+        height: 85px !important;
     }
 
     .project-page-project-card-image{
@@ -1294,7 +1294,7 @@ table, th, td {
     }
 
     .recent-blog-post-title{
-        font-size: 1.5vw;
+        font-size: 1.5vw !important;
     }
 
     .recent-blog-post-text{
@@ -1302,7 +1302,7 @@ table, th, td {
     }
 
     .recent-project-card-button{
-        font-size: 0.85vw;
+        font-size: 0.85vw !important;
     }
 
     .background-odd{
@@ -1312,15 +1312,15 @@ table, th, td {
 
     .background-even{
         padding-left: 2.5% !important;
-        padding-right: 2.5% !;
+        padding-right: 2.5% !important;
     }
 
     .main-button{
-        font-size: 1vw;
+        font-size: 1vw !important;
     }
 
     .secondary-button{
-        font-size: 1vw;
+        font-size: 1vw !important;
     }
 
     .custom-pills .nav-link {
