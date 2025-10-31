@@ -768,3 +768,13 @@ window.addEventListener('load', function() {
         });
     });
 });
+
+// Initializes all popovers on the page
+document.addEventListener("DOMContentLoaded", function () {
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+        const popoverList = [...popoverTriggerList].map(
+            popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl, {
+            placement: 'right'
+        })
+    );
+});
