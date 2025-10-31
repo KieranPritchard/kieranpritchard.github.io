@@ -411,6 +411,15 @@ NAVIGATION
     padding-top: 10%;
 }
 
+.skill-btn{
+    all: unset
+}
+
+.skill-btn:hover{
+    color:  var(--hover-highlight);
+    transition: all 0.25s;
+}
+
 #About-Me-Page-Image{
     height: auto;
     width: 100%;
