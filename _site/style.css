@@ -1027,6 +1027,61 @@ footer:before {
 /* ========================================
    COMPONENTS
    ======================================== */
+/*Popovers*/
+
+/* Base popover styling */
+.popover {
+    background-color: var(--background-secondary);
+    color: var(--base-text);
+    border: 2px solid var(--border);
+
+    /* overrides bootstrap colours*/
+    --bs-popover-bg: var(--background-secondary);
+    --bs-popover-border-color: var(--border);
+    --bs-popover-arrow-border: var(--border);
+    --bs-popover-arrow-bg: var(--background-secondary);
+}
+
+.popover-header {
+  background-color: var(--background-secondary);
+  color: var(--base-text);
+}
+
+/* The arrow container itself */
+.popover .popover-arrow {
+  width: 1rem;
+  height: 0.5rem;
+}
+
+/* Fix for all directions – use the border for ::before (outer) and background for ::after (inner) */
+.popover.bs-popover-top > .popover-arrow::before {
+  border-top-color: var(--border) !important;
+}
+.popover.bs-popover-top > .popover-arrow::after {
+  border-top-color: var(--background-secondary) !important;
+}
+
+.popover.bs-popover-bottom > .popover-arrow::before {
+  border-bottom-color: var(--border) !important;
+}
+.popover.bs-popover-bottom > .popover-arrow::after {
+  border-bottom-color: var(--background-secondary) !important;
+}
+
+.popover.bs-popover-start > .popover-arrow::before {
+  border-left-color: var(--border) !important;
+}
+.popover.bs-popover-start > .popover-arrow::after {
+  border-left-color: var(--background-secondary) !important;
+}
+
+.popover.bs-popover-end > .popover-arrow::before {
+  border-right-color: var(--border) !important;
+}
+.popover.bs-popover-end > .popover-arrow::after {
+  border-right-color: var(--background-secondary) !important;
+}
+
 /* Timeline */
 .timeline {
     position: relative;
