@@ -58,7 +58,7 @@ body{
 }
 
 /* Typography */
-h1, h2, h3, h5{
+h1, h2, h3, h4, h5{
     font-family: "Red Hat Display";
     color: var(--main-accent) !important;
 }
@@ -251,7 +251,7 @@ NAVIGATION
     height: auto;
     width: 100%;
     max-width: 90%;
-    border-radius: 25%;
+    border-radius: 100%;
 }
 
 #About-Me-Home-Page-Image{
@@ -532,10 +532,10 @@ NAVIGATION
     width: 100%;
     padding: 3.5%;
     border-radius: 25px;
-    background-color: var(--main-accent);
-    border-color: var(--border);
-    color: var(--border);
-    border-style: none;
+    background-color: var(--background-even) !important;
+    border-color: var(--main-accent);
+    color: var(--main-accent);
+    border-style: solid;
     font-family: "Source Code Pro"
 }
 
@@ -1471,8 +1471,8 @@ table, th, td {
         height: auto;
         width: 100%;
         padding-top: 0%;
-        max-width: 75%;
-        border-radius: 25%;
+        padding-bottom: 2.5%;
+        max-width: 70%;
     }
 
     #tagline{
@@ -1484,6 +1484,11 @@ table, th, td {
         padding: 0;
         padding-top: 2%;
         font-size: 3.5vw !important;
+    }
+
+    #About-Me-Home-Page-Image{
+        max-width: 75%;
+        padding-bottom: 2.5%;
     }
 
     .educational-history-card{padding: 2%;}

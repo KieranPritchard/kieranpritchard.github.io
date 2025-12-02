@@ -493,6 +493,7 @@ blockquote{
     text-align: left;
     padding-top: 2.5%;
     font-family: "Red Hat Display" !important;
+    color: var(--main-accent) !important
 }
 
 .sidebar-recent-blog-title{
