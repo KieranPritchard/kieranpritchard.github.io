@@ -383,11 +383,6 @@ NAVIGATION
 /* ========================================
    ABOUT PAGE
    ======================================== */
-.about-page-heading{
-    padding-top: 2.5%;
-    font-size: 1.5vw !important;
-}
-
 #typewriter {
     border-right: 2px solid #000;
     white-space: pre-line; /* preserves \n and still wraps text */
@@ -403,10 +398,6 @@ NAVIGATION
 
 #typewriter {
     animation: blink 0.7s step-end infinite;
-}
-
-#about-page-skills-section-text{
-    padding-top: 10%;
 }
 
 .skill-btn{
@@ -463,7 +454,6 @@ NAVIGATION
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     background-color: var(--background-secondary);
     border-radius: 25px;
-    padding: 0.75% 1%;
     margin-bottom: 2.5%;
     box-shadow: 0px 0px 20px 1px var(--main-accent);
 }
@@ -762,9 +752,6 @@ footer {
 
 .project-page-project-card{
     background-color: var(--background-secondary);
-    margin-top: 2.5%;
-    margin-bottom: 4.5%;
-    padding: 4.5%;
     border-radius: 25px;
     box-shadow: 0px 0px 20px 0.1px var(--main-accent);
 }
@@ -1478,11 +1465,6 @@ table, th, td {
     }
 
     /* About Page */
-    .about-page-heading {
-        padding: 0;
-        padding-top: 2%;
-        font-size: 3.5vw !important;
-    }
 
     #About-Me-Home-Page-Image{
         max-width: 75%;
@@ -1531,7 +1513,6 @@ table, th, td {
 
     /* Blog post spacing on mobile */
     .blog-post {
-        padding: 4% 0;
         margin-bottom: 1rem;
     }
 

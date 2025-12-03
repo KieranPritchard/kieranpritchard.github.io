@@ -25,7 +25,7 @@ permalink: /blog/
                     <div>
                         <h3 class="sidebar-title">Recent Blogs</h3>
                         {% for post in site.posts limit:3 %}
-                        <div class="row sidebar-blog-post-padding">
+                        <div class="row py-3 px-0">
                             <div class="col-3 w-25 d-none d-md-block">
                                 <img class="sidebar-recent-blog-image recent-blog-image-{{ forloop.index }} d-none d-md-block" src="{{ post.thumbnail | relative_url }}" alt="{{ post.thumbnail_alt }}">
                             </div>
@@ -40,7 +40,7 @@ permalink: /blog/
 
             <!-- Blog posts list -->
             <div class="col-sm-8">
-                <ul id="blog-list">
+                <ul id="blog-list py-4">
                     {% for post in site.posts %}
                     <li class="{{ post.topic_class }}">
                         <div class="blog-post row">
