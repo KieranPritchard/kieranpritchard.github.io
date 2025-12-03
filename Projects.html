@@ -8,7 +8,7 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
 <!-- Intro section for projects page-->
 
 <div class="background-odd">
-    <div class="container-fluid align-content-center content-container">
+    <div class="h-100 align-content-center container">
         <h2 class="text-center">Welcome To My Projects</h2>
         <p>
             On this page you will find a curated collection of work which showcases my various skills.
@@ -23,8 +23,9 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
 
 <div class="background-even auto-background-md auto-background-sm">
     <h2 class="text-center">Recent Projects</h2>
-    <!-- Cards for recent Projects-->
-    <div class="row h-75 align-content-center">
+
+    <div class="row h-100 align-items-center">
+
         {% assign sorted_portfolio = site.portfolio | sort: 'date' | reverse %}
         {% assign main_projects = '' | split: '' %}
         {% for project in sorted_portfolio %}
@@ -33,8 +34,9 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
                 {% assign main_projects = main_projects | push: project %}
             {% endif %}
         {% endfor %}
+
         {% for project in main_projects limit:3 %}
-            <div class="col-lg">
+            <div class="col-md d-flex justify-content-center">
                 <div class="recent-project-card text-center">
                     <div class="recent-project-card-img-background">
                         <img class="recent-project-card-img" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
@@ -42,7 +44,9 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
                     <div>
                         <h5 class="recent-project-card-title">{{ project.title }}</h5>
                         <p class="recent-project-card-text">{{ project.description }}</p>
-                        <a href="{{ project.url | relative_url }}"><button class="recent-project-card-button">Find Out More</button></a>
+                        <a href="{{ project.url | relative_url }}">
+                            <button class="recent-project-card-button">Find Out More</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -51,10 +55,10 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
 </div>
 
 <div class="background-odd background-auto auto-background-sm">
-    <h2 class="text-center">Overview of Work</h2>
+    <h2 class="text-center mb-3">Overview of Work</h2>
 
     <!-- Tabs Navigation -->
-    <div class="custom-pills">
+    <div class="custom-pills mb-3">
         <ul class="nav nav-pills nav-justified mb-2" id="nav-tab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">All</button>
@@ -83,20 +87,20 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
             {% if path_parts.size == 2 %}
             <div class="col">
                 <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="{{ project.url | relative_url }}">{{ project.title }}</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    {% for topic in project.topics %}
-                        <span class="topic">{{ topic }}</span>
-                    {% endfor %}
-                    </p>
-                </div>
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="{{ project.url | relative_url }}">{{ project.title }}</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        {% for topic in project.topics %}
+                            <span class="topic">{{ topic }}</span>
+                        {% endfor %}
+                        </p>
+                    </div>
                 </div>
             </div>
             {% endif %}
@@ -113,20 +117,20 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
             {% if path_parts.size == 2 and project.topics contains "Cyber Security" %}
             <div class="col">
                 <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="{{ project.url | relative_url }}">{{ project.title }}</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    {% for topic in project.topics %}
-                        <span class="topic">{{ topic }}</span>
-                    {% endfor %}
-                    </p>
-                </div>
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="{{ project.url | relative_url }}">{{ project.title }}</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        {% for topic in project.topics %}
+                            <span class="topic">{{ topic }}</span>
+                        {% endfor %}
+                        </p>
+                    </div>
                 </div>
             </div>
             {% endif %}
@@ -143,20 +147,20 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
             {% if path_parts.size == 2 and project.topics contains "Certificates" %}
             <div class="col">
                 <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="{{ project.url | relative_url }}">{{ project.title }}</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    {% for topic in project.topics %}
-                        <span class="topic">{{ topic }}</span>
-                    {% endfor %}
-                    </p>
-                </div>
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="{{ project.url | relative_url }}">{{ project.title }}</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        {% for topic in project.topics %}
+                            <span class="topic">{{ topic }}</span>
+                        {% endfor %}
+                        </p>
+                    </div>
                 </div>
             </div>
             {% endif %}
@@ -173,20 +177,20 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
             {% if path_parts.size == 2 and project.topics contains "Programming" %}
             <div class="col">
                 <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="{{ project.url | relative_url }}">{{ project.title }}</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    {% for topic in project.topics %}
-                        <span class="topic">{{ topic }}</span>
-                    {% endfor %}
-                    </p>
-                </div>
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="{{ project.url | relative_url }}">{{ project.title }}</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        {% for topic in project.topics %}
+                            <span class="topic">{{ topic }}</span>
+                        {% endfor %}
+                        </p>
+                    </div>
                 </div>
             </div>
             {% endif %}

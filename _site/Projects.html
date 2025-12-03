@@ -64,7 +64,7 @@
     <!-- Intro section for projects page-->
 
 <div class="background-odd">
-    <div class="container-fluid align-content-center content-container">
+    <div class="h-100 align-content-center container">
         <h2 class="text-center">Welcome To My Projects</h2>
         <p>
             On this page you will find a curated collection of work which showcases my various skills.
@@ -79,13 +79,15 @@
 
 <div class="background-even auto-background-md auto-background-sm">
     <h2 class="text-center">Recent Projects</h2>
-    <!-- Cards for recent Projects-->
-    <div class="row h-75 align-content-center">
+
+    <div class="row h-100 align-items-center">
+
         
         
         
+
         
-            <div class="col-lg">
+            <div class="col-md d-flex justify-content-center">
                 <div class="recent-project-card text-center">
                     <div class="recent-project-card-img-background">
                         <img class="recent-project-card-img" src="/res/Icons/portfolio-icons/Linknest_Icon.webp" alt="Linktree">
@@ -93,12 +95,14 @@
                     <div>
                         <h5 class="recent-project-card-title">Linktree</h5>
                         <p class="recent-project-card-text">A clean, responsive Linktree-style webpage built with ReactJS and Tailwind CSS. This project centralizes social media and important links in one customizable hub, featuring reusable components, modern frontend practices, and easy scalability for personal or professional use. Perfect for anyone looking to create a personalized, stylish, and easy-to-maintain digital link hub.</p>
-                        <a href="/portfolio/linktree/"><button class="recent-project-card-button">Find Out More</button></a>
+                        <a href="/portfolio/linktree/">
+                            <button class="recent-project-card-button">Find Out More</button>
+                        </a>
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg">
+            <div class="col-md d-flex justify-content-center">
                 <div class="recent-project-card text-center">
                     <div class="recent-project-card-img-background">
                         <img class="recent-project-card-img" src="/res/Icons/portfolio-icons/Port_Scanner_Icon.webp" alt="Port Scanner">
@@ -106,12 +110,14 @@
                     <div>
                         <h5 class="recent-project-card-title">Port Scanner</h5>
                         <p class="recent-project-card-text">An overview of my Python port scanner built with the socket module, showcasing my learning in network programming and debugging. The project demonstrates scanning common and full port ranges with real-time results, emphasizes ethical use, and includes clear usage instructions. It highlights my practical skills in Python, cybersecurity fundamentals with a focus on ethical hacking.</p>
-                        <a href="/portfolio/port-scanner/"><button class="recent-project-card-button">Find Out More</button></a>
+                        <a href="/portfolio/port-scanner/">
+                            <button class="recent-project-card-button">Find Out More</button>
+                        </a>
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg">
+            <div class="col-md d-flex justify-content-center">
                 <div class="recent-project-card text-center">
                     <div class="recent-project-card-img-background">
                         <img class="recent-project-card-img" src="/res/Icons/portfolio-icons/Cryptoforge_Icon.webp" alt="Cryptoforge">
@@ -119,7 +125,9 @@
                     <div>
                         <h5 class="recent-project-card-title">Cryptoforge</h5>
                         <p class="recent-project-card-text">An overview of my Python-based cryptography utility, Cryptoforge, built with the cryptography library. The project provides a command-line interface for encryption, decryption, hashing, and digital signatures, with simplified commands compared to OpenSSL. It highlights my learning in key management, algorithm implementation, and secure data handling, while reinforcing practical skills in Python and applied cryptography.</p>
-                        <a href="/portfolio/cryptoforge/"><button class="recent-project-card-button">Find Out More</button></a>
+                        <a href="/portfolio/cryptoforge/">
+                            <button class="recent-project-card-button">Find Out More</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -128,10 +136,10 @@
 </div>
 
 <div class="background-odd background-auto auto-background-sm">
-    <h2 class="text-center">Overview of Work</h2>
+    <h2 class="text-center mb-3">Overview of Work</h2>
 
     <!-- Tabs Navigation -->
-    <div class="custom-pills">
+    <div class="custom-pills mb-3">
         <ul class="nav nav-pills nav-justified mb-2" id="nav-tab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">All</button>
@@ -160,46 +168,22 @@
             
             <div class="col">
                 <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Linknest_Icon.webp" alt="Linktree">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="/portfolio/linktree/">Linktree</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    
-                        <span class="topic">Programming</span>
-                    
-                        <span class="topic">Social-Media</span>
-                    
-                    </p>
-                </div>
-                </div>
-            </div>
-            
-            
-            
-            
-            <div class="col">
-                <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Port_Scanner_Icon.webp" alt="Port Scanner">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="/portfolio/port-scanner/">Port Scanner</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    
-                        <span class="topic">Cyber Security</span>
-                    
-                        <span class="topic">Programming</span>
-                    
-                    </p>
-                </div>
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Linknest_Icon.webp" alt="Linktree">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="/portfolio/linktree/">Linktree</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        
+                            <span class="topic">Programming</span>
+                        
+                            <span class="topic">Social-Media</span>
+                        
+                        </p>
+                    </div>
                 </div>
             </div>
             
@@ -208,46 +192,22 @@
             
             <div class="col">
                 <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Cryptoforge_Icon.webp" alt="Cryptoforge">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="/portfolio/cryptoforge/">Cryptoforge</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    
-                        <span class="topic">Cyber Security</span>
-                    
-                        <span class="topic">Programming</span>
-                    
-                    </p>
-                </div>
-                </div>
-            </div>
-            
-            
-            
-            
-            <div class="col">
-                <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Remote_Command_Execution_Icon.webp" alt="Remote Command Execution">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="/portfolio/remote-command-execution/">Remote Command Execution</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    
-                        <span class="topic">Cyber Security</span>
-                    
-                        <span class="topic">Programming</span>
-                    
-                    </p>
-                </div>
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Port_Scanner_Icon.webp" alt="Port Scanner">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="/portfolio/port-scanner/">Port Scanner</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        
+                            <span class="topic">Cyber Security</span>
+                        
+                            <span class="topic">Programming</span>
+                        
+                        </p>
+                    </div>
                 </div>
             </div>
             
@@ -256,24 +216,22 @@
             
             <div class="col">
                 <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/aws-educate-badges-icon.webp" alt="AWS Educate Badges">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="/portfolio/aws-educate-badges/">AWS Educate Badges</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    
-                        <span class="topic">Cloud Computing</span>
-                    
-                        <span class="topic">AWS</span>
-                    
-                        <span class="topic">Certificates</span>
-                    
-                    </p>
-                </div>
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Cryptoforge_Icon.webp" alt="Cryptoforge">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="/portfolio/cryptoforge/">Cryptoforge</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        
+                            <span class="topic">Cyber Security</span>
+                        
+                            <span class="topic">Programming</span>
+                        
+                        </p>
+                    </div>
                 </div>
             </div>
             
@@ -282,46 +240,22 @@
             
             <div class="col">
                 <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/CTF-Write-Ups-Icon.webp" alt="CTF Write-Ups">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="/portfolio/ctf-write-ups/">CTF Write-Ups</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    
-                        <span class="topic">Cyber Security</span>
-                    
-                        <span class="topic">Ethical-Hacking</span>
-                    
-                    </p>
-                </div>
-                </div>
-            </div>
-            
-            
-            
-            
-            <div class="col">
-                <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/My_Ethical_Hacking_Lab_Setup_Icon.webp" alt="My Ethical Hacking Lab Setup">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="/portfolio/my-ethical-hacking-lab-set-up/">My Ethical Hacking Lab Setup</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    
-                        <span class="topic">Ethical-Hacking</span>
-                    
-                        <span class="topic">Cyber Security</span>
-                    
-                    </p>
-                </div>
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Remote_Command_Execution_Icon.webp" alt="Remote Command Execution">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="/portfolio/remote-command-execution/">Remote Command Execution</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        
+                            <span class="topic">Cyber Security</span>
+                        
+                            <span class="topic">Programming</span>
+                        
+                        </p>
+                    </div>
                 </div>
             </div>
             
@@ -330,24 +264,98 @@
             
             <div class="col">
                 <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Digital-Logo-BPC.webp" alt="BTEC First Foundation in Digital">
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/aws-educate-badges-icon.webp" alt="AWS Educate Badges">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="/portfolio/aws-educate-badges/">AWS Educate Badges</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        
+                            <span class="topic">Cloud Computing</span>
+                        
+                            <span class="topic">AWS</span>
+                        
+                            <span class="topic">Certificates</span>
+                        
+                        </p>
+                    </div>
                 </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="/portfolio/btec-first-foundation-in-tech/">BTEC First Foundation in Digital</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    
-                        <span class="topic">Education</span>
-                    
-                        <span class="topic">Technology</span>
-                    
-                        <span class="topic">College</span>
-                    
-                    </p>
+            </div>
+            
+            
+            
+            
+            <div class="col">
+                <div class="project-page-project-card">
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/CTF-Write-Ups-Icon.webp" alt="CTF Write-Ups">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="/portfolio/ctf-write-ups/">CTF Write-Ups</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        
+                            <span class="topic">Cyber Security</span>
+                        
+                            <span class="topic">Ethical-Hacking</span>
+                        
+                        </p>
+                    </div>
                 </div>
+            </div>
+            
+            
+            
+            
+            <div class="col">
+                <div class="project-page-project-card">
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/My_Ethical_Hacking_Lab_Setup_Icon.webp" alt="My Ethical Hacking Lab Setup">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="/portfolio/my-ethical-hacking-lab-set-up/">My Ethical Hacking Lab Setup</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        
+                            <span class="topic">Ethical-Hacking</span>
+                        
+                            <span class="topic">Cyber Security</span>
+                        
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            
+            <div class="col">
+                <div class="project-page-project-card">
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Digital-Logo-BPC.webp" alt="BTEC First Foundation in Digital">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="/portfolio/btec-first-foundation-in-tech/">BTEC First Foundation in Digital</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        
+                            <span class="topic">Education</span>
+                        
+                            <span class="topic">Technology</span>
+                        
+                            <span class="topic">College</span>
+                        
+                        </p>
+                    </div>
                 </div>
             </div>
             
@@ -371,24 +379,24 @@
             
             <div class="col">
                 <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/IDEA-Logo.webp" alt="iDEA Awards">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="/portfolio/my-idea-awards/">iDEA Awards</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    
-                        <span class="topic">Education</span>
-                    
-                        <span class="topic">Certificates</span>
-                    
-                        <span class="topic">Digital</span>
-                    
-                    </p>
-                </div>
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/IDEA-Logo.webp" alt="iDEA Awards">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="/portfolio/my-idea-awards/">iDEA Awards</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        
+                            <span class="topic">Education</span>
+                        
+                            <span class="topic">Certificates</span>
+                        
+                            <span class="topic">Digital</span>
+                        
+                        </p>
+                    </div>
                 </div>
             </div>
             
@@ -397,22 +405,22 @@
             
             <div class="col">
                 <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Sololearn-Logo.webp" alt="SoloLearn Certificates">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="/portfolio/sololearn-certificates/">SoloLearn Certificates</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    
-                        <span class="topic">Programming</span>
-                    
-                        <span class="topic">Certificates</span>
-                    
-                    </p>
-                </div>
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Sololearn-Logo.webp" alt="SoloLearn Certificates">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="/portfolio/sololearn-certificates/">SoloLearn Certificates</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        
+                            <span class="topic">Programming</span>
+                        
+                            <span class="topic">Certificates</span>
+                        
+                        </p>
+                    </div>
                 </div>
             </div>
             
@@ -432,46 +440,22 @@
             
             <div class="col">
                 <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Port_Scanner_Icon.webp" alt="Port Scanner">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="/portfolio/port-scanner/">Port Scanner</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    
-                        <span class="topic">Cyber Security</span>
-                    
-                        <span class="topic">Programming</span>
-                    
-                    </p>
-                </div>
-                </div>
-            </div>
-            
-            
-            
-            
-            <div class="col">
-                <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Cryptoforge_Icon.webp" alt="Cryptoforge">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="/portfolio/cryptoforge/">Cryptoforge</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    
-                        <span class="topic">Cyber Security</span>
-                    
-                        <span class="topic">Programming</span>
-                    
-                    </p>
-                </div>
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Port_Scanner_Icon.webp" alt="Port Scanner">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="/portfolio/port-scanner/">Port Scanner</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        
+                            <span class="topic">Cyber Security</span>
+                        
+                            <span class="topic">Programming</span>
+                        
+                        </p>
+                    </div>
                 </div>
             </div>
             
@@ -480,22 +464,46 @@
             
             <div class="col">
                 <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Remote_Command_Execution_Icon.webp" alt="Remote Command Execution">
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Cryptoforge_Icon.webp" alt="Cryptoforge">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="/portfolio/cryptoforge/">Cryptoforge</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        
+                            <span class="topic">Cyber Security</span>
+                        
+                            <span class="topic">Programming</span>
+                        
+                        </p>
+                    </div>
                 </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="/portfolio/remote-command-execution/">Remote Command Execution</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    
-                        <span class="topic">Cyber Security</span>
-                    
-                        <span class="topic">Programming</span>
-                    
-                    </p>
-                </div>
+            </div>
+            
+            
+            
+            
+            <div class="col">
+                <div class="project-page-project-card">
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Remote_Command_Execution_Icon.webp" alt="Remote Command Execution">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="/portfolio/remote-command-execution/">Remote Command Execution</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        
+                            <span class="topic">Cyber Security</span>
+                        
+                            <span class="topic">Programming</span>
+                        
+                        </p>
+                    </div>
                 </div>
             </div>
             
@@ -507,22 +515,22 @@
             
             <div class="col">
                 <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/CTF-Write-Ups-Icon.webp" alt="CTF Write-Ups">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="/portfolio/ctf-write-ups/">CTF Write-Ups</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    
-                        <span class="topic">Cyber Security</span>
-                    
-                        <span class="topic">Ethical-Hacking</span>
-                    
-                    </p>
-                </div>
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/CTF-Write-Ups-Icon.webp" alt="CTF Write-Ups">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="/portfolio/ctf-write-ups/">CTF Write-Ups</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        
+                            <span class="topic">Cyber Security</span>
+                        
+                            <span class="topic">Ethical-Hacking</span>
+                        
+                        </p>
+                    </div>
                 </div>
             </div>
             
@@ -531,22 +539,22 @@
             
             <div class="col">
                 <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/My_Ethical_Hacking_Lab_Setup_Icon.webp" alt="My Ethical Hacking Lab Setup">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="/portfolio/my-ethical-hacking-lab-set-up/">My Ethical Hacking Lab Setup</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    
-                        <span class="topic">Ethical-Hacking</span>
-                    
-                        <span class="topic">Cyber Security</span>
-                    
-                    </p>
-                </div>
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/My_Ethical_Hacking_Lab_Setup_Icon.webp" alt="My Ethical Hacking Lab Setup">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="/portfolio/my-ethical-hacking-lab-set-up/">My Ethical Hacking Lab Setup</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        
+                            <span class="topic">Ethical-Hacking</span>
+                        
+                            <span class="topic">Cyber Security</span>
+                        
+                        </p>
+                    </div>
                 </div>
             </div>
             
@@ -599,24 +607,24 @@
             
             <div class="col">
                 <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/aws-educate-badges-icon.webp" alt="AWS Educate Badges">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="/portfolio/aws-educate-badges/">AWS Educate Badges</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    
-                        <span class="topic">Cloud Computing</span>
-                    
-                        <span class="topic">AWS</span>
-                    
-                        <span class="topic">Certificates</span>
-                    
-                    </p>
-                </div>
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/aws-educate-badges-icon.webp" alt="AWS Educate Badges">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="/portfolio/aws-educate-badges/">AWS Educate Badges</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        
+                            <span class="topic">Cloud Computing</span>
+                        
+                            <span class="topic">AWS</span>
+                        
+                            <span class="topic">Certificates</span>
+                        
+                        </p>
+                    </div>
                 </div>
             </div>
             
@@ -649,24 +657,24 @@
             
             <div class="col">
                 <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/IDEA-Logo.webp" alt="iDEA Awards">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="/portfolio/my-idea-awards/">iDEA Awards</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    
-                        <span class="topic">Education</span>
-                    
-                        <span class="topic">Certificates</span>
-                    
-                        <span class="topic">Digital</span>
-                    
-                    </p>
-                </div>
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/IDEA-Logo.webp" alt="iDEA Awards">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="/portfolio/my-idea-awards/">iDEA Awards</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        
+                            <span class="topic">Education</span>
+                        
+                            <span class="topic">Certificates</span>
+                        
+                            <span class="topic">Digital</span>
+                        
+                        </p>
+                    </div>
                 </div>
             </div>
             
@@ -675,22 +683,22 @@
             
             <div class="col">
                 <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Sololearn-Logo.webp" alt="SoloLearn Certificates">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="/portfolio/sololearn-certificates/">SoloLearn Certificates</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    
-                        <span class="topic">Programming</span>
-                    
-                        <span class="topic">Certificates</span>
-                    
-                    </p>
-                </div>
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Sololearn-Logo.webp" alt="SoloLearn Certificates">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="/portfolio/sololearn-certificates/">SoloLearn Certificates</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        
+                            <span class="topic">Programming</span>
+                        
+                            <span class="topic">Certificates</span>
+                        
+                        </p>
+                    </div>
                 </div>
             </div>
             
@@ -707,46 +715,22 @@
             
             <div class="col">
                 <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Linknest_Icon.webp" alt="Linktree">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="/portfolio/linktree/">Linktree</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    
-                        <span class="topic">Programming</span>
-                    
-                        <span class="topic">Social-Media</span>
-                    
-                    </p>
-                </div>
-                </div>
-            </div>
-            
-            
-            
-            
-            <div class="col">
-                <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Port_Scanner_Icon.webp" alt="Port Scanner">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="/portfolio/port-scanner/">Port Scanner</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    
-                        <span class="topic">Cyber Security</span>
-                    
-                        <span class="topic">Programming</span>
-                    
-                    </p>
-                </div>
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Linknest_Icon.webp" alt="Linktree">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="/portfolio/linktree/">Linktree</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        
+                            <span class="topic">Programming</span>
+                        
+                            <span class="topic">Social-Media</span>
+                        
+                        </p>
+                    </div>
                 </div>
             </div>
             
@@ -755,22 +739,22 @@
             
             <div class="col">
                 <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Cryptoforge_Icon.webp" alt="Cryptoforge">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="/portfolio/cryptoforge/">Cryptoforge</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    
-                        <span class="topic">Cyber Security</span>
-                    
-                        <span class="topic">Programming</span>
-                    
-                    </p>
-                </div>
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Port_Scanner_Icon.webp" alt="Port Scanner">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="/portfolio/port-scanner/">Port Scanner</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        
+                            <span class="topic">Cyber Security</span>
+                        
+                            <span class="topic">Programming</span>
+                        
+                        </p>
+                    </div>
                 </div>
             </div>
             
@@ -779,22 +763,46 @@
             
             <div class="col">
                 <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Remote_Command_Execution_Icon.webp" alt="Remote Command Execution">
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Cryptoforge_Icon.webp" alt="Cryptoforge">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="/portfolio/cryptoforge/">Cryptoforge</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        
+                            <span class="topic">Cyber Security</span>
+                        
+                            <span class="topic">Programming</span>
+                        
+                        </p>
+                    </div>
                 </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="/portfolio/remote-command-execution/">Remote Command Execution</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    
-                        <span class="topic">Cyber Security</span>
-                    
-                        <span class="topic">Programming</span>
-                    
-                    </p>
-                </div>
+            </div>
+            
+            
+            
+            
+            <div class="col">
+                <div class="project-page-project-card">
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Remote_Command_Execution_Icon.webp" alt="Remote Command Execution">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="/portfolio/remote-command-execution/">Remote Command Execution</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        
+                            <span class="topic">Cyber Security</span>
+                        
+                            <span class="topic">Programming</span>
+                        
+                        </p>
+                    </div>
                 </div>
             </div>
             
@@ -833,22 +841,22 @@
             
             <div class="col">
                 <div class="project-page-project-card">
-                <div class="project-page-project-card-image-background">
-                    <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Sololearn-Logo.webp" alt="SoloLearn Certificates">
-                </div>
-                <div>
-                    <h5 class="project-page-project-card-title">
-                    <a class="project-page-project-card-title-link" href="/portfolio/sololearn-certificates/">SoloLearn Certificates</a>
-                    </h5>
-                    <p class="project-page-project-card-text">
-                    Topics:
-                    
-                        <span class="topic">Programming</span>
-                    
-                        <span class="topic">Certificates</span>
-                    
-                    </p>
-                </div>
+                    <div class="project-page-project-card-image-background">
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Sololearn-Logo.webp" alt="SoloLearn Certificates">
+                    </div>
+                    <div>
+                        <h5 class="project-page-project-card-title">
+                        <a class="project-page-project-card-title-link" href="/portfolio/sololearn-certificates/">SoloLearn Certificates</a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                        Topics:
+                        
+                            <span class="topic">Programming</span>
+                        
+                            <span class="topic">Certificates</span>
+                        
+                        </p>
+                    </div>
                 </div>
             </div>
             

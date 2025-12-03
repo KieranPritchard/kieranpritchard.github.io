@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5{
 }
 
 h1{ padding-top: 10%; font-size: 3vw !important;}
-h2{ padding-top: 2.5%; font-size: 2vw !important;}
+h2{ margin-top: 0%; padding-top: 1.5%; font-size: 2vw !important;}
 h3{ font-size: 1.75vw !important;}
 
 ul{ color: var(--base-text);}
@@ -160,9 +160,6 @@ blockquote{
     height: auto !important;
     min-height: auto !important;
 }
-
-/* Content container adjustments */
-.content-container{ height: 85% !important; }
 
 /* ========================================
 NAVIGATION
@@ -321,17 +318,18 @@ NAVIGATION
 }
 
 /* Recent Project Cards */
-.recent-project-card{
+.recent-project-card {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(15px); /* cleaner animation */
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    margin-top: 5%;
+    margin-top: 0; /* IMPORTANT */
     border-radius: 25px;
     padding: 5%;
     box-shadow: 0px 0px 20px 1px var(--main-accent);
+    height: 100%; /* makes all cards equal height */
 }
 
-.recent-project-card.fade-in{
+.recent-project-card.fade-in {
     opacity: 1;
     transform: translateY(0);
 }
