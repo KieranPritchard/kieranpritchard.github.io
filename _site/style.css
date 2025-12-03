@@ -141,11 +141,6 @@ blockquote{
     padding-right: 5%;
 }
 
-.background-auto{
-    height: auto !important;
-    min-height: auto !important;
-}
-
 /* Ensure content doesn't overflow on small viewports */
 .background-auto .container {
     overflow: visible;
