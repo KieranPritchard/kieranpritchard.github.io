@@ -346,9 +346,7 @@ NAVIGATION
 }
 
 .recent-project-card-button{
-    width: 95%;
     height: 50px;
-    border-radius: 15px;
     border-style: solid;
     border-color: var(--main-accent);
     color: var(--main-accent);
