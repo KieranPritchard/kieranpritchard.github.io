@@ -18,8 +18,8 @@ description: "Welcome to Kieran Pritchard's personal portfolio. I'm a Digital Fo
                 </p>
 
                 <div class="d-flex gap-2 justify-content-start">
-                    <a href="{{ '/About.html' | relative_url }}" class="main-button">Learn More</a>
-                    <a class="secondary-button" href="{{ '/res/Kieran_Pritchard_C.V.pdf' | relative_url }}" download="Kieran_Pritchard_C.V.pdf">
+                    <a href="{{ '/About.html' | relative_url }}" class="main-button rounded-4">Learn More</a>
+                    <a class="secondary-button rounded-4" href="{{ '/res/Kieran_Pritchard_C.V.pdf' | relative_url }}" download="Kieran_Pritchard_C.V.pdf">
                         Download C.V
                     </a>
                 </div>
@@ -61,7 +61,7 @@ description: "Welcome to Kieran Pritchard's personal portfolio. I'm a Digital Fo
     <h2 class="text-center">Recent Blogs</h2>
     <div class="d-flex flex-column justify-content-center content-container">
         {% for post in site.posts limit:3 %}
-        <div class="recent-blog-post">
+        <div class="recent-blog-post rounded-4">
             <!-- Blog post -->
             <div class="row">
                 <div class="col-md-2 d-none d-lg-block">
@@ -95,7 +95,7 @@ description: "Welcome to Kieran Pritchard's personal portfolio. I'm a Digital Fo
         {% endfor %}
         {% for project in main_projects limit:3 %}
             <div class="col-md">
-                <div class="recent-project-card text-center">
+                <div class="recent-project-card mt-3 p-4 text-center">
                     <div class="recent-project-card-img-background">
                         <img class="recent-project-card-img" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
                     </div>

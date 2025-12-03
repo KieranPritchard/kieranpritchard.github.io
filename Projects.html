@@ -86,7 +86,7 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
             {% assign path_parts = project.relative_path | split: '/' %}
             {% if path_parts.size == 2 %}
             <div class="col">
-                <div class="project-page-project-card mt-3 p-4">
+                <div class="project-page-project-card rounded-4 mt-3 p-4">
                     <div class="project-page-project-card-image-background">
                         <img class="project-page-project-card-image" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
                     </div>
@@ -97,7 +97,7 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
                         <p class="project-page-project-card-text">
                         Topics:
                         {% for topic in project.topics %}
-                            <span class="topic">{{ topic }}</span>
+                            <span class="topic rounded-pill">{{ topic }}</span>
                         {% endfor %}
                         </p>
                     </div>
@@ -127,7 +127,7 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
                         <p class="project-page-project-card-text">
                         Topics:
                         {% for topic in project.topics %}
-                            <span class="topic">{{ topic }}</span>
+                            <span class="topic rounded-pill">{{ topic }}</span>
                         {% endfor %}
                         </p>
                     </div>
@@ -157,7 +157,7 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
                         <p class="project-page-project-card-text">
                         Topics:
                         {% for topic in project.topics %}
-                            <span class="topic">{{ topic }}</span>
+                            <span class="topic rounded-pill">{{ topic }}</span>
                         {% endfor %}
                         </p>
                     </div>
@@ -187,7 +187,7 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
                         <p class="project-page-project-card-text">
                         Topics:
                         {% for topic in project.topics %}
-                            <span class="topic">{{ topic }}</span>
+                            <span class="topic rounded-pill">{{ topic }}</span>
                         {% endfor %}
                         </p>
                     </div>

@@ -357,14 +357,14 @@ description: "Learn more about Kieran Pritchard, a motivated Digital Foundation 
     </div>
 </div>
 
-<div class="background-even background-auto">
+<div class="background-even background-auto pb-3">
     <h2 class="text-center">My Top Projects</h2>
     <div class="container-fluid">
         <div class="row row-cols-1 row-cols-md-3">
             {% assign top_projects = site.portfolio | sort: 'date' | reverse | where: "featured", true | limit: 6 %}
             {% for project in top_projects %}
             <div class="col-md">
-                <div class="project-page-project-card">
+                <div class="project-page-project-card rounded-4 mt-2 p-4">
                     <div class="project-page-project-card-image-background">
                         {% if project.icon %}
                         <img class="project-page-project-card-image" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
@@ -378,7 +378,7 @@ description: "Learn more about Kieran Pritchard, a motivated Digital Foundation 
                         </h5>
                         <p class="project-page-project-card-text">Topics: 
                             {% for topic in project.topics %}
-                            <span class="topic">{{ topic }}</span>
+                            <span class="topic rounded-pill">{{ topic }}</span>
                             {% endfor %}
                         </p>
                     </div>
@@ -452,7 +452,7 @@ description: "Learn more about Kieran Pritchard, a motivated Digital Foundation 
 <div class="background-even auto-background-sm">
     <h2 class="text-center">Educational History</h2>
     <div class="d-flex flex-column container h-100 justify-content-center">
-        <div class="educational-history-card p-2 pe-3">
+        <div class="educational-history-card rounded-4 p-2 pe-3">
             <h5 class="educational-history-title">Bournemouth & Poole College - T-Level: Digital Software Devlopement</h5>
             <p class="educational-history-date">September 2025 - Present</p>
             <p class="educational-history-date">Topics Covered: </p>
@@ -468,7 +468,7 @@ description: "Learn more about Kieran Pritchard, a motivated Digital Foundation 
             </ul>
         </div>
         
-        <div class="educational-history-card">
+        <div class="educational-history-card rounded-4 p-2 pe-3">
             <h5 class="educational-history-title">Bournemouth & Poole College - T-Level Foundation in Digital</h5>
             <p class="educational-history-date">September 2024 - June 2025</p>
             <p class="educational-history-date">Topics Covered: </p>

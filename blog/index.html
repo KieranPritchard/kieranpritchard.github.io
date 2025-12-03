@@ -15,11 +15,11 @@ permalink: /blog/
                     </div>
                     <div>
                         <h3 class="sidebar-title text-start">Categories</h3>
-                        <input class="sidebar-checkbox" type="checkbox" onclick="blogFilter('topicOne')" id="blog-topic-1">
+                        <input class="sidebar-checkbox rounded-1" type="checkbox" onclick="blogFilter('topicOne')" id="blog-topic-1">
                         <label class="sidebar-labels" for="blog-topic-1">Career</label><br>
-                        <input class="sidebar-checkbox" type="checkbox" onclick="blogFilter('topicTwo')" id="blog-topic-2">
+                        <input class="sidebar-checkbox rounded-1" type="checkbox" onclick="blogFilter('topicTwo')" id="blog-topic-2">
                         <label class="sidebar-labels" for="blog-topic-2">Programming</label><br>
-                        <input class="sidebar-checkbox" type="checkbox" onclick="blogFilter('topicThree')" id="blog-topic-3">
+                        <input class="sidebar-checkbox rounded-1" type="checkbox" onclick="blogFilter('topicThree')" id="blog-topic-3">
                         <label class="sidebar-labels" for="blog-topic-3">Thoughts & Opinions</label><br>
                     </div>
                     <div>
@@ -45,7 +45,7 @@ permalink: /blog/
                     <li class="{{ post.topic_class }}">
                         <div class="blog-post row">
                             <div class="col-sm-3 d-none d-md-block">
-                                <img class="blog-post-image" src="{{ post.thumbnail | relative_url }}" alt="{{ post.thumbnail_alt }}">
+                                <img class="blog-post-image rounded-4" src="{{ post.thumbnail | relative_url }}" alt="{{ post.thumbnail_alt }}">
                             </div>
                             <div class="col-sm-9">
                                 <h3 class="blog-post-title">
