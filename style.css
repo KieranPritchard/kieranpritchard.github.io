@@ -528,7 +528,6 @@ NAVIGATION
 }
 
 .sidebar-title{
-    text-align: left;
     padding-top: 2.5%;
     font-family: "Red Hat Display" !important;
 }
@@ -634,7 +633,6 @@ NAVIGATION
 }
 
 .blog-post-title{ 
-    text-align: left; 
     font-size: 1.30vw !important;
     transition: ease 0.5s;
 }
@@ -941,7 +939,6 @@ footer:before {
 
 /* Post Header */
 .indivual-post-page-title{ 
-    text-align: left; 
     padding-top: 0.5%;
 }
 

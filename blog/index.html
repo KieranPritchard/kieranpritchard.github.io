@@ -14,7 +14,7 @@ permalink: /blog/
                         <input type="text" name="" id="blog-searchbar" placeholder="Search" onkeyup="blogSearch()">
                     </div>
                     <div>
-                        <h3 class="sidebar-title">Categories</h3>
+                        <h3 class="sidebar-title text-start">Categories</h3>
                         <input class="sidebar-checkbox" type="checkbox" onclick="blogFilter('topicOne')" id="blog-topic-1">
                         <label class="sidebar-labels" for="blog-topic-1">Career</label><br>
                         <input class="sidebar-checkbox" type="checkbox" onclick="blogFilter('topicTwo')" id="blog-topic-2">
@@ -23,14 +23,14 @@ permalink: /blog/
                         <label class="sidebar-labels" for="blog-topic-3">Thoughts & Opinions</label><br>
                     </div>
                     <div>
-                        <h3 class="sidebar-title">Recent Blogs</h3>
+                        <h3 class="sidebar-title text-start">Recent Blogs</h3>
                         {% for post in site.posts limit:3 %}
                         <div class="row py-3 px-0">
                             <div class="col-3 w-25 d-none d-md-block">
                                 <img class="sidebar-recent-blog-image recent-blog-image-{{ forloop.index }} d-none d-md-block" src="{{ post.thumbnail | relative_url }}" alt="{{ post.thumbnail_alt }}">
                             </div>
                             <div class="col-9 align-content-center">
-                                <a class="sidebar-recent-blog-title blog-post-title-{{ forloop.index }}" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                                <a class="sidebar-recent-blog-title text-start blog-post-title-{{ forloop.index }}" href="{{ post.url | relative_url }}">{{ post.title }}</a>
                             </div>
                         </div>
                         {% endfor %}
