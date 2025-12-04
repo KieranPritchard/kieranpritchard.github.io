@@ -357,13 +357,6 @@ NAVIGATION
     transition: ease 0.5s;
 }
 
-.recent-projects-image-background{
-    background-color: black;
-    padding: 2.5% 2.5%;
-    display: flex;
-    justify-content: center;
-}
-
 /* ========================================
    ABOUT PAGE
    ======================================== */
@@ -461,26 +454,6 @@ NAVIGATION
 .educational-history-list{
     font-size: 1vw !important;
     margin-left: 4%;
-}
-
-/* Contact Section */
-#about-contact-page-list{
-    padding: 0% !important;
-    display: block;
-    text-align: center;
-}
-
-.about-contact-page-list-item{
-    list-style-type: none;
-    padding-right: 0% !important;
-    margin-left: -10.5% !important;
-    margin-bottom: 3.5%;
-    font-size: 1.25vw;
-}
-
-.about-contact-page-icon-background{
-    margin-right: 2.5%;
-    font-size: 1.5vw;
 }
 
 /* ========================================
@@ -732,7 +705,6 @@ footer {
 
 .project-page-project-card-image-background{
     background-color: black;
-    display: flex;
     justify-content: center;
 }
 
@@ -936,7 +908,6 @@ footer:before {
 
 .indivual-post-page-header-image-background{
     background-color: white;
-    display: flex;
     justify-content: center;
 }
 
@@ -1303,7 +1274,6 @@ table, th, td {
         height: auto;
         width: 100%;
         max-width: 80%;
-        display: flex;
         justify-content: center;
         margin-top: 7.5%;
         margin-left: 7.5%;
@@ -1445,9 +1415,6 @@ table, th, td {
     .educational-history-title { font-size: 3.75vw !important; }
     .educational-history-date { font-size: 2.75vw !important; }
     .educational-history-list { font-size: 2.5vw !important; }
-    .about-contact-page-list { font-size: 6vw !important; }
-    .about-contact-page-list-item { font-size: 4vw; }
-    .about-contact-page-icon-background { font-size: 4vw; }
 
     /* Blog Page */
     #blog-sidebar {
@@ -1510,7 +1477,6 @@ table, th, td {
     /* Project Page */
     .project-page-project-card-image-background {
         background-color: black;
-        display: flex;
         justify-content: center;
     }
 
@@ -1548,7 +1514,6 @@ table, th, td {
 
     .indivual-post-page-header-image-background {
         background-color: white;
-        display: flex;
         justify-content: center;
         margin-bottom: 5%;
     }
