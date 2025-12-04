@@ -87,7 +87,7 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
             {% if path_parts.size == 2 %}
             <div class="col">
                 <div class="project-page-project-card rounded-4 mt-3 p-4">
-                    <div class="project-page-project-card-image-background">
+                    <div class="project-page-project-card-image-background h-100">
                         <img class="project-page-project-card-image" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
                     </div>
                     <div>
@@ -117,7 +117,7 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
             {% if path_parts.size == 2 and project.topics contains "Cyber Security" %}
             <div class="col">
                 <div class="project-page-project-card rounded-4 mt-3 p-4">
-                    <div class="project-page-project-card-image-background">
+                    <div class="project-page-project-card-image-background h-100">
                         <img class="project-page-project-card-image" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
                     </div>
                     <div>
@@ -147,7 +147,7 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
             {% if path_parts.size == 2 and project.topics contains "Certificates" %}
             <div class="col">
                 <div class="project-page-project-card rounded-4 mt-3 p-4">
-                    <div class="project-page-project-card-image-background">
+                    <div class="project-page-project-card-image-background h-100">
                         <img class="project-page-project-card-image" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
                     </div>
                     <div>
@@ -176,8 +176,8 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
             {% assign path_parts = project.relative_path | split: '/' %}
             {% if path_parts.size == 2 and project.topics contains "Programming" %}
             <div class="col">
-                <div class="project-page-project-card rounded-4 mt-3 p-4">
-                    <div class="project-page-project-card-image-background">
+                <div class="project-page-project-card h-100 rounded-4 mt-3 p-4">
+                    <div class="project-page-project-card-image-background h-100">
                         <img class="project-page-project-card-image" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
                     </div>
                     <div>

@@ -9,7 +9,7 @@ permalink: /blog/
         <div class="row">
             <!-- Blog Sidebar -->
             <div class="col-sm-4">
-                <div id="blog-sidebar" class="background-even">
+                <div id="blog-sidebar" class="background-even rounded-3 h-auto">
                     <div class="searchbar-container">
                         <input type="text" name="" id="blog-searchbar" placeholder="Search" onkeyup="blogSearch()">
                     </div>
@@ -27,7 +27,7 @@ permalink: /blog/
                         {% for post in site.posts limit:3 %}
                         <div class="row py-3 px-0">
                             <div class="col-3 w-25 d-none d-md-block">
-                                <img class="sidebar-recent-blog-image recent-blog-image-{{ forloop.index }} d-none d-md-block" src="{{ post.thumbnail | relative_url }}" alt="{{ post.thumbnail_alt }}">
+                                <img class="sidebar-recent-blog-image h-auto recent-blog-image-{{ forloop.index }} d-none d-md-block" src="{{ post.thumbnail | relative_url }}" alt="{{ post.thumbnail_alt }}">
                             </div>
                             <div class="col-9 align-content-center">
                                 <a class="sidebar-recent-blog-title text-start blog-post-title-{{ forloop.index }}" href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -45,7 +45,7 @@ permalink: /blog/
                     <li class="{{ post.topic_class }}">
                         <div class="blog-post row">
                             <div class="col-sm-3 d-none d-md-block">
-                                <img class="blog-post-image rounded-4" src="{{ post.thumbnail | relative_url }}" alt="{{ post.thumbnail_alt }}">
+                                <img class="blog-post-image h-auto rounded-4" src="{{ post.thumbnail | relative_url }}" alt="{{ post.thumbnail_alt }}">
                             </div>
                             <div class="col-sm-9">
                                 <h3 class="blog-post-title">

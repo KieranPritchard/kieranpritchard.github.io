@@ -95,7 +95,7 @@ description: "Welcome to Kieran Pritchard's personal portfolio. I'm a Digital Fo
         {% endfor %}
         {% for project in main_projects limit:3 %}
             <div class="col-md">
-                <div class="recent-project-card mt-3 p-4 text-center">
+                <div class="recent-project-card h-100 mt-3 p-4 text-center">
                     <div class="recent-project-card-img-background">
                         <img class="recent-project-card-img" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
                     </div>
