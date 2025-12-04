@@ -108,6 +108,28 @@ blockquote{
     color: var(--background) !important;
 }
 
+/*Card styling*/
+.card{
+    background-color: var(--background-secondary);
+}
+
+.shadow{
+    box-shadow: 0px 0px 20px 1px var(--main-accent) !important;
+}
+
+/* Recent Project Cards */
+.recent-project-card {
+    opacity: 0;
+    transform: translateY(15px); /* cleaner animation */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    margin-top: 0; /* IMPORTANT */
+}
+
+.recent-project-card.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Layout Components */
 .background-odd{
     background-color: var(--background);
@@ -274,22 +296,6 @@ NAVIGATION
     padding-bottom: 1.5%;
     padding-right: 1.5%;
     font-size: 1.25vw !important;
-}
-
-/* Recent Project Cards */
-.recent-project-card {
-    opacity: 0;
-    transform: translateY(15px); /* cleaner animation */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    margin-top: 0; /* IMPORTANT */
-    border-radius: 25px;
-    padding: 5%;
-    box-shadow: 0px 0px 20px 1px var(--main-accent);
-}
-
-.recent-project-card.fade-in {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .recent-project-card-img{

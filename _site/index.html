@@ -45,7 +45,7 @@
 
                     <!-- Theme toggle shown only in collapsed menu -->
                     <li class="nav-item d-lg-none mt-2">
-                        <button class="main-button w-100" onclick="themeSwitcher()">
+                        <button class="btn btn-outline-primary rounded-3 align-content-center w-100" onclick="themeSwitcher()">
                             <i class="fa-solid fa-moon themeToggle"></i> Toggle Theme
                         </button>
                     </li>
@@ -170,51 +170,68 @@
 
 <div class="background-even auto-background-md auto-background-sm">
     <h2 class="text-center">Recent Projects</h2>
-    <!-- Cards for recent Projects-->
-    <div class="row h-100 align-content-center">
-        
-        
-        
-        
-            <div class="col-md">
-                <div class="recent-project-card h-100 mt-3 p-4 text-center">
-                    <div class="recent-project-card-img-background">
-                        <img class="recent-project-card-img" src="/res/Icons/portfolio-icons/Linknest_Icon.webp" alt="Linktree">
-                    </div>
-                    <div>
-                        <h5 class="recent-project-card-title">Linktree</h5>
-                        <p class="recent-project-card-text">A clean, responsive Linktree-style webpage built with ReactJS and Tailwind CSS. This project centralizes social media and important links in one customizable hub, featuring reusable components, modern frontend practices, and easy scalability for personal or professional use. Perfect for anyone looking to create a personalized, stylish, and easy-to-maintain digital link hub.</p>
-                        <a href="/portfolio/linktree/"><button class="recent-project-card-button rounded-4 w-100">Find Out More</button></a>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="col-md">
-                <div class="recent-project-card h-100 mt-3 p-4 text-center">
-                    <div class="recent-project-card-img-background">
-                        <img class="recent-project-card-img" src="/res/Icons/portfolio-icons/Port_Scanner_Icon.webp" alt="Port Scanner">
-                    </div>
-                    <div>
-                        <h5 class="recent-project-card-title">Port Scanner</h5>
-                        <p class="recent-project-card-text">An overview of my Python port scanner built with the socket module, showcasing my learning in network programming and debugging. The project demonstrates scanning common and full port ranges with real-time results, emphasizes ethical use, and includes clear usage instructions. It highlights my practical skills in Python, cybersecurity fundamentals with a focus on ethical hacking.</p>
-                        <a href="/portfolio/port-scanner/"><button class="recent-project-card-button rounded-4 w-100">Find Out More</button></a>
+    <div class="container h-100">
+        <!-- Cards for recent Projects-->
+        <div class="row align-content-center">
+            
+            
+            
+            
+                <div class="col-md">
+                    <div class="recent-project-card card shadow rounded-5 d-flex flex-column justify-content-center align-items-center h-100 mt-3 p-4 text-center">
+
+                        <div class="recent-project-card-img-background d-flex justify-content-center align-items-center w-100">
+                            <img class="recent-project-card-img" src="/res/Icons/portfolio-icons/Linknest_Icon.webp" alt="Linktree">
+                        </div>
+
+                        <div class="d-flex flex-column justify-content-center align-items-center w-100 mt-3">
+                            <h5 class="recent-project-card-title">Linktree</h5>
+                            <p class="recent-project-card-text">A clean, responsive Linktree-style webpage built with ReactJS and Tailwind CSS. This project centralizes social media and important links in one customizable hub, featuring reusable components, modern frontend practices, and easy scalability for personal or professional use. Perfect for anyone looking to create a personalized, stylish, and easy-to-maintain digital link hub.</p>
+
+                            <a href="/portfolio/linktree/" class="w-100">
+                                <button class="recent-project-card-button rounded-4 w-100">Find Out More</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        
-            <div class="col-md">
-                <div class="recent-project-card h-100 mt-3 p-4 text-center">
-                    <div class="recent-project-card-img-background">
-                        <img class="recent-project-card-img" src="/res/Icons/portfolio-icons/Cryptoforge_Icon.webp" alt="Cryptoforge">
-                    </div>
-                    <div>
-                        <h5 class="recent-project-card-title">Cryptoforge</h5>
-                        <p class="recent-project-card-text">An overview of my Python-based cryptography utility, Cryptoforge, built with the cryptography library. The project provides a command-line interface for encryption, decryption, hashing, and digital signatures, with simplified commands compared to OpenSSL. It highlights my learning in key management, algorithm implementation, and secure data handling, while reinforcing practical skills in Python and applied cryptography.</p>
-                        <a href="/portfolio/cryptoforge/"><button class="recent-project-card-button rounded-4 w-100">Find Out More</button></a>
+            
+                <div class="col-md">
+                    <div class="recent-project-card card shadow rounded-5 d-flex flex-column justify-content-center align-items-center h-100 mt-3 p-4 text-center">
+
+                        <div class="recent-project-card-img-background d-flex justify-content-center align-items-center w-100">
+                            <img class="recent-project-card-img" src="/res/Icons/portfolio-icons/Port_Scanner_Icon.webp" alt="Port Scanner">
+                        </div>
+
+                        <div class="d-flex flex-column justify-content-center align-items-center w-100 mt-3">
+                            <h5 class="recent-project-card-title">Port Scanner</h5>
+                            <p class="recent-project-card-text">An overview of my Python port scanner built with the socket module, showcasing my learning in network programming and debugging. The project demonstrates scanning common and full port ranges with real-time results, emphasizes ethical use, and includes clear usage instructions. It highlights my practical skills in Python, cybersecurity fundamentals with a focus on ethical hacking.</p>
+
+                            <a href="/portfolio/port-scanner/" class="w-100">
+                                <button class="recent-project-card-button rounded-4 w-100">Find Out More</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        
+            
+                <div class="col-md">
+                    <div class="recent-project-card card shadow rounded-5 d-flex flex-column justify-content-center align-items-center h-100 mt-3 p-4 text-center">
+
+                        <div class="recent-project-card-img-background d-flex justify-content-center align-items-center w-100">
+                            <img class="recent-project-card-img" src="/res/Icons/portfolio-icons/Cryptoforge_Icon.webp" alt="Cryptoforge">
+                        </div>
+
+                        <div class="d-flex flex-column justify-content-center align-items-center w-100 mt-3">
+                            <h5 class="recent-project-card-title">Cryptoforge</h5>
+                            <p class="recent-project-card-text">An overview of my Python-based cryptography utility, Cryptoforge, built with the cryptography library. The project provides a command-line interface for encryption, decryption, hashing, and digital signatures, with simplified commands compared to OpenSSL. It highlights my learning in key management, algorithm implementation, and secure data handling, while reinforcing practical skills in Python and applied cryptography.</p>
+
+                            <a href="/portfolio/cryptoforge/" class="w-100">
+                                <button class="recent-project-card-button rounded-4 w-100">Find Out More</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
     </div>
 </div>
 

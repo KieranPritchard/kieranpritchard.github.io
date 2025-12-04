@@ -23,34 +23,37 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
 
 <div class="background-even auto-background-md auto-background-sm">
     <h2 class="text-center">Recent Projects</h2>
+    <div class="container h-100">
+        <!-- Cards for recent Projects-->
+        <div class="row align-content-center">
+            {% assign sorted_portfolio = site.portfolio | sort: 'date' | reverse %}
+            {% assign main_projects = '' | split: '' %}
+            {% for project in sorted_portfolio %}
+                {% assign path_parts = project.relative_path | split: '/' %}
+                {% if path_parts.size == 2 %}
+                    {% assign main_projects = main_projects | push: project %}
+                {% endif %}
+            {% endfor %}
+            {% for project in main_projects limit:3 %}
+                <div class="col-md">
+                    <div class="recent-project-card card shadow rounded-5 d-flex flex-column justify-content-center align-items-center h-100 mt-3 p-4 text-center">
 
-    <div class="row h-100 align-items-center">
+                        <div class="recent-project-card-img-background d-flex justify-content-center align-items-center w-100">
+                            <img class="recent-project-card-img" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
+                        </div>
 
-        {% assign sorted_portfolio = site.portfolio | sort: 'date' | reverse %}
-        {% assign main_projects = '' | split: '' %}
-        {% for project in sorted_portfolio %}
-            {% assign path_parts = project.relative_path | split: '/' %}
-            {% if path_parts.size == 2 %}
-                {% assign main_projects = main_projects | push: project %}
-            {% endif %}
-        {% endfor %}
+                        <div class="d-flex flex-column justify-content-center align-items-center w-100 mt-3">
+                            <h5 class="recent-project-card-title">{{ project.title }}</h5>
+                            <p class="recent-project-card-text">{{ project.description }}</p>
 
-        {% for project in main_projects limit:3 %}
-            <div class="col-md d-flex justify-content-center">
-                <div class="recent-project-card text-center">
-                    <div class="recent-project-card-img-background">
-                        <img class="recent-project-card-img" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
-                    </div>
-                    <div>
-                        <h5 class="recent-project-card-title">{{ project.title }}</h5>
-                        <p class="recent-project-card-text">{{ project.description }}</p>
-                        <a href="{{ project.url | relative_url }}">
-                            <button class="recent-project-card-button rounded-3 w-100">Find Out More</button>
-                        </a>
+                            <a href="{{ project.url | relative_url }}" class="w-100">
+                                <button class="recent-project-card-button rounded-4 w-100">Find Out More</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
 </div>
 
