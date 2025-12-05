@@ -21,11 +21,12 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
 
 <!-- Recent projects section -->
 
-<div class="background-even auto-background-md auto-background-sm">
+<div class="background-even auto-background-md auto-background-sm px-5">
     <h2 class="text-center">Recent Projects</h2>
-    <div class="container h-100">
-        <!-- Cards for recent Projects-->
-        <div class="row align-content-center">
+
+    <div class="container-fluid h-100">
+        <!-- Cards for recent Projects -->
+        <div class="row align-content-center justify-content-center h-100">
             {% assign sorted_portfolio = site.portfolio | sort: 'date' | reverse %}
             {% assign main_projects = '' | split: '' %}
             {% for project in sorted_portfolio %}
@@ -34,10 +35,11 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
                     {% assign main_projects = main_projects | push: project %}
                 {% endif %}
             {% endfor %}
-            {% for project in main_projects limit:3 %}
-                <div class="col-md">
-                    <div class="recent-project-card card shadow rounded-5 d-flex flex-column justify-content-center align-items-center h-100 mt-3 p-4 text-center">
 
+            {% for project in main_projects limit:3 %}
+                <div class="col-md-4 col-sm-12 d-flex">
+                    <div class="recent-project-card card shadow rounded-5 d-flex w-100 flex-column justify-content-center align-items-center h-100 mt-3 p-4 text-center">
+                        
                         <div class="recent-project-card-img-background d-flex justify-content-center align-items-center w-100">
                             <img class="recent-project-card-img" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
                         </div>
@@ -57,7 +59,7 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
     </div>
 </div>
 
-<div class="background-odd h-auto auto-background-sm">
+<div class="background-odd h-auto auto-background-sm px-5">
     <h2 class="text-center mb-3">Overview of Work</h2>
 
     <!-- Tabs Navigation -->

@@ -7,7 +7,7 @@ description: "Learn more about Kieran Pritchard, a motivated Digital Foundation 
 
 <!-- About page intro section -->
 
-<div class="background-odd">
+<div class="background-odd px-5">
     <div class="content-container h-100">
         <div class="row h-100 align-items-center">
 
@@ -21,13 +21,13 @@ description: "Learn more about Kieran Pritchard, a motivated Digital Foundation 
             </div>
 
             <div class="col-sm order-first order-md-1 text-center d-flex justify-content-center">
-                <img class="img-fluid" src="{{ '/res/kieran_pritchard_using_vr.webp' | relative_url }}" alt="Kieran Pritchard working on a computer in a classroom.">
+                <img class="img-fluid w-75" src="{{ '/res/kieran_pritchard_using_vr.webp' | relative_url }}" alt="Kieran Pritchard working on a computer in a classroom.">
             </div>
         </div>
     </div>
 </div>
 
-<div class="background-even">
+<div class="background-even px-5">
     <div class="content-container h-100 d-flex justify-content-center align-items-center">
         <blockquote class="text-center">
             <span id="typewriter"></span>
@@ -37,7 +37,7 @@ description: "Learn more about Kieran Pritchard, a motivated Digital Foundation 
 
 <!-- About page skills section-->
 
-<div class="background-odd background-auto-sm">
+<div class="background-odd px-5 background-auto-sm">
     <h2 class="text-center">Skills</h2>
     <div class="container-fluid h-100">
         <div class="row h-100 align-items-center">
@@ -355,28 +355,41 @@ description: "Learn more about Kieran Pritchard, a motivated Digital Foundation 
     </div>
 </div>
 
-<div class="background-even background-auto auto-background-sm pb-3">
+<div class="background-even px-5 background-auto auto-background-sm pb-3">
     <h2 class="text-center">My Top Projects</h2>
+
     <div class="container-fluid">
-        <div class="row row-cols-1 row-cols-md-3">
-            {% assign top_projects = site.portfolio | sort: 'date' | reverse | where: "featured", true | limit: 6 %}
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+            {% assign top_projects = site.portfolio 
+                | sort: 'date' 
+                | reverse 
+                | where: "featured", true 
+                | limit: 6 
+            %}
+
             {% for project in top_projects %}
-            <div class="col-md">
-                <div class="project-page-project-card rounded-4 mt-2 p-4">
-                    <div class="project-page-project-card-image-background d-flex h-100">
+            <div class="col d-flex">
+                <div class="project-page-project-card rounded-4 p-3 w-100 d-flex flex-column">
+
+                    <div class="project-page-project-card-image-background d-flex justify-content-center align-items-center">
                         {% if project.icon %}
                         <img class="project-page-project-card-image" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
                         {% else %}
                         <img class="project-page-project-card-image" src="{{ '/res/Icons/default-project-icon.webp' | relative_url }}" alt="{{ project.title }}">
                         {% endif %}
                     </div>
-                    <div>
-                        <h5 class="project-page-project-card-title">
-                            <a class="project-page-project-card-title-link" href="{{ project.url | relative_url }}">{{ project.title }}</a>
+
+                    <div class="grow">
+                        <h5 class="project-page-project-card-title mb-1">
+                            <a class="project-page-project-card-title-link" href="{{ project.url | relative_url }}">
+                                {{ project.title }}
+                            </a>
                         </h5>
-                        <p class="project-page-project-card-text">Topics: 
+                        <p class="project-page-project-card-text">
+                            Topics:
                             {% for topic in project.topics %}
-                            <span class="topic rounded-pill">{{ topic }}</span>
+                                <span class="topic rounded-pill">{{ topic }}</span>
                             {% endfor %}
                         </p>
                     </div>
@@ -482,7 +495,7 @@ description: "Learn more about Kieran Pritchard, a motivated Digital Foundation 
     </div>
 </div>
 
-<div class="background-odd h-auto">
+<div class="background-odd px-5 h-auto">
     <h2 class="text-center">Timeline</h2>
     <div class="d-flex flex-column content-container justify-content-center">
         <div class="timeline">

@@ -7,11 +7,10 @@ description: "Welcome to Kieran Pritchard's personal portfolio. I'm a Digital Fo
 <!-- Short introduction about me-->
 
 <div class="background-odd">
-    <div class="container h-100">
-        <div class="row align-items-center h-100">
+    <div class="container-fluid px-5 h-100">
+        <div class="row align-items-center px-5 h-100">
             <div class="col-sm d-flex flex-column justify-content-center">
                 <h1>Hello, I'm Kieran Pritchard</h1>
-                <p><span id="tagline"></span></p>
                 <p>
                     A T-Level Digital Software Devlopement student at Bournemouth and Poole College.
                     I'm passionate about programming and cybersecurity, and I'm eager to turn that passion into a career in cybersecurity.
@@ -26,7 +25,7 @@ description: "Welcome to Kieran Pritchard's personal portfolio. I'm a Digital Fo
             </div>
 
             <div class="col-sm order-first order-md-1 text-center d-flex justify-content-center">
-                <img class="img-fluid rounded-circle" src="{{ '/res/kieran-pritchard-profile-photo.webp' | relative_url }}" alt="A professional headshot of Kieran Pritchard.">
+                <img class="img-fluid rounded-circle w-75" src="{{ '/res/kieran-pritchard-profile-photo.webp' | relative_url }}" alt="A professional headshot of Kieran Pritchard.">
             </div>
         </div>
     </div>
@@ -37,11 +36,11 @@ description: "Welcome to Kieran Pritchard's personal portfolio. I'm a Digital Fo
 <div class="background-even">
     <h2 class="text-center">About Me</h2>
 
-    <div class="container h-100">
-        <div class="row h-100 align-items-center">
+    <div class="container-fluid px-5 h-100">
+        <div class="row h-100 px-5 align-items-center">
 
             <div class="col-sm text-center d-flex justify-content-center">
-                <img class="img-fluid" src="{{ '/res/kieran_pritchard_using_vr.webp' | relative_url }}" alt="Kieran Pritchard working on a computer in a classroom.">
+                <img class="img-fluid w-75" src="{{ '/res/kieran_pritchard_using_vr.webp' | relative_url }}" alt="Kieran Pritchard working on a computer in a classroom.">
             </div>
 
             <div class="col-sm order-first order-sm-1 d-flex flex-column justify-content-center">
@@ -57,7 +56,7 @@ description: "Welcome to Kieran Pritchard's personal portfolio. I'm a Digital Fo
 
 <!-- Recent Blogs section -->
 
-<div class="background-odd">
+<div class="background-odd px-5">
     <h2 class="text-center">Recent Blogs</h2>
     <div class="d-flex flex-column justify-content-center content-container">
         {% for post in site.posts limit:3 %}
@@ -83,9 +82,10 @@ description: "Welcome to Kieran Pritchard's personal portfolio. I'm a Digital Fo
 
 <div class="background-even auto-background-md auto-background-sm">
     <h2 class="text-center">Recent Projects</h2>
-    <div class="container h-100">
-        <!-- Cards for recent Projects-->
-        <div class="row align-content-center">
+
+    <div class="container-fluid h-100">
+        <!-- Cards for recent Projects -->
+        <div class="row align-content-center justify-content-center h-100">
             {% assign sorted_portfolio = site.portfolio | sort: 'date' | reverse %}
             {% assign main_projects = '' | split: '' %}
             {% for project in sorted_portfolio %}
@@ -94,10 +94,11 @@ description: "Welcome to Kieran Pritchard's personal portfolio. I'm a Digital Fo
                     {% assign main_projects = main_projects | push: project %}
                 {% endif %}
             {% endfor %}
-            {% for project in main_projects limit:3 %}
-                <div class="col-md">
-                    <div class="recent-project-card card shadow rounded-5 d-flex flex-column justify-content-center align-items-center h-100 mt-3 p-4 text-center">
 
+            {% for project in main_projects limit:3 %}
+                <div class="col-md-4 col-sm-12 d-flex">
+                    <div class="recent-project-card card shadow rounded-5 d-flex w-100 flex-column justify-content-center align-items-center h-100 mt-3 p-4 text-center">
+                        
                         <div class="recent-project-card-img-background d-flex justify-content-center align-items-center w-100">
                             <img class="recent-project-card-img" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
                         </div>
