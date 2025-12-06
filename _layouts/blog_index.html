@@ -114,9 +114,9 @@
                         </div>
 
                         <h4 class="sidebar-title mt-3">Categories</h4>
-                        <label><input class="sidebar-checkbox" type="checkbox" onclick="blogFilter('topicOne')"> Career</label><br>
-                        <label><input class="sidebar-checkbox" type="checkbox" onclick="blogFilter('topicTwo')"> Programming</label><br>
-                        <label><input class="sidebar-checkbox" type="checkbox" onclick="blogFilter('topicThree')"> Thoughts & Opinions</label>
+                        <label><input class="sidebar-checkbox" id="blog-topic-1" type="checkbox" onclick="blogFilter('topicOne')"> Career</label><br>
+                        <label><input class="sidebar-checkbox" id="blog-topic-2" type="checkbox" onclick="blogFilter('topicTwo')"> Programming</label><br>
+                        <label><input class="sidebar-checkbox" id="blog-topic-3" type="checkbox" onclick="blogFilter('topicThree')"> Thoughts & Opinions</label>
 
                         <h4 class="sidebar-title mt-4">Recent Blogs</h4>
                         {% for post in site.posts limit:3 %}
