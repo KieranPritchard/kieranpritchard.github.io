@@ -63,7 +63,7 @@
         </div>
     </nav>
 
-    <div class="background-odd">
+    <div class="background-od px-5">
         {% if page.breadcrumb %}
         <nav aria-label="breadcrumb">
             <ul class="breadcrumb">
@@ -106,7 +106,7 @@
     {% assign sections = content_with_separator | split: '|||SPLIT|||' %}
     {% for section in sections %}
         {% if forloop.first and section == "" %}{% continue %}{% endif %}
-        <div class="background-{% cycle 'even', 'odd' %} align-content-center auto-background-sm">
+        <div class="background-{% cycle 'even', 'odd' %} align-content-center h-auto px-5">
             {{ section }}
         </div>
     {% endfor %}

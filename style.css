@@ -63,15 +63,13 @@ h1, h2, h3, h4, h5{
     color: var(--main-accent) !important;
 }
 
-h1{ padding-top: 10%; font-size: 3vw !important;}
-h2{ margin-top: 0%; padding-top: 1.5%; font-size: 2vw !important;}
-h3{ font-size: 1.75vw !important;}
+h1{ padding-top: 10%;}
+h2{ margin-top: 0%; padding-top: 1.5%;}
 
 ul{ color: var(--base-text);}
 li{ font-family: "Source Code Pro"; }
 
 p{
-    font-size: 1.25vw !important;
     font-family: "Source Code Pro";
     color: var(--base-text);
 }
@@ -82,7 +80,6 @@ a:hover{ color: var(--hover-highlight) !important; }
 b{ font-family: "Source Code Pro"; }
 
 blockquote{
-    font-size: 2.5vw;
     font-family: "Source Code Pro";
 }
 
@@ -274,7 +271,6 @@ NAVIGATION
     margin-top: 0.5%;     
     padding: 1.5% 0 0.5%;
     color: var(--main-accent) !important;
-    font-size: 1.75vw;
 }
 
 .recent-blog-post-title-link{
@@ -291,7 +287,6 @@ NAVIGATION
 .recent-blog-post-text{
     padding-bottom: 1.5%;
     padding-right: 1.5%;
-    font-size: 1.25vw !important;
 }
 
 .recent-project-card-img{
@@ -302,11 +297,10 @@ NAVIGATION
 
 .recent-project-card-title{
     margin-top: 2.5%;
-    font-size: 1.45vw;
 }
 
 .recent-project-card-text{
-    font-size: 0.85vw !important;
+    font-size: 0.85vw !important
 }
 
 .recent-project-card-button{
@@ -353,13 +347,6 @@ NAVIGATION
 .skill-btn:hover{
     color:  var(--hover-highlight);
     transition: all 0.25s;
-}
-
-#About-Me-Page-Image{
-    height: auto;
-    width: 100%;
-    max-width: 85%;
-    border-radius: 10%;
 }
 
 .certifications{
@@ -502,7 +489,6 @@ NAVIGATION
     margin-left: 2.5%;
     position:relative;
     top: -7px;
-    font-size: 1.5vw;
 }
 
 .sidebar-blog-post-padding{
@@ -519,7 +505,6 @@ NAVIGATION
     font-family: "Source Code Pro";
     text-decoration: none;
     color: var(--base-text) !important;
-    font-size: 0.85vw;
 }
 
 .sidebar-recent-blog-title:hover{ 
@@ -546,7 +531,6 @@ NAVIGATION
 }
 
 .blog-post-title{ 
-    font-size: 1.30vw !important;
     transition: ease 0.5s;
 }
 
@@ -563,11 +547,6 @@ NAVIGATION
 .blog-post-date{
     font-family: "Red Hat Display";
     color: var(--main-accent);
-    font-size: 1vw !important;
-}
-
-.blog-post-description{ 
-    font-size: 1vw !important; 
 }
 
 /* Blog page specific layout fixes */
@@ -677,7 +656,6 @@ footer {
 .project-page-project-card-title{
     padding-top: 5%;
     padding-bottom: 2.5%;
-    font-size: 1.35vw;
 }
 
 .project-page-project-card-title-link{ 
@@ -713,7 +691,6 @@ footer {
 
 .contact-page-list-item{ 
     margin-bottom: 7.5%; 
-    font-size: 1.25vw; 
 }
 
 .contact-page-icon-background{
@@ -739,10 +716,6 @@ footer {
     transform: scale(1.05) !important;
 }
 
-#contact-page-button{ 
-    font-size: 1vw; 
-}
-
 /* Footer */
 #contact-footer-list{ 
     list-style: none; 
@@ -762,10 +735,6 @@ footer {
 .contact-footer-list-item{ 
     margin-bottom: 7.5%; 
     font-size: 1vw; 
-}
-
-.footer-icon{ 
-    font-size: 1.75vw; 
 }
 
 .contact-footer-icon-background{
@@ -817,7 +786,6 @@ footer:before {
 
 .breadcrumb-item{ 
     color: var(--base-text) !important; 
-    font-size: 1vw; 
 }
 
 .breadcrumb-item-link{ 
@@ -837,13 +805,11 @@ footer:before {
 .indivual-post-page-date{
     margin: 0;
     margin: 1.5% 0;
-    font-size: 1.5vw!important;
     font-family: "Red Hat Display";
     color: var(--main-accent);
 }
 
 .indivual-post-page-topics{
-    font-size: 1.25vw !important;
     color: var(--main-accent);
     position: relative;
     top: 5px;
@@ -1134,15 +1100,13 @@ table, th, td {
         color: var(--main-accent) !important;
     }
 
-    h1{ padding-top: 10%; font-size: 2vw !important;}
-    h2{ padding-top: 2.5%; font-size: 1.33vw !important;}
-    h3{ font-size: 1.16vw !important;}
+    h1{ padding-top: 10%;}
+    h2{ padding-top: 2.5%;}
 
     ul{ color: var(--base-text);}
-    li{ font-family: "Source Code Pro"; font-size: 0.83vw !important;}
+    li{ font-family: "Source Code Pro";}
 
     p{
-        font-size: 0.83vw !important;
         font-family: "Source Code Pro";
         color: var(--base-text);
     }
@@ -1153,14 +1117,9 @@ table, th, td {
     b{ font-family: "Source Code Pro"; }
 
     blockquote{
-        font-size: 2.5vw !important;
         font-family: "Source Code Pro";
     }
 
-    .contact-footer-list-item{
-        font-size: 0.75vw !important;
-    }
-    
     .recent-project-card-img{
         height: 400px !important;
     }
@@ -1171,40 +1130,6 @@ table, th, td {
 
     .project-page-project-card-image{
         height: 400px !important;
-    }
-
-    .recent-blog-post-title{
-        font-size: 1.5vw !important;
-    }
-
-    .recent-blog-post-text{
-        font-size: 1.25vw !important;
-    }
-
-    .recent-project-card-button{
-        font-size: 0.85vw !important;
-    }
-
-    .background-odd{
-        padding-left: 2.5% !important;
-        padding-right: 2.5% !important;
-    }
-
-    .background-even{
-        padding-left: 2.5% !important;
-        padding-right: 2.5% !important;
-    }
-
-    .main-button{
-        font-size: 1vw !important;
-    }
-
-    .secondary-button{
-        font-size: 1vw !important;
-    }
-
-    .custom-pills .nav-link {
-        font-size: 0.83vw !important;
     }
 }
 
@@ -1223,14 +1148,6 @@ table, th, td {
         margin-top: 7.5%;
         margin-left: 7.5%;
         margin-bottom: 7.5%;
-    }
-
-    .sidebar-labels{
-        font-size: 1vw;
-    }
-
-    .blog-post-description{ 
-        font-size: 0.85vw !important; 
     }
 
     .recent-project-card-img{
