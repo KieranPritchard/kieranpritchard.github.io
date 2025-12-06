@@ -398,9 +398,6 @@ NAVIGATION
     opacity: 0;
     transform: translateX(-50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    background-color: var(--background-secondary);
-    margin-bottom: 2.5%;
-    box-shadow: 0px 0px 20px 1px var(--main-accent);
 }
 
 .educational-history-card.fade-in{
@@ -440,9 +437,6 @@ NAVIGATION
 }
 
 #blog-searchbar{
-    width: 100%;
-    padding: 3.5%;
-    border-radius: 25px;
     background-color: var(--background-even) !important;
     border-color: var(--main-accent);
     color: var(--main-accent);
@@ -665,11 +659,6 @@ footer {
 #project-page-intro-section-text{ 
     padding-top: 1.5%; 
     font-size: 1vw; 
-}
-
-.project-page-project-card{
-    background-color: var(--background-secondary);
-    box-shadow: 0px 0px 20px 0.1px var(--main-accent);
 }
 
 .project-page-project-card-image-background{
