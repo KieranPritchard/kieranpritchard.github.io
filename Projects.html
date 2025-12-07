@@ -72,9 +72,6 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
                 <button class="nav-link" id="pills-cyber-security-tab" data-bs-toggle="pill" data-bs-target="#pills-cyber-security" type="button" role="tab" aria-controls="pills-cyber-security" aria-selected="false">Cyber Security</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-certificates-tab" data-bs-toggle="pill" data-bs-target="#pills-certificates" type="button" role="tab" aria-controls="pills-certificates" aria-selected="false">Certificates</button>
-            </li>
-            <li class="nav-item" role="presentation">
                 <button class="nav-link" id="pills-programming-tab" data-bs-toggle="pill" data-bs-target="#pills-programming" type="button" role="tab" aria-controls="pills-programming" aria-selected="false">Programming</button>
             </li>
         </ul>
@@ -120,36 +117,6 @@ description: "Explore Kieran Pritchard's projects showcasing skills in programmi
             {% for project in sorted_portfolio %}
             {% assign path_parts = project.relative_path | split: '/' %}
             {% if path_parts.size == 2 and project.topics contains "Cyber Security" %}
-            <div class="col">
-                <div class="card shadow rounded-4 mt-3 p-4">
-                    <div class="project-page-project-card-image-background d-flex h-100">
-                        <img class="project-page-project-card-image" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
-                    </div>
-                    <div>
-                        <h5 class="project-page-project-card-title">
-                        <a class="project-page-project-card-title-link" href="{{ project.url | relative_url }}">{{ project.title }}</a>
-                        </h5>
-                        <p class="project-page-project-card-text">
-                        Topics:
-                        {% for topic in project.topics %}
-                            <span class="topic rounded-pill">{{ topic }}</span>
-                        {% endfor %}
-                        </p>
-                    </div>
-                </div>
-            </div>
-            {% endif %}
-            {% endfor %}
-        </div>
-    </div>
-
-    <!-- Certificates -->
-    <div class="tab-pane fade" id="pills-certificates" role="tabpanel" aria-labelledby="pills-certificates-tab" tabindex="0">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            {% assign sorted_portfolio = site.portfolio | sort: 'date' | reverse %}
-            {% for project in sorted_portfolio %}
-            {% assign path_parts = project.relative_path | split: '/' %}
-            {% if path_parts.size == 2 and project.topics contains "Certificates" %}
             <div class="col">
                 <div class="card shadow rounded-4 mt-3 p-4">
                     <div class="project-page-project-card-image-background d-flex h-100">

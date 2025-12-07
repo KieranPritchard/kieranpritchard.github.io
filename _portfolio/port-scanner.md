@@ -3,7 +3,7 @@ layout: portfolio_post
 title: "Port Scanner"
 description: "An overview of my Python port scanner built with the socket module, showcasing my learning in network programming and debugging. The project demonstrates scanning common and full port ranges with real-time results, emphasizes ethical use, and includes clear usage instructions. It highlights my practical skills in Python, cybersecurity fundamentals with a focus on ethical hacking."
 date: 2025-8-10
-featured: false
+featured: true
 topics: ["Cyber Security", "Programming"]
 header_image: "/res/Header-Images/project-header-images/Port_Scanner_Header_Image.webp"
 icon: "/res/Icons/portfolio-icons/Port_Scanner_Icon.webp"

@@ -3,7 +3,7 @@ layout: portfolio_post
 title: "Remote Command Execution"
 description: "A showcase of my Python remote command execution project using sockets and the subprocess module, showcasing my learning in client-server communication and system command handling. The project demonstrates sending commands from a client to a server, executing them in real time, and returning results with error handling. It highlights my practical skills in Python, networking, and cybersecurity experimentation."
 date: 2025-8-10
-featured: false
+featured: true
 topics: ["Cyber Security", "Programming"]
 header_image: "/res/Header-Images/project-header-images/Remote_Command_Execution_Header_Image.webp"
 icon: "/res/Icons/portfolio-icons/Remote_Command_Execution_Icon.webp"

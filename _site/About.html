@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="/res/favicon/Website%20Favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Kieran Pritchard Portfolio</title>
+    <meta name="description" content="/Learn%20more%20about%20Kieran%20Pritchard,%20a%20motivated%20Digital%20Foundation%20T-Level%20student%20at%20Bournemouth%20and%20Poole%20College%20with%20a%20passion%20for%20cybersecurity%20and%20programming.%20Discover%20my%20skills,%20top%20projects,%20certifications,%20educational%20background,%20and%20professional%20journey.">
+</head>
+<body id="themeLoaded">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a href="/" class="navbar-brand">Kieran Pritchard</a>
+
+            <!-- Toggler button (hamburger) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible navbar content -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav flex-lg-row gap-lg-4 text-center mx-auto">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link " id="">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/About.html" class="nav-link active" id="Active-Page">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/blog/" class="nav-link " id="">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Projects.html" class="nav-link " id="">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Hobbies.html" class="nav-link " id="">Hobbies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Contact.html" class="nav-link " id="">Contact</a>
+                    </li>
+
+                    <!-- Theme toggle shown only in collapsed menu -->
+                    <li class="nav-item d-lg-none mt-2">
+                        <button class="btn btn-outline-primary rounded-3 align-content-center w-100" onclick="themeSwitcher()">
+                            <i class="fa-solid fa-moon themeToggle"></i> Toggle Theme
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Theme toggle shown only on large screens (outside collapse) -->
+            <div class="d-none d-lg-flex align-items-center ms-auto">
+                <button class="navbar-button" onclick="themeSwitcher()">
+                    <i class="fa-solid fa-moon themeToggle"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About page intro section -->
+
+<div class="background-odd px-5">
+    <div class="content-container h-100">
+        <div class="row h-100 align-items-center">
+
+            <div class="col-sm d-flex flex-column justify-content-center">
+                <h1>About Me</h1>
+                <p>
+                    Hi, I’m Kieran! I’m a T Level student and student rep at Bournemouth & Poole College, and I’ve always been passionate about technology, especially cybersecurity and ethical hacking. I learn best by getting hands-on, so I love diving into projects and challenges, and I spend a lot of my own time taking online courses, like through the Cisco Networking Academy, to keep learning. I’m hardworking, organised, and determined—whether it’s independent study, practical practice, or helping others. Along the way, I’ve earned a Merit in the Bebras Computing Challenge and been recognised for team leadership during work experience. Outside of tech, I’m a gamer, music lover, and always up for good sci-fi or horror. Everything I do is about learning, improving, and working toward my goal of becoming an ethical hacker.
+                </p>
+
+            </div>
+
+            <div class="col-sm order-first order-md-1 text-center d-flex justify-content-center">
+                <img class="img-fluid w-75" src="/res/kieran_pritchard_using_vr.webp" alt="Kieran Pritchard working on a computer in a classroom.">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="background-even px-5">
+    <div class="content-container h-100 d-flex justify-content-center align-items-center">
+        <blockquote class="text-center">
+            <span id="typewriter"></span>
+        </blockquote>
+    </div>
+</div>
+
+<!-- About page skills section-->
+
+<div class="background-odd px-5 background-auto-sm">
+    <h2 class="text-center">Skills</h2>
+    <div class="container-fluid h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-sm">
+                <h3>Soft Skills</h3>
+                <ul class="list-unstyled">
+                    <li>
+                        <i class="fa-solid fa-comments"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="Communication"
+                            data-bs-content="I Developed strong communication skills through teamwork on a live project brief, academic collaboration, and day-to-day interactions; adapting my approach to suit different audiences and situations."
+                        >
+                            Communication
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-users"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="Teamwork"
+                            data-bs-content="Excelled in collaborative projects both in class and on live briefs, playing a key role in coordinating efforts that led my team to win awards for best project outcomes. <a href='https://www.linkedin.com/feed/update/urn:li:activity:7382789736186179584/'>View Awards</a>"
+                        >
+                            Teamwork
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-ear-listen"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="Active Listening"
+                            data-bs-content="Developed strong active listening skills to accurately understand details, capture key information, and respond thoughtfully in both academic and professional settings."
+                        >
+                            Active Listening
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-user-tie"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="Leadership"
+                            data-bs-content="I serve as a Student Representative at Bournemouth and Poole College, advocating for peers, facilitating communication between students and staff, and helping to create a positive learning environment."
+                        >
+                            Leadership
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-brain"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="Problem Solving"
+                            data-bs-content="Strong problem-solving skills demonstrated through tackling coding challenges and analytical tasks. Earned a Merit in the 2024 Bebras Challenge, reflecting logical thinking and creativity in approaching complex problems."
+                        >
+                            Problem Solving
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="Critical Thinking"
+                            data-bs-content="Apply thoughtful analysis and careful consideration when approaching challenges and making key decisions, ensuring well-reasoned and effective solutions."
+                        >
+                            Critical Thinking
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-chart-line"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="Strategic Planning"
+                            data-bs-content="Forward-thinking and proactive in organizing and guiding team efforts, using strategic planning skills to coordinate peers effectively during live project briefs and achieve shared goals."
+                        >
+                            Strategic Planning
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="Time Management"
+                            data-bs-content="Effectively balance multiple tasks and deadlines through careful planning and prioritization, ensuring consistent progress and high-quality results in both academic and project-based work."
+                        >
+                            Time Management
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-folder-tree"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="Organisation Skills"
+                            data-bs-content="Highly organised in managing tasks, schedules, and collaborative projects. Combine time management, strategic planning, and clear communication to keep work structured, efficient, and on track toward goals."
+                        >
+                            Organisation Skills
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-sync-alt"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="Adaptability"
+                            data-bs-content="Quick to adjust to new challenges, technologies, and environments. Staying flexible under pressure and maintaining a positive, solutions-focused mindset in both individual and team settings."
+                        >
+                            Adaptability
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-hand-fist"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="Resilience"
+                            data-bs-content="Overcame personal and academic challenges with determination and a growth mindset, turning setbacks into opportunities for learning and self-improvement."
+                        >
+                            Resilience
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="Creativity"
+                            data-bs-content="Bring originality and fresh ideas to every project from developing innovative solutions in coding and design to finding unique approaches that enhance collaboration and problem-solving."
+                        >
+                            Creativity
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-book-open"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="Self-Directed Learning"
+                            data-bs-content="Continuously developing my skills through independent learning and professional certifications, staying motivated to expand my knowledge and stay ahead in a constantly evolving field."
+                        >
+                            Self-Directed Learning
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm">
+                <h3>Hard Skills</h3>
+                <ul class="list-unstyled">
+                    <li>
+                        <i class="fa-brands fa-python"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="Python"
+                            data-bs-content="Proficient in Python for problem-solving, automation, and project development. Apply logical thinking and clean coding practices to build efficient, reliable solutions."
+                        >
+                            Python
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="HTML, CSS, & JavaScript"
+                            data-bs-content="Skilled in front-end web development, creating responsive and user-friendly websites using HTML, CSS, and JavaScript. Designed and built this website as part of a college project, earning a Distinction grade for its functionality, design, and execution."
+                        >
+                            HTML, CSS, & JavaScript
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-git-alt"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="Git & Github"
+                            data-bs-content="Proficient in using Git and GitHub for version control and collaboration. Experienced in branching, merging, and maintaining clear version histories to support efficient teamwork and development."
+                        >
+                            Git & Github
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-bootstrap"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="Popover Title"
+                            data-bs-content="Used Bootstrap to create responsive, visually appealing, and mobile-friendly designs as part of my college website project, ensuring consistency and accessibility across all devices."
+                        >
+                            Bootstrap
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-linux"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="Linux"
+                            data-bs-content="Proficient in using Linux, including navigating the command line, managing files, and executing scripts efficiently in a Unix-based environment."
+                        >
+                            Linux
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-terminal"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="Kali Linux"
+                            data-bs-content="Built hands-on experience with Kali Linux via TryHackMe labs, practising common security tools and simulated penetration testing workflows in ethical, controlled environments to strengthen defensive and analytical skills."
+                        >
+                            Kali Linux
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-user-secret"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="Ethical Hacking"
+                            data-bs-content="Practise ethical hacking in controlled environments to identify and remediate security weaknesses. Experience with hands-on labs (TryHackMe) and responsible, legally-compliant testing workflows focusing on vulnerability discovery and exploitation"
+                        >
+                            Ethical Hacking
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-network-wired"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="Computer Networking"
+                            data-bs-content="Knowledgeable in computer networking concepts, including IP addressing, routing, protocols, and network troubleshooting. Experienced in practical applications through lab exercises and project work."
+                        >
+                            Computer Networking
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-cubes"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="Virtualization"
+                            data-bs-content="Experienced with virtualization technologies, creating and managing virtual machines to simulate environments for testing, learning, and project work."
+                        >
+                            Virtualization
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-lock"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="Cryptography"
+                            data-bs-content="Familiar with cryptographic principles and techniques, including encryption, decryption, and secure data handling, applied in practical exercises to protect information and ensure confidentiality."
+                        >
+                            Cryptography
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-cloud"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title="Cloud Computing"
+                            data-bs-content="Built practical knowledge of cloud computing through AWS certifications, learning to deploy, manage, and optimize cloud-based solutions in scalable and secure environments."
+                        >
+                            Cloud Computing
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-shield-alt"></i>
+                        <button 
+                            type="button"
+                            class="skill-btn"
+                            data-bs-toggle="popover"
+                            data-bs-title=" Cyber Security Awareness"
+                            data-bs-content="Developed a strong understanding of cybersecurity best practices, including safe online behavior, threat identification, and risk mitigation, applied in both academic projects and personal learning."
+                        >
+                            Cyber Security Awareness
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="background-even px-5 background-auto auto-background-sm pb-3">
+    <h2 class="text-center">My Top Projects</h2>
+
+    <div class="container-fluid">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+            
+
+            
+            <div class="col d-flex">
+                <div class="card shadow rounded-4 p-3 w-100 d-flex flex-column">
+
+                    <div class="project-page-project-card-image-background d-flex justify-content-center align-items-center">
+                        
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Linknest_Icon.webp" alt="Linktree">
+                        
+                    </div>
+
+                    <div class="grow">
+                        <h5 class="project-page-project-card-title mb-1">
+                            <a class="project-page-project-card-title-link" href="/portfolio/linktree/">
+                                Linktree
+                            </a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                            Topics:
+                            
+                                <span class="topic rounded-pill">Programming</span>
+                            
+                                <span class="topic rounded-pill">Social-Media</span>
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col d-flex">
+                <div class="card shadow rounded-4 p-3 w-100 d-flex flex-column">
+
+                    <div class="project-page-project-card-image-background d-flex justify-content-center align-items-center">
+                        
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Port_Scanner_Icon.webp" alt="Port Scanner">
+                        
+                    </div>
+
+                    <div class="grow">
+                        <h5 class="project-page-project-card-title mb-1">
+                            <a class="project-page-project-card-title-link" href="/portfolio/port-scanner/">
+                                Port Scanner
+                            </a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                            Topics:
+                            
+                                <span class="topic rounded-pill">Cyber Security</span>
+                            
+                                <span class="topic rounded-pill">Programming</span>
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col d-flex">
+                <div class="card shadow rounded-4 p-3 w-100 d-flex flex-column">
+
+                    <div class="project-page-project-card-image-background d-flex justify-content-center align-items-center">
+                        
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Remote_Command_Execution_Icon.webp" alt="Remote Command Execution">
+                        
+                    </div>
+
+                    <div class="grow">
+                        <h5 class="project-page-project-card-title mb-1">
+                            <a class="project-page-project-card-title-link" href="/portfolio/remote-command-execution/">
+                                Remote Command Execution
+                            </a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                            Topics:
+                            
+                                <span class="topic rounded-pill">Cyber Security</span>
+                            
+                                <span class="topic rounded-pill">Programming</span>
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col d-flex">
+                <div class="card shadow rounded-4 p-3 w-100 d-flex flex-column">
+
+                    <div class="project-page-project-card-image-background d-flex justify-content-center align-items-center">
+                        
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/CTF-Write-Ups-Icon.webp" alt="CTF Write-Ups">
+                        
+                    </div>
+
+                    <div class="grow">
+                        <h5 class="project-page-project-card-title mb-1">
+                            <a class="project-page-project-card-title-link" href="/portfolio/ctf-write-ups/">
+                                CTF Write-Ups
+                            </a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                            Topics:
+                            
+                                <span class="topic rounded-pill">Cyber Security</span>
+                            
+                                <span class="topic rounded-pill">Ethical-Hacking</span>
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col d-flex">
+                <div class="card shadow rounded-4 p-3 w-100 d-flex flex-column">
+
+                    <div class="project-page-project-card-image-background d-flex justify-content-center align-items-center">
+                        
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/My_Ethical_Hacking_Lab_Setup_Icon.webp" alt="My Ethical Hacking Lab Setup">
+                        
+                    </div>
+
+                    <div class="grow">
+                        <h5 class="project-page-project-card-title mb-1">
+                            <a class="project-page-project-card-title-link" href="/portfolio/my-ethical-hacking-lab-set-up/">
+                                My Ethical Hacking Lab Setup
+                            </a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                            Topics:
+                            
+                                <span class="topic rounded-pill">Ethical-Hacking</span>
+                            
+                                <span class="topic rounded-pill">Cyber Security</span>
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col d-flex">
+                <div class="card shadow rounded-4 p-3 w-100 d-flex flex-column">
+
+                    <div class="project-page-project-card-image-background d-flex justify-content-center align-items-center">
+                        
+                        <img class="project-page-project-card-image" src="/res/Icons/portfolio-icons/Digital-Logo-BPC.webp" alt="BTEC First Foundation in Digital">
+                        
+                    </div>
+
+                    <div class="grow">
+                        <h5 class="project-page-project-card-title mb-1">
+                            <a class="project-page-project-card-title-link" href="/portfolio/btec-first-foundation-in-tech/">
+                                BTEC First Foundation in Digital
+                            </a>
+                        </h5>
+                        <p class="project-page-project-card-text">
+                            Topics:
+                            
+                                <span class="topic rounded-pill">Education</span>
+                            
+                                <span class="topic rounded-pill">Technology</span>
+                            
+                                <span class="topic rounded-pill">College</span>
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Certifications Section -->
+<div class="background-odd auto-background-sm ">
+    <h2 class="text-center">Certifications</h2>
+    <div class="container h-100 align-content-center">
+
+        <!-- Standard Certification List -->
+        <ul class="list-unstyled">
+            <li class="certifications">
+                <strong>Introduction to Cyber Security</strong> - Open University|OpenLearn — 2024
+            </li>
+            <li class="certifications mt-3">
+                <strong>iDEA Bronze Award</strong> - iDEA Foundation - 2024
+            </li>
+            <li class="certifications mt-3">
+                <strong>iDEA Sliver Award</strong> - iDEA Foundation - 2024
+            </li>
+            <li class="certifications mt-3">
+                <strong>AWS Educate Cloud Computing 101</strong> - AWS Educate - 2025
+            </li>
+            <li class="certifications mt-3">
+                <strong>AWS Educate Getting Started With Storage</strong> - AWS Educate - 2025
+            </li>
+            <li class="certifications mt-3">
+                <strong>AWS Educate Getting Started With Compute</strong> - AWS Educate - 2025
+            </li>
+            <li class="certifications mt-3">
+                <strong>AWS Educate Getting Started With Networking</strong> - AWS Educate - 2025
+            </li>
+            <li class="certifications mt-3">
+                <strong>AWS Educate Getting Started With Databases</strong> - AWS Educate - 2025
+            </li>
+            <li class="certifications mt-3">
+                <strong>Operating Systems Basics</strong> - Cisco Networking Academy - 2025
+            </li>
+            <li class="certifications mt-3">
+                <strong>Computer Hardware Basics</strong> - Cisco Networking Academy - 2025
+            </li>
+            <li class="certifications mt-3">
+                <strong>Cyber Security Essentials</strong> - Cisco Networking Academy - 2025
+            </li>
+        </ul>
+
+        <!-- Visual Badges Row -->
+        <div class="row mt-5 justify-content-center text-center">
+            <div class="badge col-auto">
+                <img src="./res/badges/Introduction_to_cyber_security_stay_safe_online.webp" alt="Badge from 'Cyber Security Stay Safe Online" class="badge-image">
+            </div>
+            <div class="badge col-auto">
+                <img src="./res/badges/aws-educate-introduction-to-cloud-101.webp" alt="Badge from 'AWS Educate Introduction To Cloud-101" class="badge-image" style="max-height: 80px;">
+            </div>
+            <div class="badge col-auto">
+                <img src="./res/badges/aws-educate-getting-started-with-storage.webp" alt="Badge from 'AWS Educate Getting Started With Storage" class="badge-image" style="max-height: 80px;">
+            </div>
+            <div class="badge col-auto">
+                <img src="./res/badges/aws-educate-getting-started-with-compute.webp" alt="Badge from 'AWS Educate Getting Started With Compute" class="badge-image" style="max-height: 80px;">
+            </div>
+            <div class="badge col-auto">
+                <img src="./res/badges/aws-educate-getting-started-with-networking.webp" alt="Badge from 'AWS Educate Getting Started With Networking" class="badge-image" style="max-height: 80px;">
+            </div>
+            <div class="badge col-auto">
+                <img src="./res/badges/aws-educate-getting-started-with-databases-training.webp" alt="Badge from 'AWS Educate Getting Started With Databases" class="badge-image" style="max-height: 80px;">
+            </div>
+            <div class="badge col-auto">
+                <img src="./res/badges/junior-cybersecurity-analyst-career-path.png" alt="Badge from Cisco Networking Academy" class="badge-image" style="max-height: 80px;">
+            </div>
+            <div class="badge col-auto">
+                <img src="./res/badges/operating-systems-basics.png" alt="Badge from Cisco Networking Academy" class="badge-image" style="max-height: 80px;">
+            </div>
+            <div class="badge col-auto">
+                <img src="./res/badges/computer-hardware-basics.png" alt="Badge from Cisco Networking Academy" class="badge-image" style="max-height: 80px;">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Educational history section -->
+
+<div class="background-even auto-background-sm">
+    <h2 class="text-center">Educational History</h2>
+    <div class="d-flex flex-column container h-100 justify-content-center">
+        <div class="educational-history-card card shadow mb-3 rounded-4 p-2 pe-3">
+            <h5 class="educational-history-title">Bournemouth & Poole College - T-Level: Digital Software Devlopement</h5>
+            <p class="educational-history-date">September 2025 - Present</p>
+            <p class="educational-history-date">Topics Covered: </p>
+            <ul class="educational-history-list">
+                <li>Problem solving</li>
+                <li>Programming</li> 
+                <li>Emerging issues and impact of digital</li> 
+                <li>Legislation and regulatory requirements</li>
+                <li>Business context / Business Environment</li>
+                <li>Data</li> 
+                <li>Digital environments</li> 
+                <li>Security</li>
+            </ul>
+        </div>
+        
+        <div class="educational-history-card card shadow rounded-4 p-2 pe-3">
+            <h5 class="educational-history-title">Bournemouth & Poole College - T-Level Foundation in Digital</h5>
+            <p class="educational-history-date">September 2024 - June 2025</p>
+            <p class="educational-history-date">Topics Covered: </p>
+            <ul class="educational-history-list">
+                <li>Networking</li>
+                <li>Website Design</li>
+                <li>Portfolio Devlopement</li>
+                <li>Digital Graphics</li>
+                <li>Online World</li>
+                <li>Technology Systems</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="background-odd px-5 h-auto">
+    <h2 class="text-center">Timeline</h2>
+    <div class="d-flex flex-column content-container justify-content-center">
+        <div class="timeline">
+
+        <div class="timeline-item left">
+            <div class="timeline-dot"></div>
+            <div class="card timeline-card from-left">
+            <div class="card-body">
+                <h5 class="card-title">Before 2020</h5>
+                <p class="card-text">
+                    Interest piked in cyber security, triggered by films and T.V shows.
+                </p>
+            </div>
+            </div>
+        </div>
+
+        <div class="timeline-item right">
+            <div class="timeline-dot"></div>
+            <div class="card timeline-card from-right">
+            <div class="card-body">
+                <h5 class="card-title">2023</h5>
+                <p class="card-text">
+                    Started to learn programming in my first language Python, after college open day.
+                </p>
+            </div>
+            </div>
+        </div>
+
+        <div class="timeline-item left">
+            <div class="timeline-dot"></div>
+            <div class="card timeline-card from-left">
+            <div class="card-body">
+                <h5 class="card-title">2024</h5>
+                <p class="card-text">
+                    Started at Bournemouth and Poole college; Learned HTML, CSS, Javascript and C++ while working on projects; Done a couple free courses
+                </p>
+            </div>
+            </div>
+        </div>
+
+        <div class="timeline-item right">
+            <div class="timeline-dot"></div>
+            <div class="card timeline-card from-right">
+            <div class="card-body">
+                <h5 class="card-title">2025</h5>
+                <p class="card-text">
+                    Signed up to Try Hack Me started to build ethical hacking skills.
+                </p>
+            </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+    <footer class="background-odd p-4 p-lg-3 p-xxl-2 mt-5 h-auto w-100">
+    <div class="container-fluid h-100 align-content-center">
+        <div class="row h-100">
+            <div class="col-md align-content-center">
+                <h3>Kieran Pritchard</h3>
+                <p>Digital Techology Student</p>
+            </div>
+            <div class="col-md">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/About.html">About</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/Projects.html">Projects</a></li>
+                    <li><a href="/Hobbies.html">Hobbies</a></li>
+                    <li><a href="/Contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md">
+                <h3>Contact Information</h3>
+                <ul id="contact-footer-list">
+                    <li class="contact-footer-list-item"><button onclick="contactLinks('phone')" class="contact-footer-icon-background"><i class="fa-solid fa-phone"></i></button>+44 07763 534145</li>
+                    <li class="contact-footer-list-item"><button onclick="contactLinks('email')" class="contact-footer-icon-background"><i class="fa-solid fa-envelope"></i></button>KieranPritchard06@gmail.com</li>
+                    <li class="contact-footer-list-item"><button onclick="contactLinks('linkedin')" class="contact-footer-icon-background"><i class="fa-brands fa-linkedin"></i></button>Linkedin</li>
+                    <li class="contact-footer-list-item"><button onclick="contactLinks('github')" class="contact-footer-icon-background"><i class="fa-brands fa-github"></i></button>GitHub</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center p-3">
+            <p>&copy; 2025 Kieran Pritchard. All rights reserved.</p>
+            <p>All copyrighted materials are the property of their respective owners. Used here for portfolio demonstration purposes only.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

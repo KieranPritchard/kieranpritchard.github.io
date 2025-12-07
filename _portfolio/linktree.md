@@ -3,7 +3,7 @@ layout: portfolio_post
 title: "Linktree"
 description: "A clean, responsive Linktree-style webpage built with ReactJS and Tailwind CSS. This project centralizes social media and important links in one customizable hub, featuring reusable components, modern frontend practices, and easy scalability for personal or professional use. Perfect for anyone looking to create a personalized, stylish, and easy-to-maintain digital link hub."
 date: 2025-09-14
-featured: false
+featured: true
 topics: ["Programming", "Social-Media"]
 header_image: "/res/Header-Images/project-header-images/Linknest_Header_Image.webp"
 icon: "/res/Icons/portfolio-icons/Linknest_Icon.webp"
