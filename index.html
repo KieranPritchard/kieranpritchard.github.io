@@ -8,23 +8,28 @@ description: "Welcome to Kieran Pritchard's personal portfolio. I'm a Digital Fo
 
 <div class="background-odd">
     <div class="container-fluid px-5 h-100">
+        <!-- Splits the section into two columns -->
         <div class="row align-items-center h-100">
             <div class="col-sm d-flex flex-column justify-content-center">
+                <!-- Introduction text and header -->
                 <h1>Hello, I'm Kieran Pritchard</h1>
                 <p>
                     I study Digital Software Development at Bournemouth & Poole College, where I'm also a student representative.
                     I'm passionate about cybersecurity and love learning by building projects, solving problems, and taking on new challenges as I work toward becoming an ethical hacker.
                 </p>
-
+                <!-- Photo section and buttons -->
                 <div class="d-flex gap-2 justify-content-start">
+                    <!-- Learn more button, goes to about page -->
                     <a type="button" href="{{ '/About.html' | relative_url }}" class="btn btn-primary rounded-3 align-content-center">Learn More</a>
+                    <!-- Button which allows a user to download my C.V -->
                     <a type="button" class="btn btn-outline-primary rounded-3 align-content-center" href="{{ '/res/Kieran_Pritchard_C.V.pdf' | relative_url }}" download="Kieran_Pritchard_C.V.pdf">
                         Download C.V
                     </a>
                 </div>
             </div>
-
+            <!-- Column of image of myself -->
             <div class="col-sm order-first order-md-1 text-center d-flex justify-content-center">
+                <!-- Rounded image of me -->
                 <img class="img-fluid rounded-circle w-75" src="{{ '/res/kieran-pritchard-profile-photo.webp' | relative_url }}" alt="A professional headshot of Kieran Pritchard.">
             </div>
         </div>
@@ -34,16 +39,21 @@ description: "Welcome to Kieran Pritchard's personal portfolio. I'm a Digital Fo
 <!-- Shortened about me  -->
 
 <div class="background-even">
+    <!-- Section Header -->
     <h2 class="text-center">About Me</h2>
 
     <div class="container-fluid px-5 h-100">
+        <!-- Splits the section into two columns -->
         <div class="row h-100 align-items-center">
-
+            <!-- Image Coloumn  -->
             <div class="col-sm text-center d-flex justify-content-center">
+                <!-- Image of me using VR -->
                 <img class="img-fluid w-75" src="{{ '/res/kieran_pritchard_using_vr.webp' | relative_url }}" alt="Kieran Pritchard working on a computer in a classroom.">
             </div>
 
+            <!-- Biography column -->
             <div class="col-sm order-first order-sm-1 d-flex flex-column justify-content-center">
+                <!-- A paragraph about myself -->
                 <p>
                     I'm a hardworking and motivated T Level Digital Software Development student and student representative at Bournemouth & Poole College. 
                     I'm passionate about cybersecurity and ethical hacking. 
@@ -51,7 +61,6 @@ description: "Welcome to Kieran Pritchard's personal portfolio. I'm a Digital Fo
                     I take a reliable, organised approach to my work and always push myself to grow, learn, and go beyond expectations.
                 </p>
             </div>
-
         </div>
     </div>
 </div>
@@ -59,16 +68,22 @@ description: "Welcome to Kieran Pritchard's personal portfolio. I'm a Digital Fo
 <!-- Recent Blogs section -->
 
 <div class="background-odd px-5">
+    <!-- Section Header -->
     <h2 class="text-center">Recent Blogs</h2>
-    <div class="d-flex flex-column justify-content-center content-container">
+    <!-- Flex column for cards -->
+    <div class="d-flex flex-column justify-content-center container-fluid">
+        <!-- Generates blog post cards from jekyll -->
         {% for post in site.posts limit:3 %}
         <div class="recent-blog-post rounded-4">
             <!-- Blog post -->
             <div class="row">
+                <!-- Card with two columns for image and text and heading -->
                 <div class="col-md-2 d-none d-lg-block">
+                    <!-- Thumbnail image-->
                     <img class="home-page-recent-blogs-image flex" src="{{ post.thumbnail | relative_url }}" alt="{{ post.thumbnail_alt }}">
                 </div>
                 <div class="col-md-10">
+                    <!-- Header link and description generated from jekyll -->
                     <h4 class="recent-blog-post-title">
                         <a class="recent-blog-post-title-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
                     </h4>
@@ -83,11 +98,13 @@ description: "Welcome to Kieran Pritchard's personal portfolio. I'm a Digital Fo
 <!-- Recent projects section-->
 
 <div class="background-even auto-background-md auto-background-sm">
+    <!-- Section Header -->
     <h2 class="text-center">Recent Projects</h2>
 
     <div class="container-fluid h-100">
         <!-- Cards for recent Projects -->
         <div class="row align-content-center justify-content-center h-100">
+            <!-- Jekyll code to sort the portfolio posts by most recent -->
             {% assign sorted_portfolio = site.portfolio | sort: 'date' | reverse %}
             {% assign main_projects = '' | split: '' %}
             {% for project in sorted_portfolio %}
@@ -96,19 +113,24 @@ description: "Welcome to Kieran Pritchard's personal portfolio. I'm a Digital Fo
                     {% assign main_projects = main_projects | push: project %}
                 {% endif %}
             {% endfor %}
-
+            
+            <!-- Loops over the main projects and gets the three most recent ones -->
             {% for project in main_projects limit:3 %}
                 <div class="col-md-4 col-sm-12 d-flex">
+                    <!-- Recent project card template -->
                     <div class="recent-project-card card shadow rounded-5 d-flex w-100 flex-column justify-content-center align-items-center h-100 mt-3 p-4 text-center">
-                        
+                        <!-- Card thumbnail -->
                         <div class="recent-project-card-img-background d-flex justify-content-center align-items-center w-100">
                             <img class="recent-project-card-img" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
                         </div>
-
+                        
+                        <!-- Flex column with title and description-->
                         <div class="d-flex flex-column justify-content-center align-items-center w-100 mt-3">
+                            <!-- Title from jekyll front matter -->
                             <h5 class="recent-project-card-title">{{ project.title }}</h5>
+                            <!-- Description from jekyll front matter -->
                             <p class="recent-project-card-text">{{ project.description }}</p>
-
+                            <!-- Link to page -->
                             <a href="{{ project.url | relative_url }}" class="w-100">
                                 <button class="recent-project-card-button rounded-4 w-100">Find Out More</button>
                             </a>
