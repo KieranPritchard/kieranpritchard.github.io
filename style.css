@@ -1136,14 +1136,14 @@ table, th, td {
    /* Large Desktop (1400px and up) */
 @media screen and (min-width: 1400px) {
     .recent-blog-post {
-        margin-top: 0.75%;
-        margin-bottom: 0.75%;
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
     }
 
     .home-page-recent-blogs-image {
         height: auto;
         width: 100%;
-        max-width: 75%;
+        max-width: 50%;
         justify-content: center;
         margin-top: 5%;
         margin-left: 5%;
