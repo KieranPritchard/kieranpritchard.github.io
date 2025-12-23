@@ -3,7 +3,7 @@ layout: portfolio_post
 title: "Password Manager"
 description: "This project showcases a Python-based password manager designed with Object-Oriented Programming. It serves as a demonstration of CRUD functionality, allowing for the secure storing, retrieval, and modification of passwords through persistent storage. By utilizing the cryptography library, the project highlights a strong focus on data integrity and standard security practices."
 date: 2025-12-23
-featured: true
+featured: false
 topics: ["Cyber Security", "Programming"]
 header_image: "/res/Header-Images/project-header-images/Password_Manager_Header_Image.webp"
 icon: "/res/Icons/portfolio-icons/Password_Manager_Icon.webp"
