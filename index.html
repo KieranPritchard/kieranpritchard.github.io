@@ -67,77 +67,72 @@ description: "Welcome to Kieran Pritchard's personal portfolio. I'm a Digital Fo
 
 <!-- Recent Blogs section -->
 
-<div class="background-odd px-5">
+<div class="background-odd px-5 d-flex flex-column justify-content-center container-fluid gap-2">
     <!-- Section Header -->
     <h2 class="text-center">Recent Blogs</h2>
     <!-- Flex column for cards -->
-    <div class="d-flex flex-column justify-content-center container-fluid">
-        <!-- Generates blog post cards from jekyll -->
-        {% for post in site.posts limit:3 %}
-        <div class="recent-blog-post rounded-4">
-            <!-- Blog post -->
-            <div class="row">
-                <!-- Card with two columns for image and text and heading -->
-                <div class="col-md-2 d-none d-lg-block">
-                    <!-- Thumbnail image-->
-                    <img class="home-page-recent-blogs-image flex" src="{{ post.thumbnail | relative_url }}" alt="{{ post.thumbnail_alt }}">
-                </div>
-                <div class="col-md-10">
-                    <!-- Header link and description generated from jekyll -->
-                    <h4 class="recent-blog-post-title">
-                        <a class="recent-blog-post-title-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                    </h4>
-                    <p class="recent-blog-post-text">{{ post.description }}</p>
-                </div>
+    <!-- Generates blog post cards from jekyll -->
+    {% for post in site.posts limit:3 %}
+    <div class="recent-blog-post rounded-4">
+        <!-- Blog post -->
+        <div class="row">
+            <!-- Card with two columns for image and text and heading -->
+            <div class="col-md-2 d-none d-lg-block">
+                <!-- Thumbnail image-->
+                <img class="home-page-recent-blogs-image flex" src="{{ post.thumbnail | relative_url }}" alt="{{ post.thumbnail_alt }}">
+            </div>
+            <div class="col-md-10">
+                <!-- Header link and description generated from jekyll -->
+                <h4 class="recent-blog-post-title">
+                    <a class="recent-blog-post-title-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </h4>
+                <p class="recent-blog-post-text">{{ post.description }}</p>
             </div>
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
 </div>
 
 <!-- Recent projects section-->
 
-<div class="background-even auto-background-md auto-background-sm">
+<div class="background-even px-5 auto-background-md auto-background-sm d-flex flex-column justify-content-center container-fluid gap-2">
     <!-- Section Header -->
     <h2 class="text-center">Recent Projects</h2>
-
-    <div class="container-fluid h-100">
-        <!-- Cards for recent Projects -->
-        <div class="row align-content-center justify-content-center h-100">
-            <!-- Jekyll code to sort the portfolio posts by most recent -->
-            {% assign sorted_portfolio = site.portfolio | sort: 'date' | reverse %}
-            {% assign main_projects = '' | split: '' %}
-            {% for project in sorted_portfolio %}
-                {% assign path_parts = project.relative_path | split: '/' %}
-                {% if path_parts.size == 2 %}
-                    {% assign main_projects = main_projects | push: project %}
-                {% endif %}
-            {% endfor %}
-            
-            <!-- Loops over the main projects and gets the three most recent ones -->
-            {% for project in main_projects limit:3 %}
-                <div class="col-md-4 col-sm-12 d-flex">
-                    <!-- Recent project card template -->
-                    <div class="recent-project-card card shadow rounded-5 d-flex w-100 flex-column justify-content-center align-items-center h-100 mt-3 p-4 text-center">
-                        <!-- Card thumbnail -->
-                        <div class="recent-project-card-img-background d-flex justify-content-center align-items-center w-100">
-                            <img class="recent-project-card-img" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
-                        </div>
-                        
-                        <!-- Flex column with title and description-->
-                        <div class="d-flex flex-column justify-content-center align-items-center w-100 mt-3">
-                            <!-- Title from jekyll front matter -->
-                            <h5 class="recent-project-card-title">{{ project.title }}</h5>
-                            <!-- Description from jekyll front matter -->
-                            <p class="recent-project-card-text">{{ project.description }}</p>
-                            <!-- Link to page -->
-                            <a href="{{ project.url | relative_url }}" class="w-100">
-                                <button class="recent-project-card-button rounded-4 w-100">Find Out More</button>
-                            </a>
-                        </div>
+    <!-- Cards for recent Projects -->
+    <div class="row">
+        <!-- Jekyll code to sort the portfolio posts by most recent -->
+        {% assign sorted_portfolio = site.portfolio | sort: 'date' | reverse %}
+        {% assign main_projects = '' | split: '' %}
+        {% for project in sorted_portfolio %}
+            {% assign path_parts = project.relative_path | split: '/' %}
+            {% if path_parts.size == 2 %}
+                {% assign main_projects = main_projects | push: project %}
+            {% endif %}
+        {% endfor %}
+        
+        <!-- Loops over the main projects and gets the three most recent ones -->
+        {% for project in main_projects limit:3 %}
+            <div class="col-md-4 col-sm-12 d-flex">
+                <!-- Recent project card template -->
+                <div class="recent-project-card card shadow rounded-5 d-flex w-100 flex-column justify-content-center align-items-center h-100 mt-3 p-4 text-center">
+                    <!-- Card thumbnail -->
+                    <div class="recent-project-card-img-background d-flex justify-content-center align-items-center w-100">
+                        <img class="recent-project-card-img" src="{{ project.icon | relative_url }}" alt="{{ project.title }}">
+                    </div>
+                    
+                    <!-- Flex column with title and description-->
+                    <div class="d-flex flex-column justify-content-center align-items-center w-100 mt-3">
+                        <!-- Title from jekyll front matter -->
+                        <h5 class="recent-project-card-title">{{ project.title }}</h5>
+                        <!-- Description from jekyll front matter -->
+                        <p class="recent-project-card-text">{{ project.description }}</p>
+                        <!-- Link to page -->
+                        <a href="{{ project.url | relative_url }}" class="w-100">
+                            <button class="recent-project-card-button rounded-4 w-100">Find Out More</button>
+                        </a>
                     </div>
                 </div>
-            {% endfor %}
-        </div>
+            </div>
+        {% endfor %}
     </div>
 </div>
