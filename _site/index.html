@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="/res/favicon/Website%20Favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Kieran Pritchard Portfolio</title>
+    <meta name="description" content="/Welcome%20to%20Kieran%20Pritchard's%20personal%20portfolio.%20I'm%20a%20Digital%20Foundation%20T-Level%20student%20at%20Bournemouth%20and%20Poole%20College,%20passionate%20about%20programming%20and%20cybersecurity.%20Explore%20my%20latest%20blogs,%20recent%20projects,%20and%20learn%20more%20about%20my%20journey%20toward%20a%20career%20in%20cybersecurity.">
+</head>
+<body id="themeLoaded">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a href="/" class="navbar-brand">Kieran Pritchard</a>
+
+            <!-- Toggler button (hamburger) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible navbar content -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav flex-lg-row gap-lg-4 text-center mx-auto">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link active" id="Active-Page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/About.html" class="nav-link " id="">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/blog/" class="nav-link " id="">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Projects.html" class="nav-link " id="">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Hobbies.html" class="nav-link " id="">Hobbies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Contact.html" class="nav-link " id="">Contact</a>
+                    </li>
+
+                    <!-- Theme toggle shown only in collapsed menu -->
+                    <li class="nav-item d-lg-none mt-2">
+                        <button class="btn btn-outline-primary rounded-3 align-content-center w-100" onclick="themeSwitcher()">
+                            <i class="fa-solid fa-moon themeToggle"></i> Toggle Theme
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Theme toggle shown only on large screens (outside collapse) -->
+            <div class="d-none d-lg-flex align-items-center ms-auto">
+                <button class="navbar-button" onclick="themeSwitcher()">
+                    <i class="fa-solid fa-moon themeToggle"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Short introduction about me-->
+
+<div class="background-odd">
+    <div class="container-fluid px-5 h-100">
+        <!-- Splits the section into two columns -->
+        <div class="row align-items-center h-100">
+            <div class="col-sm d-flex flex-column justify-content-center">
+                <!-- Introduction text and header -->
+                <h1>Hello, I'm Kieran Pritchard</h1>
+                <p>
+                    I study Digital Software Development at Bournemouth & Poole College, where I'm also a student representative.
+                    I'm passionate about cybersecurity and love learning by building projects, solving problems, and taking on new challenges as I work toward becoming an ethical hacker.
+                </p>
+                <!-- Photo section and buttons -->
+                <div class="d-flex gap-2 justify-content-start">
+                    <!-- Learn more button, goes to about page -->
+                    <a type="button" href="/About.html" class="btn btn-primary rounded-3 align-content-center">Learn More</a>
+                    <!-- Button which allows a user to download my C.V -->
+                    <a type="button" class="btn btn-outline-primary rounded-3 align-content-center" href="/res/Kieran_Pritchard_C.V.pdf" download="Kieran_Pritchard_C.V.pdf">
+                        Download C.V
+                    </a>
+                </div>
+            </div>
+            <!-- Column of image of myself -->
+            <div class="col-sm order-first order-md-1 text-center d-flex justify-content-center">
+                <!-- Rounded image of me -->
+                <img class="img-fluid rounded-circle w-75" src="/res/kieran-pritchard-profile-photo.webp" alt="A professional headshot of Kieran Pritchard.">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Shortened about me  -->
+
+<div class="background-even">
+    <!-- Section Header -->
+    <h2 class="text-center">About Me</h2>
+
+    <div class="container-fluid px-5 h-100">
+        <!-- Splits the section into two columns -->
+        <div class="row h-100 align-items-center">
+            <!-- Image Coloumn  -->
+            <div class="col-sm text-center d-flex justify-content-center">
+                <!-- Image of me using VR -->
+                <img class="img-fluid w-75" src="/res/kieran_pritchard_using_vr.webp" alt="Kieran Pritchard working on a computer in a classroom.">
+            </div>
+
+            <!-- Biography column -->
+            <div class="col-sm order-first order-sm-1 d-flex flex-column justify-content-center">
+                <!-- A paragraph about myself -->
+                <p>
+                    I'm a hardworking and motivated T Level Digital Software Development student and student representative at Bournemouth & Poole College. 
+                    I'm passionate about cybersecurity and ethical hacking. 
+                    Whether that's building projects, improving my skills, or exploring new tech through courses and hands-on experience. 
+                    I take a reliable, organised approach to my work and always push myself to grow, learn, and go beyond expectations.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recent Blogs section -->
+
+<div class="background-odd px-5 d-flex flex-column justify-content-center container-fluid gap-2">
+    <!-- Section Header -->
+    <h2 class="text-center">Recent Blogs</h2>
+    <!-- Flex column for cards -->
+    <!-- Generates blog post cards from jekyll -->
+    
+    <div class="recent-blog-post rounded-4">
+        <!-- Blog post -->
+        <div class="row">
+            <!-- Card with two columns for image and text and heading -->
+            <div class="col-md-2 d-none d-lg-block">
+                <!-- Thumbnail image-->
+                <img class="home-page-recent-blogs-image flex" src="/res/Icons/blog-icons/Revamping-My-Portfolio-Icon.webp" alt="A graphic illustration of a hand using a stylus to design a website mockup on a tablet.">
+            </div>
+            <div class="col-md-10">
+                <!-- Header link and description generated from jekyll -->
+                <h4 class="recent-blog-post-title">
+                    <a class="recent-blog-post-title-link" href="/programming/2025/08/02/revamping-my-portfolio-2025.html">Revamping My Portfolio</a>
+                </h4>
+                <p class="recent-blog-post-text">A deep dive into the recent updates I made to my portfolio website. going from improving the design and color scheme to adding new skills, certifications, and accessibility features. as well as new styling and sections to existing pages.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="recent-blog-post rounded-4">
+        <!-- Blog post -->
+        <div class="row">
+            <!-- Card with two columns for image and text and heading -->
+            <div class="col-md-2 d-none d-lg-block">
+                <!-- Thumbnail image-->
+                <img class="home-page-recent-blogs-image flex" src="/res/Icons/blog-icons/A-Day-In-My-Life-As-A-Student-Thumbnail.webp" alt="A computer monitor displaying a student report document with text and an image.">
+            </div>
+            <div class="col-md-10">
+                <!-- Header link and description generated from jekyll -->
+                <h4 class="recent-blog-post-title">
+                    <a class="recent-blog-post-title-link" href="/career/2025/03/09/a-day-in-my-life-as-a-student.html">A Day In My Life As A Student</a>
+                </h4>
+                <p class="recent-blog-post-text">A glimpse into my world—my current routines and thoughts on college life. I've also included reflections on how my life has changed since starting college, highlighting the significant benefits and the new experiences it has opened up for me.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="recent-blog-post rounded-4">
+        <!-- Blog post -->
+        <div class="row">
+            <!-- Card with two columns for image and text and heading -->
+            <div class="col-md-2 d-none d-lg-block">
+                <!-- Thumbnail image-->
+                <img class="home-page-recent-blogs-image flex" src="/res/Icons/blog-icons/How-I-Started-Programming-Thumbnail.webp" alt="A computer monitor displaying a Python code file in a dark-themed programming editor.">
+            </div>
+            <div class="col-md-10">
+                <!-- Header link and description generated from jekyll -->
+                <h4 class="recent-blog-post-title">
+                    <a class="recent-blog-post-title-link" href="/programming/2025/03/05/how-i-started-programming.html">How I Started Programming</a>
+                </h4>
+                <p class="recent-blog-post-text">This blog post is a reflection on the beginning of my programming journey. I wanted to share with you how I got started, how I began learning, and offer some personal tips and advice for anyone looking to start their own path in programming.</p>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<!-- Recent projects section-->
+
+<div class="background-even px-5 auto-background-md auto-background-sm d-flex flex-column justify-content-center container-fluid gap-2">
+    <!-- Section Header -->
+    <h2 class="text-center">Recent Projects</h2>
+    <!-- Cards for recent Projects -->
+    <div class="row">
+        <!-- Jekyll code to sort the portfolio posts by most recent -->
+        
+        
+        
+        
+        <!-- Loops over the main projects and gets the three most recent ones -->
+        
+            <div class="col-md-4 col-sm-12 d-flex">
+                <!-- Recent project card template -->
+                <div class="recent-project-card card shadow rounded-5 d-flex w-100 flex-column justify-content-center align-items-center h-100 mt-3 p-4 text-center">
+                    <!-- Card thumbnail -->
+                    <div class="recent-project-card-img-background d-flex justify-content-center align-items-center w-100">
+                        <img class="recent-project-card-img" src="/res/Icons/portfolio-icons/Password_Manager_Icon.webp" alt="Password Manager">
+                    </div>
+                    
+                    <!-- Flex column with title and description-->
+                    <div class="d-flex flex-column justify-content-center align-items-center w-100 mt-3">
+                        <!-- Title from jekyll front matter -->
+                        <h5 class="recent-project-card-title">Password Manager</h5>
+                        <!-- Description from jekyll front matter -->
+                        <p class="recent-project-card-text">This project showcases a Python-based password manager designed with Object-Oriented Programming. It serves as a demonstration of CRUD functionality, allowing for the secure storing, retrieval, and modification of passwords through persistent storage. By utilizing the cryptography library, the project highlights a strong focus on data integrity and standard security practices.</p>
+                        <!-- Link to page -->
+                        <a href="/portfolio/password-manager/" class="w-100">
+                            <button class="recent-project-card-button rounded-4 w-100">Find Out More</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-4 col-sm-12 d-flex">
+                <!-- Recent project card template -->
+                <div class="recent-project-card card shadow rounded-5 d-flex w-100 flex-column justify-content-center align-items-center h-100 mt-3 p-4 text-center">
+                    <!-- Card thumbnail -->
+                    <div class="recent-project-card-img-background d-flex justify-content-center align-items-center w-100">
+                        <img class="recent-project-card-img" src="/res/Icons/portfolio-icons/Linknest_Icon.webp" alt="Linktree">
+                    </div>
+                    
+                    <!-- Flex column with title and description-->
+                    <div class="d-flex flex-column justify-content-center align-items-center w-100 mt-3">
+                        <!-- Title from jekyll front matter -->
+                        <h5 class="recent-project-card-title">Linktree</h5>
+                        <!-- Description from jekyll front matter -->
+                        <p class="recent-project-card-text">A clean, responsive Linktree-style webpage built with ReactJS and Tailwind CSS. This project centralizes social media and important links in one customizable hub, featuring reusable components, modern frontend practices, and easy scalability for personal or professional use. Perfect for anyone looking to create a personalized, stylish, and easy-to-maintain digital link hub.</p>
+                        <!-- Link to page -->
+                        <a href="/portfolio/linktree/" class="w-100">
+                            <button class="recent-project-card-button rounded-4 w-100">Find Out More</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-4 col-sm-12 d-flex">
+                <!-- Recent project card template -->
+                <div class="recent-project-card card shadow rounded-5 d-flex w-100 flex-column justify-content-center align-items-center h-100 mt-3 p-4 text-center">
+                    <!-- Card thumbnail -->
+                    <div class="recent-project-card-img-background d-flex justify-content-center align-items-center w-100">
+                        <img class="recent-project-card-img" src="/res/Icons/portfolio-icons/Port_Scanner_Icon.webp" alt="Port Scanner">
+                    </div>
+                    
+                    <!-- Flex column with title and description-->
+                    <div class="d-flex flex-column justify-content-center align-items-center w-100 mt-3">
+                        <!-- Title from jekyll front matter -->
+                        <h5 class="recent-project-card-title">Port Scanner</h5>
+                        <!-- Description from jekyll front matter -->
+                        <p class="recent-project-card-text">An overview of my Python port scanner built with the socket module, showcasing my learning in network programming and debugging. The project demonstrates scanning common and full port ranges with real-time results, emphasizes ethical use, and includes clear usage instructions. It highlights my practical skills in Python, cybersecurity fundamentals with a focus on ethical hacking.</p>
+                        <!-- Link to page -->
+                        <a href="/portfolio/port-scanner/" class="w-100">
+                            <button class="recent-project-card-button rounded-4 w-100">Find Out More</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+    <footer class="background-odd p-4 p-lg-3 p-xxl-2 mt-5 h-auto w-100">
+    <div class="container-fluid h-100 align-content-center">
+        <div class="row h-100">
+            <div class="col-md align-content-center">
+                <h3>Kieran Pritchard</h3>
+                <p>Digital Techology Student</p>
+            </div>
+            <div class="col-md">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/About.html">About</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/Projects.html">Projects</a></li>
+                    <li><a href="/Hobbies.html">Hobbies</a></li>
+                    <li><a href="/Contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md">
+                <h3>Contact Information</h3>
+                <ul id="contact-footer-list">
+                    <li class="contact-footer-list-item"><button onclick="contactLinks('phone')" class="contact-footer-icon-background"><i class="fa-solid fa-phone"></i></button>+44 07763 534145</li>
+                    <li class="contact-footer-list-item"><button onclick="contactLinks('email')" class="contact-footer-icon-background"><i class="fa-solid fa-envelope"></i></button>KieranPritchard06@gmail.com</li>
+                    <li class="contact-footer-list-item"><button onclick="contactLinks('linkedin')" class="contact-footer-icon-background"><i class="fa-brands fa-linkedin"></i></button>Linkedin</li>
+                    <li class="contact-footer-list-item"><button onclick="contactLinks('github')" class="contact-footer-icon-background"><i class="fa-brands fa-github"></i></button>GitHub</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center p-3">
+            <p>&copy; 2025 Kieran Pritchard. All rights reserved.</p>
+            <p>All copyrighted materials are the property of their respective owners. Used here for portfolio demonstration purposes only.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
