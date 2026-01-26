@@ -73,6 +73,8 @@ The port scanner follows a simple, interactive workflow:
 
 ## Screenshots
 
-{% include carousel.html 
-            images=page.port_scanner_images
-            carousel_id="port-scanner-carousel" %}
+<div class='container px-0'>
+  {% include carousel.html 
+    images=page.port_scanner_images
+    carousel_id="port-scanner-carousel" %}
+</div>
