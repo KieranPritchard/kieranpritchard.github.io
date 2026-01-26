@@ -1106,6 +1106,11 @@ table, th, td {
   background-color: var(--main-accent) !important;
 }
 
+.carousel-inner {
+  aspect-ratio: 16 / 9; /* adjust if needed */
+  width: 100%;
+}
+
 /* ========================================
    RESPONSIVE DESIGN
    ======================================== */
