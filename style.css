@@ -201,6 +201,19 @@ blockquote{
     height: auto;
 }
 
+/* Portfolio section auto-height
+   On mobile (below 768px), sections use auto height to prevent overflow.
+   On medium screens and up, sections use full viewport height for full-screen look. */
+.portfolio-section-auto {
+    height: auto; /* Mobile: auto height */
+}
+
+@media screen and (min-width: 768px) {
+    .portfolio-section-auto {
+        height: 100vh; /* Desktop: full viewport height */
+    }
+}
+
 /* DYNAMIC HEIGHT LOGIC:
    Prevents footer overlap on pages with long content (like Blogs). 
    Standard sections use 100vh for a 'full-screen' look, but we use the :has() 
