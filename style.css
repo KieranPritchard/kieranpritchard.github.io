@@ -21,10 +21,17 @@
 /* ========================================
    CSS VARIABLES & THEMES
    ======================================== */
+
+/* THEME CONTRACT:
+    --main-accent: Primary branding color for headers, borders, and CTA buttons.
+    --hover-highlight: Interaction color; must maintain high contrast against backgrounds.
+    --background: The primary canvas color.
+    --background-secondary: Used for section alternating and card backgrounds.
+*/
 :root,
 [data-bs-theme="light"]{
-    --background: #f9fafb;                 
-    --background-secondary: #d7e1ec;       
+    --background: #f9fafb; /* For main background */                
+    --background-secondary: #d7e1ec; /**/
     --base-text: #1f2933;                  
     --image-background: #ffffff;           
     --main-accent: #2a3c4b;               
@@ -148,7 +155,11 @@ blockquote{
     height: auto;
 }
 
-/* Override height for blog pages to prevent footer overlap */
+/* DYNAMIC HEIGHT LOGIC:
+    Prevents footer overlap on pages with long content (like Blogs). 
+    Standard sections use 100vh for a 'full-screen' look, but we use the :has() 
+    selector to switch to 'auto' height if the blog sidebar or list exists.
+*/
 .background-odd:has(#blog-sidebar),
 .background-odd:has(#blog-list) {
     height: auto !important;
@@ -255,7 +266,11 @@ NAVIGATION
     margin-left: 7.5%;
     margin-bottom: 7.5%;
 }
-
+/* SCROLL ANIMATIONS:
+    These classes require a JavaScript IntersectionObserver. 
+    Initial state is invisible (opacity 0) and shifted; 
+    JS adds the .fade-in class when the element enters the viewport.
+*/
 /* Recent Blog Posts */
 .recent-blog-post{
     opacity: 0;
@@ -1058,6 +1073,11 @@ table, th, td {
 
 /* Carousel colouring */
 
+/* SVG ICON MASKING:
+    Instead of using standard Bootstrap image assets, we use CSS masks 
+    on inline SVGs. This allows us to dynamically change the arrow color 
+    using our CSS variables (var(--background-secondary)).
+*/
 /* Base reset */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -1114,6 +1134,12 @@ table, th, td {
 /* ========================================
    RESPONSIVE DESIGN
    ======================================== */
+
+/* ULTRA-WIDE (4K) SUPPORT:
+    On screens 2560px and wider, standard font sizes and card heights 
+    can look 'lost'. These overrides scale up typography and images 
+    proportionally to maintain the intended visual impact.
+*/
 @media screen and (min-width: 2560px) {
     /* Typography */
     h1, h2, h3, h5{
