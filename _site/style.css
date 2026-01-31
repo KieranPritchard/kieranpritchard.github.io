@@ -1,0 +1,1695 @@
+/* ========================================
+   IMPORTS & FONTS
+   ======================================== */
+
+/* Google Fonts imports for typography
+   - Red Hat Display: Used for headings and branding (weight 900 only)
+   - Source Code Pro: Used for body text and code-like elements (full weight range) */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* Utility class for Red Hat Display font (black weight) */
+.red-hat-display-black {
+    font-family: "Red Hat Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Utility class for Source Code Pro font (regular weight) */
+.source-code-pro-regular {
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ========================================
+   CSS VARIABLES & THEMES
+   ======================================== */
+
+/* THEME CONTRACT:
+   Defines the semantic color variables used throughout the site.
+   These variables enable easy theme switching and maintain consistency.
+   
+   --main-accent: Primary branding color for headers, borders, and CTA buttons.
+   --hover-highlight: Interaction color; must maintain high contrast against backgrounds.
+   --background: The primary canvas color.
+   --background-secondary: Used for section alternating and card backgrounds.
+   --base-text: Primary text color for body content.
+   --image-background: Background color for image containers.
+   --border: Border color for UI elements.
+   --table-*: Specific variables for table styling to ensure proper contrast.
+*/
+
+/* Light theme (default)
+   Applied to :root and explicitly to [data-bs-theme="light"] for Bootstrap compatibility */
+:root,
+[data-bs-theme="light"]{
+    --background: #f9fafb; /* Light gray - main background */
+    --background-secondary: #d7e1ec; /* Lighter blue-gray - for cards and alternating sections */
+    --base-text: #1f2933; /* Dark gray - primary text color */
+    --image-background: #ffffff; /* White - for image containers */
+    --main-accent: #2a3c4b; /* Dark blue-gray - primary accent color */
+    --border: #d0d5db; /* Light gray - border color */
+    --hover-highlight: #5a8ab8; /* Medium blue - hover/interaction color */
+    --table-header-background: #2a3c4b;
+    --table-header-text: #f9fafb;
+    --table-body-background: #f9fafb;
+    --table-body-text: #1f2933;
+}
+
+/* Dark theme
+   Activated when [data-bs-theme="dark"] is set on html/body element */
+[data-bs-theme="dark"]{
+    --background: #0d1b2a; /* Very dark blue - main background */
+    --background-secondary: #1b2b41; /* Dark blue - for cards and alternating sections */
+    --base-text: #f0f4f8; /* Light gray - primary text color */
+    --image-background: #0a0a0a; /* Near black - for image containers */
+    --main-accent: #a9d6e5; /* Light blue - primary accent color */
+    --border: #3a4f63; /* Medium blue-gray - border color */
+    --hover-highlight: #ffbf00; /* Amber/yellow - hover/interaction color */
+    --table-header-background: #1b2b41;
+    --table-header-text: #a9d6e5;
+    --table-body-background: #3a4f63;
+    --table-body-text: #f0f4f8;
+}
+
+/* ========================================
+   GLOBAL STYLES
+   ======================================== */
+
+/* Base body styling
+   Uses !important to ensure theme background is applied over Bootstrap defaults */
+body{ 
+    background-color: var(--background) !important; 
+}
+
+/* Typography - Headings
+   All headings use Red Hat Display font and main accent color for consistency */
+h1, h2, h3, h4, h5{
+    font-family: "Red Hat Display";
+    color: var(--main-accent) !important;
+}
+
+/* Main page heading - extra top padding for visual spacing */
+h1{ padding-top: 10%;}
+
+/* Secondary headings - minimal top margin, small top padding */
+h2{ margin-top: 0%; padding-top: 1.5%;}
+
+/* Lists - inherit base text color */
+ul{ color: var(--base-text);}
+
+/* List items - use Source Code Pro for monospace aesthetic */
+li{ font-family: "Source Code Pro"; }
+
+/* Paragraphs - body text styling */
+p{
+    font-family: "Source Code Pro";
+    color: var(--base-text);
+}
+
+/* Links - use main accent color, change to hover highlight on interaction */
+a{ color: var(--main-accent) !important; }
+a:hover{ color: var(--hover-highlight) !important; }
+
+/* Bold text - maintain Source Code Pro font */
+b{ font-family: "Source Code Pro"; }
+
+/* Blockquotes - maintain Source Code Pro font for consistency */
+blockquote{
+    font-family: "Source Code Pro";
+}
+
+/* Buttons - ensure consistent font family */
+.btn{
+    font-family: "Source Code Pro" !important;
+}
+
+/* Primary button - filled style with accent color */
+.btn-primary {
+    background-color: var(--main-accent);
+    border-color: var(--main-accent) !important;
+    color: var(--background) !important;
+}
+
+/* Primary button hover - inverted style (transparent background, accent text) */
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--main-accent) !important;
+}
+
+/* Outline primary button - transparent with accent border */
+.btn-outline-primary{
+    background-color: transparent;
+    border-color: var(--main-accent) !important;
+    color: var(--main-accent) !important;
+}
+
+/* Outline primary button hover - filled style */
+.btn-outline-primary:hover{
+    background-color: var(--main-accent);
+    color: var(--background) !important;
+}
+
+/* Card styling
+   Cards use secondary background for visual separation from main background */
+.card{
+    background-color: var(--background-secondary);
+}
+
+/* Shadow utility - uses main accent color for themed shadow effect */
+.shadow{
+    box-shadow: 0px 0px 20px 1px var(--main-accent) !important;
+}
+
+/* Recent Project Cards
+   Animation-ready: starts invisible and translated down.
+   JavaScript IntersectionObserver adds .fade-in class to trigger animation.
+   margin-top: 0 prevents unwanted spacing during animation. */
+.recent-project-card {
+    opacity: 0;
+    transform: translateY(15px); /* Initial position - slightly below final position */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    margin-top: 0; /* IMPORTANT: Prevents layout shift during animation */
+}
+
+/* Fade-in state - applied by JavaScript when element enters viewport */
+.recent-project-card.fade-in {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+}
+
+/* Layout Components */
+
+/* Odd-numbered sections - use primary background, full viewport height */
+.background-odd{
+    background-color: var(--background);
+    height: 100vh;
+}
+
+/* Even-numbered sections - use secondary background, full viewport height */
+.background-even{
+    background-color: var(--background-secondary);
+    height: 100vh;
+}
+
+/* Auto-height container - prevents overflow on small viewports */
+.background-auto .container {
+    overflow: visible;
+    height: auto;
+}
+
+/* Portfolio section auto-height
+   On mobile (below 768px), sections use auto height to prevent overflow.
+   On medium screens and up, sections use full viewport height for full-screen look. */
+.portfolio-section-auto {
+    height: auto; /* Mobile: auto height */
+}
+
+@media screen and (min-width: 768px) {
+    .portfolio-section-auto {
+        height: 100vh; /* Desktop: full viewport height */
+    }
+}
+
+/* DYNAMIC HEIGHT LOGIC:
+   Prevents footer overlap on pages with long content (like Blogs). 
+   Standard sections use 100vh for a 'full-screen' look, but we use the :has() 
+   selector to switch to 'auto' height if the blog sidebar or list exists.
+   
+   Note: :has() is supported in modern browsers (Chrome 105+, Safari 15.4+, Firefox 121+).
+   Fallbacks are provided below for older browsers. */
+.background-odd:has(#blog-sidebar),
+.background-odd:has(#blog-list) {
+    height: auto !important;
+    min-height: auto !important;
+}
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+
+/* Navigation bar styling
+   Asymmetric padding: more padding on right to balance logo on left */
+.navbar{
+    background-color: var(--background);
+    padding-left: 5% !important;
+    padding-right: 10% !important;
+}
+
+/* Brand/logo styling */
+.navbar-brand{
+    font-family: "Red Hat Display";
+    color: var(--base-text) !important;
+}
+
+/* Navigation links */
+.nav-link{
+    font-family: "Source Code Pro";
+    color: var(--base-text) !important;
+}
+
+/* Navigation link hover - color change with slight scale for feedback */
+.nav-link:hover{
+    color: var(--hover-highlight) !important;
+    transition: ease 0.25s;
+    transform: scale(1.05) !important;
+}
+
+/* Active page indicator - uses hover highlight color */
+#Active-Page{
+    color: var(--hover-highlight) !important;
+}
+
+/* Navbar button (e.g., theme toggle)
+   Circular button with border, uses all: unset to reset browser defaults */
+.navbar-button{
+    all: unset; /* Reset all default styles */
+    width: 2em;
+    height: 2em;
+    border-radius: 50%; /* Perfect circle */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: var(--main-accent);
+    background-color: transparent;
+    border: 1px solid var(--main-accent);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none; /* Note: border is set above but overridden here - may be intentional for theme toggle */
+}
+
+/* Navbar button hover - filled background with scale effect */
+.navbar-button:hover {
+    background-color: var(--main-accent) !important;
+    color: var(--hover-highlight) !important;
+    transform: scale(1.05) !important;
+}
+
+/* Tab styling - custom pill navigation
+   Creates a bordered container for tab navigation */
+.custom-pills .nav-pills {
+    border-style: solid !important;
+    border-radius: 25px !important;
+    border-width: 2.5px !important;
+    border-color: var(--main-accent) !important;
+}
+
+/* Individual tab links */
+.custom-pills .nav-link {
+    font-size: 1.25vw !important;
+    border-radius: 25px !important;
+    color: var(--main-accent) !important;
+    transition: all 0.2s ease-in-out !important; /* Smooth hover effect */
+}
+
+/* Tab link hover - maintains accent color */
+.custom-pills .nav-link:hover {
+    color: var(--main-accent) !important;
+}
+
+/* Active tab - filled with accent color, text uses background color for contrast */
+.custom-pills .nav-link.active {
+    background-color: var(--main-accent) !important;
+    color: var(--background) !important;
+}
+
+/* ========================================
+   HOME PAGE
+   ======================================== */
+
+/* Tagline/typewriter effect
+   Border-right creates cursor effect, white-space: nowrap prevents wrapping */
+#tagline {
+    font-family: "Red Hat Display";
+    color: var(--main-accent);
+    font-size: 1.5vw;
+    font-weight: 500;
+    border-right: 2px solid var(--table-body-text); /* Cursor effect */
+    white-space: nowrap; /* Prevents text wrapping */
+    overflow: hidden; /* Hides overflow during animation */
+}
+
+/* Recent blogs image - positioned with margins */
+.home-page-recent-blogs-image{
+    height: auto;
+    width: 100%;
+    max-width: 80%;
+    margin-top: 7.5%;
+    margin-left: 7.5%;
+    margin-bottom: 7.5%;
+}
+
+/* SCROLL ANIMATIONS:
+   These classes require a JavaScript IntersectionObserver. 
+   Initial state is invisible (opacity 0) and shifted; 
+   JS adds the .fade-in class when the element enters the viewport.
+   
+   This pattern is used for:
+   - Recent blog posts (slide in from left)
+   - Recent project cards (fade up from below)
+   - Certifications (slide in from left)
+   - Badges (fade up from below)
+   - Educational history cards (slide in from left)
+*/
+
+/* Recent Blog Posts - slide in from left animation */
+.recent-blog-post{
+    opacity: 0;
+    transform: translateX(-50px); /* Start 50px to the left */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    background-color: var(--background-secondary);
+    box-shadow: 0 0 8px var(--main-accent); /* Subtle glow effect */
+    margin: 1% 0;
+}
+
+/* Fade-in state - applied by JavaScript */
+.recent-blog-post.fade-in{
+    opacity: 1;
+    transform: translateY(0); /* Note: should be translateX(0) for consistency */
+}
+
+/* Recent blog post title */
+.recent-blog-post-title{
+    margin-top: 0.5%;     
+    padding: 1.5% 0 0.5%;
+    color: var(--main-accent) !important;
+}
+
+/* Recent blog post title link */
+.recent-blog-post-title-link{
+    color: var(--main-accent);
+    text-decoration: none;
+    transition: ease 0.5s;
+}
+
+/* Recent blog post title link hover */
+.recent-blog-post-title-link:hover{
+    color: var(--hover-highlight);
+    transition: ease 0.25s;
+}
+
+/* Recent blog post text content */
+.recent-blog-post-text{
+    padding-bottom: 1.5%;
+    padding-right: 1.5%;
+}
+
+/* Recent project card image - fixed height for consistency */
+.recent-project-card-img{
+    height: 150px;
+    max-width: 100%;
+    width: auto;
+}
+
+/* Recent project card title */
+.recent-project-card-title{
+    margin-top: 2.5%;
+}
+
+/* Recent project card text - viewport-relative sizing */
+.recent-project-card-text{
+    font-size: 0.85vw !important
+}
+
+/* Recent project card button - custom styled button */
+.recent-project-card-button{
+    height: 50px;
+    border-style: solid;
+    border-color: var(--main-accent);
+    color: var(--main-accent);
+    border-width: 1px;
+    font-family: "Source Code Pro";
+    background-color: transparent;
+    transition: ease 0.25s;
+}
+
+/* Recent project card button hover - filled style */
+.recent-project-card-button:hover{
+    background-color: var(--main-accent);
+    color: var(--background-secondary);
+    transition: ease 0.5s;
+}
+
+/* ========================================
+   ABOUT PAGE
+   ======================================== */
+
+/* Typewriter effect container
+   Border-right creates blinking cursor, white-space: pre-line preserves line breaks */
+#typewriter {
+    border-right: 2px solid #000; /* Cursor - note: hardcoded color, consider using CSS variable */
+    white-space: pre-line; /* Preserves \n and still wraps text */
+    overflow: hidden;
+}
+
+/* Blinking cursor animation
+   Creates a pulsing effect for the typewriter cursor */
+@keyframes blink {
+    0% { border-color: transparent; }
+    50% { border-color: var(--table-body-text) }
+    100% { border-color: transparent; }
+}
+
+/* Apply blinking animation to typewriter */
+#typewriter {
+    animation: blink 0.7s step-end infinite; /* step-end creates sharp on/off effect */
+}
+
+/* Skill button - reset all styles for custom button appearance */
+.skill-btn{
+    all: unset
+}
+
+/* Skill button hover - color change on interaction */
+.skill-btn:hover{
+    color:  var(--hover-highlight);
+    transition: all 0.25s;
+}
+
+/* Certifications section - slide in from left animation */
+.certifications{
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    font-size: 1vw;
+}
+
+/* Certifications fade-in state */
+.certifications.fade-in{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Badge container - fade up from below animation */
+.badge{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Badge image - constrained height for consistency */
+.badge-image{
+    max-height: 80px;
+}
+
+/* Badge fade-in state */
+.badge.fade-in{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Educational History */
+
+/* Educational history row - full width container */
+.educational-history-row{
+    width: 100%;
+}
+
+/* Educational history card - slide in from left animation */
+.educational-history-card{
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Educational history card fade-in state */
+.educational-history-card.fade-in{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Educational history title - viewport-relative sizing */
+.educational-history-title{
+    margin-top: 0.5%;
+    margin-left: 1.5%;
+    font-size: 1.25vw !important;
+}
+
+/* Educational history date */
+.educational-history-date{
+    margin-left: 3.5%;
+    font-size: 1vw !important;
+    margin-bottom: 0.5%;
+}
+
+/* Educational history list items */
+.educational-history-list{
+    font-size: 1vw !important;
+    margin-left: 4%;
+}
+
+/* ========================================
+   BLOG PAGE
+   ======================================== */
+
+/* Sidebar - positioned on left side of blog page */
+#blog-sidebar{
+    width: 95%;
+    padding: 5%;
+    margin-right: 15%; /* Creates space between sidebar and main content */
+}
+
+/* Search bar container - centers the search input */
+.searchbar-container{
+    text-align: center;
+}
+
+/* Blog search bar - themed input field */
+#blog-searchbar{
+    background-color: var(--background-even) !important; /* Note: should be var(--background-secondary) */
+    border-color: var(--main-accent);
+    color: var(--main-accent);
+    border-style: solid;
+    font-family: "Source Code Pro"
+}
+
+/* Sidebar section titles */
+.sidebar-title{
+    padding-top: 2.5%;
+    font-family: "Red Hat Display" !important;
+}
+
+/* Sidebar recent blog post titles */
+.sidebar-recent-blog-title{
+    font-family: "Source Code Pro" !important;
+}
+
+/* Custom checkbox styling
+   Creates a themed checkbox that matches the site design */
+.sidebar-checkbox[type="checkbox"] {
+    position: relative;
+    height: 25px;
+    width: 25px;
+    appearance: none; /* Remove default checkbox appearance */
+    border: 2px solid var(--main-accent);
+    margin-left: 3%;
+    cursor: pointer;
+    transition: background 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
+}
+
+/* Checkbox focus state - accessibility enhancement
+   Provides visible focus indicator for keyboard navigation */
+.sidebar-checkbox[type="checkbox"]:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.6); /* Subtle glow - adjust color/opacity as desired */
+}
+
+/* Checkbox checked state - background and border update */
+.sidebar-checkbox[type="checkbox"]:checked {
+    background-color: var(--background-secondary);
+    border: 2px solid var(--main-accent);
+}
+
+/* Checkbox tick mark - created with ::after pseudo-element
+   Uses Unicode checkmark character (\2713) */
+.sidebar-checkbox[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); /* Start scaled to 0 (invisible) */
+    transition: transform 0.2s ease;
+}
+
+/* Checkbox tick mark when checked - scales to visible */
+.sidebar-checkbox[type="checkbox"]:checked::after {
+    content: "\2713"; /* Unicode checkmark */
+    font-size: 16px;
+    color: var(--main-accent);
+    font-weight: bold;
+    transform: translate(-50%, -50%) scale(1); /* Scale to full size */
+    pointer-events: none; /* Prevent interaction with pseudo-element */
+}
+
+/* Sidebar filter labels */
+.sidebar-labels{
+    color: var(--base-text) !important;
+    font-family: "Source Code Pro" !important;
+    margin-top: 1%;
+    margin-left: 2.5%;
+    position:relative;
+    top: -7px; /* Fine-tune alignment with checkbox */
+}
+
+/* Sidebar blog post padding */
+.sidebar-blog-post-padding{
+    padding: 2.5% 0;
+}
+
+/* Sidebar recent blog image */
+.sidebar-recent-blog-image{
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Sidebar recent blog title link */
+.sidebar-recent-blog-title{
+    margin-left: 2.5%;
+    font-family: "Source Code Pro";
+    text-decoration: none;
+    color: var(--base-text) !important;
+}
+
+/* Sidebar recent blog title hover */
+.sidebar-recent-blog-title:hover{ 
+    color: var(--hover-highlight); 
+    font-weight: bold;
+    transition: ease 0.5s;
+}
+
+/* Blog List - main content area */
+
+/* Blog list container - removes default list styling */
+#blog-list{
+    margin: 0%;
+    padding: 0%;
+    list-style: none;
+}
+
+/* Individual blog post in list */
+.blog-post{ 
+    border-bottom: solid var(--main-accent); 
+    padding: 3% 0; 
+}
+
+/* Blog post image */
+.blog-post-image{
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Blog post title - smooth transition for hover */
+.blog-post-title{ 
+    transition: ease 0.5s;
+}
+
+/* Blog post title hover */
+.blog-post-title:hover{ 
+    color: var(--hover-highlight) !important; 
+    transition: ease 0.5s;
+}
+
+/* Blog post title link - inherits color from parent */
+.blog-post-title-line{ 
+    color: inherit; 
+    text-decoration: none; 
+}
+
+/* Blog post date */
+.blog-post-date{
+    font-family: "Red Hat Display";
+    color: var(--main-accent);
+}
+
+/* Blog page specific layout fixes
+   These rules prevent footer overlap on blog pages with long content */
+
+/* Auto-height background with padding */
+.background-odd.background-auto {
+    min-height: auto !important;
+    padding-bottom: 2rem !important;
+}
+
+/* Footer spacing after auto-height sections */
+.background-odd.background-auto + footer {
+    margin-top: 2rem !important;
+}
+
+/* Alternative approach: target blog page structure directly */
+.blog-index-page .background-odd,
+.blog-index-page .background-odd.background-auto {
+    min-height: auto !important;
+    padding-bottom: 2rem !important;
+}
+
+/* Target the blog page container specifically using :has() */
+.background-odd:has(.container) {
+    min-height: auto !important;
+    padding-bottom: 2rem !important;
+}
+
+/* Fallback for browsers that don't support :has() */
+.background-odd .container {
+    margin-bottom: 2rem;
+}
+
+/* Blog index page specific fixes */
+.blog-index-page .background-odd {
+    min-height: auto !important;
+    height: auto !important;
+    padding-bottom: 3rem !important;
+}
+
+/* Blog index page footer positioning */
+.blog-index-page footer {
+    margin-top: 2rem !important;
+    position: relative !important;
+    clear: both !important;
+}
+
+/* Alternative approach: target blog page elements directly */
+#blog-sidebar + .col-sm-8,
+#blog-sidebar ~ .col-sm-8 {
+    margin-bottom: 2rem;
+}
+
+/* Target blog page structure using more specific selectors with :has() */
+.background-odd:has(#blog-sidebar) {
+    min-height: auto !important;
+    height: auto !important;
+    padding-bottom: 3rem !important;
+}
+
+/* Fallback for browsers without :has() support */
+.background-odd #blog-sidebar {
+    margin-bottom: 2rem;
+}
+
+/* Blog list container spacing */
+.background-odd #blog-list {
+    margin-bottom: 2rem;
+}
+
+/* Ensure footer spacing on blog pages */
+.background-odd + footer {
+    margin-top: 2rem !important;
+}
+
+/* Additional footer positioning fixes
+   Ensures footer is properly positioned and doesn't overlap content */
+footer {
+    position: relative !important;
+    clear: both !important;
+    width: 100% !important;
+    z-index: 1 !important;
+}
+
+/* Blog page footer specific spacing */
+.background-odd:has(#blog-sidebar) + footer,
+.background-odd #blog-sidebar ~ footer {
+    margin-top: 3rem !important;
+}
+
+/* ========================================
+   PROJECTS PAGE
+   ======================================== */
+
+/* Project page introduction text */
+#project-page-intro-section-text{ 
+    padding-top: 1.5%; 
+    font-size: 1vw; 
+}
+
+/* Project card image background - black for contrast */
+.project-page-project-card-image-background{
+    background-color: black;
+    justify-content: center;
+}
+
+/* Project card image - fixed height with object-fit for consistent sizing */
+.project-page-project-card-image{
+    height: 185px;
+    width: 100%;
+    max-width: 100%;
+    width: auto; /* Note: width is set twice - second declaration overrides */
+    object-fit: cover; /* Ensures image fills container without distortion */
+}
+
+/* Project card title */
+.project-page-project-card-title{
+    padding-top: 5%;
+    padding-bottom: 2.5%;
+}
+
+/* Project card title link */
+.project-page-project-card-title-link{ 
+    text-decoration: none; 
+    color: var(--main-accent) !important;
+}
+
+/* Project card title link hover */
+.project-page-project-card-title-link:hover{ 
+    color: var(--hover-highlight); 
+}
+
+/* Project card text */
+.project-page-project-card-text{ 
+    color: var(--main-accent); 
+    font-size: 0.85vw !important;
+}
+
+/* ========================================
+   CONTACT PAGE
+   ======================================== */
+
+/* Contact page list - removes default list styling */
+#contact-page-list{ 
+    list-style: none; 
+}
+
+/* Contact page list link */
+.contact-page-list-link{ 
+    color: var(--base-text); 
+    text-decoration: none; 
+}
+
+/* Contact page list link hover */
+.contact-page-list-link:hover{ 
+    color: var(--hover-highlight); 
+    transition: ease-in 0.3s; 
+}
+
+/* Contact page list item spacing */
+.contact-page-list-item{ 
+    margin-bottom: 7.5%; 
+}
+
+/* Contact page icon background
+   Circular icon container with border, similar to navbar-button */
+.contact-page-icon-background{
+    margin-right: 3% !important;
+    all: unset; /* Reset all default styles */
+    width: 2em;
+    height: 2em;
+    border-radius: 50%; /* Perfect circle */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: var(--main-accent);
+    background-color: transparent;
+    border: 1px solid var(--main-accent);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none; /* Note: border is set above but overridden here */
+}
+
+/* Contact page icon hover */
+.contact-page-icon-background:hover{
+    background-color: var(--main-accent) !important;
+    color: var(--hover-highlight) !important;
+    transform: scale(1.05) !important;
+}
+
+/* Footer - Contact page footer list */
+#contact-footer-list{ 
+    list-style: none; 
+    margin-left: -5%; /* Negative margin for alignment */
+}
+
+/* Contact footer list link */
+.contact-footer-list-link{ 
+    color: var(--base-text); 
+    text-decoration: none;
+}
+
+/* Contact footer list link hover */
+.contact-footer-list-link:hover{ 
+    color: var(--hover-highlight); 
+    transition: ease 0.3s !important;
+}
+
+/* Contact footer list item */
+.contact-footer-list-item{ 
+    margin-bottom: 7.5%; 
+    font-size: 1vw; 
+}
+
+/* Contact footer icon background - same styling as contact-page-icon-background */
+.contact-footer-icon-background{
+    margin-right: 3% !important;
+    all: unset;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: var(--main-accent);
+    background-color: transparent;
+    border: 1px solid var(--main-accent);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+}
+
+/* Contact footer icon hover */
+.contact-footer-icon-background:hover{
+    background-color: var(--main-accent) !important;
+    color: var(--hover-highlight) !important;
+    transform: scale(1.05) !important;
+}
+
+/* Footer positioning and spacing fixes
+   Ensures footer is properly positioned across all pages */
+footer {
+    position: relative;
+    clear: both;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Ensure proper spacing above footer using ::before pseudo-element */
+footer:before {
+    content: '';
+    display: block;
+    height: 2rem;
+    clear: both;
+}
+
+/* ========================================
+   INDIVIDUAL POST PAGES (BLOG & PORTFOLIO)
+   ======================================== */
+
+/* Breadcrumbs - navigation trail styling */
+.breadcrumb-item::before{ 
+    color: var(--base-text) !important; 
+}
+
+.breadcrumb-item{ 
+    color: var(--base-text) !important; 
+}
+
+.breadcrumb-item-link{ 
+    color: var(--base-text) !important; 
+}
+
+.breadcrumb-item-link:hover{ 
+    color: var(--hover-highlight) !important; 
+    transition: ease 0.3s; 
+}
+
+/* Post Header */
+
+/* Individual post page title */
+.indivual-post-page-title{ 
+    padding-top: 0.5%;
+}
+
+/* Individual post page date */
+.indivual-post-page-date{
+    margin: 0;
+    margin: 1.5% 0; /* Note: margin: 0 is overridden by next line */
+    font-family: "Red Hat Display";
+    color: var(--main-accent);
+}
+
+/* Individual post page topics/tags */
+.indivual-post-page-topics{
+    color: var(--main-accent);
+    position: relative;
+    top: 5px; /* Fine-tune vertical positioning */
+    margin-top: 1%;
+    margin-bottom: 3.5%;
+}
+
+/* Individual post page header image background */
+.indivual-post-page-header-image-background{
+    background-color: white; /* Note: hardcoded color, consider using CSS variable */
+    justify-content: center;
+}
+
+/* Individual post page header image */
+.indivual-post-page-header-image{
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* Individual post page content images */
+.indivual-post-page-image{
+    height: auto;
+    width: 100%;
+    max-width: 90%; /* Slightly smaller than container for visual breathing room */
+}
+
+/* Blog post page heading */
+.blog-post-page-heading{ 
+    text-align: left; 
+    margin-bottom: 2.5%;
+}
+
+/* Portfolio post page heading */
+.portfolio-post-page-heading{ 
+    text-align: left; 
+}
+
+/* Post Content Backgrounds
+   Alternating backgrounds for post content sections */
+
+/* Odd-numbered content sections */
+.blog-post-background-odd{
+    min-height: 50vh;
+    background-color: var(--background-odd); /* Note: should be var(--background) */
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Even-numbered content sections */
+.blog-post-background-even{
+    min-height: 50vh;
+    background-color: var(--background-secondary);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    line-height: 1.6; /* Improved readability */
+}
+
+/* ========================================
+   COMPONENTS
+   ======================================== */
+
+/* Popovers - Bootstrap popover component theming */
+
+/* Base popover styling
+   Overrides Bootstrap's default colors to match site theme */
+.popover {
+    background-color: var(--background-secondary);
+    color: var(--base-text);
+    border: 2px solid var(--border);
+
+    /* Bootstrap CSS variable overrides for theming */
+    --bs-popover-bg: var(--background-secondary);
+    --bs-popover-border-color: var(--border);
+    --bs-popover-arrow-border: var(--border);
+    --bs-popover-arrow-bg: var(--background-secondary);
+}
+
+/* Popover header */
+.popover-header {
+  background-color: var(--background-secondary);
+  color: var(--base-text);
+}
+
+/* Popover arrow container */
+.popover .popover-arrow {
+  width: 1rem;
+  height: 0.5rem;
+}
+
+/* Popover arrow styling for all directions
+   Bootstrap uses ::before for outer border and ::after for inner fill
+   This ensures the arrow matches the popover border and background */
+
+/* Top arrow */
+.popover.bs-popover-top > .popover-arrow::before {
+  border-top-color: var(--border) !important;
+}
+.popover.bs-popover-top > .popover-arrow::after {
+  border-top-color: var(--background-secondary) !important;
+}
+
+/* Bottom arrow */
+.popover.bs-popover-bottom > .popover-arrow::before {
+  border-bottom-color: var(--border) !important;
+}
+.popover.bs-popover-bottom > .popover-arrow::after {
+  border-bottom-color: var(--background-secondary) !important;
+}
+
+/* Start (left in LTR) arrow */
+.popover.bs-popover-start > .popover-arrow::before {
+  border-left-color: var(--border) !important;
+}
+.popover.bs-popover-start > .popover-arrow::after {
+  border-left-color: var(--background-secondary) !important;
+}
+
+/* End (right in LTR) arrow */
+.popover.bs-popover-end > .popover-arrow::before {
+  border-right-color: var(--border) !important;
+}
+.popover.bs-popover-end > .popover-arrow::after {
+  border-right-color: var(--background-secondary) !important;
+}
+
+/* Timeline - vertical timeline component for displaying chronological content */
+
+/* Timeline container */
+.timeline {
+    position: relative;
+    margin: 2rem 0;
+    padding: 1rem 0;
+}
+
+/* Timeline vertical line - created with ::before pseudo-element
+   Starts at 0% height and animates to full height via JavaScript */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the line */
+    width: 4px;
+    height: 0%; /* Initial state - JavaScript animates this */
+    background-color: var(--background-secondary);
+    transition: height 0.5s ease-out;
+}
+
+/* Timeline item container */
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+/* Timeline dot/marker
+   Positioned on the vertical line, animated on scroll */
+.timeline-item .timeline-dot {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers on the line */
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--main-accent);
+    border-radius: 50%; /* Perfect circle */
+    z-index: 1; /* Above the line */
+    border: 3px solid var(--background-secondary); /* Creates ring effect */
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    opacity: 0;
+    animation: fadeInDot 0.5s ease-out forwards;
+    animation-delay: 0.5s;
+    animation-play-state: paused; /* JavaScript starts animation */
+}
+
+/* Timeline card - content card for each timeline item */
+.timeline-item .card {
+    width: 45%; /* Leaves space for alternating left/right layout */
+    background-color: var(--background-secondary);
+    box-shadow: 0 0 8px var(--main-accent);
+    opacity: 0;
+    transition: opacity .6s ease-out, transform .6s ease-out;
+    transform: translateY(30px); /* Starts slightly below */
+}
+
+/* Left-aligned timeline card */
+.timeline-item.left .card {
+    margin-right: auto;
+}
+
+/* Right-aligned timeline card */
+.timeline-item.right .card {
+    margin-left: auto;
+}
+
+/* Timeline card animation states - applied by JavaScript */
+
+/* Card sliding in from left */
+.timeline-card.from-left {
+    transform: translateX(-50px) translateY(0);
+}
+
+/* Card sliding in from right */
+.timeline-card.from-right {
+    transform: translateX(50px) translateY(0);
+}
+
+/* Card visible state - final position */
+.timeline-card.visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+/* Timeline dot fade-in animation */
+@keyframes fadeInDot {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0); /* Start invisible and scaled down */
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1); /* End visible and full size */
+    }
+}
+
+/* Enable timeline dot animation when .animate-line class is added */
+.timeline.animate-line .timeline-item .timeline-dot {
+    animation-play-state: running;
+}
+
+/* Staggered animation delays for multiple timeline items */
+.timeline-item:nth-child(1) .timeline-dot {
+    animation-delay: 0.5s;
+}
+.timeline-item:nth-child(2) .timeline-dot {
+    animation-delay: 1.5s;
+}
+.timeline-item:nth-child(3) .timeline-dot {
+    animation-delay: 2.5s;
+}
+.timeline-item:nth-child(4) .timeline-dot {
+    animation-delay: 3.5s;
+}
+
+/* Tables - styled data tables */
+
+/* Base table styling */
+table{
+    background-color: var(--table-body-background);
+    border-color: var(--table-header-background) !important;
+    width: 100%;
+    font-size: 1vw; /* Viewport-relative sizing */
+}
+
+/* Table header cells */
+th{
+    height: 5vh; /* Viewport-relative height */
+    text-align: center !important;
+    background-color: var(--table-header-background);
+}
+
+/* Table title text - uses heading font */
+.table-title-text{
+    color: var(--table-header-text);
+    font-family: "Red Hat Display";
+}
+
+/* Table cells - consistent styling */
+table, th, td {
+    text-align: center;
+    color: var(--table-body-text);
+    border: 1px solid !important;
+    border-color: var(--table-header-background) !important;
+}
+
+/* Topics/Tags - badge-style topic indicators */
+
+/* General topic badge */
+.topic{
+    border-style: solid;
+    padding: 1% 2.5%;
+    font-size: 10px;
+}
+
+/* Post topic badge - smaller variant */
+.post-topic{
+    border-style: solid;
+    padding: 0.5% 1%;
+    font-size: 10px;
+}
+
+/* Carousel - Bootstrap carousel component theming */
+
+/* SVG ICON MASKING:
+   Instead of using standard Bootstrap image assets, we use CSS masks 
+   on inline SVGs. This allows us to dynamically change the arrow color 
+   using our CSS variables (var(--background-secondary)).
+   
+   This approach provides:
+   - Theme-aware carousel controls
+   - No need for separate image assets
+   - Easy color customization via CSS variables
+*/
+
+/* Base reset for carousel control icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none !important; /* Remove Bootstrap's default image */
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--background-secondary) !important; /* Color of the icon */
+  -webkit-mask-size: 100% 100%; /* Webkit prefix for older Safari */
+  -webkit-mask-repeat: no-repeat;
+  mask-size: 100% 100%; /* Standard property */
+  mask-repeat: no-repeat;
+}
+
+/* Previous arrow icon - left-pointing chevron */
+.carousel-control-prev-icon {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 16 16'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 16 16'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+}
+
+/* Next arrow icon - right-pointing chevron */
+.carousel-control-next-icon {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}
+
+/* Carousel indicators - dot navigation */
+.carousel-indicators [data-bs-target] {
+  background-color: var(--main-accent) !important;
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50%; /* Perfect circles */
+  opacity: 1; /* Prevent Bootstrap's default fading effect */
+}
+
+/* Carousel control buttons - previous and next */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 8%; /* Clickable area width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1; /* Always visible (Bootstrap defaults to 0.5) */
+}
+
+/* Active carousel indicator */
+.carousel-indicators .active {
+  background-color: var(--main-accent) !important;
+}
+
+/* Carousel inner container - maintains aspect ratio */
+.carousel-inner {
+  aspect-ratio: 16 / 9; /* Standard widescreen ratio - adjust if needed */
+  width: 100%;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* ULTRA-WIDE (4K) SUPPORT:
+   On screens 2560px and wider, standard font sizes and card heights 
+   can look 'lost'. These overrides scale up typography and images 
+   proportionally to maintain the intended visual impact.
+   
+   Breakpoint: 2560px (typical 4K monitor width)
+*/
+@media screen and (min-width: 2560px) {
+    /* Typography - maintain font families and colors */
+    h1, h2, h3, h5{
+        font-family: "Red Hat Display";
+        color: var(--main-accent) !important;
+    }
+
+    h1{ padding-top: 10%;}
+    h2{ padding-top: 2.5%;}
+
+    ul{ color: var(--base-text);}
+    li{ font-family: "Source Code Pro";}
+
+    p{
+        font-family: "Source Code Pro";
+        color: var(--base-text);
+    }
+
+    a{ color: var(--main-accent) !important; }
+    a:hover{ color: var(--hover-highlight) !important; }
+
+    b{ font-family: "Source Code Pro"; }
+
+    blockquote{
+        font-family: "Source Code Pro";
+    }
+
+    /* Larger card titles for better visibility */
+    .recent-project-card-title{font-size: 1.2vw !important;}
+
+    .project-page-project-card-title{font-size: 1vw !important;}
+
+    /* Larger images for better visual impact */
+    .recent-project-card-img{
+        height: 400px !important;
+    }
+
+    .recent-project-card-button{
+        height: 85px !important;
+        font-size: 1vw !important;
+    }
+
+    .project-page-project-card-image{
+        height: 400px !important;
+    }
+}
+
+/* Large Desktop (1400px and up)
+   Bootstrap's xxl breakpoint - optimizations for large screens */
+@media screen and (min-width: 1400px) {
+    /* Tighter blog post spacing */
+    .recent-blog-post {
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+    }
+
+    /* Adjusted image sizing */
+    .home-page-recent-blogs-image {
+        height: auto;
+        width: 100%;
+        max-width: 70%; /* Slightly smaller than default 80% */
+        justify-content: center;
+        margin-top: 7.5%;
+        margin-left: 7.5%;
+        margin-bottom: 7.5%;
+    }
+
+    /* Larger project card images */
+    .recent-project-card-img{
+        height: 300px !important;
+    }
+
+    .project-page-project-card-image{
+        height: 250px;
+    }
+}
+
+/* Timeline responsive adjustments
+   Breakpoint: 991px (Bootstrap's lg breakpoint)
+   Switches from centered vertical line to left-aligned for better mobile experience */
+@media (max-width: 991px) {
+    /* Move timeline line to left side */
+    .timeline::before {
+        left: 8px;
+    }
+    /* Move timeline dots to left side */
+    .timeline-item .timeline-dot {
+        left: 8px;
+    }
+    /* Full-width cards with left margin */
+    .timeline-item .card {
+        width: 95%;
+        margin-left: 2rem; /* Space for the timeline line */
+    }
+    /* Remove left/right distinction - all cards align left */
+    .timeline-item.left .card,
+    .timeline-item.right .card {
+        margin: 0 0 0 2rem;
+    }
+}
+
+/* Tablet (768px and down)
+   Bootstrap's md breakpoint - tablet and small laptop optimizations */
+@media screen and (max-width: 768px) {
+    /* Auto-height backgrounds for better content flow */
+    .auto-background-md {
+        height: auto;
+        padding-bottom: 3%;
+    }
+    
+    /* Constrain carousel image height */
+    .carousel-item img {
+        max-height: 300px;
+    }
+    
+    /* Wider carousel controls for easier tapping */
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10%;
+    }
+    
+    /* Slightly smaller carousel control icons */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+/* Mobile (576px and down)
+   Bootstrap's sm breakpoint - mobile phone optimizations
+   This is the most comprehensive responsive section */
+@media screen and (max-width: 576px) {
+    /* Typography - viewport-relative sizing for scalability */
+    h1 { font-size: 6vw !important; padding-top: 0%; }
+    h2 { font-size: 4.5vw !important; }
+    h3 { font-size: 3vw !important; }
+    p { font-size: 2.75vw !important; }
+    li { font-size: 3.5vw !important; }
+    blockquote{font-size: 4.5vw !important;}
+
+    /* Layout - remove navbar padding for more space */
+    .navbar {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    /* Auto-height backgrounds */
+    .auto-background-sm {
+        height: auto;
+        padding-bottom: 5%;
+    }
+
+    /* Smaller tab navigation font */
+    .custom-pills .nav-link {
+        font-size: 1.5vw !important;
+        border-radius: 25px !important;
+    }
+
+    /* Blog Components - increased spacing and adjusted sizing */
+    .recent-blog-post{
+        margin-bottom: 5%;
+    }
+
+    .recent-blog-post-title {
+        margin-left: 4%;
+        margin-right: 4%;
+        padding-left: 0%;
+        font-size: 4.5vw !important;
+    }
+
+    .recent-blog-post-text {
+        margin-left: 4%;
+        margin-right: 4%;
+        font-size: 2.4vw !important;
+    }
+
+    /* Tables - larger font for readability */
+    table { font-size: 2.5vw; }
+    th { height: 3.75vh; }
+
+    /* Project Cards - adjusted sizing and spacing */
+    .recent-project-card{margin-bottom: 5%;}
+    .recent-project-card-title { font-size: 3.8vw !important; }
+    .recent-project-card-text { font-size: 2.4vw !important; }
+
+    /* Tagline - smaller font */
+    #tagline{
+        font-size: 3vw;
+    }
+
+    /* About Page - educational history adjustments */
+    .educational-history-card{padding: 2%;}
+    .educational-history-title { font-size: 3.75vw !important; }
+    .educational-history-date { font-size: 2.75vw !important; }
+    .educational-history-list { font-size: 2.5vw !important; }
+
+    /* Blog Page - full-width sidebar, adjusted typography */
+    #blog-sidebar {
+        width: 100%;
+        height: auto;
+        margin-bottom: 5%;
+        margin-right: 0; /* Remove right margin on mobile */
+    }
+
+    .sidebar-labels { font-size: 3vw; }
+    .sidebar-recent-blog {
+        padding: 0;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+    .sidebar-recent-blog-title { font-size: 2vw !important; }
+    .sidebar-title { font-size: 2.75vw !important; }
+    .blog-post-title { font-size: 3.6vw !important; }
+    .blog-post-date { font-size: 2vw !important; }
+    .blog-post-description { font-size: 2vw !important; }
+
+    /* Blog layout mobile fixes - prevent footer overlap */
+    .background-odd.background-auto {
+        padding-bottom: 3rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    /* Ensure footer doesn't overlap on mobile */
+    footer {
+        margin-top: 2rem !important;
+        position: relative !important;
+    }
+
+    /* Blog post spacing on mobile */
+    .blog-post {
+        margin-bottom: 1rem;
+    }
+
+    /* Blog list container spacing */
+    #blog-list {
+        margin-bottom: 2rem;
+    }
+
+    /* Bootstrap grid fixes for mobile - stack columns */
+    .col-sm-4, .col-sm-8 {
+        width: 100% !important;
+        margin-bottom: 2rem;
+    }
+
+    /* Container spacing on mobile */
+    .container {
+        padding-bottom: 2rem;
+    }
+
+    /* Row spacing on mobile */
+    .row {
+        margin-bottom: 1rem;
+    }
+
+    /* Project Page - image and text adjustments */
+    .project-page-project-card-image-background {
+        background-color: black;
+        justify-content: center;
+    }
+
+    .project-page-project-card-image {
+        max-width: 100%;
+        width: auto;
+    }
+
+    .project-page-project-card-title { font-size: 3.4vw !important; }
+    .project-page-project-card-text { font-size: 2.4vw !important; }
+
+    /* Hobbies Page - image adjustments */
+    .hobbies-page-image {
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+        padding: 5% 0;
+    }
+
+    /* Contact Page - typography and icon sizing */
+    .contact-page-list-item { font-size: 3.75vw; }
+    .contact-page-icon-background {
+        font-size: 4vw;
+        padding: 2.5% 3.5%;
+    }
+    #contact-page-button { font-size: 2.75vw; }
+
+    /* Individual Post Pages - breadcrumbs, dates, topics, images */
+    .breadcrumb-item { font-size: 2.5vw !important; }
+    .indivual-post-page-date { font-size: 3vw !important; }
+    .indivual-post-page-topics {
+        font-size: 2.5vw !important;
+        margin-bottom: 5% !important;
+    }
+
+    .indivual-post-page-header-image-background {
+        background-color: white;
+        justify-content: center;
+        margin-bottom: 5%;
+    }
+    
+    .indivual-post-page-header-image {
+        height: auto;
+        width: 100%;
+    }
+
+    .indivual-post-page-image{
+        height: auto;
+        width: 95%; /* Slightly smaller for visual breathing room */
+        max-width: 100%;
+    }
+
+    /* Carousel adjustments for mobile - smaller images and indicators */
+    .carousel-item img { max-height: 250px; }
+    .carousel-indicators { margin-bottom: 0.5rem; }
+    .carousel-indicators [data-bs-target] {
+        width: 20px; /* Wider for easier tapping */
+        height: 2px; /* Thinner for less visual weight */
+    }
+}
