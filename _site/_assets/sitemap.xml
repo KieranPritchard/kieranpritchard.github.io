@@ -9,7 +9,7 @@
     
   <url>
     <loc>http://localhost:4000/About</loc>
-    <lastmod>2026-01-31T16:56:58+00:00</lastmod>
+    <lastmod>2026-02-04T19:04:53+00:00</lastmod>
     <priority>1</priority>
     <changefreq>weekly</changefreq>
   </url>
@@ -20,7 +20,7 @@
     
   <url>
     <loc>http://localhost:4000/Contact</loc>
-    <lastmod>2026-01-31T16:56:58+00:00</lastmod>
+    <lastmod>2026-02-04T19:04:53+00:00</lastmod>
     <priority>1</priority>
     <changefreq>weekly</changefreq>
   </url>
@@ -31,7 +31,7 @@
     
   <url>
     <loc>http://localhost:4000/Hobbies</loc>
-    <lastmod>2026-01-31T16:56:58+00:00</lastmod>
+    <lastmod>2026-02-04T19:04:53+00:00</lastmod>
     <priority>1</priority>
     <changefreq>weekly</changefreq>
   </url>
@@ -42,7 +42,7 @@
     
   <url>
     <loc>http://localhost:4000/Projects</loc>
-    <lastmod>2026-01-31T16:56:58+00:00</lastmod>
+    <lastmod>2026-02-04T19:04:53+00:00</lastmod>
     <priority>1</priority>
     <changefreq>weekly</changefreq>
   </url>
@@ -53,7 +53,7 @@
     
   <url>
     <loc>http://localhost:4000/blog/</loc>
-    <lastmod>2026-01-31T16:56:58+00:00</lastmod>
+    <lastmod>2026-02-04T19:04:53+00:00</lastmod>
     <priority>1</priority>
     <changefreq>weekly</changefreq>
   </url>
@@ -64,7 +64,7 @@
     
   <url>
     <loc>http://localhost:4000/</loc>
-    <lastmod>2026-01-31T16:56:58+00:00</lastmod>
+    <lastmod>2026-02-04T19:04:53+00:00</lastmod>
     <priority>1</priority>
     <changefreq>weekly</changefreq>
   </url>
@@ -120,98 +120,91 @@
 
   <url>
     <loc>http://localhost:4000/portfolio/online-world-unit/</loc>
-    <lastmod>2026-01-31T16:56:58+00:00</lastmod>
+    <lastmod>2026-02-04T19:04:53+00:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>http://localhost:4000/portfolio/technology-systems-unit/</loc>
-    <lastmod>2026-01-31T16:56:58+00:00</lastmod>
+    <lastmod>2026-02-04T19:04:53+00:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>http://localhost:4000/portfolio/web-development-unit/</loc>
-    <lastmod>2026-01-31T16:56:58+00:00</lastmod>
+    <lastmod>2026-02-04T19:04:53+00:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>http://localhost:4000/portfolio/networking-unit/</loc>
-    <lastmod>2026-01-31T16:56:58+00:00</lastmod>
+    <lastmod>2026-02-04T19:04:53+00:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>http://localhost:4000/portfolio/digital-graphics-unit/</loc>
-    <lastmod>2026-01-31T16:56:58+00:00</lastmod>
+    <lastmod>2026-02-04T19:04:53+00:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>http://localhost:4000/portfolio/btec-first-foundation-in-tech/</loc>
-    <lastmod>2026-01-31T16:56:58+00:00</lastmod>
+    <lastmod>2026-02-04T19:04:53+00:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>http://localhost:4000/portfolio/my-ethical-hacking-lab-set-up/</loc>
-    <lastmod>2026-01-31T16:56:58+00:00</lastmod>
-    <priority>0.6</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>http://localhost:4000/portfolio/ctf-write-ups/</loc>
-    <lastmod>2026-01-31T16:56:58+00:00</lastmod>
+    <lastmod>2026-02-04T19:04:53+00:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>http://localhost:4000/portfolio/remote-command-execution/</loc>
-    <lastmod>2026-01-31T16:56:58+00:00</lastmod>
+    <lastmod>2026-02-04T19:04:53+00:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>http://localhost:4000/portfolio/cryptoforge/</loc>
-    <lastmod>2026-01-31T16:56:58+00:00</lastmod>
+    <lastmod>2026-02-04T19:04:53+00:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>http://localhost:4000/portfolio/port-scanner/</loc>
-    <lastmod>2026-01-31T16:56:58+00:00</lastmod>
+    <lastmod>2026-02-04T19:04:53+00:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>http://localhost:4000/portfolio/linktree/</loc>
-    <lastmod>2026-01-31T16:56:58+00:00</lastmod>
+    <lastmod>2026-02-04T19:04:53+00:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>http://localhost:4000/portfolio/password-manager/</loc>
-    <lastmod>2026-01-31T16:56:58+00:00</lastmod>
+    <lastmod>2026-02-04T19:04:53+00:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>http://localhost:4000/portfolio/ctf-write-up-showcase/</loc>
-    <lastmod>2026-01-31T16:56:58+00:00</lastmod>
+    <lastmod>2026-02-04T19:04:53+00:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
