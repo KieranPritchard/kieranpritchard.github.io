@@ -1,7 +1,7 @@
 ---
 layout: portfolio_post
 title: "RootPath"
-description: "A complete overview of my time on Bournemouth & Poole College’s “T-Level Foundation in Digital” course, where I explored everything from the online world and technology systems to web development, digital graphics, and networking. Each section of this page gives a personal look at the different units, with work samples where i am able to give them as well."
+description: A complete breakdown of my "Rootpath" development journey, where I transitioned a standard Link Tree clone into a professional, desktop-optimized web application. Each section of this log offers a deep dive into the technical challenges I faced, from refactoring component architecture and implementing responsive grid systems to refining the UI/UX for a native-app feel. I have documented every major pivot and milestone, providing a transparent look at my problem-solving process and the final codebase."
 date: 2026-02-06
 featured: false
 topics: ["Web Design", "Social-Media"]
