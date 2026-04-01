@@ -7,9 +7,9 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
 
 // Creates the heading styling variable
-const notoSansHeading = Noto_Sans({ subsets: ['latin'], variable: '--font-heading' });
+const notoSansHeading = Noto_Sans({subsets:['latin'],variable:'--font-heading'});
 // Creates the roboto styling variable
-const roboto = Roboto({ subsets: ['latin'], variable: '--font-sans', weight: ['400', '700'] })
+const roboto = Roboto({subsets:['latin'],variable:'--font-sans'})
 // Creates the font mono styling variable
 const fontMono = Geist_Mono({
   subsets: ["latin"],
