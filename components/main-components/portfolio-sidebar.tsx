@@ -18,7 +18,7 @@ const items = [
     { title: "Home", url: "/", icon: Home },
     { title: "About", url: "/about", icon: User },
     { title: "Portfolio", url: "/portfolio", icon: BriefcaseBusiness },
-    { title: "Content", url: "/content", icon:  Contact}
+    { title: "Contact", url: "/contact", icon: Contact },
 ]
 
 // Exports the sidebar

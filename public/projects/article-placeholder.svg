@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Article figure placeholder">
+  <rect width="960" height="540" rx="16" fill="#111827"/>
+  <rect x="40" y="40" width="880" height="460" rx="12" fill="#1f2937" stroke="#374151" stroke-width="2"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="22">In-article image</text>
+</svg>

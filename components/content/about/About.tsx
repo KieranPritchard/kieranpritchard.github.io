@@ -46,7 +46,7 @@ export default function AboutMe({ className }: Readonly<{ className?: string }>)
                 {/* Biographical information: Body text with high readability line-height */}
                 <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                     <p>
-                        Hello! I'm Kieran, a passionate developer based in the UK. I specialize in 
+                        Hello! I am Kieran, a passionate developer based in the UK. I specialize in 
                         building robust web applications using Next.js, TypeScript, and Tailwind CSS.
                     </p>
                     <p>
