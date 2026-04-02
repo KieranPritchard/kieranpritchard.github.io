@@ -8,12 +8,12 @@ export default function Intro({className,}: Readonly<{ className?: string}>) {
         /* Section container */
         <section 
             className={cn(
-                "mx-auto w-full max-w-7xl px-4 py-12 md:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center",
+                "mx-auto w-full max-w-7xl px-4 py-20 md:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center",
                 className
             )}
         >   
             {/* Text container */}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 order-2 md:order-1">
                 {/* Heading */}
                 <div className="space-y-2">
                     <h1 className="text-4xl font-bold tracking-tight sm:text-6xl text-foreground">
@@ -34,7 +34,7 @@ export default function Intro({className,}: Readonly<{ className?: string}>) {
                     <DownloadButton text="Download C.V" link="" fileName="" kind="secondary" />
                 </div>
             </div>
-            <div className="relative aspect-square overflow-hidden rounded-2xl">
+            <div className="relative aspect-square overflow-hidden rounded-2xl order-1 md:order-2">
                 {/* IMage of me */}
                 <img 
                     src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" 

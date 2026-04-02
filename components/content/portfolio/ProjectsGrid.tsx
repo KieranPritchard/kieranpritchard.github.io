@@ -67,8 +67,8 @@ export default function ProjectsGrid({className,projects}: Readonly<{ className?
                     </div>
                     <CardTitle className="line-clamp-2 text-xl">
                         <Link
-                        href={`/portfolio/${project.slug}`}
-                        className="hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+                            href={`/portfolio/${project.slug}`}
+                            className="hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
                         >
                         {project.title}
                         </Link>
@@ -77,45 +77,39 @@ export default function ProjectsGrid({className,projects}: Readonly<{ className?
 
                     {/* Content: Project summary and tech stack badges */}
                     <CardContent className="flex-1 space-y-4">
-                    <p className="text-sm leading-relaxed text-muted-foreground">{project.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                        {project.tags.map((tag) => (
-                        <Badge key={tag} variant="secondary" className="text-[10px] font-bold uppercase">
-                            {tag}
-                        </Badge>
-                        ))}
-                    </div>
-                    <Link
-                        href={`/portfolio/${project.slug}`}
-                        className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
-                    >
-                        Read case study
-                        <ArrowRight className="h-4 w-4" aria-hidden />
-                    </Link>
+                        <p className="text-sm leading-relaxed text-muted-foreground">{project.description}</p>
+                        <div className="flex flex-wrap gap-2">
+                            {project.tags.map((tag) => (
+                            <Badge key={tag} variant="secondary" className="text-[10px] font-bold uppercase">
+                                {tag}
+                            </Badge>
+                            ))}
+                        </div>
+                        <Link
+                            href={`/portfolio/${project.slug}`}
+                            className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+                        >
+                            Read case study
+                            <ArrowRight className="h-4 w-4" aria-hidden />
+                        </Link>
                     </CardContent>
 
                     {/* Footer: Action buttons for repository and live viewing */}
                     <CardFooter className="gap-2 border-t bg-muted/20 p-4 flex-col">
-                    <LinkButton
-                        text="Case study"
-                        link={`/portfolio/${project.slug}`}
-                        kind="default"
-                        className="w-full h-9 text-xs"
-                    />
-                    <div className="flex w-full gap-2">
                         <LinkButton
-                        text="Source"
-                        link={project.github}
-                        kind="outline"
-                        className="w-full h-9 text-xs"
+                            text="Case study"
+                            link={`/portfolio/${project.slug}`}
+                            kind="default"
+                            className="w-full h-9 text-xs"
                         />
-                        <LinkButton
-                        text="Demo"
-                        link={project.link}
-                        kind="outline"
-                        className="w-full h-9 text-xs"
-                        />
-                    </div>
+                        <div className="flex w-full gap-2">
+                            <LinkButton
+                                text="Source"
+                                link={project.github}
+                                kind="outline"
+                                className="w-full h-9 text-xs"
+                            />
+                        </div>
                     </CardFooter>
                 </Card>
                 ))}

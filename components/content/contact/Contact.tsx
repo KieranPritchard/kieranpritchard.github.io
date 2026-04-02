@@ -1,9 +1,12 @@
-import { Mail } from "lucide-react"
+import { Mail, Phone } from "lucide-react"
+import { IconBrandLinkedin, IconBrandX } from "@tabler/icons-react"
 import ContactForm from "@/components/content/contact/ContactForm"
 
 export default function Contact() {
-  // NOTE: Replace this with your real email address when ready.
   const toEmail = "kieran.pritchard@example.com"
+  const phoneNumber = "+1 (555) 000-0000"
+  const linkedinUrl = "https://linkedin.com/in/kieranpritchard"
+  const xUrl = "https://x.com/kieranpritchard"
 
   return (
     <section className="mx-auto w-full max-w-7xl px-4 py-20 md:px-6 lg:px-8">
@@ -21,22 +24,50 @@ export default function Contact() {
             message and I’ll get back to you.
           </p>
 
-          <div className="space-y-4 rounded-2xl border bg-muted/20 p-6">
+          <div className="space-y-6 rounded-2xl border bg-muted/20 p-6">
+            {/* Email */}
             <div className="flex items-start gap-3">
               <Mail className="mt-1 size-5 text-primary" aria-hidden />
               <div className="space-y-1">
                 <p className="text-sm text-muted-foreground">Email</p>
-                <a
-                  className="font-medium text-primary hover:underline"
-                  href={`mailto:${toEmail}`}
-                >
+                <a className="font-medium text-primary hover:underline" href={`mailto:${toEmail}`}>
                   {toEmail}
                 </a>
               </div>
             </div>
-            <p className="text-sm text-muted-foreground">
-              Prefer email? Copy your message from the form and paste it into an email.
-            </p>
+
+            {/* Phone */}
+            <div className="flex items-start gap-3">
+              <Phone className="mt-1 size-5 text-primary" aria-hidden />
+              <div className="space-y-1">
+                <p className="text-sm text-muted-foreground">Phone</p>
+                <a className="font-medium text-primary hover:underline" href={`tel:${phoneNumber}`}>
+                  {phoneNumber}
+                </a>
+              </div>
+            </div>
+
+            {/* LinkedIn */}
+            <div className="flex items-start gap-3">
+              <IconBrandLinkedin className="mt-1 size-5 text-primary" aria-hidden />
+              <div className="space-y-1">
+                <p className="text-sm text-muted-foreground">LinkedIn</p>
+                <a className="font-medium text-primary hover:underline" href={linkedinUrl} target="_blank" rel="noopener noreferrer">
+                  View Profile
+                </a>
+              </div>
+            </div>
+
+            {/* X (Twitter) */}
+            <div className="flex items-start gap-3">
+              <IconBrandX className="mt-1 size-5 text-primary" aria-hidden />
+              <div className="space-y-1">
+                <p className="text-sm text-muted-foreground">X / Twitter</p>
+                <a className="font-medium text-primary hover:underline" href={xUrl} target="_blank" rel="noopener noreferrer">
+                  Follow @kieranpritchard
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -47,4 +78,3 @@ export default function Contact() {
     </section>
   )
 }
-
