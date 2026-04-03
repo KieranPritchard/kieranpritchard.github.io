@@ -3,25 +3,35 @@
 import { motion } from "framer-motion"
 import { 
     SiReact, 
-    SiNextdotjs, 
-    SiTypescript, 
+    SiJavascript, 
     SiTailwindcss, 
     SiNodedotjs, 
-    SiPostgresql, 
-    SiFramer, 
-    SiGithub 
+    SiHtml5, 
+    SiCss,
+    SiGithub,
+    SiPython,
+    SiGo,
+    SiBootstrap,
+    SiGit,
+    SiKalilinux,
+    SiDocker
 } from "@icons-pack/react-simple-icons"
 import { cn } from "@/lib/utils"
 
 const SKILLS = [
+    { name: "HTML", Icon: SiHtml5},
+    { name: "CSS", Icon: SiCss},
+    { name: "JavaScript", Icon: SiJavascript},
+    { name: "Python", Icon: SiPython},
+    { name: "Go", Icon: SiGo},
     { name: "React", Icon: SiReact },
-    { name: "Next.js", Icon: SiNextdotjs },
-    { name: "TypeScript", Icon: SiTypescript },
     { name: "Tailwind", Icon: SiTailwindcss },
+    { name: "Bootstrap", Icon: SiBootstrap},
     { name: "Node.js", Icon: SiNodedotjs },
-    { name: "PostgreSQL", Icon: SiPostgresql },
-    { name: "Framer", Icon: SiFramer },
     { name: "GitHub", Icon: SiGithub },
+    { name: "Git", Icon: SiGit },
+    { name: "Kali Linux", Icon: SiKalilinux },
+    { name: "Docker", Icon: SiDocker }
 ]
 
 export default function TechStack({ className }: { className?: string }) {

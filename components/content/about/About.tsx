@@ -35,7 +35,7 @@ export default function AboutMe({ className }: Readonly<{ className?: string }>)
         <section 
             id="about"
             className={cn(
-                "mx-auto w-full max-w-7xl px-4 py-20 md:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center overflow-hidden",
+                "mx-auto w-full max-w-7xl px-4 py-12 md:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center overflow-hidden",
                 className
             )}
         >   
@@ -86,13 +86,12 @@ export default function AboutMe({ className }: Readonly<{ className?: string }>)
                 >   
                     {/* Displays the paragraphs */}
                     <p>
-                        Hello! I am Kieran, a passionate developer based in the UK. I specialize in 
-                        building robust web applications using Next.js, TypeScript, and Tailwind CSS.
+                        I am a high-achieving Digital Software Development student at Bournemouth & Poole College with a dedicated focus on ethical hacking and secure system architecture. 
+                        I specialize in building robust, defense-oriented applications while utilizing my role as a student representative to drive collaborative excellence and positive change within the technical community.
                     </p>
                     <p>
-                        With a keen eye for design and a love for clean code, I strive to create 
-                        digital experiences that are not only visually stunning but also highly 
-                        performant and accessible to all users.
+                        With a strong foundation in modern programming and proactive problem-solving, I strive to create digital experiences that are not only high-performing but also fundamentally secure against emerging threats. 
+                        I am committed to applying my organizational skills and technical expertise to gain hands-on industry experience and build a resilient, long-term career in cybersecurity.
                     </p>
                 </motion.div>
 

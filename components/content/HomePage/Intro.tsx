@@ -39,7 +39,7 @@ export default function Intro({ className }: Readonly<{ className?: string }>) {
                 className
             )}
         >   
-            <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 md:grid-cols-2">
+            <div className="py-12 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 md:grid-cols-2">
                 
                 {/* Text container: min-w-0 prevents grid blowout during sidebar transitions */}
                 <motion.div 
@@ -66,8 +66,8 @@ export default function Intro({ className }: Readonly<{ className?: string }>) {
                         className="max-w-150 text-lg leading-relaxed text-muted-foreground md:text-xl"
                         variants={itemVariants}
                     >
-                        I am a developer focused on building functional, beautiful interfaces. 
-                        I specialize in creating seamless user experiences with modern web technologies.
+                        I'm a software student focused ethical hacking and software. 
+                        I specialize in building solutions via proactive problem-solving.
                     </motion.p>
 
                     <motion.div 
