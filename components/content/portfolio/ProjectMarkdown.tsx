@@ -93,7 +93,7 @@ export function ProjectMarkdown({ content }: Readonly<{ content: string }>) {
           ),
           p: ({ children, ...props }) => (
             <FadeUpObserver>
-              <p className="leading-relaxed text-foreground/90 [&:not(:first-child)]:mt-6" {...props}>
+              <p className="leading-relaxed text-foreground/90 not-first:mt-6" {...props}>
                 {children}
               </p>
             </FadeUpObserver>

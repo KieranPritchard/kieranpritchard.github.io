@@ -142,20 +142,6 @@ export default function FeaturedProjectsList({ className, projects }: { classNam
                 </motion.div>
                 ))}
             </motion.div>
-
-            <motion.div 
-                className="mt-16 text-center"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-            >
-                <LinkButton
-                text="Browse Full Portfolio"
-                link="/portfolio"
-                kind="outline"
-                className="px-10 py-6 text-lg border-primary/20 hover:bg-primary/5 transition-all"
-                />
-            </motion.div>
         </section>
     )
 }
