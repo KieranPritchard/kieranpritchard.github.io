@@ -11,7 +11,7 @@ tags:
 link: "#"
 github: "#"
 date: "2024-11-12"
-coverImage: /projects/ethical-hacking-lab/ethical-hacking-lab-1.webp
+coverImage: "https://github.com/KieranPritchard/kieranpritchard.github.io/blob/main/public/projects/ethical-hacking-lab/ethical-hacking-lab-1.webp"
 coverAlt: "Abstract cover treatment for the ethical hacking lab project"
 ---
 
