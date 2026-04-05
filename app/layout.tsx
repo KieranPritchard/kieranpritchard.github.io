@@ -6,6 +6,15 @@ import { Geist_Mono, Roboto, Noto_Sans } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: {
+    default: 'Kieran Pritchard', // The title used if a child page doesn't define one
+    template: '%s | Kieran Pritchard', // The layout for child pages (%s is the placeholder)
+  },
+  description: 'Software student focused on ethical hacking and secure dev.',
+}
 
 const notoSansHeading = Noto_Sans({ subsets: ['latin'], variable: '--font-heading' });
 const roboto = Roboto({ weight: ['400', '700'], subsets: ['latin'], variable: '--font-sans' });

@@ -6,6 +6,13 @@ import NowSection from "@/components/content/about/Now";
 import PersonalInterests from "@/components/content/about/PersonalInterests";
 import Skills from "@/components/content/about/Skills";
 import ContentContainer from "@/components/content/ContentContainer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: 'About',
+    description: 'Page detailing who I am',
+}
+
 
 export default function Page() {
   return (
