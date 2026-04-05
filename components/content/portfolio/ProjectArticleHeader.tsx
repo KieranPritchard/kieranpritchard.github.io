@@ -7,6 +7,10 @@ import { Badge } from "@/components/ui/badge"
 import type { ProjectSummary } from "@/types/project"
 import { cn } from "@/lib/utils"
 
+/**
+ * Formats an ISO date string into a localized British English format (e.g., 5 April 2026).
+ * Returns the original string if parsing fails.
+ */
 function formatArticleDate(iso: string) {
   const parsed = new Date(iso)
   if (Number.isNaN(parsed.getTime())) {
@@ -20,11 +24,15 @@ function formatArticleDate(iso: string) {
   }).format(parsed)
 }
 
+/**
+ * ProjectArticleHeader component to display project titles, metadata, and hero images.
+ * Uses Framer Motion for staggered text entry and a decorative border reveal.
+ */
 export function ProjectArticleHeader({
   project,
   className,
 }: Readonly<{ project: ProjectSummary; className?: string }>) {
-  // Animation variants for text elements
+  // Animation variants for text elements using a custom delay multiplier
   const textVariants: Variants = {
     hidden: { opacity: 0, y: 10 },
     visible: (custom: number) => ({
@@ -38,7 +46,7 @@ export function ProjectArticleHeader({
     <header className={cn("space-y-8", className)}>
       <div className="space-y-6 pb-10 relative">
         <div className="space-y-4">
-          {/* Metadata Row */}
+          {/* Metadata Row: Displays the formatted date and project category */}
           <motion.div 
             className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground"
             variants={textVariants}
@@ -55,7 +63,7 @@ export function ProjectArticleHeader({
             </Badge>
           </motion.div>
 
-          {/* Project Title */}
+          {/* Project Title: Large heading with sequential animation delay */}
           <motion.h1 
             className="font-heading text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
             variants={textVariants}
@@ -66,7 +74,7 @@ export function ProjectArticleHeader({
             {project.title}
           </motion.h1>
 
-          {/* Description */}
+          {/* Description: Leading paragraph for project summary */}
           <motion.p 
             className="max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl"
             variants={textVariants}
@@ -77,7 +85,7 @@ export function ProjectArticleHeader({
             {project.description}
           </motion.p>
 
-          {/* Tags */}
+          {/* Tags: Maps through project tags to display interactive badges */}
           <motion.div 
             className="flex flex-wrap gap-2 pt-2"
             variants={textVariants}
@@ -97,7 +105,7 @@ export function ProjectArticleHeader({
           </motion.div>
         </div>
 
-        {/* Decorative Animated Border */}
+        {/* Decorative Animated Border: Expands horizontally across the header bottom */}
         <motion.div 
           className="absolute bottom-0 left-0 h-px bg-border w-full"
           initial={{ scaleX: 0, originX: 0 }}
@@ -106,7 +114,7 @@ export function ProjectArticleHeader({
         />
       </div>
 
-      {/* Cover Image with subtle zoom-out entrance */}
+      {/* Cover Image: Hero section with a subtle zoom-out and fade-in effect */}
       {project.coverImage ? (
         <motion.figure 
           className="overflow-hidden rounded-2xl border bg-muted/30 shadow-2xl shadow-primary/5"

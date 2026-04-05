@@ -1,5 +1,6 @@
 "use client"
 
+import { Variants } from "framer-motion"
 import { motion } from "framer-motion"
 import {
     Card,
@@ -19,7 +20,12 @@ import {
     Disc 
 } from "lucide-react"
 
+/**
+ * PersonalInterests component: Showcases non-professional hobbies and tastes.
+ * Uses a two-column grid on desktop to balance media collections with technical lifestyle interests.
+ */
 export default function PersonalInterests({ className }: Readonly<{ className?: string }>) {
+    // Array of musical artists used to populate the focus-fuel badges
     const musicList = [
         "Bring Me The Horizon", "Bad Omens", "Bilmuri", "Marilyn Manson", "Sleep Token", 
         "Linkin Park", "Evanescence", "Depeche Mode", "Panic! at the Disco", 
@@ -27,12 +33,13 @@ export default function PersonalInterests({ className }: Readonly<{ className?: 
         "Spiritbox", "Poppy", "NIN", "The Cure"
     ]
 
+    // Array of TV shows and media franchises for the media collection badges
     const mediaList = [
         "Doctor Who", "Peaky Blinders", "Stranger Things", "Torchwood", 
         "Dexter", "AHS", "Futurama", "Helluva Boss", "Pokémon"
     ]
 
-    // Animation variants
+    // Animation variants: Manages the staggered entrance of the section and individual cards
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -41,11 +48,13 @@ export default function PersonalInterests({ className }: Readonly<{ className?: 
         }
     }
 
+    // Standard slide-up animation for card containers and headers
     const itemVariants = {
         hidden: { opacity: 0, y: 10 },
         visible: { opacity: 1, y: 0 }
     }
 
+    // "Pop" effect for individual skill and artist badges
     const badgeVariants = {
         hidden: { opacity: 0, scale: 0.8 },
         visible: { opacity: 1, scale: 1 }
@@ -61,7 +70,7 @@ export default function PersonalInterests({ className }: Readonly<{ className?: 
                 viewport={{ once: true, margin: "-50px" }}
             >
                 
-                {/* Section Header */}
+                {/* Section Header: Title and animated primary underline reveal */}
                 <motion.div className="space-y-2 col-span-1 md:col-span-2 mb-4" variants={itemVariants}>
                     <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
                         Beyond the Code
@@ -74,7 +83,7 @@ export default function PersonalInterests({ className }: Readonly<{ className?: 
                     />
                 </motion.div>
 
-                {/* Music & Collections Card */}
+                {/* Music & Collections Card: Highlights audio preferences and physical media habits */}
                 <motion.div variants={itemVariants} whileHover={{ y: -5 }}>
                     <Card className="h-full flex flex-col transition-colors hover:border-primary/50 hover:bg-muted/30">
                         <CardHeader>
@@ -89,6 +98,7 @@ export default function PersonalInterests({ className }: Readonly<{ className?: 
                                     Music is my primary fuel for focus. My rotation leans heavily into alternative, 
                                     industrial, and emo-rock.
                                 </p>
+                                {/* Staggered badge list for music artists */}
                                 <motion.div className="flex flex-wrap gap-2" variants={containerVariants}>
                                     {musicList.map((artist) => (
                                         <motion.div key={artist} variants={badgeVariants}>
@@ -100,6 +110,7 @@ export default function PersonalInterests({ className }: Readonly<{ className?: 
                                 </motion.div>
                             </div>
 
+                            {/* Physical Media sub-section with horizontal hover shift */}
                             <motion.div 
                                 className="pt-4 border-t border-border flex items-start gap-3"
                                 whileHover={{ x: 5 }}
@@ -117,7 +128,7 @@ export default function PersonalInterests({ className }: Readonly<{ className?: 
                     </Card>
                 </motion.div>
 
-                {/* Hobbies & Technical Interests Card */}
+                {/* Hobbies & Technical Interests Card: Details TV media and active lifestyle pursuits */}
                 <motion.div variants={itemVariants} whileHover={{ y: -5 }}>
                     <Card className="h-full flex flex-col transition-colors hover:border-primary/50 hover:bg-muted/30">
                         <CardHeader>
@@ -127,6 +138,7 @@ export default function PersonalInterests({ className }: Readonly<{ className?: 
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-6">
+                            {/* Media List: Categorized list of favorite television shows */}
                             <div className="space-y-3">
                                 <div className="flex items-center gap-2 text-sm font-medium text-foreground">
                                     <Film className="h-4 w-4 text-primary" />
@@ -143,7 +155,7 @@ export default function PersonalInterests({ className }: Readonly<{ className?: 
                                 </motion.div>
                             </div>
 
-                            {/*Photography & Gaming */}
+                            {/* Photography & Gaming: 2x2 grid for creative and competitive hobbies */}
                             <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border">
                                 <motion.div className="space-y-1" whileHover={{ scale: 1.05 }}>
                                     <div className="flex items-center gap-2 text-sm font-medium">
@@ -161,7 +173,7 @@ export default function PersonalInterests({ className }: Readonly<{ className?: 
                                 </motion.div>
                             </div>
 
-                            {/* Technical Hobbies */}
+                            {/* Technical Hobbies: Highlights continued learning through side projects and security practice */}
                             <div className="pt-4 border-t border-border grid grid-cols-2 gap-4">
                                 <motion.div className="space-y-1" whileHover={{ scale: 1.05 }}>
                                     <div className="flex items-center gap-2 text-sm font-medium">

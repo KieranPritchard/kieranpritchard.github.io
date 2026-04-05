@@ -5,6 +5,10 @@ import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 import { Briefcase, GraduationCap, Calendar } from "lucide-react"
 
+/**
+ * Data-driven timeline entries. 
+ * Categorized by 'education' or 'work' to determine the leading icon.
+ */
 const timelineData = [
     {
         title: "T-Level: Digital Software Development",
@@ -50,18 +54,21 @@ const timelineData = [
     }
 ]
 
-// Expierence timeline 
+/**
+ * ExperienceTimeline component: Renders a vertical path of professional and academic milestones.
+ * Features a scroll-triggered line draw animation and staggered card entry.
+ */
 export default function ExperienceTimeline({ className }: Readonly<{ className?: string }>) {
-    // Animation variants for the container
+    // Animation variants for the container to orchestrate staggered children
     const containerVariants: Variants = {
-        hidden: { opacity: 0 }, // Makes the container invisible
+        hidden: { opacity: 0 },
         visible: {
-            opacity: 1, // Sets the container visible
+            opacity: 1,
             transition: { staggerChildren: 0.3 }
         }
     }
 
-    // Animation variants for each timeline item
+    // Animation variants for each timeline item card
     const itemVariants: Variants = {
         hidden: { opacity: 0, x: -20 },
         visible: { 
@@ -73,7 +80,7 @@ export default function ExperienceTimeline({ className }: Readonly<{ className?:
 
     return (
         <section className={cn("mx-auto w-full max-w-7xl px-4 py-12 md:px-6 lg:px-8 overflow-hidden", className)}>
-            {/* Section Header */}
+            {/* Section Header with animated title and reveal underline */}
             <motion.div 
                 className="space-y-2 mb-12"
                 initial={{ opacity: 0, y: -10 }}
@@ -92,9 +99,9 @@ export default function ExperienceTimeline({ className }: Readonly<{ className?:
                 />
             </motion.div>
 
-            {/* Timeline Wrapper */}
+            {/* Timeline Wrapper: Contains the relative positioning for the vertical line */}
             <div className="relative">
-                {/* Vertical Line Animation */}
+                {/* Vertical Line Animation: Uses origin-top and scaleY to "draw" the line downward on scroll */}
                 <motion.div 
                     className="absolute left-5 top-0 bottom-0 w-0.5 bg-border origin-top"
                     initial={{ scaleY: 0 }}
@@ -116,7 +123,7 @@ export default function ExperienceTimeline({ className }: Readonly<{ className?:
                             variants={itemVariants}
                             className="relative flex items-start gap-8 group"
                         >
-                            {/* Timeline Icon with Pulse effect */}
+                            {/* Timeline Icon: Switches between Briefcase and GraduationCap based on entry type */}
                             <motion.div 
                                 className="relative flex items-center justify-center w-10 h-10 rounded-full border border-border bg-background shadow shrink-0 z-10 group-hover:border-primary transition-colors duration-300"
                                 whileHover={{ scale: 1.1 }}
@@ -128,13 +135,13 @@ export default function ExperienceTimeline({ className }: Readonly<{ className?:
                                 )}
                             </motion.div>
 
-                            {/* Content Card */}
+                            {/* Content Card: Individual entry details with hover lift effect */}
                             <div className="flex-1 pb-8 min-w-0">
                                 <motion.div 
                                     className="p-5 rounded-xl border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md hover:border-primary/30"
                                     whileHover={{ y: -2 }}
                                 >
-                                    {/* Card Header */}
+                                    {/* Card Header: Project title and date badge */}
                                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
                                         <h3 className="font-bold text-lg tracking-tight truncate group-hover:text-primary transition-colors">
                                             {item.title}
@@ -145,13 +152,13 @@ export default function ExperienceTimeline({ className }: Readonly<{ className?:
                                         </time>
                                     </div>
 
-                                    {/* Organization Label */}
+                                    {/* Organization Label: Primary-colored indicator for college or workplace */}
                                     <div className="text-sm font-bold text-primary/90 mb-4 flex items-center gap-2">
                                         <span className="w-1.5 h-1.5 rounded-full bg-primary/40" />
                                         {item.organization}
                                     </div>
 
-                                    {/* CV Bullet Points */}
+                                    {/* CV Bullet Points: Rendered from the details array */}
                                     <ul className="space-y-2 text-sm text-muted-foreground list-none">
                                         {item.details.map((detail, idx) => (
                                             <li key={idx} className="flex gap-2">

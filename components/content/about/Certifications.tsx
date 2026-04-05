@@ -5,9 +5,16 @@ import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 import { Award, ExternalLink } from "lucide-react"
 
-// Component for my certifications
+/**
+ * Certifications component: Displays a comprehensive gallery of earned credentials.
+ * Features automated grid layout and staggered entrance animations to maintain
+ * performance with a high volume of items.
+ */
 export default function Certifications({ className }: Readonly<{ className?: string }>) {
-    // Stores my certs as a JSON object
+    /**
+     * Centralized certification data. 
+     * Includes credentials from Cisco, AWS, Miro, and Sololearn.
+     */
     const certs = [
         {
             title: "Networking Basics",
@@ -100,28 +107,28 @@ export default function Certifications({ className }: Readonly<{ className?: str
         }
     ]
 
-    // Animation variants for the grid items
+    // Animation variants for the grid items: StaggerChildren set to 0.1 for a faster cascade
     const containerVariants: Variants = {
-        hidden: { opacity: 0 }, // Sets to invisible
+        hidden: { opacity: 0 },
         visible: {
-            opacity: 1, // Sets to visisable
+            opacity: 1,
             transition: {
-                staggerChildren: 0.1, // Subtle stagger for a large list
+                staggerChildren: 0.1,
             },
         },
     }
 
+    // Individual card animation: Defines the entry point and duration
     const cardVariants: Variants = {
-        hidden: { opacity: 0, y: 20 }, // Sets to hidden and slightly off center
+        hidden: { opacity: 0, y: 20 },
         visible: { 
-            opacity: 1, // Sets to visible
-            y: 0, // Sets to normal coordinates
+            opacity: 1, 
+            y: 0, 
             transition: { duration: 0.5, ease: "easeOut" } 
         },
     }
 
     return (
-        /* Certifications section */
         <section 
             id="certifications"
             className={cn(
@@ -129,7 +136,7 @@ export default function Certifications({ className }: Readonly<{ className?: str
                 className
             )}
         >
-            {/* Header: Consistent with AboutMe/Intro styling */}
+            {/* Header: Title section with sliding entrance and expanding underline */}
             <motion.div 
                 className="mb-12 space-y-2"
                 initial={{ opacity: 0, x: -20 }}
@@ -137,11 +144,9 @@ export default function Certifications({ className }: Readonly<{ className?: str
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
             >
-                {/* Header */}
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
                     Certifications
                 </h2>
-                {/* Divider */}
                 <motion.div 
                     className="h-1 bg-primary rounded-full" 
                     initial={{ width: 0 }}
@@ -151,7 +156,7 @@ export default function Certifications({ className }: Readonly<{ className?: str
                 />
             </motion.div>
 
-            {/* Certification Grid with Staggered Animation */}
+            {/* Certification Grid: Dynamically generates cards with framer-motion stagger logic */}
             <motion.div 
                 className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
                 variants={containerVariants}
@@ -159,7 +164,6 @@ export default function Certifications({ className }: Readonly<{ className?: str
                 whileInView="visible"
                 viewport={{ once: true, margin: "-50px" }}
             >
-                {/* Maps the certificates to the page */}
                 {certs.map((cert, index) => (
                     <motion.div 
                         key={index}
@@ -170,12 +174,12 @@ export default function Certifications({ className }: Readonly<{ className?: str
                         }}
                         className="group relative flex flex-col gap-4 rounded-2xl border border-border bg-muted/30 p-6 transition-colors duration-300 hover:bg-muted/50 hover:border-primary/50"
                     >
-                        {/* Icon/Badge Area */}
+                        {/* Icon/Badge Area: Inverts colors and scales up on parent card hover */}
                         <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
                             <Award className="h-6 w-6" />
                         </div>
 
-                        {/* Content */}
+                        {/* Content: Title, Issuer, and Issue Date */}
                         <div className="space-y-1">
                             <h3 className="font-semibold text-lg text-foreground leading-tight group-hover:text-primary transition-colors">
                                 {cert.title}
@@ -188,7 +192,7 @@ export default function Certifications({ className }: Readonly<{ className?: str
                             </p>
                         </div>
 
-                        {/* External Link */}
+                        {/* Verification Link: Direct link to Credly or SoloLearn credentials */}
                         <a 
                             href={cert.link}
                             target="_blank"

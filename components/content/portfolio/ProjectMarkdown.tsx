@@ -16,6 +16,9 @@ import {
 } from "@/components/ui/table"
 import { cn } from "@/lib/utils"
 
+/**
+ * Calculates an approximate reading time based on a standard speed of 220 words per minute.
+ */
 function estimateReadingMinutes(markdown: string) {
   const words = markdown.trim().split(/\s+/).filter(Boolean).length
   return Math.max(1, Math.round(words / 220))
@@ -52,12 +55,16 @@ const FadeUpObserver = ({ children }: { children: React.ReactNode }) => {
   )
 }
 
+/**
+ * ProjectMarkdown component: Parses and styles project case studies using GitHub Flavored Markdown.
+ * Includes custom Tailwind styling and Framer Motion reveal effects for every block element.
+ */
 export function ProjectMarkdown({ content }: Readonly<{ content: string }>) {
   const minutes = estimateReadingMinutes(content)
 
   return (
     <article className="min-w-0">
-      {/* Read time - Animates immediately on page load */}
+      {/* Read time - Animates immediately on page load to provide quick context */}
       <motion.p 
         className="mb-10 text-sm font-semibold tracking-tight text-muted-foreground/80 bg-muted/30 px-4 py-2 rounded-full w-fit border border-border/50"
         initial={{ opacity: 0, y: -10 }}
@@ -67,9 +74,11 @@ export function ProjectMarkdown({ content }: Readonly<{ content: string }>) {
         {minutes} min read
       </motion.p>
 
+      {/* Markdown Parser: Overrides default HTML tags with custom styled React components */}
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         components={{
+          // Typography: All headers and paragraphs wrapped in FadeUpObserver for scroll animations
           h1: ({ children, ...props }) => (
             <FadeUpObserver>
               <h2 className="mt-12 scroll-m-20 font-heading text-2xl font-bold tracking-tight text-foreground first:mt-0" {...props}>
@@ -98,8 +107,7 @@ export function ProjectMarkdown({ content }: Readonly<{ content: string }>) {
               </p>
             </FadeUpObserver>
           ),
-          // Blockquote itself animates in, but content (p) within it also might.
-          // Applying FadeUpObserver directly to the blockquote handles it cleanly.
+          // Blockquote styling with colored accent border and italic text
           blockquote: ({ children, ...props }) => (
             <FadeUpObserver>
               <blockquote
@@ -110,7 +118,7 @@ export function ProjectMarkdown({ content }: Readonly<{ content: string }>) {
               </blockquote>
             </FadeUpObserver>
           ),
-          // Tables and code blocks also benefit from the fade-up observer
+          // Table Layout: Adds a scrollable container for mobile responsiveness
           table: ({ children, ...props }) => (
             <FadeUpObserver>
               <div className="my-8 w-full overflow-y-auto rounded-xl border border-border/50 bg-card/50 shadow-inner">
@@ -118,12 +126,14 @@ export function ProjectMarkdown({ content }: Readonly<{ content: string }>) {
               </div>
             </FadeUpObserver>
           ),
+          // Media: Handles local Next.js optimized images vs standard external URLs
           img: ({ src, alt }) => {
             if (!src || typeof src !== "string") {
               return null
             }
 
             if (src.startsWith("/")) {
+              // Optimized local images using next/image
               return (
                 <FadeUpObserver>
                   <span className="my-10 block overflow-hidden rounded-xl border bg-muted/20 shadow-xl shadow-primary/5">
@@ -141,6 +151,7 @@ export function ProjectMarkdown({ content }: Readonly<{ content: string }>) {
               )
             }
 
+            // Standard img tag for external resources
             return (
               <FadeUpObserver>
                 <img
@@ -152,12 +163,13 @@ export function ProjectMarkdown({ content }: Readonly<{ content: string }>) {
               </FadeUpObserver>
             )
           },
-          // Keep these semantic components, framer motion handles block ancestors
+          // Table sub-components for consistent UI/Table styling
           thead: ({ children, ...props }) => <TableHeader {...props}>{children}</TableHeader>,
           tbody: ({ children, ...props }) => <TableBody {...props}>{children}</TableBody>,
           tr: ({ children, ...props }) => <TableRow className="border-border/50" {...props}>{children}</TableRow>,
           th: ({ children, ...props }) => <TableHead className="text-muted-foreground" {...props}>{children}</TableHead>,
           td: ({ children, ...props }) => <TableCell className="text-foreground/90" {...props}>{children}</TableCell>,
+          // Links: Differentiates between internal Next.js links and external new-tab links
           a: ({ href, children, ...props }) => {
             const external = href?.startsWith("http")
             const baseClass = "font-medium text-primary underline-offset-4 hover:underline transition-colors"
@@ -169,6 +181,7 @@ export function ProjectMarkdown({ content }: Readonly<{ content: string }>) {
             }
             return <span className="font-medium text-primary" {...props}>{children}</span>
           },
+          // Code: Distinguishes between inline snippets and syntax-highlighted code blocks
           code: ({ children, className, ...props }) => {
             const isBlock = Boolean(className?.includes("language-"))
             if (isBlock) {
@@ -188,6 +201,7 @@ export function ProjectMarkdown({ content }: Readonly<{ content: string }>) {
               <hr className="my-12 border-border/50" />
             </FadeUpObserver>
           ),
+          // Lists: Styled bullet and numbered lists with primary-colored markers
           ul: ({ children, ...props }) => (
             <FadeUpObserver>
               <ul className="my-6 list-disc space-y-3 pl-6 text-foreground/90 marker:text-primary/70" {...props}>

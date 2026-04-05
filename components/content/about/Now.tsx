@@ -12,9 +12,15 @@ import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
 import { Rocket, BookOpen, Coffee, Calendar } from "lucide-react"
 
+/**
+ * NowSection component: Inspired by the "Now page" movement by Derek Sivers.
+ * Provides a snapshot of current focus areas, learning goals, and personal life.
+ */
 export default function NowSection({ className }: Readonly<{ className?: string }>) {
+    // Current date marker to show the freshness of the information
     const lastUpdated = "April 2026"
 
+    // Animation variants for the staggered grid entrance
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
@@ -23,6 +29,7 @@ export default function NowSection({ className }: Readonly<{ className?: string 
         }
     }
 
+    // Individual card animation for a subtle slide-up effect
     const cardVariants: Variants = {
         hidden: { opacity: 0, y: 20 },
         visible: { 
@@ -42,7 +49,7 @@ export default function NowSection({ className }: Readonly<{ className?: string 
                 viewport={{ once: true, margin: "-50px" }}
             >
                 
-                {/* Header Container */}
+                {/* Header Container: Includes the section title and a "Live" status badge */}
                 <motion.div 
                     className="space-y-4 col-span-1 md:col-span-2 lg:col-span-3 mb-4"
                     variants={cardVariants}
@@ -59,6 +66,7 @@ export default function NowSection({ className }: Readonly<{ className?: string 
                                 transition={{ delay: 0.4, duration: 0.8 }}
                             />
                         </div>
+                        {/* Status Badge: Features a CSS-based ping animation to represent "live" status */}
                         <motion.div
                             initial={{ scale: 0.9, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
@@ -80,7 +88,7 @@ export default function NowSection({ className }: Readonly<{ className?: string 
                     </p>
                 </motion.div>
 
-                {/* Focus: Professional/Coding */}
+                {/* Focus: Professional/Coding - Includes a bounce animation on icon hover */}
                 <motion.div variants={cardVariants} whileHover={{ y: -5 }}>
                     <Card className="h-full flex flex-col transition-colors hover:border-primary/50 hover:bg-muted/30">
                         <CardHeader>
@@ -97,7 +105,7 @@ export default function NowSection({ className }: Readonly<{ className?: string 
                     </Card>
                 </motion.div>
 
-                {/* Focus: Learning */}
+                {/* Focus: Learning - Features a rotation animation on icon hover */}
                 <motion.div variants={cardVariants} whileHover={{ y: -5 }}>
                     <Card className="h-full flex flex-col transition-colors hover:border-primary/50 hover:bg-muted/30">
                         <CardHeader>
@@ -113,7 +121,7 @@ export default function NowSection({ className }: Readonly<{ className?: string 
                     </Card>
                 </motion.div>
 
-                {/* Focus: Personal/Lifestyle */}
+                {/* Focus: Personal/Lifestyle - Features a scale animation on icon hover */}
                 <motion.div variants={cardVariants} whileHover={{ y: -5 }}>
                     <Card className="h-full flex flex-col transition-colors hover:border-primary/50 hover:bg-muted/30">
                         <CardHeader>

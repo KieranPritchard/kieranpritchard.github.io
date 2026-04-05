@@ -7,7 +7,13 @@ import { Input } from "@/components/ui/input"
 import { cn } from "@/lib/utils"
 import { CheckCircle2, Copy } from "lucide-react"
 
+/**
+ * ContactForm Component: A specialized form that formats user input into an email 
+ * template and copies it to the clipboard. Includes a fallback "manual copy" area 
+ * for browsers with restricted clipboard permissions.
+ */
 export default function ContactForm({ toEmail }: Readonly<{ toEmail: string }>) {
+  // Form state management
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
@@ -38,6 +44,7 @@ export default function ContactForm({ toEmail }: Readonly<{ toEmail: string }>) 
           setStatus(null)
           setManualBody(null)
 
+          // Formats the data into a clean, readable text block
           const body = [
             `To: ${toEmail}`,
             `Name: ${name || "-"}`,
@@ -50,6 +57,7 @@ export default function ContactForm({ toEmail }: Readonly<{ toEmail: string }>) 
             setIsSubmitting(false)
           }
 
+          // Clipboard API Logic: Handles modern async copying with fallback error states
           if (typeof navigator !== "undefined" && "clipboard" in navigator) {
             navigator.clipboard
               .writeText(body)
@@ -67,11 +75,13 @@ export default function ContactForm({ toEmail }: Readonly<{ toEmail: string }>) 
             return
           }
 
+          // Fallback: Triggered if the browser blocks clipboard access
           setStatus("Clipboard unavailable. Copy the message from the box below.")
           setManualBody(body)
           finish()
         }}
       >
+        {/* Name Input Field */}
         <div className="space-y-1.5">
           <label className="text-sm font-medium text-foreground/80" htmlFor="contact-name">
             Name
@@ -87,6 +97,7 @@ export default function ContactForm({ toEmail }: Readonly<{ toEmail: string }>) 
           />
         </div>
 
+        {/* Email Input Field */}
         <div className="space-y-1.5">
           <label className="text-sm font-medium text-foreground/80" htmlFor="contact-email">
             Email
@@ -103,6 +114,7 @@ export default function ContactForm({ toEmail }: Readonly<{ toEmail: string }>) 
           />
         </div>
 
+        {/* Message Textarea: Optimized for larger text blocks with no-resize constraint */}
         <div className="space-y-1.5">
           <label className="text-sm font-medium text-foreground/80" htmlFor="contact-message">
             Message
@@ -118,6 +130,7 @@ export default function ContactForm({ toEmail }: Readonly<{ toEmail: string }>) 
           />
         </div>
 
+        {/* Submit Button: Switches between 'Copy' and 'Formatting' states */}
         <div className="pt-2">
           <Button 
             type="submit" 
@@ -142,6 +155,7 @@ export default function ContactForm({ toEmail }: Readonly<{ toEmail: string }>) 
         </div>
       </form>
 
+      {/* Dynamic Feedback UI: Handles success messages and manual copy fallback via AnimatePresence */}
       <AnimatePresence>
         {status && (
           <motion.div 
@@ -157,6 +171,7 @@ export default function ContactForm({ toEmail }: Readonly<{ toEmail: string }>) 
           </motion.div>
         )}
 
+        {/* Manual Copy Box: Displayed only if the automatic clipboard action fails */}
         {manualBody && (
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}

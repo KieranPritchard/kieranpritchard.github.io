@@ -11,16 +11,21 @@ import {
 import { cn } from "@/lib/utils"
 import { Target, Fingerprint, Zap } from "lucide-react"
 
+/**
+ * MissionValues component: Communicates the core philosophy and development 
+ * principles (Performance, Security, User Experience) behind the portfolio.
+ */
 export default function MissionValues({ className }: Readonly<{ className?: string }>) {
+    // Defines the core mission points with associated Lucide icons
     const values = [
         {
             title: "Performance First",
-            description: "I believe the web should be fast by default. I prioritize clean, efficient code and optimized assets to ensure a seamless user experience.",
+            description: "I believe applications should be fast by default. I prioritize clean, efficient code and optimized assets to ensure a seamless user experience.",
             icon: Zap,
         },
         {
             title: "Security Mindset",
-            description: "With a background in ethical hacking, I don't just build features—I build secure systems that protect user data from the ground up.",
+            description: "With a background in ethical hacking, I don't just build features. I build secure systems, as well as bringing the skillset that helps to protect user data.",
             icon: Fingerprint,
         },
         {
@@ -30,7 +35,7 @@ export default function MissionValues({ className }: Readonly<{ className?: stri
         },
     ]
 
-    // Animation variants for the grid
+    // Animation variants for the grid: Staggers the appearance of child cards as they enter view
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
@@ -41,6 +46,7 @@ export default function MissionValues({ className }: Readonly<{ className?: stri
         },
     }
 
+    // Individual card entrance: Uses spring physics for a snappy, high-quality feel
     const cardVariants: Variants = {
         hidden: { opacity: 0, scale: 0.95, y: 20 },
         visible: { 
@@ -57,7 +63,7 @@ export default function MissionValues({ className }: Readonly<{ className?: stri
 
     return (
         <section className={cn("mx-auto w-full max-w-7xl px-4 py-12 md:px-6 lg:px-8 overflow-hidden", className)}>
-            {/* Section Header */}
+            {/* Section Header: Features a slide-in title and an expanding underline animation */}
             <motion.div 
                 className="space-y-2 mb-8"
                 initial={{ opacity: 0, x: -20 }}
@@ -77,7 +83,7 @@ export default function MissionValues({ className }: Readonly<{ className?: stri
                 />
             </motion.div>
 
-            {/* Value Cards Grid */}
+            {/* Value Cards Grid: Maps through the values array to render interactive cards */}
             <motion.div 
                 className="grid grid-cols-1 md:grid-cols-3 gap-6"
                 variants={containerVariants}
@@ -89,11 +95,12 @@ export default function MissionValues({ className }: Readonly<{ className?: stri
                     <motion.div
                         key={value.title}
                         variants={cardVariants}
-                        whileHover={{ y: -5 }}
+                        whileHover={{ y: -5 }} // Subtle lift on hover for better interactivity
                     >
                         <Card className="h-full flex flex-col transition-colors hover:border-primary/50 hover:bg-muted/30">
                             <CardHeader>
                                 <CardTitle className="flex items-center gap-3 text-xl group">
+                                    {/* Icon Animation: Rotates and scales when the user hovers over the icon specifically */}
                                     <motion.div
                                         whileHover={{ rotate: 15, scale: 1.1 }}
                                         transition={{ type: "spring", stiffness: 300 }}

@@ -12,14 +12,22 @@ import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
 import { ShieldCheck, Code2, Terminal } from "lucide-react"
 
+/**
+ * Hardcoded skills data categorized by domain. 
+ * This drives the rendering of the badges within each category card.
+ */
 const skillsData = {
     languages: ["Go (Golang)", "Node.js", "React", "Python", "JavaScript (ES6+)", "HTML5/CSS3"],
     security: ["Linux (Kali)", "Wireshark", "Ethical Hacking", "Nmap", "Threat Management", "Firewalls"],
     tools: ["Git/GitHub", "VirtualBox", "Power Automate", "Bash/PowerShell", "Docker", "Adobe Suite"],
 }
 
+/**
+ * Skills Section: Displays a grid of expertise cards with staggered reveal animations.
+ * Uses Framer Motion for scroll-triggered entrance and hover states.
+ */
 export default function Skills({ className }: Readonly<{ className?: string }>) {
-    // Parent grid animation
+    // Parent grid animation: Handles the initial fade and staggers the appearance of child cards
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
@@ -28,7 +36,7 @@ export default function Skills({ className }: Readonly<{ className?: string }>) 
         }
     }
 
-    // Individual card entrance
+    // Individual card entrance: Defines the upward slide and fade for each category card
     const cardVariants: Variants = {
         hidden: { opacity: 0, y: 20 },
         visible: { 
@@ -38,7 +46,7 @@ export default function Skills({ className }: Readonly<{ className?: string }>) 
         }
     }
 
-    // Badge "pop" animation
+    // Badge "pop" animation: Uses a spring physics transition for a bouncy, organic feel
     const badgeVariants: Variants = {
         hidden: { opacity: 0, scale: 0.8 },
         visible: { 
@@ -57,7 +65,7 @@ export default function Skills({ className }: Readonly<{ className?: string }>) 
                 whileInView="visible"
                 viewport={{ once: true, margin: "-50px" }}
             >
-                {/* Header Container */}
+                {/* Header Container: Includes the section title and the animated underline reveal */}
                 <motion.div className="space-y-2 col-span-1 md:col-span-3 mb-4" variants={cardVariants}>
                     <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
                         Skills & Expertise
@@ -70,7 +78,7 @@ export default function Skills({ className }: Readonly<{ className?: string }>) 
                     />
                 </motion.div>
 
-                {/* Development Card */}
+                {/* Development Card: Focuses on programming languages and frameworks */}
                 <motion.div variants={cardVariants} whileHover={{ y: -5 }}>
                     <Card className="h-full flex flex-col transition-colors hover:border-primary/50 hover:bg-muted/30">
                         <CardHeader>
@@ -93,7 +101,7 @@ export default function Skills({ className }: Readonly<{ className?: string }>) 
                     </Card>
                 </motion.div>
 
-                {/* Security Card */}
+                {/* Security Card: Highlights cybersecurity tools and operating systems */}
                 <motion.div variants={cardVariants} whileHover={{ y: -5 }}>
                     <Card className="h-full flex flex-col transition-colors hover:border-primary/50 hover:bg-muted/30">
                         <CardHeader>
@@ -116,7 +124,7 @@ export default function Skills({ className }: Readonly<{ className?: string }>) 
                     </Card>
                 </motion.div>
 
-                {/* Infrastructure/Tools Card */}
+                {/* Infrastructure/Tools Card: Covers automation, devtools, and environment management */}
                 <motion.div variants={cardVariants} whileHover={{ y: -5 }}>
                     <Card className="h-full flex flex-col transition-colors hover:border-primary/50 hover:bg-muted/30">
                         <CardHeader>

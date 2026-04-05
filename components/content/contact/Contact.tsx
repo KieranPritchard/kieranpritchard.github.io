@@ -7,13 +7,18 @@ import { IconBrandLinkedin, IconBrandX } from "@tabler/icons-react"
 import ContactForm from "@/components/content/contact/ContactForm"
 import { cn } from "@/lib/utils"
 
+/**
+ * Contact Component: A split-view layout featuring a call-to-action (CTA), 
+ * direct communication links, and a functional ContactForm.
+ */
 export default function Contact({ className }: Readonly<{ className?: string }>) {
+  // Hardcoded contact strings and social URLs
   const toEmail = "KieranPritchard06@gmail.com"
   const phoneNumber = "+44 07763 534145"
   const linkedinUrl = "https://www.linkedin.com/in/kieran-pritchard/"
   const xUrl = "https://x.com/OverF10w_0x"
 
-  // Parent container variant for staggered children
+  // Parent container variant: Coordinates the staggered entry for the info column
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -25,7 +30,7 @@ export default function Contact({ className }: Readonly<{ className?: string }>)
     },
   }
 
-  // Individual item entrance variants
+  // Individual item entrance: Defines a subtle slide-up effect for text and headers
   const itemVariants: Variants = {
     hidden: { opacity: 0, y: 15 },
     visible: { 
@@ -35,7 +40,7 @@ export default function Contact({ className }: Readonly<{ className?: string }>)
     },
   }
 
-  // Variants for the interactive contact links block
+  // Contact Block variant: Uses a circOut ease for a snappy, physics-based expansion
   const contactBlockVariants: Variants = {
     hidden: { opacity: 0, scale: 0.95 },
     visible: { 
@@ -51,7 +56,7 @@ export default function Contact({ className }: Readonly<{ className?: string }>)
       className={cn("mx-auto w-full max-w-7xl px-4 py-20 md:px-6 lg:px-8 overflow-hidden", className)}
     >
       <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:items-start">
-        {/* Contact Information Column */}
+        {/* Contact Information Column: Staggered reveal for context and links */}
         <motion.div 
           className="space-y-6"
           variants={containerVariants}
@@ -59,7 +64,7 @@ export default function Contact({ className }: Readonly<{ className?: string }>)
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          {/* Header Section */}
+          {/* Header Section with animated primary divider */}
           <motion.div className="space-y-2" variants={itemVariants}>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
               Contact
@@ -72,7 +77,7 @@ export default function Contact({ className }: Readonly<{ className?: string }>)
             />
           </motion.div>
 
-          {/* Intro Text */}
+          {/* Intro Text: Encourages collaboration or professional inquiries */}
           <motion.p 
             className="text-lg leading-relaxed text-muted-foreground md:max-w-lg"
             variants={itemVariants}
@@ -81,16 +86,16 @@ export default function Contact({ className }: Readonly<{ className?: string }>)
             message and I’ll get back to you.
           </motion.p>
 
-          {/* Contact Links Block with interaction animations */}
+          {/* Contact Links Block: Houses high-fidelity interaction icons (LinkedIn, X, etc.) */}
           <motion.div 
             className="space-y-6 rounded-2xl border border-border/50 bg-muted/20 p-6 shadow-2xl shadow-primary/5 transition-all duration-300 hover:border-primary/40 hover:bg-muted/50"
             variants={contactBlockVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            whileHover={{ y: -5, transition: { duration: 0.2 } }}
+            whileHover={{ y: -5, transition: { duration: 0.2 } }} // Subtle vertical lift on hover
           >
-            {/* Email */}
+            {/* Direct Email Link with pulse animation trigger */}
             <div className="flex items-start gap-4 group">
               <Mail className="mt-1 size-5 text-primary group-hover:animate-pulse" aria-hidden />
               <div className="space-y-1">
@@ -104,7 +109,7 @@ export default function Contact({ className }: Readonly<{ className?: string }>)
               </div>
             </div>
 
-            {/* Phone */}
+            {/* Direct Phone Link with rotation animation trigger */}
             <div className="flex items-start gap-4 group">
               <Phone className="mt-1 size-5 text-primary group-hover:rotate-12 transition-transform" aria-hidden />
               <div className="space-y-1">
@@ -118,7 +123,7 @@ export default function Contact({ className }: Readonly<{ className?: string }>)
               </div>
             </div>
 
-            {/* LinkedIn */}
+            {/* LinkedIn Profile link with scale-up animation trigger */}
             <div className="flex items-start gap-4 group">
               <IconBrandLinkedin className="mt-1 size-5 text-primary group-hover:scale-110 transition-transform" aria-hidden />
               <div className="space-y-1">
@@ -134,7 +139,7 @@ export default function Contact({ className }: Readonly<{ className?: string }>)
               </div>
             </div>
 
-            {/* X (Twitter) */}
+            {/* X / Twitter Profile link with rotation animation trigger */}
             <div className="flex items-start gap-4 group">
               <IconBrandX className="mt-1 size-5 text-primary group-hover:rotate-12 transition-transform" aria-hidden />
               <div className="space-y-1">
@@ -152,7 +157,7 @@ export default function Contact({ className }: Readonly<{ className?: string }>)
           </motion.div>
         </motion.div>
 
-        {/* Contact Form Column */}
+        {/* Contact Form Column: Slides in from the right to complete the layout balance */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}

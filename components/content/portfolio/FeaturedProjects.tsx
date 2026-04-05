@@ -11,35 +11,46 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { LinkButton } from "@/components/Buttons/LinkButton"
 
+/*
+    FeaturedProjectsList to store the most recent projects for my portfolio
+    Takes in projects summary and class name as props
+*/
 export default function FeaturedProjectsList({ className, projects }: { className?: string; projects: ProjectSummary[] }) {
+    // Takes a slice of the four most recent projects
     const featured = projects.slice(0, 4)
 
+    // Creates the animations for the container
     const containerVariants: Variants = {
-        hidden: { opacity: 0 },
+        hidden: { opacity: 0 }, /* Sets the hidden values */
         visible: {
             opacity: 1,
             transition: { staggerChildren: 0.15 }
-        }
+        } /* Sets the visible value */
     }
 
+    // Creates teh animations for the cards
     const cardVariants: Variants = {
-        hidden: { opacity: 0, y: 30 },
+        hidden: { opacity: 0, y: 30 }, // Sets the hidden value
         visible: { 
             opacity: 1, 
             y: 0, 
             transition: { duration: 0.6, ease: "easeOut" } 
-        }
+        } // Sets the visible value
     }
 
     return (
+        /* Creates the section */
         <section className={cn("mx-auto w-full max-w-6xl px-4 py-16 md:px-6 overflow-hidden", className)}>
+            {/* Animated divider */}
             <motion.div 
                 className="mb-12 space-y-2"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
             >
+                {/* The header */}
                 <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Selected Projects</h2>
+                {/* The divider */}
                 <motion.div 
                     className="h-1 bg-primary rounded-full" 
                     initial={{ width: 0 }}
@@ -48,6 +59,7 @@ export default function FeaturedProjectsList({ className, projects }: { classNam
                 />
             </motion.div>
 
+            {/* List container that triggers staggered entrance for children */}
             <motion.div 
                 className="flex flex-col gap-6"
                 variants={containerVariants}
@@ -56,6 +68,7 @@ export default function FeaturedProjectsList({ className, projects }: { classNam
                 viewport={{ once: true, margin: "-50px" }}
             >
                 {featured.map((project) => (
+                /* Individual project card wrapper with slide-up animation */
                 <motion.div key={project.slug} variants={cardVariants}>
                     <Card className="group overflow-hidden border-border/50 bg-card/40 transition-all duration-500 hover:border-primary/40 hover:bg-card hover:shadow-2xl hover:shadow-primary/5">
                         <CardContent className="p-0">
@@ -64,7 +77,7 @@ export default function FeaturedProjectsList({ className, projects }: { classNam
                                 {/* Visual Sidebar / Image Reveal */}
                                 <div className="relative flex items-center justify-center bg-muted/30 p-8 md:w-44 md:border-r border-border/50 overflow-hidden">
                                     
-                                    {/* Icon State */}
+                                    {/* Icon State: Renders based on project category */}
                                     <motion.div 
                                     className="rounded-full bg-background p-4 shadow-sm text-primary z-0"
                                     whileHover={{ scale: 1.1, rotate: 5 }}
@@ -74,7 +87,7 @@ export default function FeaturedProjectsList({ className, projects }: { classNam
                                     {project.category === "automation" && <Zap className="h-8 w-8" />}
                                     </motion.div>
 
-                                    {/* Hover Image Reveal */}
+                                    {/* Hover Image Reveal: Shows project screenshot on card hover */}
                                     {project.coverImage && (
                                     <div className="absolute inset-0 z-10 opacity-0 scale-110 transition-all duration-500 ease-out group-hover:opacity-100 group-hover:scale-100">
                                         <Image 
@@ -84,14 +97,15 @@ export default function FeaturedProjectsList({ className, projects }: { classNam
                                         className="object-cover"
                                         sizes="(max-width: 768px) 100vw, 176px" 
                                         />
-                                        {/* Overlay to ensure text/icon remains visible if needed, or just for style */}
+                                        {/* Color overlay for visual consistency */}
                                         <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
                                     </div>
                                     )}
                                 </div>
 
-                                {/* Content Area */}
+                                {/* Content Area: Project details and links */}
                                 <div className="flex flex-1 flex-col p-6 md:p-10 min-w-0">
+                                    {/* Metadata: Category badge and tag list */}
                                     <div className="mb-3 flex flex-wrap items-center gap-3">
                                     <Badge variant="outline" className="text-[10px] font-bold uppercase tracking-widest text-primary border-primary/20 bg-primary/5">
                                         {project.category}
@@ -105,16 +119,19 @@ export default function FeaturedProjectsList({ className, projects }: { classNam
                                     </div>
                                     </div>
 
+                                    {/* Project title with internal navigation link */}
                                     <Link href={`/portfolio/${project.slug}`} className="group/title inline-block">
                                     <h3 className="text-2xl font-bold transition-colors group-hover/title:text-primary md:text-3xl">
                                         {project.title}
                                     </h3>
                                     </Link>
 
+                                    {/* Project summary text with line clamping for consistency */}
                                     <p className="mt-4 text-base leading-relaxed text-muted-foreground line-clamp-2 md:max-w-2xl">
                                     {project.description}
                                     </p>
 
+                                    {/* Action Links: CTA for case study and external GitHub link */}
                                     <div className="mt-8 flex flex-wrap items-center gap-6">
                                     <Link
                                         href={`/portfolio/${project.slug}`}
@@ -124,6 +141,7 @@ export default function FeaturedProjectsList({ className, projects }: { classNam
                                         <ArrowRight className="h-4 w-4" />
                                     </Link>
                                     
+                                    {/* Visual separator for desktop view */}
                                     <div className="hidden h-4 w-px bg-border md:block" />
 
                                     <Link
