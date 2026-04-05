@@ -20,6 +20,8 @@ import { cn } from "@/lib/utils"
  * Features dynamic active-state styling to provide navigational context,
  * consistent with the primary accent and scale-transition design language.
  */
+
+// Stores the items to be displayed on the navbar
 const items = [
     { title: "Home", url: "/", icon: Home },
     { title: "About", url: "/about", icon: User },
@@ -31,6 +33,7 @@ export function PortfolioSidebar({ className }: { className?: string }) {
     const pathname = usePathname()
 
     return (
+        /* Creates a floating sidebar */
         <Sidebar 
             variant="floating" 
             className={cn("border-r border-border/50", className)}
@@ -38,22 +41,29 @@ export function PortfolioSidebar({ className }: { className?: string }) {
             {/* Brand Section */}
             <SidebarHeader className="p-6">
                 <div className="flex flex-col gap-2">
+                    {/* Name box */}
                     <span className="text-xl font-bold tracking-tight text-foreground">
                         Kieran Pritchard
                     </span>
+                    {/* Custom divider */}
                     <div className="h-1 w-8 bg-primary rounded-full" />
                 </div>
             </SidebarHeader>
 
+            {/* Groups the sidebar content */}
             <SidebarContent className="px-2">
                 <SidebarGroup>
                     <SidebarGroupContent>
                         <SidebarMenu className="gap-1">
+                            {/* Maps the items to link buttons */}
                             {items.map((item) => {
+                                // Stores the active link
                                 const isActive = pathname === item.url
                                 
                                 return (
+                                    /* Creates sidebar item */
                                     <SidebarMenuItem key={item.title}>
+                                        {/* Creates sidebar menu button */}
                                         <SidebarMenuButton 
                                             asChild 
                                             isActive={isActive}
@@ -64,6 +74,7 @@ export function PortfolioSidebar({ className }: { className?: string }) {
                                                     : "hover:bg-muted"
                                             )}
                                         >
+                                            {/* Creates the link to the other pages */}
                                             <a href={item.url} className="flex items-center gap-3 px-3 py-2">
                                                 {/* Active Indicator Bar */}
                                                 {isActive && (
@@ -90,7 +101,8 @@ export function PortfolioSidebar({ className }: { className?: string }) {
                     </SidebarGroupContent>
                 </SidebarGroup>
             </SidebarContent>
-
+            
+            {/* Stores the footer of the page */}
             <SidebarFooter className="p-4 border-t border-border/40">
                 <div className="flex items-center justify-around py-2">
                     
