@@ -5,7 +5,8 @@ import Link from "next/link"
 import { motion, Variants } from "framer-motion"
 import { Separator } from "@/components/ui/separator"
 import { Button } from "@/components/ui/button"
-import { Link2, Mail} from "lucide-react"
+import { Mail} from "lucide-react"
+import { IconBrandLinkedin, IconBrandGithub } from "@tabler/icons-react"
 
 /**
  * Footer Component: A responsive, animated site footer that maintains design consistency
@@ -83,8 +84,8 @@ export default function Footer({ className }: Readonly<{ className?: string }>) 
                         </h3>
                         <div className="flex gap-3">
                             {[
-                                { icon: Link2, href: "https://github.com" },
-                                { icon: Link2, href: "https://linkedin.com" },
+                                { icon: IconBrandGithub, href: "https://github.com/KieranPritchard" },
+                                { icon: IconBrandLinkedin, href: "https://www.linkedin.com/in/kieran-pritchard/" },
                                 { icon: Mail, href: "mailto:KieranPritchard06@gmail.com" }
                             ].map((social, index) => (
                                 <motion.div key={index} whileHover={{ scale: 1.1, y: -2 }} whileTap={{ scale: 0.95 }}>
