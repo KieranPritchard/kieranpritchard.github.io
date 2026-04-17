@@ -7,35 +7,50 @@ import { ProjectBreadcrumbs } from "@/components/content/portfolio/ProjectBreadc
 import { ProjectMarkdown } from "@/components/content/portfolio/ProjectMarkdown"
 import { getAllProjects, getProjectBySlug, getProjectFileSlugs } from "@/lib/projects"
 
+// Function to generate static parameters
 export async function generateStaticParams() {
+  // Returns the project file slugs
   return getProjectFileSlugs().map((slug) => ({ slug }))
 }
 
+// Generates metadata
 export async function generateMetadata({ params }: Readonly<{ params: Promise<{ slug: string }> }>) {
+  // Stores the slug
   const { slug } = await params
+  // Gets the project by the slug
   const project = getProjectBySlug(slug)
 
+  // Checks if the project isnt there
   if (!project) {
+    // Returns an empty arrary
     return {}
   }
 
+  // Retuns the metadata
   return {
-    title: `${project.title} · Portfolio`,
+    title: `${project.title}`,
     description: project.description,
   }
 }
 
+// Function for the page
 export default async function Page({ params }: Readonly<{ params: Promise<{ slug: string }> }>) {
+  // Gets the slug
   const { slug } = await params
+  // Gets the project
   const project = getProjectBySlug(slug)
 
+  // Checks if the project is not found
   if (!project) {
+    // Returns not found
     notFound()
   }
 
+  // Gets the related projects 
   const related = getAllProjects().filter((item) => item.slug !== project.slug).slice(0, 3)
+  // returns content and summary
   const { content, ...summary } = project
-
+  
   return (
     <ContentContainer className="max-w-3xl pb-20">
       <ProjectBreadcrumbs
