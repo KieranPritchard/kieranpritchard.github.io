@@ -1,10 +1,10 @@
 import { getBlogFileSlugs, getBlogBySlug, getAllBlogs } from "@/lib/blogs";
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import ContentContainer from "@/components/content/ContentContainer"
-import { ProjectBreadcrumbs } from "@/components/content/portfolio/ProjectBreadcrumbs"
-import { ProjectMarkdown } from "@/components/content/portfolio/ProjectMarkdown"
-import { BlogArticleHeader } from "@/components/content/blog/BlogArticleHeader";
+import ContentContainer from "@/components/pages/ContentContainer"
+import { ProjectBreadcrumbs } from "@/components/pages/portfolio/ProjectBreadcrumbs"
+import { ProjectMarkdown } from "@/components/pages/portfolio/ProjectMarkdown"
+import { BlogArticleHeader } from "@/components/pages/blog/BlogArticleHeader";
 
 // Function to generate static parameters
 export async function generateStaticParams() {

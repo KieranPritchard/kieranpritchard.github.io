@@ -1,10 +1,10 @@
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import ContentContainer from "@/components/content/ContentContainer"
+import ContentContainer from "@/components/pages/ContentContainer"
 import { LinkButton } from "@/components/Buttons/LinkButton"
-import { ProjectArticleHeader } from "@/components/content/portfolio/ProjectArticleHeader"
-import { ProjectBreadcrumbs } from "@/components/content/portfolio/ProjectBreadcrumbs"
-import { ProjectMarkdown } from "@/components/content/portfolio/ProjectMarkdown"
+import { ProjectArticleHeader } from "@/components/pages/portfolio/ProjectArticleHeader"
+import { ProjectBreadcrumbs } from "@/components/pages/portfolio/ProjectBreadcrumbs"
+import { ProjectMarkdown } from "@/components/pages/portfolio/ProjectMarkdown"
 import { getAllProjects, getProjectBySlug, getProjectFileSlugs } from "@/lib/projects"
 
 // Function to generate static parameters

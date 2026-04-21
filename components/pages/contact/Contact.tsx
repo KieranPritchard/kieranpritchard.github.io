@@ -4,7 +4,7 @@ import { Variants } from "framer-motion"
 import { motion } from "framer-motion"
 import { Mail, Phone } from "lucide-react"
 import { IconBrandLinkedin, IconBrandX } from "@tabler/icons-react"
-import ContactForm from "@/components/content/contact/ContactForm"
+import ContactForm from "@/components/pages/contact/ContactForm"
 import { cn } from "@/lib/utils"
 
 /**

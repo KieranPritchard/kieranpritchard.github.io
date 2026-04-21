@@ -1,9 +1,9 @@
-import ContentContainer from "@/components/content/ContentContainer";
-import About from "@/components/content/HomePage/About";
-import Intro from "@/components/content/HomePage/Intro";
-import TechStack from "@/components/content/HomePage/TechStack";
-import WhatIDo from "@/components/content/HomePage/WhatIDo";
-import FeaturedProjectsList from "@/components/content/portfolio/FeaturedProjects";
+import ContentContainer from "@/components/pages/ContentContainer";
+import About from "@/components/pages/HomePage/About";
+import Intro from "@/components/pages/HomePage/Intro";
+import TechStack from "@/components/pages/HomePage/TechStack";
+import WhatIDo from "@/components/pages/HomePage/WhatIDo";
+import FeaturedProjectsList from "@/components/pages/portfolio/FeaturedProjects";
 import { getAllProjects } from "@/lib/projects";
 
 export default function Page() {
