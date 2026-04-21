@@ -5,7 +5,8 @@ import BlogList from "@/components/content/blog/BlogList"
 import { Metadata } from 'next'
 import ContentContainer from "@/components/content/ContentContainer"
 import type { BlogSummary } from "@/types/blog"
-import { WhoAmI } from "@/components/content/blog/Widgets/WhoAmI"
+import  WhoAmI from "@/components/content/blog/Widgets/WhoAmI"
+import TagCloud from "@/components/content/blog/Widgets/TagCloud"
 
 export const metadata: Metadata = {
     title: 'Blog',
@@ -59,6 +60,7 @@ export default async function Page() {
                 {/* Sidebar Column: Fixed width, won't shrink */}
                 <aside className="w-full md:w-75 shrink-0 md:sticky md:top-24 space-y-8">
                     <WhoAmI />
+                    <TagCloud posts={dummyBlogs} />
                 </aside>
                 
                 {/* Main Content Column: Fills remaining space */}

@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button";
 import { SiGithub, SiX } from "@icons-pack/react-simple-icons";
 import { IconBrandLinkedin } from "@tabler/icons-react";
 
-export function WhoAmI() {
+export default function WhoAmI() {
     return (
         <Card className="w-full md:max-w-xs sticky top-8">
-            <CardContent className="flex flex-col items-center pt-6 space-y-4">
+            <CardContent className="flex flex-col items-center space-y-4">
                 {/* Avatar and profile image */}
                 <Avatar className="w-24 h-24 border-2">
                     <AvatarImage src="/your-profile-pic.jpg" alt="Your Name" />
