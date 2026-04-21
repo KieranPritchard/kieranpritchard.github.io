@@ -5,6 +5,7 @@ import BlogList from "@/components/content/blog/BlogList"
 import { Metadata } from 'next'
 import ContentContainer from "@/components/content/ContentContainer"
 import type { BlogSummary } from "@/types/blog"
+import { WhoAmI } from "@/components/content/blog/Widgets/WhoAmI"
 
 export const metadata: Metadata = {
     title: 'Blog',
@@ -56,11 +57,8 @@ export default async function Page() {
             <div className="flex flex-col md:flex-row gap-12 items-start">
                 
                 {/* Sidebar Column: Fixed width, won't shrink */}
-                <aside className="w-full md:w-[300px] flex-shrink-0 md:sticky md:top-24 space-y-8">
-                    <div className="rounded-lg border border-border/50 bg-card p-6">
-                        <h3 className="mb-4 font-bold">Widgets</h3>
-                        <p className="text-sm text-muted-foreground">Sidebar content goes here.</p>
-                    </div>
+                <aside className="w-full md:w-75 shrink-0 md:sticky md:top-24 space-y-8">
+                    <WhoAmI />
                 </aside>
                 
                 {/* Main Content Column: Fills remaining space */}
