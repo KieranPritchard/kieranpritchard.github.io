@@ -1,0 +1,139 @@
+"use client"
+
+import { Variants } from "framer-motion"
+import { motion } from "framer-motion"
+import Image from "next/image"
+import { Badge } from "@/components/ui/badge"
+import type { BlogSummary } from "@/types/blog"
+import { cn } from "@/lib/utils"
+
+/**
+ * Formats an ISO date string into a localized British English format (e.g., 5 April 2026).
+ * Returns the original string if parsing fails.
+ */
+function formatArticleDate(iso: string) {
+    const parsed = new Date(iso)
+    if (Number.isNaN(parsed.getTime())) {
+        return iso
+    }
+
+    return new Intl.DateTimeFormat("en-GB", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+    }).format(parsed)
+}
+
+/**
+ * ProjectArticleHeader component to display project titles, metadata, and hero images.
+ * Uses Framer Motion for staggered text entry and a decorative border reveal.
+ */
+export function BlogArticleHeader({
+    blog,
+    className,
+}: Readonly<{ blog: BlogSummary; className?: string }>) {
+    // Animation variants for text elements using a custom delay multiplier
+    const textVariants: Variants = {
+        hidden: { opacity: 0, y: 10 },
+        visible: (custom: number) => ({
+            opacity: 1,
+            y: 0,
+            transition: { delay: custom * 0.1, duration: 0.5, ease: "easeOut" }
+        })
+    }
+
+    return (
+        <header className={cn("space-y-8", className)}>
+            <div className="space-y-6 pb-10 relative">
+                <div className="space-y-4">
+                {/* Metadata Row: Displays the formatted date and project category */}
+                <motion.div 
+                    className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground"
+                    variants={textVariants}
+                    initial="hidden"
+                    animate="visible"
+                    custom={0}
+                >
+                    <time dateTime={blog.date}>{formatArticleDate(blog.date)}</time>
+                    <span aria-hidden className="text-border">
+                    ·
+                    </span>
+                    <Badge variant="secondary" className="capitalize px-3 py-0.5">
+                    {blog.category}
+                    </Badge>
+                </motion.div>
+
+                {/* Project Title: Large heading with sequential animation delay */}
+                <motion.h1 
+                    className="font-heading text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
+                    variants={textVariants}
+                    initial="hidden"
+                    animate="visible"
+                    custom={1}
+                >
+                    {blog.title}
+                </motion.h1>
+
+                {/* Description: Leading paragraph for project summary */}
+                <motion.p 
+                    className="max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl"
+                    variants={textVariants}
+                    initial="hidden"
+                    animate="visible"
+                    custom={2}
+                >
+                    {blog.description}
+                </motion.p>
+
+                {/* Tags: Maps through project tags to display interactive badges */}
+                <motion.div 
+                    className="flex flex-wrap gap-2 pt-2"
+                    variants={textVariants}
+                    initial="hidden"
+                    animate="visible"
+                    custom={3}
+                >
+                    {blog.tags.map((tag) => (
+                    <Badge 
+                        key={tag} 
+                        variant="outline" 
+                        className="bg-background/50 hover:border-primary/50 transition-colors"
+                    >
+                        {tag}
+                    </Badge>
+                    ))}
+                </motion.div>
+            </div>
+
+            {/* Decorative Animated Border: Expands horizontally across the header bottom */}
+            <motion.div 
+                className="absolute bottom-0 left-0 h-px bg-border w-full"
+                initial={{ scaleX: 0, originX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+            />
+            </div>
+
+            {/* Cover Image: Hero section with a subtle zoom-out and fade-in effect */}
+            {blog.coverImage ? (
+                <motion.figure 
+                className="overflow-hidden rounded-2xl border bg-muted/30 shadow-2xl shadow-primary/5"
+                initial={{ opacity: 0, y: 20, scale: 0.98 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ delay: 0.6, duration: 0.7, ease: "circOut" }}
+                >
+                <div className="relative aspect-21/9 w-full sm:aspect-[2.4/1]">
+                    <Image
+                    src={blog.coverImage}
+                    alt={blog.coverAlt ?? ""}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 1200px"
+                    priority
+                    />
+                </div>
+                </motion.figure>
+            ) : null}
+        </header>
+    )
+}
