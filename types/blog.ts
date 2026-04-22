@@ -16,7 +16,7 @@ export type BlogFrontmatter = {
     tags: string[]
     date: string
     coverImage?: string
-    coverAlt: string
+    coverAlt?: string
 }
 
 // Exports the project summary
