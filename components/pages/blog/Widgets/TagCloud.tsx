@@ -42,7 +42,7 @@ export default function TagCloud({ posts }: { posts: BlogSummary[] }) {
     const uniqueCategories = [...new Set(posts.map((post) => post.category.charAt(0).toUpperCase() + post.category.slice(1)))];
 
     return (
-        <Card className="w-full md:max-w-xs sticky top-8">
+        <Card className="w-full">
             <CardContent className="flex flex-col items-start space-y-4">
                 <div className="text-center">
                     <h3 className="text-lg font-bold">Tags</h3>

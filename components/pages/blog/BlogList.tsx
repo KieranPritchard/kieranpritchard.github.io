@@ -36,17 +36,17 @@ export default function BlogList({ className, posts }: { className?: string; pos
                     <Card className="group overflow-hidden border-border/50 bg-card/40 transition-all duration-500 hover:border-primary/40 hover:bg-card hover:shadow-2xl hover:shadow-primary/5 md:py-0">
                         <CardContent className="p-0">
                             <div className="flex flex-col md:flex-row">
-                                {/* Desktop-only sidebar image layout */}
-                                <div className="relative hidden shrink-0 md:block md:w-[250px] md:h-[250px] bg-muted/30 border-r border-border/50 overflow-hidden">
+                                {/* Responsive image layout */}
+                                <div className="relative shrink-0 aspect-video w-full md:aspect-auto md:w-[280px] lg:w-[320px] bg-muted/30 border-b md:border-b-0 md:border-r border-border/50 overflow-hidden">
                                     {post.coverImage ? (
                                         <img
                                             src={post.coverImage}
                                             alt={post.coverAlt || post.title}
-                                            className="h-full w-full object-cover"
+                                            className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                                         />
                                     ) : (
                                         // Fallback state if no image is provided
-                                        <div className="flex h-full w-full items-center justify-center bg-muted/50">
+                                        <div className="absolute inset-0 flex items-center justify-center bg-muted/50">
                                             <span className="text-sm text-muted-foreground/30">No Image</span>
                                         </div>
                                     )}

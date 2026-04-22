@@ -1,7 +1,7 @@
 ---
 title: "My Top 5 Favourite Cybersecurity Tools: Insights from Personal Experience"
 slug: "top-5-favorite-cybersecurity-tools"
-category: "web"
+category: "security"
 description: "Explore my favourite tools for cybersecurity as I share personal insights on why Nmap, Wireshark, and others are my go-to choices for securing data."
 tags:
   - Cyber Security

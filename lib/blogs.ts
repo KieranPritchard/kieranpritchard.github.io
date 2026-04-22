@@ -11,7 +11,6 @@ const contentDir = path.join(process.cwd(), "content/blogs")
 function isBlogCategory(value:unknown): value is BlogCategory {
     // Returns the correct value
     return (
-        value === "development" ||
         value === "developement" ||
         value === "web" ||
         value === "security" ||

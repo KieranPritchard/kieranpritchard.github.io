@@ -8,7 +8,7 @@ import { IconBrandLinkedin } from "@tabler/icons-react";
 
 export default function WhoAmI() {
     return (
-        <Card className="w-full md:max-w-xs sticky top-8">
+        <Card className="w-full">
             <CardContent className="flex flex-col items-center space-y-4">
                 {/* Avatar and profile image */}
                 <Avatar className="w-24 h-24 border-2">
