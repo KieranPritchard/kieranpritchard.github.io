@@ -99,35 +99,33 @@ export default function About({ className }: Readonly<{ className?: string }>) {
                 <motion.div variants={itemVariants} whileHover={{ y: -5 }}>
                     <Card className="h-full">
                         {/* 2x2 grid to provide information about me */}
-                        <CardContent className="space-y-6">
-                            <div className="grid grid-cols-2 gap-4">
+                        <CardContent className="p-6">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                                 <motion.div className="space-y-1" whileHover={{ scale: 1.05 }}>
                                     {/* Name section part */}
                                     <div className="flex items-center gap-2 text-sm font-medium">
-                                        <UserRound className="h-4 w-4 text-primary" />
+                                        <UserRound className="h-4 w-4 text-primary shrink-0" />
                                         <span className="font-semibold">Name: </span>Kieran
                                     </div>
                                 </motion.div>
                                 <motion.div className="space-y-1" whileHover={{ scale: 1.05 }}>
                                     {/* Location section part */}
                                     <div className="flex items-center gap-2 text-sm font-medium">
-                                        <MapPin className="h-4 w-4 text-primary"/>
+                                        <MapPin className="h-4 w-4 text-primary shrink-0"/>
                                         <span className="font-semibold">From: </span>Bournemouth, England
                                     </div>
                                 </motion.div>
-                            </div>
-                            <div className="grid grid-cols-2 gap-4">
                                 <motion.div className="space-y-1" whileHover={{ scale: 1.05 }}>
                                     {/* Age section part */}
                                     <div className="flex items-center gap-2 text-sm font-medium">
-                                        <Clock3 className="h-4 w-4 text-primary" />
+                                        <Clock3 className="h-4 w-4 text-primary shrink-0" />
                                         <span className="font-semibold">Age: </span>20
                                     </div>
                                 </motion.div>
                                 <motion.div className="space-y-1" whileHover={{ scale: 1.05 }}>
                                     {/* Email section part */}
-                                    <div className="flex items-center gap-2 text-sm font-medium">
-                                        <AtSign className="h-4 w-4 text-primary"/>
+                                    <div className="flex items-center gap-2 text-sm font-medium break-all">
+                                        <AtSign className="h-4 w-4 text-primary shrink-0"/>
                                         KieranPritchard06@gmail.com
                                     </div>
                                 </motion.div>

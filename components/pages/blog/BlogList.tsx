@@ -33,7 +33,7 @@ export default function BlogList({ className, posts }: { className?: string; pos
             {posts.map((post) => (
                 // Individual motion wrapper for animation coordination
                 <motion.div key={post.slug} variants={cardVariants}>
-                    <Card className="group md:py-0">
+                    <Card className="group py-0">
                         <CardContent className="p-0">
                             <div className="flex flex-col md:flex-row">
                                 {/* Responsive image layout */}

@@ -1,4 +1,4 @@
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { SidebarProvider, SidebarTrigger, SidebarInset } from "@/components/ui/sidebar"
 import { TooltipProvider } from "@/components/ui/tooltip" // Added this
 import { PortfolioSidebar } from "@/components/main-components/portfolio-sidebar"
 import { ModeToggle } from "@/components/main-components/mode-toggle"
@@ -26,7 +26,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-background font-sans antialiased overflow-x-hidden",
           fontMono.variable,
           roboto.variable,
           notoSansHeading.variable
@@ -42,7 +42,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <TooltipProvider delayDuration={0}>
             <SidebarProvider>
               <PortfolioSidebar />
-              <main className="relative flex min-h-screen flex-col w-full">
+              <SidebarInset className="min-w-0">
                 <header className="sticky top-0 z-10 flex h-16 shrink-0 items-center justify-between px-4">
                   <div className="flex items-center gap-2">
                     <SidebarTrigger className="-ml-1" />
@@ -51,11 +51,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                     <ModeToggle />
                   </div>
                 </header>
-                <div className="flex flex-1 flex-col gap-4 p-4 md:p-8">
+                <div className="flex flex-1 flex-col gap-4 p-4 md:p-8 min-w-0">
                   {children}
                 </div>
                 <Footer />
-              </main>
+              </SidebarInset>
             </SidebarProvider>
           </TooltipProvider>
         </ThemeProvider>

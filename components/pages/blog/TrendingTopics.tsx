@@ -47,7 +47,7 @@ export default function TrendingTopics({
             {/* Grid Container with backdrop */}
             <div className="relative p-6">
                 {/* Rounded background layer behind the grid */}
-                <div className="absolute inset-0 bg-muted/30 rounded-3xl -z-10 border border-border/50" />
+                <div className="absolute inset-0 bg-muted/30 rounded-3xl border border-border/50 pointer-events-none" />
                 
                 <motion.div 
                     className="grid grid-cols-2 gap-4 md:grid-cols-4"
