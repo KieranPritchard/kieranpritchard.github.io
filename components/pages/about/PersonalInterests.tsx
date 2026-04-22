@@ -112,7 +112,7 @@ export default function PersonalInterests({ className }: Readonly<{ className?: 
 
                             {/* Physical Media sub-section with horizontal hover shift */}
                             <motion.div 
-                                className="pt-4 border-t border-border flex items-start gap-3"
+                                className="flex items-start gap-3"
                                 whileHover={{ x: 5 }}
                             >
                                 <Disc className="h-5 w-5 text-primary mt-1 shrink-0" />
@@ -156,7 +156,7 @@ export default function PersonalInterests({ className }: Readonly<{ className?: 
                             </div>
 
                             {/* Photography & Gaming: 2x2 grid for creative and competitive hobbies */}
-                            <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border">
+                            <div className="grid grid-cols-2 gap-4">
                                 <motion.div className="space-y-1" whileHover={{ scale: 1.05 }}>
                                     <div className="flex items-center gap-2 text-sm font-medium">
                                         <Camera className="h-4 w-4 text-primary" />
@@ -174,7 +174,7 @@ export default function PersonalInterests({ className }: Readonly<{ className?: 
                             </div>
 
                             {/* Technical Hobbies: Highlights continued learning through side projects and security practice */}
-                            <div className="pt-4 border-t border-border grid grid-cols-2 gap-4">
+                            <div className="grid grid-cols-2 gap-4">
                                 <motion.div className="space-y-1" whileHover={{ scale: 1.05 }}>
                                     <div className="flex items-center gap-2 text-sm font-medium">
                                         <Code2 className="h-4 w-4 text-primary" />
