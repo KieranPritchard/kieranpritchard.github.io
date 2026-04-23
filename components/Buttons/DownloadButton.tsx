@@ -22,11 +22,11 @@ const BaseDownloadButton = React.forwardRef<HTMLDivElement, DownloadButtonProps>
     ({ kind = "default", text, link, fileName, className }, ref) => {
         return (
             <div ref={ref} className={cn("inline-block", className)}>
-                <Button variant={kind} asChild className="gap-2">
+                <Button size={"lg"} variant={kind} asChild className="gap-2 rounded-lg">
                     {/* The 'download' attribute triggers the file save dialog */}
                     <a href={link} download={fileName ?? true}>
-                        <Download className="h-4 w-4" />
                         {text}
+                        <Download className="h-4 w-4" />
                     </a>
                 </Button>
             </div>

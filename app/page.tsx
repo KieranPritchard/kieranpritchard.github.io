@@ -14,7 +14,7 @@ export default function Page() {
   return (
     <>
       <ContentContainer>
-        <Intro />
+        <Intro projects={projects}/>
       </ContentContainer>
       <ContentContainer>
         <WhatIDo />

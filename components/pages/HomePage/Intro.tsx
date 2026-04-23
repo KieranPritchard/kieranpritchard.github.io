@@ -5,8 +5,9 @@ import { motion } from "framer-motion"
 import { DownloadButton } from "@/components/Buttons/DownloadButton"
 import { LinkButton } from "@/components/Buttons/LinkButton"
 import { cn } from "@/lib/utils"
+import { ProjectSummary } from "@/types/project"
 
-export default function Intro({ className }: Readonly<{ className?: string }>) {
+export default function Intro({ className, projects }: Readonly<{ className?: string; projects: ProjectSummary[]}>) {
     // Staggered entrance variants
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
@@ -35,7 +36,7 @@ export default function Intro({ className }: Readonly<{ className?: string }>) {
         */
         <section 
             className={cn(
-                "relative flex min-h-[80vh] w-full items-center justify-center overflow-hidden px-4 py-12 md:px-8 lg:px-12",
+                "relative flex min-h-[80vh] w-full items-center justify-center overflow-hidden px-4 md:px-8 lg:px-12",
                 className
             )}
         >   
@@ -51,7 +52,7 @@ export default function Intro({ className }: Readonly<{ className?: string }>) {
                 >
                     <motion.div className="space-y-3" variants={itemVariants}>
                         <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
-                            Kieran Pritchard
+                            Ethical hacker & <span className="text-primary">software</span> developer.
                         </h1>
                         {/* Match sidebar accent line */}
                         <motion.div 
@@ -63,11 +64,12 @@ export default function Intro({ className }: Readonly<{ className?: string }>) {
                     </motion.div>
 
                     <motion.p 
-                        className="max-w-150 text-lg leading-relaxed text-muted-foreground md:text-xl"
+                        className="max-w-150 text-md leading-relaxed text-muted-foreground md:text-lg"
                         variants={itemVariants}
                     >
-                        I'm a software student focused ethical hacking and software. 
-                        I specialize in building solutions via proactive problem-solving.
+                        I'm <strong className="text-foreground">Kieran</strong> a Digital Software Developement student at 
+                        <strong className="text-foreground"> Bournemouth & Poole College</strong>, focused on offensive security, automation,
+                        and well built software. I build Things that are robust because I know how they break
                     </motion.p>
 
                     <motion.div 
@@ -81,6 +83,26 @@ export default function Intro({ className }: Readonly<{ className?: string }>) {
                             fileName="kieran_pritchard_cv.pdf" 
                             kind="secondary" 
                         />  
+                    </motion.div>
+                    <motion.div
+                        className="flex flex-wrap text-sm justify-between items-center gap-4" 
+                        variants={itemVariants}
+                    >
+                        <motion.p
+                            className="flex-row"
+                        >
+                            <strong className="text-foreground">{projects.length}+</strong><br />
+                            
+                            Shipped Projects
+                        </motion.p>
+                        <motion.p>
+                            <strong className="text-foreground">T Level</strong><br />
+                            Year 1 - BPC
+                        </motion.p>
+                        <motion.p>
+                            <strong>20</strong><br />
+                            Years Old
+                        </motion.p>
                     </motion.div>
                 </motion.div>
 
