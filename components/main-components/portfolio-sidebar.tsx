@@ -15,6 +15,7 @@ import {
 import { Home, BriefcaseBusiness, User, Newspaper, Contact } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { ModeToggle } from "@/components/main-components/mode-toggle"
+import { AnimationToggle } from "./AnimationToggle"
 
 /**
  * PortfolioSidebar Component
@@ -107,6 +108,7 @@ export function PortfolioSidebar({ className }: { className?: string }) {
             <SidebarFooter className="p-2 my-2">
                 <div className="flex items-center justify-center gap-2 w-full">
                     <ModeToggle />
+                    <AnimationToggle />
                 </div>
             </SidebarFooter>
         </Sidebar>
