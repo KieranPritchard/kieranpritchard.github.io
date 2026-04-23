@@ -12,9 +12,9 @@ import {
     SidebarMenuItem,
     SidebarFooter
 } from "@/components/ui/sidebar"
-import { Home, BriefcaseBusiness, User, Newspaper, Contact } from "lucide-react"
+import { Home, Toolbox, User, NotebookPen, Mail } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { ModeToggle } from "@/components/main-components/mode-toggle"
+import { ModeToggle } from "@/components/main-components/ModeToggle"
 import { AnimationToggle } from "./AnimationToggle"
 
 /**
@@ -27,9 +27,9 @@ import { AnimationToggle } from "./AnimationToggle"
 const items = [
     { title: "Home", url: "/", icon: Home },
     { title: "About", url: "/about", icon: User },
-    { title: "Blog", url: "/blog", icon: Newspaper },
-    { title: "Portfolio", url: "/portfolio", icon: BriefcaseBusiness },
-    { title: "Contact", url: "/contact", icon: Contact },
+    { title: "Portfolio", url: "/portfolio", icon: Toolbox },
+    { title: "Blog", url: "/blog", icon: NotebookPen },
+    { title: "Contact", url: "/contact", icon: Mail },
 ]
 
 export function PortfolioSidebar({ className }: { className?: string }) {
@@ -59,31 +59,28 @@ export function PortfolioSidebar({ className }: { className?: string }) {
                     <SidebarGroupContent>
                         <SidebarMenu className="gap-1">
                             {/* Maps the items to link buttons */}
+                            {/* Maps the items to link buttons */}
                             {items.map((item) => {
-                                // Stores the active link
                                 const isActive = pathname === item.url
                                 
                                 return (
-                                    /* Creates sidebar item */
-                                    <SidebarMenuItem key={item.title}>
-                                        {/* Creates sidebar menu button */}
+                                    <SidebarMenuItem key={item.title} className="relative">
+                                        {/* Active Indicator Bar positioned outside the button */}
+                                        {isActive && (
+                                            <div className="absolute -left-1 top-1/2 -translate-y-1/2 h-8 w-1 bg-primary rounded-full" />
+                                        )}
+                                        
                                         <SidebarMenuButton 
                                             asChild 
                                             isActive={isActive}
                                             className={cn(
-                                                "group relative transition-all duration-300",
+                                                "group transition-all duration-300 rounded-md",
                                                 isActive 
-                                                    ? "bg-primary/10 text-primary hover:bg-primary/15" 
+                                                    ? "bg-primary/15! text-primary" 
                                                     : "hover:bg-muted"
                                             )}
                                         >
-                                            {/* Creates the link to the other pages */}
-                                            <a href={item.url} className="flex items-center gap-3 px-3 py-2">
-                                                {/* Active Indicator Bar */}
-                                                {isActive && (
-                                                    <div className="absolute left-0 h-4 w-1 bg-primary rounded-r-full" />
-                                                )}
-                                                
+                                            <a href={item.url} className="flex items-center gap-3 px-3 py-6">
                                                 <item.icon className={cn(
                                                     "size-5 transition-transform duration-300 group-hover:scale-110",
                                                     isActive ? "text-primary" : "text-muted-foreground group-hover:text-primary"

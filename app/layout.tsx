@@ -1,7 +1,7 @@
 // app/layout.tsx
 import { SidebarProvider, SidebarTrigger, SidebarInset } from "@/components/ui/sidebar"
 import { TooltipProvider } from "@/components/ui/tooltip"
-import { PortfolioSidebar } from "@/components/main-components/portfolio-sidebar"
+import { PortfolioSidebar } from "@/components/main-components/PortfolioSidebar"
 import { Geist_Mono, Roboto, Noto_Sans } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
