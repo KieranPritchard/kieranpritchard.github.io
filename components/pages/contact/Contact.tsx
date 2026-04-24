@@ -1,171 +1,71 @@
 "use client"
 
-import { Variants } from "framer-motion"
-import { motion } from "framer-motion"
-import { Mail, Phone } from "lucide-react"
-import { IconBrandLinkedin, IconBrandX } from "@tabler/icons-react"
+import { Mail, MapPin, Clock } from "lucide-react"
+import { IconBrandLinkedin, IconBrandGithub, IconBrandDiscord } from "@tabler/icons-react"
 import ContactForm from "@/components/pages/contact/ContactForm"
-import { cn } from "@/lib/utils"
 
-/**
- * Contact Component: A split-view layout featuring a call-to-action (CTA), 
- * direct communication links, and a functional ContactForm.
- */
-export default function Contact({ className }: Readonly<{ className?: string }>) {
-  // Hardcoded contact strings and social URLs
+export default function Contact() {
   const toEmail = "KieranPritchard06@gmail.com"
-  const phoneNumber = "+44 07763 534145"
-  const linkedinUrl = "https://www.linkedin.com/in/kieran-pritchard/"
-  const xUrl = "https://x.com/OverF10w_0x"
-
-  // Parent container variant: Coordinates the staggered entry for the info column
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1,
-      },
-    },
-  }
-
-  // Individual item entrance: Defines a subtle slide-up effect for text and headers
-  const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 15 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 0.5, ease: "easeOut" } 
-    },
-  }
-
-  // Contact Block variant: Uses a circOut ease for a snappy, physics-based expansion
-  const contactBlockVariants: Variants = {
-    hidden: { opacity: 0, scale: 0.95 },
-    visible: { 
-      opacity: 1, 
-      scale: 1, 
-      transition: { delay: 0.5, duration: 0.6, ease: "circOut" } 
-    },
-  }
 
   return (
-    <section 
-      id="contact" 
-      className={cn("mx-auto w-full max-w-7xl px-4 py-20 md:px-6 lg:px-8 overflow-hidden", className)}
-    >
-      <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:items-start">
-        {/* Contact Information Column: Staggered reveal for context and links */}
-        <motion.div 
-          className="space-y-6"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          {/* Header Section with animated primary divider */}
-          <motion.div className="space-y-2" variants={itemVariants}>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
-              Contact
-            </h2>
-            <motion.div 
-              className="h-1 bg-primary rounded-full" 
-              initial={{ width: 0 }}
-              whileInView={{ width: 80 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-            />
-          </motion.div>
+    <section className="mx-auto w-full max-w-7xl px-4 py-20 md:px-6 lg:px-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        {/* Left Column */}
+        <div className="space-y-12">
+          <div className="space-y-4">
+            <p className="text-[10px] font-mono uppercase tracking-widest text-primary">— CONTACT</p>
+            <h2 className="text-5xl font-bold tracking-tight">Get in touch.</h2>
+            <p className="text-muted-foreground max-w-md leading-relaxed">
+              Placements, CTF invites, collaborations, or just a hello — I reply to everything reasonable. Usually within a day.
+            </p>
+          </div>
 
-          {/* Intro Text: Encourages collaboration or professional inquiries */}
-          <motion.p 
-            className="text-lg leading-relaxed text-muted-foreground md:max-w-lg"
-            variants={itemVariants}
-          >
-            Have a project in mind or want to chat about collaboration? Send a
-            message and I’ll get back to you.
-          </motion.p>
-
-          {/* Contact Links Block: Houses high-fidelity interaction icons (LinkedIn, X, etc.) */}
-          <motion.div 
-            className="space-y-6 rounded-2xl border border-border/50 bg-muted/20 p-6 shadow-2xl shadow-primary/5 transition-all duration-300 hover:border-primary/40 hover:bg-muted/50"
-            variants={contactBlockVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            whileHover={{ y: -5, transition: { duration: 0.2 } }} // Subtle vertical lift on hover
-          >
-            {/* Direct Email Link with pulse animation trigger */}
-            <div className="flex items-start gap-4 group">
-              <Mail className="mt-1 size-5 text-primary group-hover:animate-pulse" aria-hidden />
-              <div className="space-y-1">
-                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Email</p>
-                <a 
-                  className="font-medium text-primary hover:underline underline-offset-2 break-all" 
-                  href={`mailto:${toEmail}`}
-                >
-                  {toEmail}
-                </a>
-              </div>
+          {/* This is the rounded square card container */}
+          <div className="rounded-2xl border bg-muted/20 border-border overflow-hidden">
+            {/* Info Items */}
+            <div className="divide-y divide-border">
+              {[
+                { icon: Mail, label: "EMAIL", value: toEmail, href: `mailto:${toEmail}` },
+                { icon: MapPin, label: "BASED IN", value: "Bournemouth, England" },
+                { icon: Clock, label: "RESPONSE TIME", value: "Usually < 24h" }
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-center gap-4 p-6">
+                  <div className="p-2 rounded-lg bg-muted/30 text-primary"><item.icon className="size-5" /></div>
+                  <div>
+                    <p className="text-[10px] font-mono uppercase tracking-widest text-foreground">{item.label}</p>
+                    {item.href ? (
+                      <a href={item.href} className="font-semibold hover:text-primary transition-colors">{item.value}</a>
+                    ) : (
+                      <p className="font-semibold">{item.value}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
 
-            {/* Direct Phone Link with rotation animation trigger */}
-            <div className="flex items-start gap-4 group">
-              <Phone className="mt-1 size-5 text-primary group-hover:rotate-12 transition-transform" aria-hidden />
-              <div className="space-y-1">
-                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Phone</p>
+            {/* Social Buttons Grid */}
+            <div className="grid grid-cols-2 gap-px bg-muted/20 border-t border-border">
+              {[
+                { icon: Mail, label: "Email", href: `mailto:${toEmail}` },
+                { icon: IconBrandGithub, label: "GitHub", href: "#" },
+                { icon: IconBrandLinkedin, label: "LinkedIn", href: "#" },
+                { icon: IconBrandDiscord, label: "Discord", href: "#" }
+              ].map((item, i) => (
                 <a 
-                  className="font-medium text-primary hover:underline underline-offset-2" 
-                  href={`tel:${phoneNumber}`}
+                  key={i} 
+                  href={item.href} 
+                  className="flex items-center gap-3 p-4 hover:bg-primary/30 transition-colors"
                 >
-                  {phoneNumber}
+                  <item.icon className="size-4 text-primary" />
+                  <span className="text-sm font-semibold">{item.label}</span>
                 </a>
-              </div>
+              ))}
             </div>
+          </div>
+        </div>
 
-            {/* LinkedIn Profile link with scale-up animation trigger */}
-            <div className="flex items-start gap-4 group">
-              <IconBrandLinkedin className="mt-1 size-5 text-primary group-hover:scale-110 transition-transform" aria-hidden />
-              <div className="space-y-1">
-                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">LinkedIn</p>
-                <a 
-                  className="font-medium text-primary hover:underline underline-offset-2" 
-                  href={linkedinUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  View Profile
-                </a>
-              </div>
-            </div>
-
-            {/* X / Twitter Profile link with rotation animation trigger */}
-            <div className="flex items-start gap-4 group">
-              <IconBrandX className="mt-1 size-5 text-primary group-hover:rotate-12 transition-transform" aria-hidden />
-              <div className="space-y-1">
-                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">X / Twitter</p>
-                <a 
-                  className="font-medium text-primary hover:underline underline-offset-2 break-all" 
-                  href={xUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  Follow Me
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        </motion.div>
-
-        {/* Contact Form Column: Slides in from the right to complete the layout balance */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4, duration: 0.7, ease: "easeOut" }}
-        >
-          <ContactForm toEmail={toEmail} />
-        </motion.div>
+        {/* Right Column */}
+        <ContactForm toEmail={toEmail} />
       </div>
     </section>
   )
