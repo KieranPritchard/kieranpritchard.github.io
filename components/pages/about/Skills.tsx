@@ -1,151 +1,124 @@
 "use client"
 
-import { Variants } from "framer-motion"
-import { motion } from "framer-motion"
-import {
-    Card,
-    CardContent,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { Variants, motion } from "framer-motion"
 import { cn } from "@/lib/utils"
-import { ShieldCheck, Code2, Terminal } from "lucide-react"
 
 /**
- * Hardcoded skills data categorized by domain. 
- * This drives the rendering of the badges within each category card.
+ * Skill metrics categorized by domain. 
+ * Values represent proficiency percentages.
  */
-const skillsData = {
-    languages: ["Go (Golang)", "Node.js", "React", "Python", "JavaScript (ES6+)", "HTML5/CSS3"],
-    security: ["Linux (Kali)", "Wireshark", "Ethical Hacking", "Nmap", "Threat Management", "Firewalls"],
-    tools: ["Git/GitHub", "VirtualBox", "Power Automate", "Bash/PowerShell", "Docker", "Adobe Suite"],
-}
+const skillCategories = [
+    {
+        title: "Languages",
+        skills: [
+            { name: "Python", value: 88 },
+            { name: "JavaScript / TS", value: 82 },
+            { name: "Go", value: 62 },
+            { name: "HTML / CSS", value: 90 },
+        ]
+    },
+    {
+        title: "Frameworks",
+        skills: [
+            { name: "React", value: 78 },
+            { name: "Tailwind CSS", value: 86 },
+            { name: "Node.js", value: 70 },
+        ]
+    },
+    {
+        title: "Security",
+        skills: [
+            { name: "Kali Linux", value: 75 },
+            { name: "Wireshark", value: 68 },
+            { name: "Nmap", value: 72 },
+            { name: "Cryptography", value: 65 },
+        ]
+    },
+    {
+        title: "Tools",
+        skills: [
+            { name: "Git / GitHub", value: 85 },
+        ]
+    }
+]
 
 /**
- * Skills Section: Displays a grid of expertise cards with staggered reveal animations.
- * Uses Framer Motion for scroll-triggered entrance and hover states.
+ * Skills component: Renders a progress-bar based skill calibration view.
+ * Features staggered entrance animations and progress bar fill effects.
  */
 export default function Skills({ className }: Readonly<{ className?: string }>) {
-    // Parent grid animation: Handles the initial fade and staggers the appearance of child cards
+    // Animation variants for the container to orchestrate staggered children
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
-            transition: { staggerChildren: 0.2 }
-        }
+            transition: { staggerChildren: 0.1 },
+        },
     }
 
-    // Individual card entrance: Defines the upward slide and fade for each category card
-    const cardVariants: Variants = {
-        hidden: { opacity: 0, y: 20 },
+    // Animation variants for each category block
+    const itemVariants: Variants = {
+        hidden: { opacity: 0, y: 10 },
         visible: { 
             opacity: 1, 
             y: 0, 
-            transition: { duration: 0.5, ease: "easeOut" } 
-        }
-    }
-
-    // Badge "pop" animation: Uses a spring physics transition for a bouncy, organic feel
-    const badgeVariants: Variants = {
-        hidden: { opacity: 0, scale: 0.8 },
-        visible: { 
-            opacity: 1, 
-            scale: 1,
-            transition: { type: "spring", stiffness: 300, damping: 15 }
-        }
+            transition: { duration: 0.4, ease: "easeOut" } 
+        },
     }
 
     return (
-        <section className={cn("mx-auto w-full max-w-7xl px-4 py-12 md:px-6 lg:px-8 overflow-hidden", className)}>
+        <section className={cn("mx-auto w-full max-w-7xl px-4 py-16 md:px-6 lg:px-8", className)}>
+            
+            {/* Header: Calibration title */}
             <motion.div 
-                className="grid grid-cols-1 md:grid-cols-3 gap-6"
+                className="mb-16 space-y-2"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+            >
+                <p className="text-xs font-mono uppercase tracking-widest text-primary">
+                    - Skills
+                </p>
+                <h2 className="text-4xl font-bold tracking-tight text-foreground">
+                    Calibration.
+                </h2>
+                <div className="h-1 w-20 bg-primary rounded-full mt-4" />
+            </motion.div>
+
+            {/* Content: Mapped skill categories */}
+            <motion.div 
+                className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ once: true }}
             >
-                {/* Header Container: Includes the section title and the animated underline reveal */}
-                <motion.div className="space-y-2 col-span-1 md:col-span-3 mb-4" variants={cardVariants}>
-                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
-                        Skills & Expertise
-                    </h2>
-                    <motion.div 
-                        className="h-1 bg-primary rounded-full" 
-                        initial={{ width: 0 }}
-                        whileInView={{ width: 80 }}
-                        transition={{ delay: 0.4, duration: 0.8 }}
-                    />
-                </motion.div>
-
-                {/* Development Card: Focuses on programming languages and frameworks */}
-                <motion.div variants={cardVariants} whileHover={{ y: -5 }}>
-                    <Card className="h-full">
-                        <CardHeader>
-                            <CardTitle className="flex items-center gap-2 text-xl">
-                                <Code2 className="h-5 w-5 text-primary" />
-                                Development
-                            </CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <motion.div className="flex flex-wrap gap-2" variants={containerVariants}>
-                                {skillsData.languages.map((skill) => (
-                                    <motion.div key={skill} variants={badgeVariants}>
-                                        <Badge variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default">
-                                            {skill}
-                                        </Badge>
-                                    </motion.div>
-                                ))}
-                            </motion.div>
-                        </CardContent>
-                    </Card>
-                </motion.div>
-
-                {/* Security Card: Highlights cybersecurity tools and operating systems */}
-                <motion.div variants={cardVariants} whileHover={{ y: -5 }}>
-                    <Card className="h-full">
-                        <CardHeader>
-                            <CardTitle className="flex items-center gap-2 text-xl">
-                                <ShieldCheck className="h-5 w-5 text-primary" />
-                                Security & Systems
-                            </CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <motion.div className="flex flex-wrap gap-2" variants={containerVariants}>
-                                {skillsData.security.map((skill) => (
-                                    <motion.div key={skill} variants={badgeVariants}>
-                                        <Badge variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default">
-                                            {skill}
-                                        </Badge>
-                                    </motion.div>
-                                ))}
-                            </motion.div>
-                        </CardContent>
-                    </Card>
-                </motion.div>
-
-                {/* Infrastructure/Tools Card: Covers automation, devtools, and environment management */}
-                <motion.div variants={cardVariants} whileHover={{ y: -5 }}>
-                    <Card className="h-full">
-                        <CardHeader>
-                            <CardTitle className="flex items-center gap-2 text-xl">
-                                <Terminal className="h-5 w-5 text-primary" />
-                                Automation & Tools
-                            </CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <motion.div className="flex flex-wrap gap-2" variants={containerVariants}>
-                                {skillsData.tools.map((skill) => (
-                                    <motion.div key={skill} variants={badgeVariants}>
-                                        <Badge variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default">
-                                            {skill}
-                                        </Badge>
-                                    </motion.div>
-                                ))}
-                            </motion.div>
-                        </CardContent>
-                    </Card>
-                </motion.div>
+                {skillCategories.map((category) => (
+                    <motion.div key={category.title} className="space-y-6" variants={itemVariants}>
+                        <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider">
+                            {category.title}
+                        </h3>
+                        <div className="space-y-6">
+                            {category.skills.map((skill) => (
+                                <div key={skill.name} className="space-y-2">
+                                    <div className="flex justify-between items-center text-sm">
+                                        <span className="font-medium text-foreground">{skill.name}</span>
+                                        <span className="font-mono text-muted-foreground">{skill.value}%</span>
+                                    </div>
+                                    <div className="h-1.5 w-full bg-border rounded-full overflow-hidden">
+                                        <motion.div 
+                                            className="h-full bg-primary"
+                                            initial={{ width: 0 }}
+                                            whileInView={{ width: `${skill.value}%` }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 1, ease: "easeOut" }}
+                                        />
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </motion.div>
+                ))}
             </motion.div>
         </section>
     )
