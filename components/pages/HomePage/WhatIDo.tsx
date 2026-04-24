@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Variants } from "framer-motion"
 import { cn } from "@/lib/utils"
 import { Lock, Code, HandHelping } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card"
 
 /**
  * WhatIDo component: Displays cards which provide information about what i do
@@ -14,17 +15,20 @@ export default function WhatIDo({ className }: Readonly<{ className?: string }>)
         {
             title: "Ethical Hacking",
             description: "I actively compete in CTF challenges and develop custom automation tools and scripts to enhance security workflows.",
-            icon: Lock
+            icon: Lock,
+            tags: ["CTFs", "Pentesting"]
         },
         {
             title: "Software Development",
             description: "While specializing in software development for my T-Level course, I also build independent projects and custom digital solutions.",
-            icon: Code
+            icon: Code,
+            tags: ["React", "Python", "Go"]
         },
         {
             title: "IT Support",
             description: "Experienced in providing technical assistance within professional IT environments, ensuring seamless support for team members.",
-            icon: HandHelping
+            icon: HandHelping,
+            tags: []
         }
     ]
 
@@ -67,8 +71,11 @@ export default function WhatIDo({ className }: Readonly<{ className?: string }>)
                 transition={{ duration: 0.6 }}
             >
                 {/* Heading  */}
+                <p className="text-xs text-primary font-mono">
+                    - WHAT I DO
+                </p>
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
-                    What I Do
+                    Three Disaplines
                 </h2>
                 {/* Animated divider */}
                 <motion.div 
@@ -82,7 +89,7 @@ export default function WhatIDo({ className }: Readonly<{ className?: string }>)
 
             {/* Certification Grid: Dynamically generates cards with framer-motion stagger logic */}
             <motion.div 
-                className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+                className="flex flex-col gap-6 w-full mx-auto" // Added width constraints and margin auto
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -90,27 +97,46 @@ export default function WhatIDo({ className }: Readonly<{ className?: string }>)
             >
                 {items.map((item, index) => (
                     <motion.div 
-                        key={index}
+                        key={index} 
                         variants={cardVariants}
-                        whileHover={{ 
-                            y: -5,
-                            transition: { duration: 0.2 }
-                        }}
-                        className="group relative flex flex-col items-center gap-4 rounded-2xl border border-border bg-muted/30 p-6 transition-colors duration-300 hover:bg-muted/50 hover:border-primary/50"
+                        className="group relative flex items-center gap-6 rounded-xl border p-6 transition-all duration-300 hover:border-primary/30" // Added items-center
                     >
-                        {/* Icon/Badge Area: Inverts colors and scales up on parent card hover */}
-                        <div className="flex h-18 w-18 items-center justify-center rounded-xl bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
-                            <item.icon className="h-9 w-9" />
+                        {/* Numbering */}
+                        <div className="absolute top-6 right-6 font-mono text-sm">
+                            0{index + 1}
                         </div>
 
-                        {/* Content: Title and Description*/}
-                        <div className="space-y-1 text-center">
-                            <h3 className="font-semibold text-xl text-foreground leading-tight group-hover:text-primary transition-colors">
-                                {item.title}
-                            </h3>
-                            <p className="text-muted-foreground font-medium text-md">
-                                {item.description}
-                            </p>
+                        {/* Icon Box */}
+                        <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg text-primary bg-primary/10">
+                            <item.icon className="h-8 w-8" />
+                        </div>
+
+                        {/* Content Area */}
+                        <div className="flex flex-1 flex-col gap-3">
+                            <div className="space-y-1">
+                                <h3 className="text-2xl font-semibold text-foreground">
+                                    {item.title}
+                                </h3>
+                                <p className="max-w-xl text-md leading-relaxed">
+                                    {item.description}
+                                </p>
+                            </div>
+
+                            {/* Tags container */}
+                            {item.tags && (
+                                <div className="flex flex-wrap items-center gap-2 pt-2">
+                                    <div className="ml-auto flex gap-2">
+                                        {item.tags.map((tag, tagIndex) => (
+                                            <span 
+                                                key={tagIndex} 
+                                                className="rounded-full border px-3 py-1 text-[10px] font-medium uppercase tracking-wider transition-colors"
+                                            >
+                                                #{tag}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     </motion.div>
                 ))}
