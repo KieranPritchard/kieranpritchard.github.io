@@ -1,19 +1,17 @@
 "use client"
 
-import { Variants } from "framer-motion"
-import { motion } from "framer-motion"
+import { Variants, motion } from "framer-motion"
 import { cn } from "@/lib/utils"
-import { Award, ExternalLink } from "lucide-react"
+import { ExternalLink, Award } from "lucide-react"
 
 /**
- * Certifications component: Displays a comprehensive gallery of earned credentials.
- * Features automated grid layout and staggered entrance animations to maintain
- * performance with a high volume of items.
+ * Certifications component: Displays a gallery of earned credentials
+ * featuring staggered animations and consistent branding.
  */
 export default function Certifications({ className }: Readonly<{ className?: string }>) {
     /**
-     * Centralized certification data. 
-     * Includes credentials from Cisco, AWS, Miro, and Sololearn.
+     * Certification data set.
+     * Includes title, issuer, date, and link.
      */
     const certs = [
         {
@@ -107,100 +105,86 @@ export default function Certifications({ className }: Readonly<{ className?: str
         }
     ]
 
-    // Animation variants for the grid items: StaggerChildren set to 0.1 for a faster cascade
+
+    // Parent grid variants (for staggerChildren logic)
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
-            transition: {
-                staggerChildren: 0.1,
-            },
+            transition: { staggerChildren: 0.1 },
         },
     }
 
-    // Individual card animation: Defines the entry point and duration
-    const cardVariants: Variants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { 
-            opacity: 1, 
-            y: 0, 
-            transition: { duration: 0.5, ease: "easeOut" } 
+    // Individual item variants (slide-up entrance)
+    const itemVariants: Variants = {
+        hidden: { opacity: 0, y: 10 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.4, ease: "easeOut" },
         },
     }
 
     return (
-        <section 
+        <section
             id="certifications"
-            className={cn(
-                "mx-auto w-full max-w-7xl px-4 py-20 md:px-6 lg:px-8 overflow-hidden",
-                className
-            )}
+            className={cn("mx-auto w-full max-w-7xl px-4 py-16 md:px-6 lg:px-8", className)}
         >
-            {/* Header: Title section with sliding entrance and expanding underline */}
-            <motion.div 
-                className="mb-12 space-y-2"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+            {/* Standard Header Style */}
+            <motion.div
+                className="mb-16 space-y-2"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
             >
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
-                    Certifications
-                </h2>
-                <motion.div 
-                    className="h-1 bg-primary rounded-full" 
-                    initial={{ width: 0 }}
-                    whileInView={{ width: 80 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.4, duration: 0.8 }}
-                />
+                <p className="text-xs font-mono uppercase tracking-widest text-primary">- Certifications</p>
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">Receipts.</h2>
+                <div className="mt-4 h-1 w-20 rounded-full bg-primary" />
             </motion.div>
 
-            {/* Certification Grid: Dynamically generates cards with framer-motion stagger logic */}
-            <motion.div 
-                className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+            {/* List Grid */}
+            <motion.div
+                className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ once: true }}
             >
                 {certs.map((cert, index) => (
-                    <motion.div 
+                    <motion.div
                         key={index}
-                        variants={cardVariants}
-                        whileHover={{ 
-                            y: -5,
-                            transition: { duration: 0.2 }
-                        }}
-                        className="group relative flex flex-col gap-4 rounded-2xl border border-border bg-muted/30 p-6 transition-colors duration-300 hover:bg-muted/50 hover:border-primary/50"
+                        variants={itemVariants}
+                        // Added base bg-card, border, and border-radius.
+                        // Hover transition added to parent for subtle effect.
+                        className="group flex flex-col justify-between rounded-lg border border-border bg-card p-6 transition-colors duration-200 hover:border-primary/50"
                     >
-                        {/* Icon/Badge Area: Inverts colors and scales up on parent card hover */}
-                        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
-                            <Award className="h-6 w-6" />
-                        </div>
-
-                        {/* Content: Title, Issuer, and Issue Date */}
-                        <div className="space-y-1">
-                            <h3 className="font-semibold text-lg text-foreground leading-tight group-hover:text-primary transition-colors">
+                        {/* Cert Header/Body */}
+                        <div className="space-y-4">
+                            {/* Blue Icon Background. Matched from image with rounded-lg. */}
+                            <div className="inline-flex items-center justify-center rounded-lg bg-primary/30 p-2.5 text-primary">
+                                <Award className="h-5 w-5" />
+                            </div>
+                            <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-200">
                                 {cert.title}
                             </h3>
-                            <p className="text-muted-foreground font-medium text-sm">
-                                {cert.issuer}
-                            </p>
-                            <p className="text-xs text-muted-foreground/60">
-                                Issued {cert.date}
-                            </p>
+                            {/* Metadata in same typography style as Experience items. */}
+                            <div className="flex items-center justify-between">
+                                <span className="text-xs font-mono uppercase tracking-wider text-muted-foreground">
+                                    {cert.issuer}
+                                </span>
+                                <span className="text-xs font-mono text-muted-foreground">{cert.date}</span>
+                            </div>
                         </div>
 
-                        {/* Verification Link: Direct link to Credly or SoloLearn credentials */}
-                        <a 
+                        {/* Footer / CTA link */}
+                        <a
                             href={cert.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="mt-auto flex items-center gap-2 text-sm font-medium text-primary/80 hover:text-primary transition-colors"
+                            className="mt-6 flex items-center gap-2 text-xs font-bold text-primary hover:underline underline-offset-4"
                         >
-                            View Credential
-                            <ExternalLink className="h-4 w-4" />
+                            Verify Credential
+                            <ExternalLink className="h-3 w-3" />
                         </a>
                     </motion.div>
                 ))}
