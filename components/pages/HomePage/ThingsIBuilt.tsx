@@ -57,7 +57,7 @@ export default function ThingsIBuilt({ className, projects }: { className?: stri
                     - SELECTED WORK
                 </p>
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
-                    Things I've built.
+                    Things I&apos;ve built.
                 </h2>
                 <motion.div 
                     className="h-1 bg-primary rounded-full" 

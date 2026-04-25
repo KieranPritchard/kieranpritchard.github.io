@@ -15,7 +15,7 @@ import {
 import { Home, Toolbox, User, NotebookPen, Mail } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { ModeToggle } from "@/components/main-components/ModeToggle"
-import { AnimationToggle } from "./AnimationToggle"
+import { AnimationToggle } from "@/components/main-components/AnimationToggle"
 
 /**
  * Configuration for sidebar navigation items.

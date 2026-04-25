@@ -3,7 +3,7 @@
 import { Variants } from "framer-motion"
 import { motion } from "framer-motion"
 import { DownloadButton } from "@/components/Buttons/DownloadButton"
-import { LinkButton } from "@/components/Buttons/LinkButton"
+import { LinkButton } from "@/components/shared/buttons/LinkButton"
 import { cn } from "@/lib/utils"
 import { ProjectSummary } from "@/types/project"
 
@@ -76,7 +76,7 @@ export default function Intro({ className, projects }: Readonly<{ className?: st
                         className="max-w-150 text-md leading-relaxed text-muted-foreground md:text-lg"
                         variants={itemVariants}
                     >
-                        I'm <strong className="text-foreground">Kieran</strong> a Digital Software Developement student at 
+                        I&apos;m <strong className="text-foreground">Kieran</strong> a Digital Software Developement student at 
                         <strong className="text-foreground"> Bournemouth & Poole College</strong>, focused on offensive security, automation,
                         and well built software. I build things that are robust because I know how they break
                     </motion.p>

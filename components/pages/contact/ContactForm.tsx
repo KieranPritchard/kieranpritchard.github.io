@@ -39,7 +39,7 @@ export default function ContactForm({ toEmail }: { toEmail: string }) {
     <div className="rounded-2xl border border-border bg-muted/20 p-6 h-fit">
       <h3 className="text-xl font-bold tracking-tight">Send a message</h3>
       <p className="mt-2 text-sm text-muted-foreground">
-        Fill this in and I'll get back to you.
+        Fill this in and I&apos;ll get back to you.
       </p>
 
       {/* Form Fields: Name, Subject selection, and Message area */}
@@ -77,7 +77,7 @@ export default function ContactForm({ toEmail }: { toEmail: string }) {
 
         {/* Action Bar: Footer metadata and Copy button */}
         <div className="pt-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <p className="text-[10px] font-mono text-muted-foreground">// End-to-end encrypted in transit</p>
+          <p className="text-[10px] font-mono text-muted-foreground">End-to-end encrypted in transit</p>
           
           <Button 
             type="button" 

@@ -1,5 +1,5 @@
 "use client"
-import { useMotionPreference } from "../MotionContext";
+import { useMotionPreference } from "@/components/providers/MotionProvider"
 import { Button } from "@/components/ui/button"
 import { Clock } from "lucide-react";
 

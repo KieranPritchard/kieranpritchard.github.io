@@ -55,7 +55,7 @@ export default function ProjectsGrid({ className, projects }: Readonly<{ classNa
                         - Portfolio
                     </span>
                     <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
-                        Everything I've built.
+                        Everything I&apos;ve built.
                     </h2>
                     {/* Decorative blue accent line */}
                     <div className="h-1 w-12 bg-primary rounded-full mt-2" />

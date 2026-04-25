@@ -92,7 +92,7 @@ export default function ExperienceTimeline({ className }: Readonly<{ className?:
                     - Experience
                 </p>
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
-                    Where I've been.
+                    Where I&apos;ve been.
                 </h2>
                 <div className="h-1 w-20 bg-primary rounded-full mt-4" />
             </motion.div>

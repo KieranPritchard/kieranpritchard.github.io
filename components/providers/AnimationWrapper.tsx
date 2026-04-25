@@ -1,6 +1,6 @@
 'use client'
 import { MotionConfig } from "framer-motion";
-import { useMotionPreference } from "./MotionContext";
+import { useMotionPreference } from "./MotionProvider";
 
 /**
  * A wrapper component that configures Framer Motion's reduced motion settings

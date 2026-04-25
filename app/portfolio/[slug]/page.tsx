@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import ContentContainer from "@/components/pages/ContentContainer"
-import { LinkButton } from "@/components/Buttons/LinkButton"
+import { LinkButton } from "@/components/shared/buttons/LinkButton"
 import { ProjectArticleHeader } from "@/components/pages/portfolio/ProjectArticleHeader"
 import { ProjectBreadcrumbs } from "@/components/pages/portfolio/ProjectBreadcrumbs"
 import { ProjectMarkdown } from "@/components/pages/portfolio/ProjectMarkdown"
