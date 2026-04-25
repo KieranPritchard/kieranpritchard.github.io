@@ -3,7 +3,7 @@
 import { Variants } from "framer-motion"
 import { motion } from "framer-motion"
 import { DownloadButton } from "@/components/Buttons/DownloadButton"
-import { LinkButton } from "@/components/shared/buttons/LinkButton"
+import { LinkButton } from "@/components/Buttons/LinkButton"
 import { cn } from "@/lib/utils"
 import { ProjectSummary } from "@/types/project"
 

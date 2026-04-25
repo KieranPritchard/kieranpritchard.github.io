@@ -1,7 +1,7 @@
-import ContentContainer from "@/components/pages/ContentContainer"
-import FeaturedProjects from "@/components/pages/portfolio/FeaturedProjects"
-import InteractiveLabs from "@/components/pages/portfolio/InteractiveLabs/InteractiveLabs"
-import ProjectsGrid from "@/components/pages/portfolio/ProjectsGrid"
+import ContentContainer from "@/components/sections/ContentContainer"
+import FeaturedProjects from "@/components/sections/portfolio/FeaturedProjects"
+import InteractiveLabs from "@/components/sections/portfolio/InteractiveLabs/InteractiveLabs"
+import ProjectsGrid from "@/components/sections/portfolio/ProjectsGrid"
 import { getAllProjects } from "@/lib/projects"
 import { Metadata } from 'next'
 

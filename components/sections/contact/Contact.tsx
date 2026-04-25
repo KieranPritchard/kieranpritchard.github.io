@@ -2,7 +2,7 @@
 
 import { Mail, MapPin, Clock } from "lucide-react"
 import { IconBrandLinkedin, IconBrandGithub, IconBrandDiscord } from "@tabler/icons-react"
-import ContactForm from "@/components/pages/contact/ContactForm"
+import ContactForm from "@/components/sections/contact/ContactForm"
 
 /**
  * Contact Component

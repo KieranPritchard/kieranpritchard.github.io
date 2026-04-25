@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils"
 import { Variants } from "framer-motion"
 import { motion } from "framer-motion"
-import { LinkButton } from "@/components/shared/buttons/LinkButton"
+import { LinkButton } from "@/components/Buttons/LinkButton"
 import { Card, CardContent } from "@/components/ui/card"
 import { UserRound, MapPin, Clock3, AtSign } from "lucide-react"
 

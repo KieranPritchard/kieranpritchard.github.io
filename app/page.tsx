@@ -1,8 +1,8 @@
-import ContentContainer from "@/components/pages/ContentContainer";
-import Intro from "@/components/pages/HomePage/Intro";
-import TechStack from "@/components/pages/HomePage/TechStack";
-import ThingsIBuilt from "@/components/pages/HomePage/ThingsIBuilt";
-import WhatIDo from "@/components/pages/HomePage/WhatIDo";
+import ContentContainer from "@/components/sections/ContentContainer";
+import Intro from "@/components/sections/HomePage/Intro";
+import TechStack from "@/components/sections/HomePage/TechStack";
+import ThingsIBuilt from "@/components/sections/HomePage/ThingsIBuilt";
+import WhatIDo from "@/components/sections/HomePage/WhatIDo";
 import { getAllProjects } from "@/lib/projects";
 
 /**
