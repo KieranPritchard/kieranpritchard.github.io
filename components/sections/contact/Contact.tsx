@@ -1,7 +1,7 @@
 "use client"
 
 import { Mail, MapPin, Clock } from "lucide-react"
-import { IconBrandLinkedin, IconBrandGithub, IconBrandDiscord } from "@tabler/icons-react"
+import { IconBrandLinkedin, IconBrandGithub, IconBrandDiscord, IconBrandX } from "@tabler/icons-react"
 import ContactForm from "@/components/sections/contact/ContactForm"
 
 /**
@@ -60,7 +60,7 @@ export default function Contact() {
                 { icon: Mail, label: "Email", href: `mailto:${toEmail}` },
                 { icon: IconBrandGithub, label: "GitHub", href: "https://github.com/KieranPritchard" },
                 { icon: IconBrandLinkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/kieran-pritchard/" },
-                { icon: IconBrandDiscord, label: "Discord", href: "#" }
+                { icon: IconBrandX, label: "X", href: "https://x.com/OverF10w_0x" }
               ].map((item, i) => (
                 <a 
                   key={i} 
