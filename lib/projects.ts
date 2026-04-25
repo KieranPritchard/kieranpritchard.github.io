@@ -4,18 +4,29 @@ import path from "path"
 import matter from "gray-matter"
 import type { ProjectCategory, ProjectDoc, ProjectSummary } from "@/types/project"
 
-// Stores the content directory path for ease of use
+/**
+ * Absolute path to the directory containing project content files.
+ */
 const contentDir = path.join(process.cwd(), "content/projects")
 
-// Checks for the correct cataegory
+/**
+ * Type guard to check if a value is a valid ProjectCategory.
+ * 
+ * @param value - The value to check.
+ * @returns True if the value is a valid ProjectCategory, false otherwise.
+ */
 function isProjectCategory(value: unknown): value is ProjectCategory {
-  // Returns the correct value
   return value === "web" || value === "security" || value === "automation"
 }
 
-// Function to normalise frontmatter
+/**
+ * Normalizes and validates frontmatter data from a project markdown file.
+ * 
+ * @param data - The raw frontmatter data from gray-matter.
+ * @returns A validated ProjectDoc object (metadata only, no content) or null if required fields are missing.
+ */
 function normalizeFrontmatter(data: Record<string, unknown>): ProjectDoc | null {
-  // Stores front matter data if the correct data type is used
+  // Extract and validate basic fields
   const title = typeof data.title === "string" ? data.title : null
   const slug = typeof data.slug === "string" ? data.slug : null
   const category = data.category
@@ -25,17 +36,15 @@ function normalizeFrontmatter(data: Record<string, unknown>): ProjectDoc | null 
   const github = typeof data.github === "string" ? data.github : null
   const date = typeof data.date === "string" ? data.date : null
 
-  // Checks for if all the categorys are there if not returns null
+  // Ensure all mandatory fields are present
   if (!title || !slug || !isProjectCategory(category) || !description || !tags?.length || !link || !github || !date) {
     return null
   }
 
-  // Gets the cover image
+  // Optional fields
   const coverImage = typeof data.coverImage === "string" ? data.coverImage : undefined
-  // Gets the alt text
   const coverAlt = typeof data.coverAlt === "string" ? data.coverAlt : undefined
 
-  // Returns the frontmatter
   return {
     title,
     slug,
@@ -51,71 +60,77 @@ function normalizeFrontmatter(data: Record<string, unknown>): ProjectDoc | null 
   }
 }
 
-// Function to get the project file slugs
+/**
+ * Retrieves all project file slugs (filenames without extension) from the content directory.
+ * 
+ * @returns An array of slugs as strings.
+ */
 export function getProjectFileSlugs(): string[] {
-  // Checks if the file does not exist
   if (!fs.existsSync(contentDir)) {
-    // Returns an empty array
     return []
   }
 
-  // Returns the file map
   return fs
     .readdirSync(contentDir)
-    .filter((file) => file.endsWith(".md")) // Filters for md files
+    .filter((file) => file.endsWith(".md"))
     .map((file) => path.basename(file, ".md"))
 }
 
-// Function to get the project by the slug
+/**
+ * Fetches a single project by its slug.
+ * 
+ * @param slug - The unique identifier for the project.
+ * @returns The project data (ProjectDoc) or null if not found or invalid.
+ */
 export function getProjectBySlug(slug: string): ProjectDoc | null {
-  // Stores the full path
   const fullPath = path.join(contentDir, `${slug}.md`)
   
-  // Checks if the file exists
   if (!fs.existsSync(fullPath)) {
-    // Returns null
     return null
   }
 
-  // Gets the raw file
+  // Read and parse markdown file
   const raw = fs.readFileSync(fullPath, "utf8")
-  // Gets the data and the content
   const { data, content } = matter(raw)
-  // Gets the base of the file
+  
+  // Normalize and validate the frontmatter
   const base = normalizeFrontmatter(data as Record<string, unknown>)
-  // Checks if it does not exist
+  
   if (!base) {
-    // Returns null
     return null
   }
 
-  // Checks if there is not a slug
+  // Security check: ensure the slug in frontmatter matches the requested slug
   if (base.slug !== slug) {
     return null
   }
 
-  // Returns the base and content
   return { ...base, content }
 }
 
-// Gets the project summary from the doc
+/**
+ * Converts a full ProjectDoc to a ProjectSummary by removing the content field.
+ * 
+ * @param doc - The full project document.
+ * @returns A summary object containing metadata only.
+ */
 function projectSummaryFromDoc(doc: ProjectDoc): ProjectSummary {
-  // Stores the project
   const { title, slug, category, description, tags, link, github, date, coverImage, coverAlt } = doc
-  // Returns the project
   return { title, slug, category, description, tags, link, github, date, coverImage, coverAlt }
 }
 
-// Function to get all of the projects
+/**
+ * Retrieves all projects, sorted by date in descending order.
+ * 
+ * @returns An array of ProjectSummary objects.
+ */
 export function getAllProjects(): ProjectSummary[] {
-  // Stores the items
   const items = getProjectFileSlugs()
-    // Maps them to by slug
     .map((fileSlug) => getProjectBySlug(fileSlug))
-    // Filters for actual ones
     .filter((doc): doc is ProjectDoc => doc !== null)
     .map(projectSummaryFromDoc)
 
-  // Sorts and returns the items
+  // Sort by date: newest first
   return items.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 }
+

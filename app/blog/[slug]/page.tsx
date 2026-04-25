@@ -67,11 +67,11 @@ export default async function Page({ params }: Readonly<{ params: Promise<{ slug
 
             {related.length ? (
                 <aside className="mt-16 rounded-xl border bg-muted/20 p-6">
-                <h2 className="font-heading text-lg font-semibold">More projects</h2>
+                <h2 className="font-heading text-lg font-semibold">Related articles</h2>
                 <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
                     {related.map((item) => (
                     <li key={item.slug}>
-                        <Link className="text-primary hover:underline" href={`/portfolio/${item.slug}`}>
+                        <Link className="text-primary hover:underline" href={`/blog/${item.slug}`}>
                         {item.title}
                         </Link>
                     </li>

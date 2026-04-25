@@ -3,12 +3,23 @@ import { useMotionPreference } from "../MotionContext";
 import { Button } from "@/components/ui/button"
 import { Clock } from "lucide-react";
 
+/**
+ * A button component that toggles global animations on or off.
+ * Uses the MotionContext to manage state.
+ */
 export const AnimationToggle = () => {
-    const { isAnimationEnabled, toggleAnimation } = useMotionPreference();
+    const { toggleAnimation } = useMotionPreference();
 
     return (
-        <Button className="rounded-lg" variant={"outline"} size="icon" onClick={toggleAnimation}>
-            <Clock />
+        <Button 
+            className="rounded-lg" 
+            variant="outline" 
+            size="icon" 
+            onClick={toggleAnimation}
+            title="Toggle Animations"
+        >
+            <Clock className="h-4 w-4" />
         </Button>
     );
 };
+

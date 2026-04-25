@@ -2,16 +2,20 @@
 
 import { Variants } from "framer-motion"
 import { motion } from "framer-motion"
-import { DownloadButton } from "@/components/Buttons/DownloadButton"
-import { LinkButton } from "@/components/Buttons/LinkButton"
 import { cn } from "@/lib/utils"
 
 /**
- * AboutMe Component: A biographical section featuring an animated profile image 
+ * AboutMe Component
+ * 
+ * A biographical section for the blog page featuring an animated profile image 
  * and a staggered text reveal. Highlights professional background and core mission.
+ * 
+ * @param className - Optional CSS class name for the section container.
  */
 export default function AboutMe({ className }: Readonly<{ className?: string }>) {
-    // Parent container variant: Orchestrates the staggered entrance of all child text elements
+    /**
+     * Parent container variants: Orchestrates the staggered entrance of child elements.
+     */
     const containerVariants : Variants = {
         hidden: { opacity: 0 },
         visible: {
@@ -23,7 +27,9 @@ export default function AboutMe({ className }: Readonly<{ className?: string }>)
         },
     }
 
-    // Text reveal variant: Provides a subtle slide-in from the left with a smooth fade
+    /**
+     * Text reveal variants: Provides a subtle slide-in from the left with a fade.
+     */
     const textVariants : Variants = {
         hidden: { opacity: 0, x: -20 },
         visible: { 
@@ -41,7 +47,7 @@ export default function AboutMe({ className }: Readonly<{ className?: string }>)
                 className
             )}
         >   
-            {/* Content Column: Placed first to appear on the left */}
+            {/* Content Column: Biography and mission statement */}
             <motion.div 
                 className="flex flex-col gap-6"
                 variants={containerVariants}
@@ -76,7 +82,7 @@ export default function AboutMe({ className }: Readonly<{ className?: string }>)
                 </motion.div>
             </motion.div>
 
-            {/* Profile Image: Placed second to appear on the right */}
+            {/* Profile Image Section: Animated with a circular expansion feel and scale effect on hover */}
             <motion.div 
                 className="relative aspect-square max-w-md mx-auto md:mx-0 overflow-hidden rounded-2xl bg-muted shadow-xl"
                 initial={{ opacity: 0, x: 50 }}

@@ -9,7 +9,9 @@ import { cn } from "@/lib/utils"
 
 /**
  * Formats an ISO date string into a localized British English format (e.g., 5 April 2026).
- * Returns the original string if parsing fails.
+ * 
+ * @param iso - The ISO date string to format.
+ * @returns A formatted date string or the original string if parsing fails.
  */
 function formatArticleDate(iso: string) {
     const parsed = new Date(iso)
@@ -25,14 +27,22 @@ function formatArticleDate(iso: string) {
 }
 
 /**
- * ProjectArticleHeader component to display project titles, metadata, and hero images.
- * Uses Framer Motion for staggered text entry and a decorative border reveal.
+ * BlogArticleHeader Component
+ * 
+ * Displays the hero section for a single blog article, including the title, 
+ * metadata (date, category, reading time), summary description, and cover image.
+ * Uses Framer Motion for sophisticated entrance animations.
+ * 
+ * @param blog - The blog post summary data.
+ * @param className - Optional CSS class name for the header container.
  */
 export function BlogArticleHeader({
     blog,
     className,
 }: Readonly<{ blog: BlogSummary; className?: string }>) {
-    // Animation variants for text elements using a custom delay multiplier
+    /**
+     * Animation variants for text elements using a custom delay multiplier.
+     */
     const textVariants: Variants = {
         hidden: { opacity: 0, y: 10 },
         visible: (custom: number) => ({
@@ -46,66 +56,83 @@ export function BlogArticleHeader({
         <header className={cn("space-y-8", className)}>
             <div className="space-y-6 pb-10 relative">
                 <div className="space-y-4">
-                {/* Metadata Row: Displays the formatted date and project category */}
-                <motion.div 
-                    className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground"
-                    variants={textVariants}
-                    initial="hidden"
-                    animate="visible"
-                    custom={0}
-                >
-                    <time dateTime={blog.date}>{formatArticleDate(blog.date)}</time>
-                    <span aria-hidden className="text-border">
-                    ·
-                    </span>
-                    <Badge variant="secondary" className="capitalize px-3 py-0.5">
-                    {blog.category}
-                    </Badge>
-                </motion.div>
-
-                {/* Project Title: Large heading with sequential animation delay */}
-                <motion.h1 
-                    className="font-heading text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
-                    variants={textVariants}
-                    initial="hidden"
-                    animate="visible"
-                    custom={1}
-                >
-                    {blog.title}
-                </motion.h1>
-
-                {/* Description: Leading paragraph for project summary */}
-                <motion.p 
-                    className="max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl"
-                    variants={textVariants}
-                    initial="hidden"
-                    animate="visible"
-                    custom={2}
-                >
-                    {blog.description}
-                </motion.p>
-
-                {/* Tags: Maps through project tags to display interactive badges */}
-                <motion.div 
-                    className="flex flex-wrap gap-2 pt-2"
-                    variants={textVariants}
-                    initial="hidden"
-                    animate="visible"
-                    custom={3}
-                >
-                    {blog.tags.map((tag) => (
-                    <Badge 
-                        key={tag} 
-                        variant="outline" 
-                        className="bg-background/50 hover:border-primary/50 transition-colors"
+                    {/* Branded Label */}
+                    <motion.p 
+                        className="text-xs font-mono uppercase tracking-widest text-primary"
+                        variants={textVariants}
+                        initial="hidden"
+                        animate="visible"
+                        custom={0}
                     >
-                        {tag}
-                    </Badge>
-                    ))}
-                </motion.div>
-            </div>
+                        - Blog Article
+                    </motion.p>
 
-            {/* Decorative Animated Border: Expands horizontally across the header bottom */}
+                    {/* Article Title: Large heading with staggered entry */}
+                    <motion.h1 
+                        className="font-heading text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
+                        variants={textVariants}
+                        initial="hidden"
+                        animate="visible"
+                        custom={1}
+                    >
+                        {blog.title}
+                    </motion.h1>
+
+                    {/* Accent Underline Line */}
+                    <motion.div 
+                        className="h-1 w-12 bg-primary rounded-full"
+                        initial={{ width: 0 }}
+                        animate={{ width: 48 }}
+                        transition={{ delay: 0.3, duration: 0.8 }}
+                    />
+
+                    {/* Metadata Row: Displays the formatted date, category, and reading time */}
+                    <motion.div 
+                        className="flex flex-wrap items-center gap-3 text-[12px] font-mono text-muted-foreground pt-2"
+                        variants={textVariants}
+                        initial="hidden"
+                        animate="visible"
+                        custom={2}
+                    >
+                        <time dateTime={blog.date}>{formatArticleDate(blog.date)}</time>
+                        <span>·</span>
+                        <span className="uppercase tracking-wider">{blog.category}</span>
+                        <span>·</span>
+                        <span>{blog.readingTime}</span>
+                    </motion.div>
+
+                    {/* Article Description: Summary paragraph */}
+                    <motion.p 
+                        className="max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl pt-2"
+                        variants={textVariants}
+                        initial="hidden"
+                        animate="visible"
+                        custom={3}
+                    >
+                        {blog.description}
+                    </motion.p>
+
+                    {/* Tags: List of hashtags as interactive badges */}
+                    <motion.div 
+                        className="flex flex-wrap gap-2 pt-2"
+                        variants={textVariants}
+                        initial="hidden"
+                        animate="visible"
+                        custom={4}
+                    >
+                        {blog.tags.map((tag) => (
+                        <Badge 
+                            key={tag} 
+                            variant="outline" 
+                            className="bg-background/50 hover:border-primary/50 transition-colors font-mono text-[10px] uppercase tracking-wider"
+                        >
+                            #{tag}
+                        </Badge>
+                        ))}
+                    </motion.div>
+                </div>
+
+            {/* Decorative Animated Bottom Border */}
             <motion.div 
                 className="absolute bottom-0 left-0 h-px bg-border w-full"
                 initial={{ scaleX: 0, originX: 0 }}
@@ -114,7 +141,7 @@ export function BlogArticleHeader({
             />
             </div>
 
-            {/* Cover Image: Hero section with a subtle zoom-out and fade-in effect */}
+            {/* Hero Cover Image: Zoom-out and fade-in effect */}
             {blog.coverImage ? (
                 <motion.figure 
                 className="overflow-hidden rounded-2xl border bg-muted/30 shadow-2xl shadow-primary/5"

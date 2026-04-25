@@ -4,25 +4,34 @@ import { Mail, MapPin, Clock } from "lucide-react"
 import { IconBrandLinkedin, IconBrandGithub, IconBrandDiscord } from "@tabler/icons-react"
 import ContactForm from "@/components/pages/contact/ContactForm"
 
+/**
+ * Contact Component
+ * 
+ * The main page component for the Contact section.
+ * Features a structured layout with contact information (email, location, response time),
+ * social media links, and a functional message form.
+ */
 export default function Contact() {
+  /** The primary contact email address. */
   const toEmail = "KieranPritchard06@gmail.com"
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-4 py-20 md:px-6 lg:px-8">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-        {/* Left Column */}
-        <div className="space-y-12">
-          <div className="space-y-4">
-            <p className="text-[10px] font-mono uppercase tracking-widest text-primary">— CONTACT</p>
-            <h2 className="text-5xl font-bold tracking-tight">Get in touch.</h2>
-            <p className="text-muted-foreground max-w-md leading-relaxed">
-              Placements, CTF invites, collaborations, or just a hello — I reply to everything reasonable. Usually within a day.
-            </p>
-          </div>
+    <section>
+      {/* Header Section: Branded heading and introductory summary */}
+      <div className="mb-12 space-y-4">
+        <p className="text-[10px] font-mono uppercase tracking-widest text-primary">— CONTACT</p>
+        <h2 className="text-5xl font-bold tracking-tight">Get in touch.</h2>
+        <p className="text-muted-foreground max-w-2xl leading-relaxed text-lg">
+          Placements, CTF invites, collaborations, or just a hello — I reply to everything reasonable. Usually within a day.
+        </p>
+      </div>
 
-          {/* This is the rounded square card container */}
+      {/* Main Layout Grid: Sidebar for information and main area for the form */}
+      <div className="grid grid-cols-1 lg:grid-cols-[400px_1fr] gap-12 items-start">
+        {/* Sidebar Column: Contact Metadata & Social Links */}
+        <div className="space-y-8">
           <div className="rounded-2xl border bg-muted/20 border-border overflow-hidden">
-            {/* Info Items */}
+            {/* Info Items: Email, Location, and Availability */}
             <div className="divide-y divide-border">
               {[
                 { icon: Mail, label: "EMAIL", value: toEmail, href: `mailto:${toEmail}` },
@@ -30,9 +39,11 @@ export default function Contact() {
                 { icon: Clock, label: "RESPONSE TIME", value: "Usually < 24h" }
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center gap-4 p-6">
-                  <div className="p-2 rounded-lg bg-muted/30 text-primary"><item.icon className="size-5" /></div>
+                  <div className="p-2 rounded-lg bg-muted/30 text-primary">
+                    <item.icon className="size-5" />
+                  </div>
                   <div>
-                    <p className="text-[10px] font-mono uppercase tracking-widest text-foreground">{item.label}</p>
+                    <p className="text-[10px] font-mono uppercase tracking-widest text-foreground/70">{item.label}</p>
                     {item.href ? (
                       <a href={item.href} className="font-semibold hover:text-primary transition-colors">{item.value}</a>
                     ) : (
@@ -43,18 +54,20 @@ export default function Contact() {
               ))}
             </div>
 
-            {/* Social Buttons Grid */}
+            {/* Social Links Matrix: Easy-access buttons for profile navigation */}
             <div className="grid grid-cols-2 gap-px bg-muted/20 border-t border-border">
               {[
                 { icon: Mail, label: "Email", href: `mailto:${toEmail}` },
-                { icon: IconBrandGithub, label: "GitHub", href: "#" },
-                { icon: IconBrandLinkedin, label: "LinkedIn", href: "#" },
+                { icon: IconBrandGithub, label: "GitHub", href: "https://github.com/KieranPritchard" },
+                { icon: IconBrandLinkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/kieran-pritchard/" },
                 { icon: IconBrandDiscord, label: "Discord", href: "#" }
               ].map((item, i) => (
                 <a 
                   key={i} 
                   href={item.href} 
-                  className="flex items-center gap-3 p-4 hover:bg-primary/30 transition-colors"
+                  target={item.href.startsWith("http") ? "_blank" : undefined}
+                  rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  className="flex items-center gap-3 p-4 hover:bg-primary/10 transition-colors"
                 >
                   <item.icon className="size-4 text-primary" />
                   <span className="text-sm font-semibold">{item.label}</span>
@@ -64,7 +77,7 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Right Column */}
+        {/* Main Column: Contact Form Integration */}
         <ContactForm toEmail={toEmail} />
       </div>
     </section>

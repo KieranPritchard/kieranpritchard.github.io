@@ -7,11 +7,22 @@ import { Code, Shield, Zap, ExternalLink } from "lucide-react"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 
+/**
+ * ThingsIBuilt Component
+ * 
+ * Displays a featured selection of projects (the first 3) in a grid of cards.
+ * Each card shows the project category icon, title, description, and a link.
+ * 
+ * @param className - Optional CSS class name for the section container.
+ * @param projects - An array of project summaries to choose from.
+ */
 export default function ThingsIBuilt({ className, projects }: { className?: string; projects: ProjectSummary[] }) {
-    // Takes a slice of the featured projects
+    // Select the first 3 projects to feature on the home page
     const featured = projects.slice(0, 3)
 
-    // Stores the container variants
+    /**
+     * Staggered entrance variants for the project grid.
+     */
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
@@ -20,7 +31,9 @@ export default function ThingsIBuilt({ className, projects }: { className?: stri
         }
     }
 
-    // Stores the card variants
+    /**
+     * Animation variants for individual project cards.
+     */
     const cardVariants: Variants = {
         hidden: { opacity: 0, y: 20 },
         visible: { 
@@ -32,7 +45,7 @@ export default function ThingsIBuilt({ className, projects }: { className?: stri
 
     return (
         <section className={cn("mx-auto w-full max-w-6xl px-4 py-16 md:px-6", className)}>
-            {/* Stores the header */}
+            {/* Section Header */}
             <motion.div
                 className="mb-12 space-y-2"
                 initial={{ opacity: 0, x: -20 }}
@@ -40,14 +53,12 @@ export default function ThingsIBuilt({ className, projects }: { className?: stri
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
             >
-                {/* Heading  */}
                 <p className="text-xs text-primary font-mono">
                     - SELECTED WORK
                 </p>
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
                     Things I've built.
                 </h2>
-                {/* Animated divider */}
                 <motion.div 
                     className="h-1 bg-primary rounded-full" 
                     initial={{ width: 0 }}
@@ -57,7 +68,7 @@ export default function ThingsIBuilt({ className, projects }: { className?: stri
                 />
             </motion.div>
 
-            {/* Displays the cards for the header */}
+            {/* Project Grid */}
             <motion.div 
                 className="grid grid-cols-1 md:grid-cols-3 gap-6"
                 variants={containerVariants}
@@ -68,7 +79,7 @@ export default function ThingsIBuilt({ className, projects }: { className?: stri
                 {featured.map((project) => (
                     <motion.div key={project.slug} variants={cardVariants}>
                         <Card className="group relative flex flex-col overflow-hidden bg-muted/20 border-border/50 transition-all">
-                            {/* Icon container moved outside CardContent for full-width header look */}
+                            {/* Icon Section: Displays an icon based on project category */}
                             <div className="flex justify-center items-center py-10 border-b border-border/50">
                                 <div className="inline-flex w-12 h-12 items-center justify-center rounded-lg bg-background/50 text-primary">
                                     {project.category === "security" && <Shield className="h-6 w-6" />}
@@ -85,13 +96,13 @@ export default function ThingsIBuilt({ className, projects }: { className?: stri
                                     </span>
                                 </div>
 
-                                {/* Title & Description */}
+                                {/* Project Title & Short Description */}
                                 <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
                                 <p className="text-sm text-muted-foreground leading-relaxed mb-6 grow line-clamp-3">
                                     {project.description}
                                 </p>
 
-                                {/* Footer Metadata */}
+                                {/* Project Metadata Footer: Date and external link */}
                                 <div className="mt-auto flex items-center justify-between text-xs text-muted-foreground">
                                     <span>{new Date(project.date).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}</span>
                                     <Link 
@@ -100,7 +111,7 @@ export default function ThingsIBuilt({ className, projects }: { className?: stri
                                         className="flex items-center gap-1 hover:text-foreground transition-colors"
                                     >
                                         <ExternalLink className="h-3 w-3" />
-                                        Link
+                                        View Details
                                     </Link>
                                 </div>
                             </CardContent>

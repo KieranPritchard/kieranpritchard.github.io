@@ -5,17 +5,28 @@ import { cn } from "@/lib/utils"
 import { Card } from "@/components/ui/card"
 import { Flame, TrendingUp, Sparkles, Hash } from "lucide-react"
 
-/** * Defines the structure for each trending topic item. 
+/**
+ * Topic Interface
+ * 
+ * Defines the structure for each trending topic item.
  */
 interface Topic {
+    /** The display name of the topic. */
     name: string
+    /** Optional icon element to display above the topic name. */
     icon?: React.ReactNode
+    /** Optional count or additional metadata string. */
     count?: string
 }
 
 /**
- * TrendingTopics component: Renders a section highlighting key trends
- * with staggered entry animations and a glass-morphism style background.
+ * TrendingTopics Component
+ * 
+ * Renders a section highlighting key blog themes or categories in a grid of cards.
+ * Features staggered entry animations and glass-morphism style background layers.
+ * 
+ * @param className - Optional CSS class name for the section container.
+ * @param topics - An array of Topic objects to display.
  */
 export default function TrendingTopics({ 
     className, 
@@ -34,7 +45,6 @@ export default function TrendingTopics({
                 <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                     Trending Topics
                 </h2>
-                {/* Decorative underline animation */}
                 <motion.div 
                     className="h-1 bg-primary rounded-full" 
                     initial={{ width: 0 }}
@@ -44,9 +54,9 @@ export default function TrendingTopics({
                 />
             </div>
 
-            {/* Grid Container with backdrop */}
+            {/* Topics Grid: Contained within a decorative background box */}
             <div className="relative p-6">
-                {/* Rounded background layer behind the grid */}
+                {/* Visual Backdrop Layer */}
                 <div className="absolute inset-0 bg-muted/30 rounded-3xl border border-border/50 pointer-events-none" />
                 
                 <motion.div 
@@ -63,13 +73,13 @@ export default function TrendingTopics({
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.4 }}
                         >
-                            {/* Card with hover states and group-hover logic */}
-                            <Card className="group flex h-full flex-col items-center justify-center p-6 cursor-pointer">
-                                {/* Icon container with transition effects */}
+                            {/* Topic Card: Individual clickable or display card */}
+                            <Card className="group flex h-full flex-col items-center justify-center p-6 cursor-pointer bg-card/50 border-border/50 hover:border-primary/50 transition-colors">
+                                {/* Icon Container: Inverts colors on hover */}
                                 <div className="mb-1 p-6 rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                                     {topic.icon || <Hash className="h-6 w-6" />}
                                 </div>
-                                <div className="flex flex-col items-center text-xl text-center">
+                                <div className="flex flex-col items-center text-xl text-center pt-2">
                                     <span className="font-semibold text-foreground group-hover:text-primary transition-colors">
                                         {topic.name}
                                     </span>

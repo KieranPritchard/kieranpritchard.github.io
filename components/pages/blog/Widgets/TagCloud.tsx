@@ -2,7 +2,10 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import type { BlogSummary } from "@/types/blog";
 
-// Stores all of the colour styles
+/**
+ * Mapping of color names to their respective Tailwind CSS background and text classes
+ * for both light and dark modes.
+ */
 const colorStyles: Record<string, string> = {
     red: "bg-red-50 text-red-700 dark:bg-red-950 dark:text-red-300",
     orange: "bg-orange-50 text-orange-700 dark:bg-orange-950 dark:text-orange-300",
@@ -28,27 +31,41 @@ const colorStyles: Record<string, string> = {
     stone: "bg-stone-50 text-stone-700 dark:bg-stone-950 dark:text-stone-300",
 };
 
-// Stores the tailwind colours object
+/**
+ * Array of available Tailwind color keys extracted from colorStyles.
+ */
 const tailwindColors = Object.keys(colorStyles);
 
-// Funcion to get the badge style
+/**
+ * Selects a badge style based on the provided index, cycling through available colors.
+ * 
+ * @param index - The index of the item being styled.
+ * @returns A string of Tailwind CSS classes.
+ */
 const getBadgeStyle = (index: number) => {
     const colorKey = tailwindColors[index % tailwindColors.length];
     return colorStyles[colorKey];
 };
 
+/**
+ * TagCloud Component
+ * 
+ * A widget that displays a list of unique blog categories as colorful badges.
+ * 
+ * @param posts - An array of blog summaries used to extract unique categories.
+ */
 export default function TagCloud({ posts }: { posts: BlogSummary[] }) {
-    // Stores the unique categorys
+    // Extract unique categories and capitalize the first letter of each
     const uniqueCategories = [...new Set(posts.map((post) => post.category.charAt(0).toUpperCase() + post.category.slice(1)))];
 
     return (
         <Card className="w-full">
-            <CardContent className="flex flex-col items-start space-y-4">
-                <div className="text-center">
-                    <h3 className="text-lg font-bold">Tags</h3>
-                    <div className="flex flex-wrap gap-2 justify-center mt-2">
+            <CardContent className="flex flex-col items-start space-y-4 p-6">
+                <div className="w-full">
+                    <h3 className="text-lg font-bold mb-3">Tags</h3>
+                    <div className="flex flex-wrap gap-2">
                         {uniqueCategories.map((category, index) => (
-                            <Badge key={category} className={getBadgeStyle(index)}>
+                            <Badge key={category} className={cn("hover:opacity-80 transition-opacity", getBadgeStyle(index))}>
                                 {category}
                             </Badge>
                         ))}

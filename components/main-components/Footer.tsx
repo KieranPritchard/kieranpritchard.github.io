@@ -5,7 +5,9 @@ import Link from "next/link"
 import { motion, Variants } from "framer-motion"
 import { Separator } from "@/components/ui/separator"
 
-// Stores the pages
+/**
+ * Navigation links for the portfolio pages.
+ */
 const PAGES = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
@@ -14,7 +16,9 @@ const PAGES = [
     { name: "Contact", href: "/contact" },
 ]
 
-// Stores the content for elsewhere
+/**
+ * Links to external profiles and resources.
+ */
 const ELSEWHERE = [
     { name: "GitHub", href: "https://github.com/KieranPritchard" },
     { name: "Email", href: "mailto:KieranPritchard06@gmail.com" },
@@ -22,18 +26,29 @@ const ELSEWHERE = [
     { name: "CV (PDF)", href: "/kieran_pritchard_cv.pdf" },
 ]
 
-// Stores teh status
+/**
+ * Personal status indicators displayed in the footer.
+ */
 const STATUS = [
     "Available for work",
     "Open to CTFs",
     "Coffee: hot",
 ]
 
+/**
+ * Footer Component
+ * 
+ * Displays site navigation, social links, status updates, and copyright information.
+ * Uses Framer Motion for staggered entry animations when scrolled into view.
+ * 
+ * @param className - Optional CSS class name for the footer container.
+ */
 export default function Footer({ className }: Readonly<{ className?: string }>) {
-    // Stores the current year
     const currentYear = new Date().getFullYear()
 
-    // Stores the animations for the container
+    /**
+     * Animation variants for the main footer container to stagger children.
+     */
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
@@ -42,7 +57,9 @@ export default function Footer({ className }: Readonly<{ className?: string }>) 
         },
     }
 
-    // Stores the items aniamtions
+    /**
+     * Animation variants for individual footer sections.
+     */
     const itemVariants: Variants = {
         hidden: { opacity: 0, y: 10 },
         visible: { 
@@ -62,7 +79,7 @@ export default function Footer({ className }: Readonly<{ className?: string }>) 
                 viewport={{ once: true }}
             >
                 <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 mb-16">
-                    {/* Stores the header */}
+                    {/* Brand Section: Logo/Name and short bio */}
                     <motion.div className="flex flex-col gap-4" variants={itemVariants}>
                         <h3 className="text-lg font-bold text-foreground">Kieran Pritchard</h3>
                         <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
@@ -70,7 +87,7 @@ export default function Footer({ className }: Readonly<{ className?: string }>) 
                         </p>
                     </motion.div>
 
-                    {/* Displays the pages */}
+                    {/* Internal Navigation Links */}
                     <motion.div className="flex flex-col gap-4" variants={itemVariants}>
                         <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-wider">PAGES</h4>
                         <nav className="flex flex-col gap-2">
@@ -82,7 +99,7 @@ export default function Footer({ className }: Readonly<{ className?: string }>) 
                         </nav>
                     </motion.div>
                     
-                    {/* Displays the offsight links */}
+                    {/* External/Social Links */}
                     <motion.div className="flex flex-col gap-4" variants={itemVariants}>
                         <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-wider">ELSEWHERE</h4>
                         <nav className="flex flex-col gap-2">
@@ -94,7 +111,7 @@ export default function Footer({ className }: Readonly<{ className?: string }>) 
                         </nav>
                     </motion.div>
                     
-                    {/* Displays the other things */}
+                    {/* Status and Fun Indicators */}
                     <motion.div className="flex flex-col gap-4" variants={itemVariants}>
                         <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-wider">STATUS</h4>
                         <div className="flex flex-col gap-2">
@@ -107,6 +124,7 @@ export default function Footer({ className }: Readonly<{ className?: string }>) 
 
                 <Separator className="my-8 bg-border/50" />
 
+                {/* Bottom Bar: Copyright and credits */}
                 <motion.div 
                     className="flex flex-col items-center justify-between gap-4 md:flex-row text-xs text-muted-foreground"
                     variants={itemVariants}

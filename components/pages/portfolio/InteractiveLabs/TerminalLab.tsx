@@ -7,34 +7,47 @@ import { cn } from "@/lib/utils"
 import { Terminal, Shield, Zap, X, Minus, Plus} from "lucide-react"
 
 /**
- * TerminalLine Type: Defines the structure for command history.
- * 'input' represents user commands, while 'output' represents system responses.
+ * TerminalLine Type
+ * 
+ * Defines the structure for command history entries.
+ * 'type' determines if it was user input or system output.
  */
 type TerminalLine = {
+    /** The source of the line ('input' or 'output'). */
     type: string; 
+    /** The actual text content of the line. */
     content: string;
 }
 
 /**
- * TerminalLab Component: An interactive terminal emulator that allows users to
- * explore your background and skills through a CLI interface.
+ * TerminalLab Component
+ * 
+ * An interactive terminal emulator that simulates a secure shell environment.
+ * Users can interact with the portfolio via CLI commands like 'whoami', 'ls', and 'cat'.
+ * Features auto-scrolling, command parsing, and a customized dark "hacker" aesthetic.
+ * 
+ * @param className - Optional CSS class name for the component wrapper.
  */
 export default function TerminalLab({ className }: { className?: string }) {
-    // State to manage the terminal's persistent history
+    /** State to manage the terminal's persistent history of inputs and outputs. */
     const [history, setHistory] = useState<TerminalLine[]>([
         { type: 'output', content: "Initializing core_v2.0.4..." },
         { type: 'output', content: "Establishing encrypted tunnel via Port 443..." },
         { type: 'output', content: "Welcome to the secure shell. Type 'help' to see available commands." }
     ])
     
-    // State for the current active input
+    /** State for the current active text input. */
     const [inputValue, setInputValue] = useState("")
     
-    // Reference used to programmatically control the scroll position
+    /** Reference for the terminal's scrollable container to manage scroll position. */
     const scrollRef = useRef<HTMLDivElement>(null)
 
-    // Auto-scroll Effect: Ensures the latest command is always visible by 
-    // pinning the scrollbar to the bottom whenever history updates.
+    /**
+     * Auto-scroll Effect
+     * 
+     * Ensures the latest command is always visible by pinning the scrollbar 
+     * to the bottom whenever the history updates.
+     */
     useEffect(() => {
         if (scrollRef.current) {
             scrollRef.current.scrollTop = scrollRef.current.scrollHeight
@@ -42,8 +55,12 @@ export default function TerminalLab({ className }: { className?: string }) {
     }, [history])
 
     /**
-     * handleCommand: The "Brain" of the terminal. 
+     * Command Processor
+     * 
      * Parses the user input on 'Enter' and determines the appropriate system response.
+     * Simulates a real shell environment with specific command logic.
+     * 
+     * @param e - The keyboard event from the input field.
      */
     const handleCommand = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (e.key === "Enter" && inputValue.trim()) {
@@ -52,7 +69,7 @@ export default function TerminalLab({ className }: { className?: string }) {
 
             let response: string = ""
             
-            // Command Logic Switch: Simulates a real shell environment
+            // Simulates basic shell commands
             switch (cmd) {
                 case "help":
                     response = "Available: whoami, ls, cat, clear, status"
@@ -96,12 +113,13 @@ export default function TerminalLab({ className }: { className?: string }) {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
             >
-                {/* Section Header: Features the Terminal icon and animated primary divider */}
+                {/* Section Header */}
                 <div className="mb-12 space-y-2">
                     <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl flex items-center gap-3">
                         <Terminal className="h-8 w-8 text-primary" />
                         Terminal Lab
                     </h2>
+                    {/* Animated primary underline */}
                     <motion.div 
                         className="h-1 bg-primary rounded-full" 
                         initial={{ width: 0 }}
@@ -111,9 +129,9 @@ export default function TerminalLab({ className }: { className?: string }) {
                     />
                 </div>
 
-                {/* Main Terminal Window: Styled with a dark aesthetic and emerald text for a "Hacker" vibe */}
-                <Card className="group shadow-2xl">
-                    {/* Window Controls: Simulates an OS window header */}
+                {/* Terminal Window Emulation */}
+                <Card className="group shadow-2xl border-border/50">
+                    {/* Fake OS Window Header with control buttons and status */}
                     <CardHeader className="border-b border-border/50 bg-muted/20 py-3 flex flex-row items-center justify-between">
                         <div className="flex gap-1.5 group/controls">
                             <div className="group flex h-3 w-3 items-center justify-center rounded-full bg-destructive/80 transition-colors">
@@ -132,14 +150,14 @@ export default function TerminalLab({ className }: { className?: string }) {
                         </div>
                     </CardHeader>
                     
-                    {/* Terminal Scroll Area: Uses a custom scrollbar-hide and monospace font */}
+                    {/* Console Scrollable Area */}
                     <CardContent className="p-0">
                         <div 
                             ref={scrollRef}
                             className="h-[350px] overflow-y-auto bg-[#0d0d0d] p-6 font-mono text-sm leading-relaxed text-emerald-500 scrollbar-hide"
                         >
                             <div className="space-y-1">
-                                {/* History Rendering: Colors input and output differently for visual hierarchy */}
+                                {/* Rendering Command History */}
                                 {history.map((line, i) => (
                                     <div key={i} className={line.type === 'input' ? "text-primary" : "text-emerald-500/90"}>
                                         {line.type === 'input' ? (
@@ -153,7 +171,7 @@ export default function TerminalLab({ className }: { className?: string }) {
                                     </div>
                                 ))}
                                 
-                                {/* Active Input Line: Unstyled input field for seamless integration */}
+                                {/* Interactive Prompt Row */}
                                 <div className="mt-2 flex items-center gap-2">
                                     <span className="flex items-center gap-1 text-primary">
                                         <Zap className="h-3 w-3" />
@@ -173,7 +191,7 @@ export default function TerminalLab({ className }: { className?: string }) {
                         </div>
                     </CardContent>
                     
-                    {/* Footer Status Bar: Includes a pulsing animation to indicate the system is "Live" */}
+                    {/* Connection Status Footer with pulsing "Live" indicator */}
                     <div className="border-t border-border/50 bg-muted/10 px-6 py-3 text-[10px] text-muted-foreground flex justify-between items-center">
                         <span>Connection: Encrypted</span>
                         <span className="animate-pulse flex items-center gap-1">

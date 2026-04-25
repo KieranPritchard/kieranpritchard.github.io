@@ -2,16 +2,27 @@ import Link from "next/link"
 import { ChevronRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 
-// Defines the shape of an individual breadcrumb item
-type Crumb = { label: string; href?: string }
+/**
+ * Defines the structure for a single breadcrumb item.
+ */
+type Crumb = { 
+  /** The text label to display. */
+  label: string; 
+  /** The destination URL (optional for the last item). */
+  href?: string 
+}
 
 /**
- * ProjectBreadcrumbs component to render a hierarchical navigation trail.
- * Automatically handles separators and applies active styling to the final item.
+ * ProjectBreadcrumbs Component
+ * 
+ * Renders a horizontal navigation trail (breadcrumb) for hierarchical pages.
+ * Automatically inserts separators and highlights the active (last) item.
+ * 
+ * @param items - An array of breadcrumb objects (label and optional href).
+ * @param className - Optional CSS class name for the navigation container.
  */
 export function ProjectBreadcrumbs({ items, className }: Readonly<{ items: Crumb[]; className?: string }>) {
   return (
-    /* Main navigation wrapper with accessibility label */
     <nav aria-label="Breadcrumb" className={cn("text-sm text-muted-foreground", className)}>
       <ol className="flex flex-wrap items-center gap-1">
         {items.map((item, index) => {
@@ -19,16 +30,18 @@ export function ProjectBreadcrumbs({ items, className }: Readonly<{ items: Crumb
 
           return (
             <li key={`${item.label}-${index}`} className="flex items-center gap-1">
-              {/* Separator Icon: Renders for every item except the first one */}
+              {/* Separator Icon: Hidden from screen readers */}
               {index > 0 && <ChevronRight className="size-3.5 shrink-0 opacity-60" aria-hidden />}
               
-              {/* Conditional Rendering: Links for intermediate steps, text for the current page */}
+              {/* Interactive Link or Static Label */}
               {item.href && !isLast ? (
-                <Link href={item.href} className="hover:text-foreground transition-colors">
+                <Link href={item.href} className="hover:text-foreground transition-colors underline-offset-4 hover:underline">
                   {item.label}
                 </Link>
               ) : (
-                <span className={isLast ? "font-medium text-foreground" : undefined}>{item.label}</span>
+                <span className={cn(isLast && "font-medium text-foreground")}>
+                  {item.label}
+                </span>
               )}
             </li>
           )

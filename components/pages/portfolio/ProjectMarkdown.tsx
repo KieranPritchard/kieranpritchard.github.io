@@ -16,13 +16,6 @@ import {
 } from "@/components/ui/table"
 import { cn } from "@/lib/utils"
 
-/**
- * Calculates an approximate reading time based on a standard speed of 220 words per minute.
- */
-function estimateReadingMinutes(markdown: string) {
-  const words = markdown.trim().split(/\s+/).filter(Boolean).length
-  return Math.max(1, Math.round(words / 220))
-}
 
 /**
  * Standard animation variants for markdown elements.
@@ -38,9 +31,13 @@ const markdownItemVariants: Variants = {
 }
 
 /**
+ * FadeUpObserver Component
+ * 
  * A reusable wrapper that detects when its children enter the viewport
- * and triggers the fade-up animation. This ensures animations play
+ * and triggers a fade-up animation. This ensures animations play
  * sequentially as the user scrolls.
+ * 
+ * @param children - The React elements to wrap with animation.
  */
 const FadeUpObserver = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -56,24 +53,17 @@ const FadeUpObserver = ({ children }: { children: React.ReactNode }) => {
 }
 
 /**
- * ProjectMarkdown component: Parses and styles project case studies using GitHub Flavored Markdown.
- * Includes custom Tailwind styling and Framer Motion reveal effects for every block element.
+ * ProjectMarkdown Component
+ * 
+ * Parses and styles project case studies using GitHub Flavored Markdown.
+ * Includes custom Tailwind styling for typography, tables, images, and code blocks,
+ * with Framer Motion reveal effects for every block element.
+ * 
+ * @param content - The raw markdown string to render.
  */
 export function ProjectMarkdown({ content }: Readonly<{ content: string }>) {
-  const minutes = estimateReadingMinutes(content)
-
   return (
     <article className="min-w-0">
-      {/* Read time - Animates immediately on page load to provide quick context */}
-      <motion.p 
-        className="mb-10 text-sm font-semibold tracking-tight text-muted-foreground/80 bg-muted/30 px-4 py-2 rounded-full w-fit border border-border/50"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-      >
-        {minutes} min read
-      </motion.p>
-
       {/* Markdown Parser: Overrides default HTML tags with custom styled React components */}
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}

@@ -4,8 +4,7 @@ import { Variants, motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 
 /**
- * Data-driven timeline entries.
- * Stores the professional and academic history details.
+ * Data representing professional and academic milestones.
  */
 const timelineData = [
     {
@@ -49,11 +48,17 @@ const timelineData = [
 ]
 
 /**
- * ExperienceTimeline component: Renders a structured list of milestones.
- * Features staggered entrance animations and clean, readable typography.
+ * ExperienceTimeline Component
+ * 
+ * Renders a vertical timeline of professional and educational experience.
+ * Features staggered entrance animations and a clean grid layout.
+ * 
+ * @param className - Optional CSS class name for the section container.
  */
 export default function ExperienceTimeline({ className }: Readonly<{ className?: string }>) {
-    // Animation variants for the container to orchestrate staggered children
+    /**
+     * Parent container variants for orchestrating staggered child animations.
+     */
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
@@ -62,7 +67,9 @@ export default function ExperienceTimeline({ className }: Readonly<{ className?:
         },
     }
 
-    // Animation variants for each timeline item row
+    /**
+     * Animation variants for individual timeline items.
+     */
     const itemVariants: Variants = {
         hidden: { opacity: 0, y: 10 },
         visible: { 
@@ -74,7 +81,7 @@ export default function ExperienceTimeline({ className }: Readonly<{ className?:
 
     return (
         <section className={cn("mx-auto w-full max-w-7xl px-4 py-16 md:px-6 lg:px-8", className)}>
-            {/* Section Header: Title and decorative accent */}
+            {/* Section Header */}
             <motion.div 
                 className="mb-16 space-y-2"
                 initial={{ opacity: 0 }}
@@ -90,7 +97,7 @@ export default function ExperienceTimeline({ className }: Readonly<{ className?:
                 <div className="h-1 w-20 bg-primary rounded-full mt-4" />
             </motion.div>
 
-            {/* List entries: Mapped from timelineData */}
+            {/* Timeline List: Mapped from timelineData */}
             <motion.div 
                 className="flex flex-col gap-12"
                 variants={containerVariants}
@@ -104,12 +111,12 @@ export default function ExperienceTimeline({ className }: Readonly<{ className?:
                         className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4 border-b border-border/50"
                         variants={itemVariants}
                     >
-                        {/* Date Column: Monospaced for alignment */}
+                        {/* Date Column */}
                         <div className="text-sm font-mono text-muted-foreground pt-1">
                             {item.date}
                         </div>
 
-                        {/* Content Column: Details organized with separators */}
+                        {/* Content Column */}
                         <div className="space-y-3 pb-8">
                             <span className="text-xs font-bold text-primary uppercase tracking-wider">
                                 {item.organization}
@@ -120,7 +127,7 @@ export default function ExperienceTimeline({ className }: Readonly<{ className?:
                             <ul className="space-y-2 text-sm text-muted-foreground leading-relaxed max-w-2xl">
                                 {item.details.map((detail, i) => (
                                     <li key={i} className="flex gap-2">
-                                        <span>•</span>
+                                        <span className="text-primary">•</span>
                                         {detail}
                                     </li>
                                 ))}

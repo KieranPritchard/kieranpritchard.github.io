@@ -5,13 +5,16 @@ import { cn } from "@/lib/utils"
 import { ExternalLink, Award } from "lucide-react"
 
 /**
- * Certifications component: Displays a gallery of earned credentials
- * featuring staggered animations and consistent branding.
+ * Certifications Component
+ * 
+ * Displays a gallery of earned credentials and certifications in a grid.
+ * Each certification includes the title, issuer, date, and a verification link.
+ * 
+ * @param className - Optional CSS class name for the section container.
  */
 export default function Certifications({ className }: Readonly<{ className?: string }>) {
     /**
-     * Certification data set.
-     * Includes title, issuer, date, and link.
+     * Data set for earned certifications.
      */
     const certs = [
         {
@@ -105,8 +108,9 @@ export default function Certifications({ className }: Readonly<{ className?: str
         }
     ]
 
-
-    // Parent grid variants (for staggerChildren logic)
+    /**
+     * Grid variants for staggering entrance of certification cards.
+     */
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
@@ -115,7 +119,9 @@ export default function Certifications({ className }: Readonly<{ className?: str
         },
     }
 
-    // Individual item variants (slide-up entrance)
+    /**
+     * Individual card entrance variants.
+     */
     const itemVariants: Variants = {
         hidden: { opacity: 0, y: 10 },
         visible: {
@@ -130,7 +136,7 @@ export default function Certifications({ className }: Readonly<{ className?: str
             id="certifications"
             className={cn("mx-auto w-full max-w-7xl px-4 py-16 md:px-6 lg:px-8", className)}
         >
-            {/* Standard Header Style */}
+            {/* Section Header */}
             <motion.div
                 className="mb-16 space-y-2"
                 initial={{ opacity: 0 }}
@@ -142,7 +148,7 @@ export default function Certifications({ className }: Readonly<{ className?: str
                 <div className="mt-4 h-1 w-20 rounded-full bg-primary" />
             </motion.div>
 
-            {/* List Grid */}
+            {/* Certification Grid */}
             <motion.div
                 className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
                 variants={containerVariants}
@@ -154,20 +160,20 @@ export default function Certifications({ className }: Readonly<{ className?: str
                     <motion.div
                         key={index}
                         variants={itemVariants}
-                        // Added base bg-card, border, and border-radius.
-                        // Hover transition added to parent for subtle effect.
                         className="group flex flex-col justify-between rounded-lg border border-border bg-card p-6 transition-colors duration-200 hover:border-primary/50"
                     >
-                        {/* Cert Header/Body */}
                         <div className="space-y-4">
-                            {/* Blue Icon Background. Matched from image with rounded-lg. */}
+                            {/* Decorative Icon Box */}
                             <div className="inline-flex items-center justify-center rounded-lg bg-primary/30 p-2.5 text-primary">
                                 <Award className="h-5 w-5" />
                             </div>
+                            
+                            {/* Certification Title */}
                             <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-200">
                                 {cert.title}
                             </h3>
-                            {/* Metadata in same typography style as Experience items. */}
+                            
+                            {/* Metadata: Issuer and Year */}
                             <div className="flex items-center justify-between">
                                 <span className="text-xs font-mono uppercase tracking-wider text-muted-foreground">
                                     {cert.issuer}
@@ -176,7 +182,7 @@ export default function Certifications({ className }: Readonly<{ className?: str
                             </div>
                         </div>
 
-                        {/* Footer / CTA link */}
+                        {/* External Link for Verification */}
                         <a
                             href={cert.link}
                             target="_blank"

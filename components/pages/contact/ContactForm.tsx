@@ -13,9 +13,22 @@ import {
   SelectValue 
 } from "@/components/ui/select"
 
+/**
+ * ContactForm Component
+ * 
+ * A styled form interface for user messages. Currently, it facilitates
+ * copying the target email address to the clipboard as a fallback for 
+ * direct form submission.
+ * 
+ * @param toEmail - The target email address for contact.
+ */
 export default function ContactForm({ toEmail }: { toEmail: string }) {
+  /** State to track if the email has been successfully copied to the clipboard. */
   const [isCopied, setIsCopied] = useState(false)
 
+  /**
+   * Copies the 'toEmail' to the system clipboard and triggers a temporary success state.
+   */
   const copyEmail = () => {
     navigator.clipboard.writeText(toEmail)
     setIsCopied(true)
@@ -23,19 +36,21 @@ export default function ContactForm({ toEmail }: { toEmail: string }) {
   }
 
   return (
-    <div className="rounded-2xl border border-border bg-muted/20 p-8 h-fit">
+    <div className="rounded-2xl border border-border bg-muted/20 p-6 h-fit">
       <h3 className="text-xl font-bold tracking-tight">Send a message</h3>
       <p className="mt-2 text-sm text-muted-foreground">
         Fill this in and I'll get back to you.
       </p>
 
-      {/* Changed form to a simple div wrapper since we aren't submitting via POST anymore */}
+      {/* Form Fields: Name, Subject selection, and Message area */}
       <div className="mt-8 space-y-5">
+        {/* Name Input */}
         <div className="space-y-1.5">
           <label className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground">YOUR NAME</label>
           <Input placeholder="Jane Doe" className="bg-muted border-border" />
         </div>
 
+        {/* Subject Selection Dropdown */}
         <div className="space-y-1.5">
           <label className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground">SUBJECT</label>
           <Select>
@@ -50,6 +65,7 @@ export default function ContactForm({ toEmail }: { toEmail: string }) {
           </Select>
         </div>
 
+        {/* Message Textarea */}
         <div className="space-y-1.5">
           <label className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground">MESSAGE</label>
           <Textarea
@@ -59,6 +75,7 @@ export default function ContactForm({ toEmail }: { toEmail: string }) {
           />
         </div>
 
+        {/* Action Bar: Footer metadata and Copy button */}
         <div className="pt-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <p className="text-[10px] font-mono text-muted-foreground">// End-to-end encrypted in transit</p>
           

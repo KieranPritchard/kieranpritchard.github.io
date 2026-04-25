@@ -7,49 +7,64 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { MotionProvider } from "@/components/MotionContext"
 import { AnimationWrapper } from "@/components/AnimationWrapper"
-import { AnimationToggle } from "@/components/main-components/AnimationToggle"
 import { cn } from "@/lib/utils"
 import { Metadata } from 'next'
 import Footer from "@/components/main-components/Footer"
 
-// Define site metadata for SEO
+/**
+ * Global Metadata Configuration
+ * 
+ * Defines the default page titles and descriptions for search engine optimization (SEO).
+ */
 export const metadata: Metadata = {
   title: { default: 'Kieran Pritchard', template: '%s | Kieran Pritchard' },
-  description: 'Software student focused on ethical hacking and secure dev.',
+  description: 'Software student focused on ethical hacking and secure development.',
 }
 
-// Initialize fonts with CSS variables for global use in Tailwind
+/**
+ * Font Initialization
+ * 
+ * Configures Google Fonts with CSS variables for seamless integration with Tailwind CSS.
+ */
 const notoSansHeading = Noto_Sans({ subsets: ['latin'], variable: '--font-heading' });
 const roboto = Roboto({ weight: ['400', '700'], subsets: ['latin'], variable: '--font-sans' });
 const fontMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
+/**
+ * RootLayout Component
+ * 
+ * The primary layout wrapper for the entire application.
+ * It initializes global providers (Theme, Motion, Tooltip, Sidebar), 
+ * sets up the navigation structure, and defines the global font styling.
+ * 
+ * @param children - The active page content to be rendered within the layout.
+ */
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn("min-h-screen bg-background font-sans antialiased overflow-x-hidden", fontMono.variable, roboto.variable, notoSansHeading.variable)}>
-        {/* MotionProvider handles the global state for animation toggling */}
+        {/* MotionProvider: Manages global animation toggle state */}
         <MotionProvider>
-          {/* AnimationWrapper applies the MotionConfig logic based on the provider state */}
+          {/* AnimationWrapper: Conditionally enables/disables Framer Motion animations */}
           <AnimationWrapper>
-            {/* ThemeProvider manages light/dark mode persistence */}
+            {/* ThemeProvider: Manages light/dark mode with system preference support */}
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-              {/* TooltipProvider ensures accessible tooltips are available globally */}
+              {/* TooltipProvider: Required for Radix UI tooltip components */}
               <TooltipProvider delayDuration={0}>
-                {/* SidebarProvider enables sidebar state management */}
+                {/* SidebarProvider: Orchestrates the collapsible navigation sidebar */}
                 <SidebarProvider>
                   <PortfolioSidebar />
                   <SidebarInset className="min-w-0">
-                    {/* Header containing navigation triggers and the animation toggle */}
-                    <header className="sticky top-0 z-10 flex h-16 shrink-0 items-center justify-between px-4">
+                    {/* Sticky Global Header */}
+                    <header className="sticky top-0 z-10 flex h-16 shrink-0 items-center justify-between px-4 bg-background/50 backdrop-blur-md">
                       <div className="flex items-center gap-2">
                         <SidebarTrigger className="-ml-1" />
                       </div>
                     </header>
-                    {/* Main content area */}
-                    <div className="flex flex-1 flex-col gap-4 p-4 md:p-8 min-w-0">
+                    {/* Main Content Area */}
+                    <main className="flex flex-1 flex-col gap-4 p-4 md:p-8 min-w-0">
                       {children}
-                    </div>
-                    {/* Application footer */}
+                    </main>
                     <Footer />
                   </SidebarInset>
                 </SidebarProvider>
@@ -61,3 +76,4 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     </html>
   )
 }
+

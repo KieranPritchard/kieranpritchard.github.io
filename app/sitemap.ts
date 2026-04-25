@@ -1,29 +1,58 @@
 import { MetadataRoute } from 'next'
+import { getAllBlogs } from '@/lib/blogs'
+import { getAllProjects } from '@/lib/projects'
 
+/**
+ * Sitemap Generator
+ * 
+ * Automatically generates a sitemap.xml file for the portfolio website.
+ * Includes static routes (home, about, etc.) and dynamic routes for all 
+ * blog articles and portfolio projects.
+ * 
+ * @returns A promise that resolves to an array of sitemap entries.
+ */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  // You can fetch dynamic data here (e.g., from a CMS or database)
-  // const posts = await fetch('https://api.example.com/posts').then(res => res.json())
+    /** The base URL of the deployed website. */
+    const baseUrl = 'https://kieranpritchard.github.io'
 
-    const baseRules = [
-        {
-            url: 'https://kieranpritchard.github.io',
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 1,
-        },
-        {
-            url: 'https://kieranpritchard.github.io/about',
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        },
-    ] as const
+    /**
+     * Define static routes with their respective priorities and change frequencies.
+     */
+    const staticRoutes = [
+        '',
+        '/about',
+        '/blog',
+        '/portfolio',
+        '/contact',
+    ].map((route) => ({
+        url: `${baseUrl}${route}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: route === '' ? 1 : 0.8,
+    }))
 
-    // If you had dynamic posts, you would map them here:
-    // const postRules = posts.map((post) => ({
-    //   url: `https://kieranpritchard.github.io/blog/${post.slug}`,
-    //   lastModified: post.updatedAt,
-    // }))
+    /**
+     * Dynamically generate routes for all blog posts.
+     */
+    const blogs = getAllBlogs()
+    const blogRoutes = blogs.map((blog) => ({
+        url: `${baseUrl}/blog/${blog.slug}`,
+        lastModified: new Date(blog.date),
+        changeFrequency: 'monthly' as const,
+        priority: 0.6,
+    }))
 
-    return [...baseRules]
+    /**
+     * Dynamically generate routes for all portfolio projects.
+     */
+    const projects = getAllProjects()
+    const projectRoutes = projects.map((project) => ({
+        url: `${baseUrl}/portfolio/${project.slug}`,
+        lastModified: new Date(project.date),
+        changeFrequency: 'monthly' as const,
+        priority: 0.6,
+    }))
+
+    // Combine all routes into a single sitemap array
+    return [...staticRoutes, ...blogRoutes, ...projectRoutes]
 }

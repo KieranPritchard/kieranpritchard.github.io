@@ -3,13 +3,20 @@ import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
 import type { BlogCategory, BlogDoc, BlogSummary } from "@/types/blog"
+import { calculateReadingTime } from "./utils"
 
-// Stores the content directory for ease of use
+/**
+ * Absolute path to the directory containing blog content files.
+ */
 const contentDir = path.join(process.cwd(), "content/blogs")
 
-// Function to check if there is a blog category
-function isBlogCategory(value:unknown): value is BlogCategory {
-    // Returns the correct value
+/**
+ * Type guard to check if a value is a valid BlogCategory.
+ * 
+ * @param value - The value to check.
+ * @returns True if the value is a valid BlogCategory, false otherwise.
+ */
+function isBlogCategory(value: unknown): value is BlogCategory {
     return (
         value === "developement" ||
         value === "web" ||
@@ -19,27 +26,37 @@ function isBlogCategory(value:unknown): value is BlogCategory {
     )
 }
 
-// Function to normalise frontmatter
-function normaliseFrontmatter(data:Record<string, unknown>): BlogDoc | null {
-    // Stores front matter data if the correct data type is used
+/**
+ * Normalizes and validates frontmatter data from a blog markdown file.
+ * 
+ * @param data - The raw frontmatter data from gray-matter.
+ * @param content - Optional content string to calculate reading time if not present in frontmatter.
+ * @returns A validated BlogDoc object or null if required fields are missing.
+ */
+function normaliseFrontmatter(data: Record<string, unknown>, content?: string): BlogDoc | null {
+    // Extract and validate basic fields
     const title = typeof data.title === "string" ? data.title : null
     const slug = typeof data.slug === "string" ? data.slug : null
     const category = data.category
     const description = typeof data.description === "string" ? data.description : null
     const tags = Array.isArray(data.tags) ? data.tags.filter((t): t is string => typeof t === "string") : null
     const date = typeof data.date === "string" ? data.date : null
+    
+    // Determine reading time: either from frontmatter or by calculating it from content
+    let readingTime = typeof data.readingTime === "string" ? data.readingTime : null
+    if (!readingTime && content) {
+        readingTime = calculateReadingTime(content)
+    }
 
-    // Checks if all the categories are not there
-    if (!title || !slug || !isBlogCategory(category) || !description || !tags?.length || !date){
+    // Ensure all mandatory fields are present
+    if (!title || !slug || !isBlogCategory(category) || !description || !tags?.length || !date || !readingTime){
         return null
     }
 
-    // Gets the cover image
+    // Optional fields
     const coverImage = typeof data.coverImage === "string" ? data.coverImage : undefined
-    // Gets the alt text
     const coverAlt = typeof data.coverAlt === "string" ? data.coverAlt : undefined
 
-    // Returns the frontmatter
     return {
         title,
         slug,
@@ -47,77 +64,83 @@ function normaliseFrontmatter(data:Record<string, unknown>): BlogDoc | null {
         description,
         tags,
         date,
+        readingTime,
         coverImage,
         coverAlt,
-        content: "",
+        content: content ?? "",
     }
 }
 
-// Function to get the project file slugs
+/**
+ * Retrieves all blog file slugs (filenames without extension) from the content directory.
+ * 
+ * @returns An array of slugs as strings.
+ */
 export function getBlogFileSlugs(): string[] {
-    // Checks if the file does not exist
     if (!fs.existsSync(contentDir)) {
-        // Returns an empty array
         return []
     }
 
-    // Returns the file map
     return fs
         .readdirSync(contentDir)
-        .filter((file) => file.endsWith(".md")) // Filters for md files
+        .filter((file) => file.endsWith(".md"))
         .map((file) => path.basename(file, ".md"))
 }
 
-// Function to get the project by the slug
+/**
+ * Fetches a single blog post by its slug.
+ * 
+ * @param slug - The unique identifier for the blog post.
+ * @returns The blog post data (BlogDoc) or null if not found or invalid.
+ */
 export function getBlogBySlug(slug: string): BlogDoc | null {
-    // Stores the full path
     const fullPath = path.join(contentDir, `${slug}.md`)
     
-    // Checks if the file exists
     if (!fs.existsSync(fullPath)) {
-        // Returns null
         return null
     }
 
-    // Gets the raw file
+    // Read and parse markdown file
     const raw = fs.readFileSync(fullPath, "utf8")
-    // Gets the data and the content
     const { data, content } = matter(raw)
-    // Gets the base of the file
-    const base = normaliseFrontmatter(data as Record<string, unknown>)
-    // Checks if it does not exist
+    
+    // Normalize and validate the frontmatter
+    const base = normaliseFrontmatter(data as Record<string, unknown>, content)
+    
     if (!base) {
-        // Returns null
         return null
     }
 
-    // Checks if there is not a slug
+    // Security check: ensure the slug in frontmatter matches the requested slug
     if (base.slug !== slug) {
         return null
     }
 
-    // Returns the base and content
     return { ...base, content }
 }
 
-// Gets the project summary from the doc
+/**
+ * Converts a full BlogDoc to a BlogSummary by removing the content field.
+ * 
+ * @param doc - The full blog document.
+ * @returns A summary object containing metadata only.
+ */
 function blogSummaryFromDoc(doc: BlogDoc): BlogSummary {
-    // Stores the project
-    const { title, slug, category, description, tags, date, coverImage, coverAlt } = doc
-    // Returns the project
-    return { title, slug, category, description, tags, date, coverImage, coverAlt }
+    const { title, slug, category, description, tags, date, readingTime, coverImage, coverAlt } = doc
+    return { title, slug, category, description, tags, date, readingTime, coverImage, coverAlt }
 }
 
-// Function to get all of the projects
+/**
+ * Retrieves all blog posts, sorted by date in descending order.
+ * 
+ * @returns An array of BlogSummary objects.
+ */
 export function getAllBlogs(): BlogSummary[] {
-    // Stores the items
     const items = getBlogFileSlugs()
-        // Maps them to by slug
         .map((fileSlug) => getBlogBySlug(fileSlug))
-        // Filters for actual ones
         .filter((doc): doc is BlogDoc => doc !== null)
         .map(blogSummaryFromDoc)
 
-    // Sorts and returns the items
+    // Sort by date: newest first
     return items.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 }

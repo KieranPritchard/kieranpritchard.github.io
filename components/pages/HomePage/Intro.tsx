@@ -7,8 +7,19 @@ import { LinkButton } from "@/components/Buttons/LinkButton"
 import { cn } from "@/lib/utils"
 import { ProjectSummary } from "@/types/project"
 
+/**
+ * Intro Component
+ * 
+ * The hero section of the home page. It introduces the user with a title, bio,
+ * call-to-action buttons, and a profile image.
+ * 
+ * @param className - Optional CSS class name for the section container.
+ * @param projects - An array of project summaries to display the project count.
+ */
 export default function Intro({ className, projects }: Readonly<{ className?: string; projects: ProjectSummary[]}>) {
-    // Staggered entrance variants
+    /**
+     * Staggered entrance variants for the text container and its children.
+     */
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
@@ -20,6 +31,9 @@ export default function Intro({ className, projects }: Readonly<{ className?: st
         },
     }
 
+    /**
+     * Animation variants for individual items within the intro section.
+     */
     const itemVariants: Variants = {
         hidden: { opacity: 0, y: 15 },
         visible: { 
@@ -30,10 +44,6 @@ export default function Intro({ className, projects }: Readonly<{ className?: st
     }
 
     return (
-        /* 
-            Using flex-1 and w-full ensures the component fills the available 
-            space left by the SidebarInset or Sidebar provider.
-        */
         <section 
             className={cn(
                 "relative flex min-h-[80vh] w-full items-center justify-center overflow-hidden px-4 md:px-8 lg:px-12",
@@ -42,7 +52,7 @@ export default function Intro({ className, projects }: Readonly<{ className?: st
         >   
             <div className="sm:py-12 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 md:grid-cols-2">
                 
-                {/* Text container: min-w-0 prevents grid blowout during sidebar transitions */}
+                {/* Content Section: Title, Bio, and Buttons */}
                 <motion.div 
                     className="flex flex-col gap-6 order-2 md:order-1 min-w-0"
                     variants={containerVariants}
@@ -54,7 +64,6 @@ export default function Intro({ className, projects }: Readonly<{ className?: st
                         <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
                             Ethical hacker & <span className="text-primary">software</span> developer.
                         </h1>
-                        {/* Match sidebar accent line */}
                         <motion.div 
                             className="h-1.5 w-20 bg-primary rounded-full" 
                             initial={{ width: 0 }}
@@ -69,7 +78,7 @@ export default function Intro({ className, projects }: Readonly<{ className?: st
                     >
                         I'm <strong className="text-foreground">Kieran</strong> a Digital Software Developement student at 
                         <strong className="text-foreground"> Bournemouth & Poole College</strong>, focused on offensive security, automation,
-                        and well built software. I build Things that are robust because I know how they break
+                        and well built software. I build things that are robust because I know how they break
                     </motion.p>
 
                     <motion.div 
@@ -84,6 +93,8 @@ export default function Intro({ className, projects }: Readonly<{ className?: st
                             kind="secondary" 
                         />  
                     </motion.div>
+
+                    {/* Stats/Info Grid */}
                     <motion.div
                         className="flex flex-wrap text-sm justify-between items-center gap-4" 
                         variants={itemVariants}
@@ -92,7 +103,6 @@ export default function Intro({ className, projects }: Readonly<{ className?: st
                             className="flex-row font-mono"
                         >
                             <strong className="text-foreground">{projects.length}+</strong><br />
-                            
                             Shipped Projects
                         </motion.p>
                         <motion.p>
@@ -106,7 +116,7 @@ export default function Intro({ className, projects }: Readonly<{ className?: st
                     </motion.div>
                 </motion.div>
 
-                {/* Image container: responsive aspect ratio and rounded-full styling */}
+                {/* Profile Image Section */}
                 <motion.div 
                     className="relative flex justify-center order-1 md:order-2"
                     initial={{ opacity: 0, scale: 0.9 }}

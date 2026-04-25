@@ -4,8 +4,8 @@ import { Variants, motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 
 /**
- * Skill metrics categorized by domain. 
- * Values represent proficiency percentages.
+ * Skill categories and individual skill metrics.
+ * Values represent estimated proficiency percentages for visual representation.
  */
 const skillCategories = [
     {
@@ -43,11 +43,17 @@ const skillCategories = [
 ]
 
 /**
- * Skills component: Renders a progress-bar based skill calibration view.
- * Features staggered entrance animations and progress bar fill effects.
+ * Skills Component
+ * 
+ * Renders a set of progress bars grouped by skill categories.
+ * Features staggered entrance for categories and animated fill for progress bars.
+ * 
+ * @param className - Optional CSS class name for the section container.
  */
 export default function Skills({ className }: Readonly<{ className?: string }>) {
-    // Animation variants for the container to orchestrate staggered children
+    /**
+     * Parent container variants for orchestrating staggered category animations.
+     */
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
@@ -56,7 +62,9 @@ export default function Skills({ className }: Readonly<{ className?: string }>) 
         },
     }
 
-    // Animation variants for each category block
+    /**
+     * Animation variants for individual skill category blocks.
+     */
     const itemVariants: Variants = {
         hidden: { opacity: 0, y: 10 },
         visible: { 
@@ -68,8 +76,7 @@ export default function Skills({ className }: Readonly<{ className?: string }>) 
 
     return (
         <section className={cn("mx-auto w-full max-w-7xl px-4 py-16 md:px-6 lg:px-8", className)}>
-            
-            {/* Header: Calibration title */}
+            {/* Section Header */}
             <motion.div 
                 className="mb-16 space-y-2"
                 initial={{ opacity: 0 }}
@@ -85,7 +92,7 @@ export default function Skills({ className }: Readonly<{ className?: string }>) 
                 <div className="h-1 w-20 bg-primary rounded-full mt-4" />
             </motion.div>
 
-            {/* Content: Mapped skill categories */}
+            {/* Skills Content: Grid of categories with animated progress bars */}
             <motion.div 
                 className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16"
                 variants={containerVariants}
@@ -101,11 +108,14 @@ export default function Skills({ className }: Readonly<{ className?: string }>) 
                         <div className="space-y-6">
                             {category.skills.map((skill) => (
                                 <div key={skill.name} className="space-y-2">
+                                    {/* Skill Name and Percentage Label */}
                                     <div className="flex justify-between items-center text-sm">
                                         <span className="font-medium text-foreground">{skill.name}</span>
                                         <span className="font-mono text-muted-foreground">{skill.value}%</span>
                                     </div>
+                                    {/* Progress Bar Track */}
                                     <div className="h-1.5 w-full bg-border rounded-full overflow-hidden">
+                                        {/* Animated Progress Bar Fill */}
                                         <motion.div 
                                             className="h-full bg-primary"
                                             initial={{ width: 0 }}

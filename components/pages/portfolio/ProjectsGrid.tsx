@@ -8,18 +8,33 @@ import {
     CardContent,
     CardFooter,
     CardHeader,
-    CardTitle,
 } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
 import type { ProjectSummary } from "@/types/project"
 import { ArrowRight, Code, Shield, Zap, LayoutGrid, Square, List, Search } from "lucide-react"
 
+/**
+ * ProjectsGrid Component
+ * 
+ * A comprehensive project gallery featuring filtering by category, search functionality,
+ * and multiple view modes (Grid, Card, and List). 
+ * Uses Framer Motion's AnimatePresence and layout transitions for smooth UI updates.
+ * 
+ * @param className - Optional CSS class name for the section container.
+ * @param projects - An array of all available project summaries.
+ */
 export default function ProjectsGrid({ className, projects }: Readonly<{ className?: string; projects: ProjectSummary[] }>) {
+    /** State for currently selected category filter. */
     const [filter, setFilter] = useState("all")
+    /** State for search query string. */
     const [search, setSearch] = useState("")
+    /** State for the active view mode layout. */
     const [viewMode, setViewMode] = useState<"grid" | "card" | "list">("grid")
 
+    /**
+     * Projects filtered based on category selection and search query.
+     */
     const filteredProjects = projects.filter((project) => {
         const matchesFilter = filter === "all" || project.category === filter
         const matchesSearch = project.title.toLowerCase().includes(search.toLowerCase()) || 
@@ -27,11 +42,13 @@ export default function ProjectsGrid({ className, projects }: Readonly<{ classNa
         return matchesFilter && matchesSearch
     })
 
+    /** List of valid project categories for the filter buttons. */
     const categories = ["all", "security", "web", "automation"]
 
     return (
         <section className={cn("mx-auto w-full max-w-7xl px-4 py-12 md:px-6 lg:px-8", className)}>
             
+            {/* Header and Controls Area */}
             <div className="mb-12 space-y-6">
                 <div className="space-y-2">
                     <span className="text-xs font-mono uppercase tracking-widest text-primary">
@@ -40,14 +57,14 @@ export default function ProjectsGrid({ className, projects }: Readonly<{ classNa
                     <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
                         Everything I've built.
                     </h2>
-                    {/* The specific blue line indicator */}
+                    {/* Decorative blue accent line */}
                     <div className="h-1 w-12 bg-primary rounded-full mt-2" />
                 </div>
 
-                {/* Top Control Bar Container */}
+                {/* Control Bar: Filter, Search, and View Toggles */}
                 <div className="rounded-xl border border-border bg-card p-4 space-y-4">
                     <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                        {/* Filter Section */}
+                        {/* Category Filter Buttons */}
                         <div className="flex flex-wrap items-center gap-2">
                             <span className="text-xs font-mono uppercase tracking-wider text-muted-foreground mr-2">Filter</span>
                             {categories.map((cat) => (
@@ -64,7 +81,7 @@ export default function ProjectsGrid({ className, projects }: Readonly<{ classNa
                             ))}
                         </div>
 
-                        {/* Search Section */}
+                        {/* Search Input Field */}
                         <div className="relative flex items-center md:w-64">
                             <Search className="absolute left-2.5 h-3.5 w-3.5 text-muted-foreground" />
                             <input 
@@ -77,7 +94,7 @@ export default function ProjectsGrid({ className, projects }: Readonly<{ classNa
                         </div>
                     </div>
 
-                    {/* View Toggle Bar */}
+                    {/* View Mode Toggle Bar (Grid vs Card vs List) */}
                     <div className="flex gap-2 border-t border-border pt-4">
                         <button onClick={() => setViewMode("grid")} className={cn("p-2 rounded-md hover:bg-muted transition-colors", viewMode === "grid" ? "text-primary bg-muted" : "text-muted-foreground")}><LayoutGrid className="h-4 w-4" /></button>
                         <button onClick={() => setViewMode("card")} className={cn("p-2 rounded-md hover:bg-muted transition-colors", viewMode === "card" ? "text-primary bg-muted" : "text-muted-foreground")}><Square className="h-4 w-4" /></button>
@@ -86,6 +103,7 @@ export default function ProjectsGrid({ className, projects }: Readonly<{ classNa
                 </div>
             </div>
 
+            {/* Dynamic Results Display Area */}
             <AnimatePresence mode="popLayout">
                 <motion.div 
                     layout
@@ -103,6 +121,7 @@ export default function ProjectsGrid({ className, projects }: Readonly<{ classNa
                             exit={{ opacity: 0, scale: 0.95 }}
                             transition={{ duration: 0.3 }}
                         >
+                            {/* Grid View Mode: Compact Cards */}
                             {viewMode === "grid" && (
                                 <Card className="group h-full flex flex-col border-border/50 hover:border-primary/50 transition-all">
                                     <CardHeader>
@@ -125,6 +144,7 @@ export default function ProjectsGrid({ className, projects }: Readonly<{ classNa
                                 </Card>
                             )}
 
+                            {/* Card View Mode: Horizontal Extended Cards */}
                             {viewMode === "card" && (
                                 <div className="group flex flex-col md:flex-row gap-6 p-6 rounded-lg border border-border bg-card">
                                     <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg bg-muted border border-border">
@@ -146,6 +166,7 @@ export default function ProjectsGrid({ className, projects }: Readonly<{ classNa
                                 </div>
                             )}
 
+                            {/* List View Mode: Clean Row Items */}
                             {viewMode === "list" && (
                                 <div className="flex items-center justify-between py-6 border-b border-border group hover:bg-muted/30 px-2 transition-colors">
                                     <div className="flex items-center gap-8">

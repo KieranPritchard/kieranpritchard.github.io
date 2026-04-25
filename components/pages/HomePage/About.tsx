@@ -4,28 +4,35 @@ import { cn } from "@/lib/utils"
 import { Variants } from "framer-motion"
 import { motion } from "framer-motion"
 import { LinkButton } from "@/components/Buttons/LinkButton"
-import { Separator } from "@/components/ui/separator"
 import { Card, CardContent } from "@/components/ui/card"
 import { UserRound, MapPin, Clock3, AtSign } from "lucide-react"
 
 /**
- * About Component: A biographical section featuring an animated profile image 
- * and a staggered text reveal. Highlights professional background and core mission.
+ * About Component
+ * 
+ * A biographical section for the home page featuring an animated profile image 
+ * and a staggered text reveal. Highlights professional background and personal details.
+ * 
+ * @param className - Optional CSS class name for the section container.
  */
 export default function About({ className }: Readonly<{ className?: string }>) {
-    // Parent container variant: Orchestrates the staggered entrance of all child text elements
+    /**
+     * Parent container variants: Orchestrates the staggered entrance of child elements.
+     */
     const containerVariants : Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.2, // Time delay between each child element's animation
-                delayChildren: 0.1,    // Initial wait before the first child begins
+                staggerChildren: 0.2,
+                delayChildren: 0.1,
             },
         },
     }
 
-    // Text reveal variant: Provides a subtle slide-in from the right with a smooth fade
+    /**
+     * Text reveal variants: Provides a subtle slide-in from the right with a fade.
+     */
     const textVariants : Variants = {
         hidden: { opacity: 0, x: 20 },
         visible: { 
@@ -35,7 +42,9 @@ export default function About({ className }: Readonly<{ className?: string }>) {
         },
     }
 
-    // Standard slide-up animation for card containers and headers
+    /**
+     * Slide-up animation variants for cards and smaller items.
+     */
     const itemVariants = {
         hidden: { opacity: 0, y: 10 },
         visible: { opacity: 1, y: 0 }
@@ -49,7 +58,7 @@ export default function About({ className }: Readonly<{ className?: string }>) {
                 className
             )}
         >
-            {/* Profile Image: Animated with a circular expansion feel (circOut) and a scale effect on hover */}
+            {/* Profile Image: Animated with a circular expansion feel and scale effect on hover */}
             <motion.div
                 className="relative aspect-square max-w-md mx-auto md:mx-0 overflow-hidden rounded-2xl bg-muted shadow-xl"
                 initial={{ opacity: 0, x: -50 }}
@@ -64,7 +73,8 @@ export default function About({ className }: Readonly<{ className?: string }>) {
                     className="h-full w-full object-cover transition-transform duration-700 hover:scale-110"
                 />
             </motion.div>
-            {/* Content Column: Bound by containerVariants to control the flow of sub-elements */}
+
+            {/* Content Column: Staggered entry for text elements and cards */}
             <motion.div 
                 className="flex flex-col gap-6"
                 variants={containerVariants}
@@ -72,7 +82,7 @@ export default function About({ className }: Readonly<{ className?: string }>) {
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
             >
-                {/* Section Title: Includes the signature primary-colored animated divider */}
+                {/* Section Title with Animated Underline */}
                 <motion.div className="space-y-2" variants={textVariants}>
                     <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
                         About Me
@@ -85,7 +95,7 @@ export default function About({ className }: Readonly<{ className?: string }>) {
                     />
                 </motion.div>
 
-                {/* Biography: Structured as distinct paragraphs for readability */}
+                {/* Short Biography */}
                 <motion.div 
                     className="space-y-4 text-lg text-muted-foreground leading-relaxed"
                     variants={textVariants}
@@ -96,34 +106,30 @@ export default function About({ className }: Readonly<{ className?: string }>) {
                     </p>
                 </motion.div>
 
+                {/* Info Card: Displays personal details in a 2x2 grid */}
                 <motion.div variants={itemVariants} whileHover={{ y: -5 }}>
-                    <Card className="h-full">
-                        {/* 2x2 grid to provide information about me */}
+                    <Card className="h-full bg-muted/20 border-border/50">
                         <CardContent className="p-6">
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                                 <motion.div className="space-y-1" whileHover={{ scale: 1.05 }}>
-                                    {/* Name section part */}
                                     <div className="flex items-center gap-2 text-sm font-medium">
                                         <UserRound className="h-4 w-4 text-primary shrink-0" />
                                         <span className="font-semibold">Name: </span>Kieran
                                     </div>
                                 </motion.div>
                                 <motion.div className="space-y-1" whileHover={{ scale: 1.05 }}>
-                                    {/* Location section part */}
                                     <div className="flex items-center gap-2 text-sm font-medium">
                                         <MapPin className="h-4 w-4 text-primary shrink-0"/>
                                         <span className="font-semibold">From: </span>Bournemouth, England
                                     </div>
                                 </motion.div>
                                 <motion.div className="space-y-1" whileHover={{ scale: 1.05 }}>
-                                    {/* Age section part */}
                                     <div className="flex items-center gap-2 text-sm font-medium">
                                         <Clock3 className="h-4 w-4 text-primary shrink-0" />
                                         <span className="font-semibold">Age: </span>20
                                     </div>
                                 </motion.div>
                                 <motion.div className="space-y-1" whileHover={{ scale: 1.05 }}>
-                                    {/* Email section part */}
                                     <div className="flex items-center gap-2 text-sm font-medium break-all">
                                         <AtSign className="h-4 w-4 text-primary shrink-0"/>
                                         KieranPritchard06@gmail.com
@@ -134,7 +140,7 @@ export default function About({ className }: Readonly<{ className?: string }>) {
                     </Card>
                 </motion.div>
 
-                {/* Action Buttons: Grouped together for CV access and portfolio navigation */}
+                {/* Link to full About page */}
                 <motion.div 
                     className="flex flex-wrap items-center gap-4 pt-4" 
                     variants={textVariants}

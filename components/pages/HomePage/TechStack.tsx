@@ -18,6 +18,9 @@ import {
 import { cn } from "@/lib/utils"
 import { motion } from "framer-motion"
 
+/**
+ * List of technologies and tools displayed in the tech stack marquee.
+ */
 const SKILLS = [
     { name: "HTML", Icon: SiHtml5},
     { name: "CSS", Icon: SiCss},
@@ -34,6 +37,14 @@ const SKILLS = [
     { name: "Docker", Icon: SiDocker }
 ]
 
+/**
+ * TechStack Component
+ * 
+ * Displays an infinite horizontal marquee of technology icons and names.
+ * Uses CSS keyframes for smooth animation and prevents JS jitter.
+ * 
+ * @param className - Optional CSS class name for the section container.
+ */
 export default function TechStack({ className }: { className?: string }) {
     return (
         <section className={cn("w-full py-12 overflow-hidden", className)}>
@@ -52,7 +63,7 @@ export default function TechStack({ className }: { className?: string }) {
             `}</style>
 
             <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-                {/* Header matches your Intro component style */}
+                {/* Section Header: Consistent with other home page sections */}
                 <motion.div
                     className="mb-12 space-y-2"
                     initial={{ opacity: 0, x: -20 }}
@@ -60,14 +71,12 @@ export default function TechStack({ className }: { className?: string }) {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    {/* Heading  */}
                     <p className="text-xs text-primary font-mono">
-                        - SELECTED WORK
+                        - TECH STACK
                     </p>
                     <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
-                        Things I've built.
+                        Technologies I use.
                     </h2>
-                    {/* Animated divider */}
                     <motion.div 
                         className="h-1 bg-primary rounded-full" 
                         initial={{ width: 0 }}
@@ -77,9 +86,9 @@ export default function TechStack({ className }: { className?: string }) {
                     />
                 </motion.div>
 
-                {/* This wrapper is the key to preventing sidebar layout breakage */}
+                {/* Marquee Container: Handles the infinite scroll and fade effects */}
                 <div className="group relative w-full overflow-hidden">
-                    {/* Fading gradient masks for a smooth "fade in/out" look */}
+                    {/* Fading gradient masks for a smooth "fade in/out" edge look */}
                     <div className="absolute inset-y-0 left-0 w-12 z-10 bg-linear-to-r from-background to-transparent" />
                     <div className="absolute inset-y-0 right-0 w-12 z-10 bg-linear-to-l from-background to-transparent" />
 
