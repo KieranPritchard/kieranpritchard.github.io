@@ -56,7 +56,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                   <PortfolioSidebar />
                   <SidebarInset className="min-w-0">
                     {/* Sticky Global Header */}
-                    <header className="sticky top-0 z-10 flex h-16 shrink-0 items-center justify-between px-4 bg-background/50 backdrop-blur-md">
+                    <header className="sticky top-0 z-10 flex h-16 shrink-0 items-center justify-between px-4">
                       <div className="flex items-center gap-2">
                         <SidebarTrigger className="-ml-1" />
                       </div>
