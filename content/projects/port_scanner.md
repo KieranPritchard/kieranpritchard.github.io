@@ -11,7 +11,7 @@ tags:
 link: "#"
 github: "/projects/port-scanner/port-scanner.png"
 date: "2025-8-10"
-coverImage: ""
+coverImage: "/projects/port-scanner/port-scanner.png"
 coverAlt: "Thumbnail Image for the project"
 ---
 
