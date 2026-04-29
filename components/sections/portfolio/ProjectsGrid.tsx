@@ -139,7 +139,7 @@ export default function ProjectsGrid({ className, projects }: Readonly<{ classNa
                                         </div>
                                     </CardContent>
                                     <CardFooter className="pt-4 border-t border-border/50">
-                                        <a href={project.github} className="text-xs font-bold hover:underline">Source code</a>
+                                        <Link href={`/portfolio/${project.slug}`} className="text-xs font-bold hover:underline">View Project</Link>
                                     </CardFooter>
                                 </Card>
                             )}

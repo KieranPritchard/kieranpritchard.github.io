@@ -9,8 +9,8 @@ tags:
   - Networking
   - Cybersecurity
 link: "#"
-github: "/projects/port-scanner/port-scanner.png"
-date: "2025-8-10"
+github: "https://github.com/KieranPritchard/Port-Scanner"
+date: "2025-08-23"
 coverImage: "/projects/port-scanner/port-scanner.png"
 coverAlt: "Thumbnail Image for the project"
 ---
