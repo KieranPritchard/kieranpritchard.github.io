@@ -1,7 +1,7 @@
 // app/layout.tsx
 import { SidebarProvider, SidebarTrigger, SidebarInset } from "@/components/ui/sidebar"
 import { TooltipProvider } from "@/components/ui/tooltip"
-import { PortfolioSidebar } from "@/components/layout/Sidebar"
+import { PortfolioSidebar } from "@/components/layouts/Sidebar"
 import { Geist_Mono, Roboto, Noto_Sans } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/providers/ThemeProvider"
@@ -9,7 +9,7 @@ import { MotionProvider } from "@/components/providers/MotionProvider"
 import { AnimationWrapper } from "@/components/providers/AnimationWrapper"
 import { cn } from "@/lib/utils"
 import { Metadata } from 'next'
-import Footer from "@/components/layout/Footer"
+import Footer from "@/components/layouts/Footer"
 
 /**
  * Global Metadata Configuration
