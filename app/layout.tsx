@@ -10,6 +10,7 @@ import { AnimationWrapper } from "@/components/providers/AnimationWrapper"
 import { cn } from "@/lib/utils"
 import { Metadata } from 'next'
 import Footer from "@/components/layouts/Footer"
+import { FaviconHandler } from "@/components/handler/FaviconHandler"
 
 /**
  * Global Metadata Configuration
@@ -49,6 +50,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <AnimationWrapper>
             {/* ThemeProvider: Manages light/dark mode with system preference support */}
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+              <FaviconHandler />
               {/* TooltipProvider: Required for Radix UI tooltip components */}
               <TooltipProvider delayDuration={0}>
                 {/* SidebarProvider: Orchestrates the collapsible navigation sidebar */}
