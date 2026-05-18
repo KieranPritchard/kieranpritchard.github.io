@@ -18,6 +18,11 @@ export default function Certifications({ className }: Readonly<{ className?: str
      */
     const certs = [
         {
+            title: "Python Essentials 1",
+            issuer: "Cisco",
+            date: "2026",
+            link: "https://www.credly.com/badges/ffada7e7-645f-467c-a034-dfe28ae22c86/public_url",
+        },{
             title: "Networking Basics",
             issuer: "Cisco",
             date: "2026",
@@ -100,12 +105,6 @@ export default function Certifications({ className }: Readonly<{ className?: str
             date: "2023",
             link: "https://www.sololearn.com/en/certificates/CC-TMBKLXCV",
         },
-        {
-            title: "Introduction to Python",
-            issuer: "SoloLearn",
-            date: "2023",
-            link: "https://www.sololearn.com/en/certificates/CC-0S7TV3M2",
-        }
     ]
 
     /**
